@@ -4,17 +4,24 @@
 
 # Site
 title: Sometwo
-subtitle: Life is too short, be enthusiastic！
-description: Nameless want to be someone, but end to another nobody. Maybe Sometwo. Just for fun.
+subtitle: Life is too short, be active！
+description: Nameless want to be someone, but end to nobody. Maybe sometwo this time.
 keywords: blog, life, naive, sometwo
-author: Json Dai
-language: en
+author: Sometwo
+language:
+- zh-CN
+- en
+- de
+- es
+- fa
+- fr
+- hu
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://sometwo7.github.io/blog/
-root: /blog/
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -73,7 +80,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
