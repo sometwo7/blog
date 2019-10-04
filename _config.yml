@@ -3,25 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Sometwo
-subtitle: Life is too short, be active！
-description: Nameless want to be someone, but end to nobody. Maybe sometwo this time.
+title: 佚名
+subtitle: 一生太短，请务必热情！(Life too short, just be active!)
+description: 一些学习笔记与人生的妄想。(Nameless want to be someone, but end to nobody. Maybe sometwo this time.)
 keywords: blog, life, naive, sometwo
 author: Sometwo
-language:
-- zh-CN
-- en
-- de
-- es
-- fa
-- fr
-- hu
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://sometwo7.github.io/blog/
-root: /
+root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
