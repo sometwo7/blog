@@ -1,0 +1,195 @@
+---
+title: Java基础
+date: 2019-10-04 19:49:10
+tags: Java
+categories: Java学习
+comments: true
+---
+# Java 基础
+
+<!-- TOC -->
+
+- [Java 基础](#java-基础)
+    - [1. JDK 和 JRE 有什么区别？](#1-jdk-和-jre-有什么区别)
+    - [2. == 和 equals 的区别是什么？](#2--和-equals-的区别是什么)
+    - [3. 两个对象的 hashCode()相同,则 equals()也一定为 true,对吗？](#3-两个对象的-hashcode相同则-equals也一定为-true对吗)
+    - [4. final 在 java 中有什么作用？](#4-final-在-java-中有什么作用)
+    - [5. java 中的 Math.round(-1.5) 等于多少？](#5-java-中的-mathround-15-等于多少)
+    - [6. String 属于基础的数据类型吗？](#6-string-属于基础的数据类型吗)
+    - [7. java 中操作字符串都有哪些类？它们之间有什么区别？](#7-java-中操作字符串都有哪些类它们之间有什么区别)
+    - [8. String str="i"与 String str=new String(“i”)一样吗？](#8-string-stri与-string-strnew-stringi一样吗)
+    - [9. 如何将字符串反转？](#9-如何将字符串反转)
+    - [10. String 类的常用方法都有那些？](#10-string-类的常用方法都有那些)
+    - [11. 抽象类必须要有抽象方法吗？](#11-抽象类必须要有抽象方法吗)
+    - [12. 普通类和抽象类有哪些区别？](#12-普通类和抽象类有哪些区别)
+    - [13. 抽象类能使用 final 修饰吗？](#13-抽象类能使用-final-修饰吗)
+    - [14. 接口和抽象类有什么区别？](#14-接口和抽象类有什么区别)
+    - [15. java 中 IO 流分为几种？](#15-java-中-io-流分为几种)
+    - [16. BIO、NIO、AIO 有什么区别？](#16-bionioaio-有什么区别)
+    - [17. Files 的常用方法都有哪些？](#17-files-的常用方法都有哪些)
+    - [18. java 如何解决的多重继承](#18-java-如何解决的多重继承)
+
+<!-- /TOC -->
+
+## 1. JDK 和 JRE 有什么区别？
+
+- JDK:Java Development Kit--面向开发人员的 SDK.它提供了 JAVA 的开发环境和运行环境
+  > SDK:Software Development Kit--软件开发包
+- JRE:Java Runtime Environment--面向使用者.提供了 JAVA 的运行环境，包含JVM
+- JVM:Java Virtual Machine--是我们常说的 Java 虚拟机
+
+## 2. == 和 equals 的区别是什么？
+
+- ==：基本数据类型比较的是数值，引用类型比较的是内存地址是否相等；
+- equals：是调用equals方法来比较两个对象
+ 1. 在没有重写equals方法的情况下，默认调用Object类的equals方法，实际上使用==来比较对象的内存地址；
+ 2. 字符串重写了equals方法，比较的是两个字符串的内容是否一致。
+
+## 3. 两个对象的 hashCode()相同,则 equals()也一定为 true,对吗？
+- 不对。
+- 需要注意的是当 equals 方法被重写时, hashCode 方法也要被重写.
+- Java 对象的 eqauls 方法和 hashCode 方法是这样规定的：
+  1.  相等(相同)的对象必须具有相等的哈希码(或者散列码).
+  2.  如果两个对象的 hashCode 相同,它们并不一定相同.
+
+## 4. final 在 java 中有什么作用？
+
+- final 的作用是告诉编译器一块数据是恒定不变得；
+- final 修饰的类不能被集成，final 类的方法默认都是 final 修饰的，但 final 类的成员变量默认不是final的；
+- final 修饰方法不能被子类重写，但可以被子类继承；
+- final 修饰的成员变量表示常量，只能被赋值一次，初次赋值后值不能再被改变；
+- final 不能修饰构造方法。
+
+## 5. java 中的 Math.round(-1.5) 等于多少？
+
+- Math.round(11.5)的返回值是 12,Math.round(-11.5)的返回值是-11.
+- 四舍五入的原理是在参数上加 0.5 然后进行下取整.
+
+## 6. String 属于基础的数据类型吗？
+
+- 基础数据类型 8 种：byte、short、int、long、float、double、char、boolean
+- String 是对象,是引用类型.
+
+## 7. java 中操作字符串都有哪些类？它们之间有什么区别？
+
+- 主要有三种, String, StringBuffer, StringBuilder；
+- String使用final修饰，所用方法都是返回new String，因此对String对象的任何修改操作都会生成新对象，不会影响原对象；
+- StringBuffer对字符串操作的方法都加了synchronized关键字，保证线程安全；
+- StringBuilder不保证线程安全；
+- 对于操作效率而言,一般来说,StringBuilder 大于 StringBuffer 大于 String；
+- 对于线程安全而言,StringBuffer 是线程安全的；而 StringBuilder 是非线程安全的；
+- 对于频繁的字符串操作而言,无论是 StringBuffer 还是 StringBuilder,都优于 String.
+
+## 8. String str="i"与 String str=new String(“i”)一样吗？
+
+- String str = "a", 内存中如果有“a",str 就指向它；如果没有,才创建“a”，str指向被创建的“a”;
+- String str = new String("a"), 是构造一个 String 对象指向“a”,再将新对象的地址赋给 str.
+
+## 9. 如何将字符串反转？
+
+- 利用 StringBuffer 的 reverse 方法
+- 将字符串，从后向前遍历一遍
+- 将字符串，依次放入栈里，再从栈里读出
+- 二分法，将字符串的前后一半分别翻转，再组合在一起
+
+## 10. String 类的常用方法都有那些？
+``` java
+// 返回字符串长度
+public int length() 
+// 返回字符串是否长度为0
+public boolean isEmpty() 
+// 返回字符串某一位的字符 
+public char charAt(int index) 
+// 提取子串
+public String substring(int beginIndex, int endIndex) 
+// 字符串比较
+public int compareTo(String anotherString) 
+// 字符串是否相等
+public boolean equals(Object anotherObject) 
+// 字符串拼接
+public String concat(String str) 
+// 返回特定字符在字符串中首次出现的位置
+public int indexOf(int ch/String str) 
+// 字符串转换成小写
+public String toLowerCase() 
+//字符串转换成大写
+public String toUpperCase() 
+// 替换特殊的子字符串成新的子字符串
+public String replace(char oldChar, char newChar) 
+// 去除字符串两端的空格
+public String trim() 
+// 根据特定表达式分割字符串
+public String[] split(String str) 
+```
+## 11. 抽象类必须要有抽象方法吗？
+
+- 抽象类不一定要有抽象方法；
+- 用 abstract 修饰的类就是抽象类,即使一个类中的方法全部实现过,也可以用 abstract 修饰为抽象类,所以抽象类不一定都有抽象方法.
+- 延伸：因为真有一种情况可以将类定义为 static 类型的,那就是内部类.
+
+## 12. 普通类和抽象类有哪些区别？
+
+- 1、普通类可以去实例化调用；抽象类不能被实例化,因为它是存在于一种概念而不非具体.
+- 2、普通类和抽象类都可以被继承,但是抽象类被继承后子类必须重写继承的抽象方法,除非自类也是抽象类.
+- 包含抽象方法的类称为抽象类,但并不意味着抽象类中只能有抽象方法,它和普通类一样,同样可以拥有成员变量和普通的成员方法.
+- 注意,抽象类和普通类的主要有三点区别：
+  - 1)抽象方法必须为 public 或者 protected,缺省情况下默认为 public.(因为如果为 private,则不能被子类继承,子类便无法实现该方法)
+  - 2)抽象类不能用来创建对象；
+  - 3)如果一个类继承于一个抽象类,则子类必须实现父类的抽象方法.如果子类没有实现父类的抽象方法,则必须将子类也定义为为 abstract 类.
+
+## 13. 抽象类能使用 final 修饰吗？
+
+- 不能,抽象类是为了让子类继承之后重写其方法的,而用 final 修饰的类,无法被继承
+
+## 14. 接口和抽象类有什么区别？
+
+|             | 抽象类                               | 接口                                 |
+| ----------- | ---------------------------- -------| ------------------------------------ |
+| 默认方法实现 | 抽象类可以有默认的方法实现              |接口不能有默认的方法实现。java8以后有特别 |
+| 实现        | 抽象类的子类使用 extends 来继承        |接口必须使用 implements 来实现接口       |
+| 构造函数     | 抽象类可以有构造函数                   |接口不能有                             |
+| main 方法   | 抽象类可以有 main 方法，并且我们能运行它 |接口不能有 main 方法                   |
+| 实现数量     | 类只能有一个抽象类                    |类可以有多个接口                        |
+| 访问修饰符   | 抽象类中的方法可以是任意访问修饰符      |接口中的方法默认使用 public 修饰         |
+
+## 15. java 中 IO 流分为几种？
+
+- 按功能划分：输入流、输出流
+- 按类型划分：字符流、字节流
+
+## 16. BIO、NIO、AIO 有什么区别？
+- java支持方面
+	- 同步阻塞的 BIO, 服务器实现模式为一个连接一个线程，即客户端有连接请求时服务器端就需要启动一个线程进行处理，如果这个连接不做任何事情会造成不必要的线程开销，可以通过线程池机制改善;
+	- 同步非阻塞的 NIO, 服务器实现模式为一个请求一个线程，即客户端发送的连接请求都会注册到多路复用器上，多路复用器轮询到连接有I/O请求时才启动一个线程进行处理;
+	- 异步非阻塞的 AIO, 服务器实现模式为一个有效请求一个线程，客户端的I/O请求都是由OS先完成了再通知服务器应用去启动线程进行处理.
+- 适用场景
+	- BIO方式适用于连接数目比较小且固定的架构，这种方式对服务器资源要求比较高，并发局限于应用中，JDK1.4以前的唯一选择，但程序直观简单易理解。
+	- NIO方式适用于连接数目多且连接比较短（轻操作）的架构，比如聊天服务器，并发局限于应用中，编程比较复杂，JDK1.4开始支持。
+	- AIO方式使用于连接数目多且连接比较长（重操作）的架构，比如相册服务器，充分调用OS参与并发操作，编程比较复杂，JDK7开始支持。
+
+## 17. Files 的常用方法都有哪些？
+
+| 方法声明                 | 功能描述                                                     |
+| ------------------------ | ------------------------------------------------------------ |
+| boolean exists()         | 判断 File 对象对应的文件或者目录是否存在若存在则返回 true，否则返回 false |
+| boolean delete()         | 删除 File 对象对应的文件或者目录若成功则返回 true，否则返回 false |
+| boolean createNewFile()  | 当 File 对象对应的文件不存在时，该方法将新建一个此 File 对象所指定的新文件若创建成功则返回 true，否则返回 false |
+| String getName()         | 返回 File 对象表示的文件或文件夹的名称                       |
+| String getPath()         | 返回 File 对象对应的路径                                     |
+| String getAbsolutePath() | 返回 File 对象对应的绝对路径（在 UNIX/Linux 等系统上，如果路径是以正斜线 / 开始的，则这个路径是绝对路径；在 Windows 等系统上，如果路径是从盘符开始的，则这个路径是绝对路径） |
+| String getParent()       | 返回 File 对象对应目录的父目录，（即返回的目录不包含最后一级子目录） |
+| boolean canRead()        | 判断 File 对象对应的文件或者目录是否可读若可读则返回 true，反之返回 false |
+| boolean canWrite()       | 判断 File 对象对应的文件或者目录是否可写。若可写则返回 true，反之返回 false |
+| boolean isFile()         | 判断 File 对象对应的是否是文件（不是目录）若是文件则返回 true，反之返回 false |
+| boolean isDirectory()    | 判断 File 对象对应的是否是目录（不是文件）若是目录则返回 true，反之返回 false |
+| boolean isAbsolute()     | 判断 File 对象对应的文件或者目录是否是绝对路径               |
+| long lastModified()      | 返回 1970 年 1 月 1 日 0 时 0 分 0 秒到文件最好修改时间的毫秒值 |
+| long length()            | 返回文件内容长度                                             |
+| String [ ]list()         | 返回指定目录的全部内容，只列出名称                           |
+| File[ ] listFiles()      | 返回一个包含了 File 对象所有子文件和子目录的 File 数组       |
+
+## 18. java 如何解决的多重继承
+
+多重继承指的是一个类可以同时从多于一个的父类那里继承行为和特征
+1. 接口，实现多个接口；
+2. 内部类，使用多个内部类分别继承不同的类，向外提供内部类的方法。

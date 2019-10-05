@@ -5,7 +5,7 @@
 # Site
 title: 佚名
 subtitle: 一生太短，请务必热情！(Life too short, just be active!)
-description: 一些学习笔记与人生的妄想。(Nameless want to be someone, but end to nobody. Maybe sometwo this time.)
+description: 一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.
 keywords: blog, life, naive, sometwo
 author: Sometwo
 language: zh-CN
@@ -79,5 +79,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/sometwo7/blog
+  repo: https://github.com/sometwo7/blog.git
   branch: master
