@@ -81,3 +81,26 @@ deploy:
   type: git
   repo: https://github.com/sometwo7/blog.git
   branch: master
+
+server:
+  port: 4000
+
+marked:
+  # For preserve original quotes in code blocks.
+  smartypants: false
+  # For disable links in code blocks.
+  autolink: false
+
+kramed:
+  # For preserve original quotes in code blocks.
+  smartypants: false
+
+search:
+  path: search.json
+  field: all
+
+symbols_count_time:
+  symbols: false
+  time: false
+  total_symbols: false
+  total_time: false
