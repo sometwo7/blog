@@ -44,7 +44,7 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
+    path: 'search.json',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
@@ -64,7 +64,7 @@
 <meta property="og:description" content="JAVA想要面试的初/中/想要面试的初/中/高级 Java 程序员想要查漏补缺的人想要不断完善和扩充自己 Java 技术栈的人原本就掌握了技术却不知道怎么表达的人有上进心,也愿意学习的人 一、 面试题覆盖全,且解析全面 这份面试题总内容包含了十九个模块：Java 基础、容器、多线程、反射、对象拷贝、Java Web 模块、异常、网络、设计模式、Spring/Spring MVC、Spring Bo">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://sometwo7.github.io/blog/2019/10/04/java基础%20(汇总)/..%5Cpic%5Cjava%E7%9A%84%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B.jpg">
-<meta property="og:updated_time" content="2019-10-05T06:12:06.015Z">
+<meta property="og:updated_time" content="2019-10-07T03:02:11.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础(汇总)">
 <meta name="twitter:description" content="JAVA想要面试的初/中/想要面试的初/中/高级 Java 程序员想要查漏补缺的人想要不断完善和扩充自己 Java 技术栈的人原本就掌握了技术却不知道怎么表达的人有上进心,也愿意学习的人 一、 面试题覆盖全,且解析全面 这份面试题总内容包含了十九个模块：Java 基础、容器、多线程、反射、对象拷贝、Java Web 模块、异常、网络、设计模式、Spring/Spring MVC、Spring Bo">
@@ -260,7 +260,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-05 06:12:06" itemprop="dateModified" datetime="2019-10-05T06:12:06+00:00">2019-10-05</time>
+                <time title="修改时间：2019-10-07 03:02:11" itemprop="dateModified" datetime="2019-10-07T03:02:11+00:00">2019-10-07</time>
               </span>
             
           
@@ -296,14 +296,14 @@
 <h2 id="一、-Java-基础"><a href="#一、-Java-基础" class="headerlink" title="一、 Java 基础"></a>一、 Java 基础</h2><ol>
 <li><p>JDK 和 JRE 有什么区别？</p>
 <ul>
-<li><p>JDK:Java Deveplment Kit–面向开发人员的 SDK.它提供了 JAVA 的开发环境和运行环境</p>
+<li><p>JDK:Java Deveplment Kit--面向开发人员的 SDK.它提供了 JAVA 的开发环境和运行环境</p>
 <blockquote>
-<p>SDK:Software Devemplment Kit–软件开发包</p>
+<p>SDK:Software Devemplment Kit--软件开发包</p>
 </blockquote>
 </li>
-<li><p>JRE:Java Runtime Enviroment–面向使用者.提供了 JAVA 的运行环境</p>
+<li><p>JRE:Java Runtime Enviroment--面向使用者.提供了 JAVA 的运行环境</p>
 </li>
-<li><p>JVM:Java virtual machine–是我们常说的 Java 虚拟机</p>
+<li><p>JVM:Java virtual machine--是我们常说的 Java 虚拟机</p>
 </li>
 </ul>
 </li>
@@ -357,14 +357,14 @@
 <li>StringBuilder: 脱胎于 StringBuffer,允许多线程方法添加或者删除,线程不安全,一般用于单线程.</li>
 </ul>
 </li>
-<li><p>String str=”i”与 String str=new String(“i”)一样吗？</p>
+<li><p>String str=&quot;i&quot;与 String str=new String(“i”)一样吗？</p>
 <blockquote>
 <p><a href="https://www.cnblogs.com/bluestorm/p/3296897.html" target="_blank" rel="noopener">答案链接</a></p>
 </blockquote>
 <ul>
-<li><p>String str = “a”; 这个只是一个引用,内存中如果有“a”的话,str 就指向它；如果没有,才创建它;</p>
+<li><p>String str = &quot;a&quot;; 这个只是一个引用,内存中如果有“a&quot;的话,str 就指向它；如果没有,才创建它;</p>
 </li>
-<li><p>如果你以后还用到”a”这个字符串的话并且是这样:String str1 = “a”; String str2 = “a”; String str2 = “a”; 这 4 个变量都共享一个字符串”a”.而 String str = new String(“a”);是根据”a”这个 String 对象再次构造一个 String 对象,将新构造出来的 String 对象的引用赋给 str.</p>
+<li><p>如果你以后还用到&quot;a&quot;这个字符串的话并且是这样:String str1 = &quot;a&quot;; String str2 = &quot;a&quot;; String str2 = &quot;a&quot;; 这 4 个变量都共享一个字符串&quot;a&quot;.而 String str = new String(&quot;a&quot;);是根据&quot;a&quot;这个 String 对象再次构造一个 String 对象,将新构造出来的 String 对象的引用赋给 str.</p>
 <blockquote>
 <p><a href="https://www.cnblogs.com/aspirant/p/9193112.html" target="_blank" rel="noopener">链接</a></p>
 </blockquote>
@@ -389,7 +389,7 @@
 <li>public char charAt(int index)</li>
 <li>public String substring(int beginIndex, int endIndex)</li>
 <li>public boolean equals(Object anotherObject)</li>
-<li>public String concat(String str)//“aa”+”bb”+”cc”;</li>
+<li>public String concat(String str)//&quot;aa&quot;+&quot;bb&quot;+&quot;cc&quot;;</li>
 <li>public int indexOf(int ch/String str)</li>
 <li>public String toLowerCase()/public String toUpperCase()</li>
 <li>public String replace(char oldChar, char newChar)</li>

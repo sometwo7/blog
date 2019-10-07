@@ -44,7 +44,7 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
+    path: 'search.json',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="佚名">
 <meta property="og:description" content="Java 基础   Java 基础 1. JDK 和 JRE 有什么区别？ 2. == 和 equals 的区别是什么？ 3. 两个对象的 hashCode()相同,则 equals()也一定为 true,对吗？ 4. final 在 java 中有什么作用？ 5. java 中的 Math.round(-1.5) 等于多少？ 6. String 属于基础的数据类型吗？ 7. java 中操作字符">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-05T06:12:06.015Z">
+<meta property="og:updated_time" content="2019-10-07T03:02:11.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础">
 <meta name="twitter:description" content="Java 基础   Java 基础 1. JDK 和 JRE 有什么区别？ 2. == 和 equals 的区别是什么？ 3. 两个对象的 hashCode()相同,则 equals()也一定为 true,对吗？ 4. final 在 java 中有什么作用？ 5. java 中的 Math.round(-1.5) 等于多少？ 6. String 属于基础的数据类型吗？ 7. java 中操作字符">
@@ -258,7 +258,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-05 06:12:06" itemprop="dateModified" datetime="2019-10-05T06:12:06+00:00">2019-10-05</time>
+                <time title="修改时间：2019-10-07 03:02:11" itemprop="dateModified" datetime="2019-10-07T03:02:11+00:00">2019-10-07</time>
               </span>
             
           
@@ -298,7 +298,7 @@
 <li><a href="#5-java-中的-mathround-15-等于多少">5. java 中的 Math.round(-1.5) 等于多少？</a></li>
 <li><a href="#6-string-属于基础的数据类型吗">6. String 属于基础的数据类型吗？</a></li>
 <li><a href="#7-java-中操作字符串都有哪些类它们之间有什么区别">7. java 中操作字符串都有哪些类？它们之间有什么区别？</a></li>
-<li><a href="#8-string-stri与-string-strnew-stringi一样吗">8. String str=”i”与 String str=new String(“i”)一样吗？</a></li>
+<li><a href="#8-string-stri与-string-strnew-stringi一样吗">8. String str=&quot;i&quot;与 String str=new String(“i”)一样吗？</a></li>
 <li><a href="#9-如何将字符串反转">9. 如何将字符串反转？</a></li>
 <li><a href="#10-string-类的常用方法都有那些">10. String 类的常用方法都有那些？</a></li>
 <li><a href="#11-抽象类必须要有抽象方法吗">11. 抽象类必须要有抽象方法吗？</a></li>
@@ -315,12 +315,12 @@
 <!-- /TOC -->
 
 <h2 id="1-JDK-和-JRE-有什么区别？"><a href="#1-JDK-和-JRE-有什么区别？" class="headerlink" title="1. JDK 和 JRE 有什么区别？"></a>1. JDK 和 JRE 有什么区别？</h2><ul>
-<li>JDK:Java Development Kit–面向开发人员的 SDK.它提供了 JAVA 的开发环境和运行环境<blockquote>
-<p>SDK:Software Development Kit–软件开发包</p>
+<li>JDK:Java Development Kit--面向开发人员的 SDK.它提供了 JAVA 的开发环境和运行环境<blockquote>
+<p>SDK:Software Development Kit--软件开发包</p>
 </blockquote>
 </li>
-<li>JRE:Java Runtime Environment–面向使用者.提供了 JAVA 的运行环境，包含JVM</li>
-<li>JVM:Java Virtual Machine–是我们常说的 Java 虚拟机</li>
+<li>JRE:Java Runtime Environment--面向使用者.提供了 JAVA 的运行环境，包含JVM</li>
+<li>JVM:Java Virtual Machine--是我们常说的 Java 虚拟机</li>
 </ul>
 <h2 id="2-和-equals-的区别是什么？"><a href="#2-和-equals-的区别是什么？" class="headerlink" title="2. == 和 equals 的区别是什么？"></a>2. == 和 equals 的区别是什么？</h2><ul>
 <li>==：基本数据类型比较的是数值，引用类型比较的是内存地址是否相等；</li>
@@ -363,9 +363,9 @@
 <li>对于线程安全而言,StringBuffer 是线程安全的；而 StringBuilder 是非线程安全的；</li>
 <li>对于频繁的字符串操作而言,无论是 StringBuffer 还是 StringBuilder,都优于 String.</li>
 </ul>
-<h2 id="8-String-str-”i”与-String-str-new-String-“i”-一样吗？"><a href="#8-String-str-”i”与-String-str-new-String-“i”-一样吗？" class="headerlink" title="8. String str=”i”与 String str=new String(“i”)一样吗？"></a>8. String str=”i”与 String str=new String(“i”)一样吗？</h2><ul>
-<li>String str = “a”, 内存中如果有“a”,str 就指向它；如果没有,才创建“a”，str指向被创建的“a”;</li>
-<li>String str = new String(“a”), 是构造一个 String 对象指向“a”,再将新对象的地址赋给 str.</li>
+<h2 id="8-String-str-quot-i-quot-与-String-str-new-String-“i”-一样吗？"><a href="#8-String-str-quot-i-quot-与-String-str-new-String-“i”-一样吗？" class="headerlink" title="8. String str=&quot;i&quot;与 String str=new String(“i”)一样吗？"></a>8. String str=&quot;i&quot;与 String str=new String(“i”)一样吗？</h2><ul>
+<li>String str = &quot;a&quot;, 内存中如果有“a&quot;,str 就指向它；如果没有,才创建“a”，str指向被创建的“a”;</li>
+<li>String str = new String(&quot;a&quot;), 是构造一个 String 对象指向“a”,再将新对象的地址赋给 str.</li>
 </ul>
 <h2 id="9-如何将字符串反转？"><a href="#9-如何将字符串反转？" class="headerlink" title="9. 如何将字符串反转？"></a>9. 如何将字符串反转？</h2><ul>
 <li>利用 StringBuffer 的 reverse 方法</li>
@@ -607,7 +607,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-基础"><span class="nav-number">1.</span> <span class="nav-text">Java 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-JDK-和-JRE-有什么区别？"><span class="nav-number">1.1.</span> <span class="nav-text">1. JDK 和 JRE 有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-和-equals-的区别是什么？"><span class="nav-number">1.2.</span> <span class="nav-text">2. == 和 equals 的区别是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-两个对象的-hashCode-相同-则-equals-也一定为-true-对吗？"><span class="nav-number">1.3.</span> <span class="nav-text">3. 两个对象的 hashCode()相同,则 equals()也一定为 true,对吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-final-在-java-中有什么作用？"><span class="nav-number">1.4.</span> <span class="nav-text">4. final 在 java 中有什么作用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-java-中的-Math-round-1-5-等于多少？"><span class="nav-number">1.5.</span> <span class="nav-text">5. java 中的 Math.round(-1.5) 等于多少？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-String-属于基础的数据类型吗？"><span class="nav-number">1.6.</span> <span class="nav-text">6. String 属于基础的数据类型吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-java-中操作字符串都有哪些类？它们之间有什么区别？"><span class="nav-number">1.7.</span> <span class="nav-text">7. java 中操作字符串都有哪些类？它们之间有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-String-str-”i”与-String-str-new-String-“i”-一样吗？"><span class="nav-number">1.8.</span> <span class="nav-text">8. String str=”i”与 String str=new String(“i”)一样吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-如何将字符串反转？"><span class="nav-number">1.9.</span> <span class="nav-text">9. 如何将字符串反转？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-String-类的常用方法都有那些？"><span class="nav-number">1.10.</span> <span class="nav-text">10. String 类的常用方法都有那些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-抽象类必须要有抽象方法吗？"><span class="nav-number">1.11.</span> <span class="nav-text">11. 抽象类必须要有抽象方法吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-普通类和抽象类有哪些区别？"><span class="nav-number">1.12.</span> <span class="nav-text">12. 普通类和抽象类有哪些区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-抽象类能使用-final-修饰吗？"><span class="nav-number">1.13.</span> <span class="nav-text">13. 抽象类能使用 final 修饰吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-接口和抽象类有什么区别？"><span class="nav-number">1.14.</span> <span class="nav-text">14. 接口和抽象类有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-java-中-IO-流分为几种？"><span class="nav-number">1.15.</span> <span class="nav-text">15. java 中 IO 流分为几种？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-BIO、NIO、AIO-有什么区别？"><span class="nav-number">1.16.</span> <span class="nav-text">16. BIO、NIO、AIO 有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-Files-的常用方法都有哪些？"><span class="nav-number">1.17.</span> <span class="nav-text">17. Files 的常用方法都有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-java-如何解决的多重继承"><span class="nav-number">1.18.</span> <span class="nav-text">18. java 如何解决的多重继承</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-基础"><span class="nav-number">1.</span> <span class="nav-text">Java 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-JDK-和-JRE-有什么区别？"><span class="nav-number">1.1.</span> <span class="nav-text">1. JDK 和 JRE 有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-和-equals-的区别是什么？"><span class="nav-number">1.2.</span> <span class="nav-text">2. == 和 equals 的区别是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-两个对象的-hashCode-相同-则-equals-也一定为-true-对吗？"><span class="nav-number">1.3.</span> <span class="nav-text">3. 两个对象的 hashCode()相同,则 equals()也一定为 true,对吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-final-在-java-中有什么作用？"><span class="nav-number">1.4.</span> <span class="nav-text">4. final 在 java 中有什么作用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-java-中的-Math-round-1-5-等于多少？"><span class="nav-number">1.5.</span> <span class="nav-text">5. java 中的 Math.round(-1.5) 等于多少？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-String-属于基础的数据类型吗？"><span class="nav-number">1.6.</span> <span class="nav-text">6. String 属于基础的数据类型吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-java-中操作字符串都有哪些类？它们之间有什么区别？"><span class="nav-number">1.7.</span> <span class="nav-text">7. java 中操作字符串都有哪些类？它们之间有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-String-str-quot-i-quot-与-String-str-new-String-“i”-一样吗？"><span class="nav-number">1.8.</span> <span class="nav-text">8. String str=&quot;i&quot;与 String str=new String(“i”)一样吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-如何将字符串反转？"><span class="nav-number">1.9.</span> <span class="nav-text">9. 如何将字符串反转？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-String-类的常用方法都有那些？"><span class="nav-number">1.10.</span> <span class="nav-text">10. String 类的常用方法都有那些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-抽象类必须要有抽象方法吗？"><span class="nav-number">1.11.</span> <span class="nav-text">11. 抽象类必须要有抽象方法吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-普通类和抽象类有哪些区别？"><span class="nav-number">1.12.</span> <span class="nav-text">12. 普通类和抽象类有哪些区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-抽象类能使用-final-修饰吗？"><span class="nav-number">1.13.</span> <span class="nav-text">13. 抽象类能使用 final 修饰吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-接口和抽象类有什么区别？"><span class="nav-number">1.14.</span> <span class="nav-text">14. 接口和抽象类有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-java-中-IO-流分为几种？"><span class="nav-number">1.15.</span> <span class="nav-text">15. java 中 IO 流分为几种？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-BIO、NIO、AIO-有什么区别？"><span class="nav-number">1.16.</span> <span class="nav-text">16. BIO、NIO、AIO 有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-Files-的常用方法都有哪些？"><span class="nav-number">1.17.</span> <span class="nav-text">17. Files 的常用方法都有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-java-如何解决的多重继承"><span class="nav-number">1.18.</span> <span class="nav-text">18. java 如何解决的多重继承</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
