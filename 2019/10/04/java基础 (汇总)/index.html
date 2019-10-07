@@ -25,7 +25,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/blog/',
-    scheme: 'Mist',
+    scheme: 'Gemini',
     version: '7.4.1',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
@@ -43,7 +43,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},
     path: 'search.json',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
@@ -64,7 +64,7 @@
 <meta property="og:description" content="JAVA想要面试的初/中/想要面试的初/中/高级 Java 程序员想要查漏补缺的人想要不断完善和扩充自己 Java 技术栈的人原本就掌握了技术却不知道怎么表达的人有上进心,也愿意学习的人 一、 面试题覆盖全,且解析全面 这份面试题总内容包含了十九个模块：Java 基础、容器、多线程、反射、对象拷贝、Java Web 模块、异常、网络、设计模式、Spring/Spring MVC、Spring Bo">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://sometwo7.github.io/blog/2019/10/04/java基础%20(汇总)/..%5Cpic%5Cjava%E7%9A%84%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B.jpg">
-<meta property="og:updated_time" content="2019-10-07T03:02:11.792Z">
+<meta property="og:updated_time" content="2019-10-07T03:13:10.620Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础(汇总)">
 <meta name="twitter:description" content="JAVA想要面试的初/中/想要面试的初/中/高级 Java 程序员想要查漏补缺的人想要不断完善和扩充自己 Java 技术栈的人原本就掌握了技术却不知道怎么表达的人有上进心,也愿意学习的人 一、 面试题覆盖全,且解析全面 这份面试题总内容包含了十九个模块：Java 基础、容器、多线程、反射、对象拷贝、Java Web 模块、异常、网络、设计模式、Spring/Spring MVC、Spring Bo">
@@ -195,11 +195,36 @@
     <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>搜索</a>
+      </li>
+    
   </ul>
 
-    
-
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -213,6 +238,8 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+            
+
           <div id="content" class="content">
             
 
@@ -260,7 +287,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-07 03:02:11" itemprop="dateModified" datetime="2019-10-07T03:02:11+00:00">2019-10-07</time>
+                <time title="修改时间：2019-10-07 03:13:10" itemprop="dateModified" datetime="2019-10-07T03:13:10+00:00">2019-10-07</time>
               </span>
             
           
@@ -1354,7 +1381,7 @@ pic\java的运行流程.jpg
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a></div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
 
         
 
@@ -1379,7 +1406,7 @@ pic\java的运行流程.jpg
   <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 <script src="/blog/js/utils.js?v=7.4.1"></script><script src="/blog/js/motion.js?v=7.4.1"></script>
-<script src="/blog/js/schemes/muse.js?v=7.4.1"></script>
+<script src="/blog/js/schemes/pisces.js?v=7.4.1"></script>
 
 <script src="/blog/js/next-boot.js?v=7.4.1"></script>
 
@@ -1393,6 +1420,8 @@ pic\java的运行流程.jpg
 
 
 
+
+  <script src="/blog/js/local-search.js?v=7.4.1"></script>
 
 
 
