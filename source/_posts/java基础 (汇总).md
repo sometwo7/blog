@@ -1,9 +1,8 @@
 ---
 title: Java基础(汇总)
 date: 2019-10-04 19:49:32
-tags: Java
-categories: 
- - Java学习
+tags: [Java]
+categories: [Java学习]
 comments: true
 ---
 # JAVA
