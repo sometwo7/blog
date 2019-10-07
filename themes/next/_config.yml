@@ -61,7 +61,7 @@ footer:
     # `heart` is recommended with animation in red (#ff0000).
     name: user
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
     color: "#808080"
 
@@ -109,9 +109,9 @@ creative_commons:
 
 # Schemes
 #scheme: Muse
-scheme: Mist
+# scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -619,9 +619,9 @@ comments:
 # Disqus
 disqus:
   enable: false
-  shortname:
+  shortname: sometwo
   count: true
-  lazyload: false
+  lazyload: true
   #post_meta_order: 0
 
 # DisqusJS
@@ -813,7 +813,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/wzpan/hexo-generator-search
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -822,7 +822,7 @@ local_search:
   # Unescape html strings to the readable one.
   unescape: false
   # Preload the search data when the page loads.
-  preload: false
+  preload: true
 
 # Swiftype Search API Key
 swiftype_key:
