@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="对象拷贝link    对象拷贝 1. 为什么要使用克隆？ 2. 如何实现对象克隆？ 3. 深拷贝和浅拷贝区别是什么？      1. 为什么要使用克隆？克隆的对象可能包含一些已经修改过的属性，而 new 出来的对象的属性都还是初始化时候的值，所以当需要一个新的对象来保存当前对象的“状态”就靠 clone 方法了 2. 如何实现对象克隆？浅克隆(ShallowClone)和深克隆(DeepClon">
+  <meta name="description" content="设计模式1. 说一下你熟悉的设计模式？ 根据目的来分可以可以分成3类，创建型、结构型、行为型； 创建型有5种，工厂方法，抽象工厂，原型，单例，建造者； 结构型有7种，适配器，代理，桥接，装饰，外观，享元，组合； 行为型有11种，模板方法，解释器，策略，命令，职责链，状态，观察者，中介者，迭代器，访问，备忘录；   根据作用范围来分，可以有两类，分别是类模式、对象模式； 类模式主要有4种，工厂方法，">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对象拷贝">
-<meta property="og:url" content="https://sometwo7.github.io/blog/2019/10/04/05对象拷贝/index.html">
+<meta property="og:title" content="设计模式">
+<meta property="og:url" content="https://sometwo7.github.io/blog/2019/10/04/09设计模式/index.html">
 <meta property="og:site_name" content="佚名">
-<meta property="og:description" content="对象拷贝link    对象拷贝 1. 为什么要使用克隆？ 2. 如何实现对象克隆？ 3. 深拷贝和浅拷贝区别是什么？      1. 为什么要使用克隆？克隆的对象可能包含一些已经修改过的属性，而 new 出来的对象的属性都还是初始化时候的值，所以当需要一个新的对象来保存当前对象的“状态”就靠 clone 方法了 2. 如何实现对象克隆？浅克隆(ShallowClone)和深克隆(DeepClon">
+<meta property="og:description" content="设计模式1. 说一下你熟悉的设计模式？ 根据目的来分可以可以分成3类，创建型、结构型、行为型； 创建型有5种，工厂方法，抽象工厂，原型，单例，建造者； 结构型有7种，适配器，代理，桥接，装饰，外观，享元，组合； 行为型有11种，模板方法，解释器，策略，命令，职责链，状态，观察者，中介者，迭代器，访问，备忘录；   根据作用范围来分，可以有两类，分别是类模式、对象模式； 类模式主要有4种，工厂方法，">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-10-08T09:06:44.825Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对象拷贝">
-<meta name="twitter:description" content="对象拷贝link    对象拷贝 1. 为什么要使用克隆？ 2. 如何实现对象克隆？ 3. 深拷贝和浅拷贝区别是什么？      1. 为什么要使用克隆？克隆的对象可能包含一些已经修改过的属性，而 new 出来的对象的属性都还是初始化时候的值，所以当需要一个新的对象来保存当前对象的“状态”就靠 clone 方法了 2. 如何实现对象克隆？浅克隆(ShallowClone)和深克隆(DeepClon">
-  <link rel="canonical" href="https://sometwo7.github.io/blog/2019/10/04/05对象拷贝/">
+<meta name="twitter:title" content="设计模式">
+<meta name="twitter:description" content="设计模式1. 说一下你熟悉的设计模式？ 根据目的来分可以可以分成3类，创建型、结构型、行为型； 创建型有5种，工厂方法，抽象工厂，原型，单例，建造者； 结构型有7种，适配器，代理，桥接，装饰，外观，享元，组合； 行为型有11种，模板方法，解释器，策略，命令，职责链，状态，观察者，中介者，迭代器，访问，备忘录；   根据作用范围来分，可以有两类，分别是类模式、对象模式； 类模式主要有4种，工厂方法，">
+  <link rel="canonical" href="https://sometwo7.github.io/blog/2019/10/04/09设计模式/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>对象拷贝 | 佚名</title>
+  <title>设计模式 | 佚名</title>
   
 
 
@@ -246,7 +246,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/05对象拷贝/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/09设计模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -258,7 +258,7 @@
       <meta itemprop="name" content="佚名">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">对象拷贝
+        <h1 class="post-title" itemprop="name headline">设计模式
 
           
         </h1>
@@ -274,7 +274,7 @@
                 
               
 
-              <time title="创建时间：2019-10-04 19:49:15" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:15+00:00">2019-10-04</time>
+              <time title="创建时间：2019-10-04 19:49:19" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:19+00:00">2019-10-04</time>
             </span>
           
             
@@ -314,25 +314,87 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="对象拷贝"><a href="#对象拷贝" class="headerlink" title="对象拷贝"></a>对象拷贝</h1><p><a href="https://www.cnblogs.com/Qian123/p/5710533.html" target="_blank" rel="noopener">link</a></p>
-<!-- TOC -->
-
-<ul>
-<li><a href="#对象拷贝">对象拷贝</a><ul>
-<li><a href="#1-为什么要使用克隆">1. 为什么要使用克隆？</a></li>
-<li><a href="#2-如何实现对象克隆">2. 如何实现对象克隆？</a></li>
-<li><a href="#3-深拷贝和浅拷贝区别是什么">3. 深拷贝和浅拷贝区别是什么？</a></li>
+        <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="1-说一下你熟悉的设计模式？"><a href="#1-说一下你熟悉的设计模式？" class="headerlink" title="1. 说一下你熟悉的设计模式？"></a>1. 说一下你熟悉的设计模式？</h2><ul>
+<li>根据目的来分可以可以分成3类，创建型、结构型、行为型；<ul>
+<li>创建型有5种，工厂方法，抽象工厂，原型，单例，建造者；</li>
+<li>结构型有7种，适配器，代理，桥接，装饰，外观，享元，组合；</li>
+<li>行为型有11种，模板方法，解释器，策略，命令，职责链，状态，观察者，中介者，迭代器，访问，备忘录；</li>
+</ul>
+</li>
+<li>根据作用范围来分，可以有两类，分别是类模式、对象模式；<ul>
+<li>类模式主要有4种，工厂方法，类的适配器，模板方法，解释器；</li>
+<li>对象模式有20种，单例，原型，抽象工厂，建造者，代理，对象的适配器，桥接，装饰，外观，享元，组合，策略，命令，责任链，状态，观察者，中介者，迭代器，访问者，备忘录；</li>
 </ul>
 </li>
 </ul>
-<!-- /TOC -->
-
-<h2 id="1-为什么要使用克隆？"><a href="#1-为什么要使用克隆？" class="headerlink" title="1. 为什么要使用克隆？"></a>1. 为什么要使用克隆？</h2><p>克隆的对象可能包含一些已经修改过的属性，而 new 出来的对象的属性都还是初始化时候的值，所以当需要一个新的对象来保存当前对象的“状态”就靠 clone 方法了</p>
-<h2 id="2-如何实现对象克隆？"><a href="#2-如何实现对象克隆？" class="headerlink" title="2. 如何实现对象克隆？"></a>2. 如何实现对象克隆？</h2><p><strong>浅克隆(ShallowClone)</strong>和<strong>深克隆(DeepClone)</strong></p>
-<h2 id="3-深拷贝和浅拷贝区别是什么？"><a href="#3-深拷贝和浅拷贝区别是什么？" class="headerlink" title="3. 深拷贝和浅拷贝区别是什么？"></a>3. 深拷贝和浅拷贝区别是什么？</h2><ul>
-<li>在浅克隆中，如果原型对象的成员变量是值类型，将复制一份给克隆对象；如果原型对象的成员变量是引用类型，则将引用对象的地址复制一份给克隆对象，也就是说原型对象和克隆对象的成员变量指向相同的内存地址。(在浅克隆中，当对象被复制时只复制它本身和其中包含的值类型的成员变量，而引用类型的成员对象并没有复制。)</li>
-<li>在深克隆中，无论原型对象的成员变量是值类型还是引用类型，都将复制一份给克隆对象，深克隆将原型对象的所有引用对象也复制一份给克隆对象。(在深克隆中，除了对象本身被复制外，对象所包含的所有成员变量也将复制。)</li>
+<table>
+<thead>
+<tr>
+<th>范围\目的</th>
+<th>创建型模式</th>
+<th>结构型模式</th>
+<th>行为型模式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类模式</td>
+<td>工厂方法</td>
+<td>(类）适配器</td>
+<td>模板方法、解释器</td>
+</tr>
+<tr>
+<td>对象模式</td>
+<td>单例，原型，抽象工厂，建造者</td>
+<td>代理，(对象）适配器，桥接，装饰，外观，享元，组合</td>
+<td>策略，命令，职责链，状态，观察者，中介者，迭代器，访问，备忘录</td>
+</tr>
+</tbody></table>
+<h2 id="2-简单工厂和抽象工厂有什么区别？"><a href="#2-简单工厂和抽象工厂有什么区别？" class="headerlink" title="2. 简单工厂和抽象工厂有什么区别？"></a>2. 简单工厂和抽象工厂有什么区别？</h2><ul>
+<li>简单工厂，可以理解为专门生产某一个产品的工厂；</li>
+<li>工厂方法，是生产某一类产品的工厂，是生产具体产品的工厂的父类；</li>
+<li>抽象工厂，生产多类产品的工厂；</li>
 </ul>
+<h2 id="3-设计的基本原则有哪些？"><a href="#3-设计的基本原则有哪些？" class="headerlink" title="3. 设计的基本原则有哪些？"></a>3. 设计的基本原则有哪些？</h2><ul>
+<li><p>设置模式的六大原则，开闭原则，里氏代换原则，依赖倒转原则，接口隔离原则，迪米特法则，合成复用原则；</p>
+</li>
+<li><p>开闭原则的意思是：对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果；</p>
+</li>
+<li><p>里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现；</p>
+</li>
+<li><p>依赖倒转原则，针对接口编程，依赖于抽象而不依赖于具体；</p>
+</li>
+<li><p>接口隔离原则，使用多个隔离的接口，比使用单个接口要好。它还有另外一个意思是：降低类之间的耦合度；</p>
+</li>
+<li><p>迪米特法则又称为，最少知道原则，是指一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立；</p>
+</li>
+<li><p>合成复用原则是指：尽量使用合成/聚合的方式，而不是使用继承。</p>
+</li>
+</ul>
+<h2 id="4-设计模式简介"><a href="#4-设计模式简介" class="headerlink" title="4. 设计模式简介"></a>4. 设计模式简介</h2><ol>
+<li>单例（Singleton）模式：某个类只能生成一个实例，该类提供了一个全局访问点供外部获取该实例，其拓展是有限多例模式。</li>
+<li>原型（Prototype）模式：将一个对象作为原型，通过对其进行复制而克隆出多个和原型类似的新实例。</li>
+<li>工厂方法（Factory Method）模式：定义一个用于创建产品的接口，由子类决定生产什么产品。</li>
+<li>抽象工厂（AbstractFactory）模式：提供一个创建产品族的接口，其每个子类可以生产一系列相关的产品。</li>
+<li>建造者（Builder）模式：将一个复杂对象分解成多个相对简单的部分，然后根据不同需要分别创建它们，最后构建成该复杂对象。</li>
+<li>代理（Proxy）模式：为某对象提供一种代理以控制对该对象的访问。即客户端通过代理间接地访问该对象，从而限制、增强或修改该对象的一些特性。</li>
+<li>适配器（Adapter）模式：将一个类的接口转换成客户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的那些类能一起工作。</li>
+<li>桥接（Bridge）模式：将抽象与实现分离，使它们可以独立变化。它是用组合关系代替继承关系来实现，从而降低了抽象和实现这两个可变维度的耦合度。</li>
+<li>装饰（Decorator）模式：动态的给对象增加一些职责，即增加其额外的功能。</li>
+<li>外观（Facade）模式：为多个复杂的子系统提供一个一致的接口，使这些子系统更加容易被访问。</li>
+<li>享元（Flyweight）模式：运用共享技术来有效地支持大量细粒度对象的复用。</li>
+<li>组合（Composite）模式：将对象组合成树状层次结构，使用户对单个对象和组合对象具有一致的访问性。</li>
+<li>模板方法（TemplateMethod）模式：定义一个操作中的算法骨架，而将算法的一些步骤延迟到子类中，使得子类可以不改变该算法结构的情况下重定义该算法的某些特定步骤。</li>
+<li>策略（Strategy）模式：定义了一系列算法，并将每个算法封装起来，使它们可以相互替换，且算法的改变不会影响使用算法的客户。</li>
+<li>命令（Command）模式：将一个请求封装为一个对象，使发出请求的责任和执行请求的责任分割开。</li>
+<li>职责链（Chain of Responsibility）模式：把请求从链中的一个对象传到下一个对象，直到请求被响应为止。通过这种方式去除对象之间的耦合。</li>
+<li>状态（State）模式：允许一个对象在其内部状态发生改变时改变其行为能力。</li>
+<li>观察者（Observer）模式：多个对象间存在一对多关系，当一个对象发生改变时，把这种改变通知给其他多个对象，从而影响其他对象的行为。</li>
+<li>中介者（Mediator）模式：定义一个中介对象来简化原有对象之间的交互关系，降低系统中对象间的耦合度，使原有对象之间不必相互了解。</li>
+<li>迭代器（Iterator）模式：提供一种方法来顺序访问聚合对象中的一系列数据，而不暴露聚合对象的内部表示。</li>
+<li>访问者（Visitor）模式：在不改变集合元素的前提下，为一个集合中的每个元素提供多种访问方式，即每个元素有多个访问者对象访问。</li>
+<li>备忘录（Memento）模式：在不破坏封装性的前提下，获取并保存一个对象的内部状态，以便以后恢复它。</li>
+<li>解释器（Interpreter）模式：提供如何定义语言的文法，以及对语言句子的解释方法，即解释器。</li>
+</ol>
 
     </div>
 
@@ -358,8 +420,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/blog/2019/10/04/04反射/" rel="next" title="反射">
-                  <i class="fa fa-chevron-left"></i> 反射
+                <a href="/blog/2019/10/04/08网络/" rel="next" title="网络">
+                  <i class="fa fa-chevron-left"></i> 网络
                 </a>
               
             </div>
@@ -368,8 +430,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/blog/2019/10/04/06JavaWeb模块/" rel="prev" title="Java Web">
-                  Java Web <i class="fa fa-chevron-right"></i>
+                <a href="/blog/2019/10/04/10SpringSpringMVC/" rel="prev" title="Spring/Spring MVC">
+                  Spring/Spring MVC <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -416,7 +478,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#对象拷贝"><span class="nav-number">1.</span> <span class="nav-text">对象拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-为什么要使用克隆？"><span class="nav-number">1.1.</span> <span class="nav-text">1. 为什么要使用克隆？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-如何实现对象克隆？"><span class="nav-number">1.2.</span> <span class="nav-text">2. 如何实现对象克隆？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-深拷贝和浅拷贝区别是什么？"><span class="nav-number">1.3.</span> <span class="nav-text">3. 深拷贝和浅拷贝区别是什么？</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-说一下你熟悉的设计模式？"><span class="nav-number">1.1.</span> <span class="nav-text">1. 说一下你熟悉的设计模式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-简单工厂和抽象工厂有什么区别？"><span class="nav-number">1.2.</span> <span class="nav-text">2. 简单工厂和抽象工厂有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-设计的基本原则有哪些？"><span class="nav-number">1.3.</span> <span class="nav-text">3. 设计的基本原则有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-设计模式简介"><span class="nav-number">1.4.</span> <span class="nav-text">4. 设计模式简介</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
