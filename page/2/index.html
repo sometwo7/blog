@@ -245,115 +245,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/11SpringBootSpringCloud/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sometwo">
-      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="佚名">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/blog/2019/10/04/11SpringBootSpringCloud/" class="post-title-link" itemprop="url">Spring Boot/Spring Cloud</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-04 19:49:21" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:21+00:00">2019-10-04</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 09:23:02" itemprop="dateModified" datetime="2019-10-09T09:23:02+00:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Spring-Boot-Spring-Cloud"><a href="#Spring-Boot-Spring-Cloud" class="headerlink" title="Spring Boot/Spring Cloud"></a>Spring Boot/Spring Cloud</h1><!-- TOC -->
-
-<ul>
-<li><a href="#spring-bootspring-cloud">Spring Boot/Spring Cloud</a><ul>
-<li><a href="#1-什么是-spring-boot">1. 什么是 spring boot？</a></li>
-<li><a href="#2-为什么要用-spring-boot">2. 为什么要用 spring boot？</a></li>
-<li><a href="#3-spring-boot-核心配置文件是什么">3. spring boot 核心配置文件是什么？</a></li>
-<li><a href="#4-spring-boot-配置文件有哪几种类型它们有什么区别">4. spring boot 配置文件有哪几种类型？它们有什么区别？</a></li>
-<li><a href="#5-spring-boot-有哪些方式可以实现热部署">5. spring boot 有哪些方式可以实现热部署？</a></li>
-<li><a href="#6-jpa-和-hibernate-有什么区别">6. jpa 和 hibernate 有什么区别？</a></li>
-<li><a href="#7-什么是-spring-cloud">7. 什么是 spring cloud？</a></li>
-<li><a href="#8-spring-cloud-断路器的作用是什么">8. spring cloud 断路器的作用是什么？</a></li>
-<li><a href="#9-spring-cloud-的核心组件有哪些">9. spring cloud 的核心组件有哪些？</a></li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-
-<h2 id="1-什么是-spring-boot？"><a href="#1-什么是-spring-boot？" class="headerlink" title="1. 什么是 spring boot？"></a>1. 什么是 spring boot？</h2><h2 id="2-为什么要用-spring-boot？"><a href="#2-为什么要用-spring-boot？" class="headerlink" title="2. 为什么要用 spring boot？"></a>2. 为什么要用 spring boot？</h2><h2 id="3-spring-boot-核心配置文件是什么？"><a href="#3-spring-boot-核心配置文件是什么？" class="headerlink" title="3. spring boot 核心配置文件是什么？"></a>3. spring boot 核心配置文件是什么？</h2><h2 id="4-spring-boot-配置文件有哪几种类型？它们有什么区别？"><a href="#4-spring-boot-配置文件有哪几种类型？它们有什么区别？" class="headerlink" title="4. spring boot 配置文件有哪几种类型？它们有什么区别？"></a>4. spring boot 配置文件有哪几种类型？它们有什么区别？</h2><h2 id="5-spring-boot-有哪些方式可以实现热部署？"><a href="#5-spring-boot-有哪些方式可以实现热部署？" class="headerlink" title="5. spring boot 有哪些方式可以实现热部署？"></a>5. spring boot 有哪些方式可以实现热部署？</h2><h2 id="6-jpa-和-hibernate-有什么区别？"><a href="#6-jpa-和-hibernate-有什么区别？" class="headerlink" title="6. jpa 和 hibernate 有什么区别？"></a>6. jpa 和 hibernate 有什么区别？</h2><h2 id="7-什么是-spring-cloud？"><a href="#7-什么是-spring-cloud？" class="headerlink" title="7. 什么是 spring cloud？"></a>7. 什么是 spring cloud？</h2><h2 id="8-spring-cloud-断路器的作用是什么？"><a href="#8-spring-cloud-断路器的作用是什么？" class="headerlink" title="8. spring cloud 断路器的作用是什么？"></a>8. spring cloud 断路器的作用是什么？</h2><h2 id="9-spring-cloud-的核心组件有哪些？"><a href="#9-spring-cloud-的核心组件有哪些？" class="headerlink" title="9. spring cloud 的核心组件有哪些？"></a>9. spring cloud 的核心组件有哪些？</h2>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/10SpringSpringMVC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -394,7 +285,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 09:23:02" itemprop="dateModified" datetime="2019-10-09T09:23:02+00:00">2019-10-09</time>
+                <time title="修改时间：2019-10-11 08:37:27" itemprop="dateModified" datetime="2019-10-11T08:37:27+00:00">2019-10-11</time>
               </span>
             
           
@@ -508,7 +399,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 09:23:02" itemprop="dateModified" datetime="2019-10-09T09:23:02+00:00">2019-10-09</time>
+                <time title="修改时间：2019-10-11 08:37:27" itemprop="dateModified" datetime="2019-10-11T08:37:27+00:00">2019-10-11</time>
               </span>
             
           
@@ -680,7 +571,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 09:23:02" itemprop="dateModified" datetime="2019-10-09T09:23:02+00:00">2019-10-09</time>
+                <time title="修改时间：2019-10-11 08:37:27" itemprop="dateModified" datetime="2019-10-11T08:37:27+00:00">2019-10-11</time>
               </span>
             
           
@@ -789,7 +680,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 09:23:02" itemprop="dateModified" datetime="2019-10-09T09:23:02+00:00">2019-10-09</time>
+                <time title="修改时间：2019-10-11 08:37:27" itemprop="dateModified" datetime="2019-10-11T08:37:27+00:00">2019-10-11</time>
               </span>
             
           
@@ -898,7 +789,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 09:23:02" itemprop="dateModified" datetime="2019-10-09T09:23:02+00:00">2019-10-09</time>
+                <time title="修改时间：2019-10-11 08:37:27" itemprop="dateModified" datetime="2019-10-11T08:37:27+00:00">2019-10-11</time>
               </span>
             
           
@@ -1008,7 +899,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 09:23:02" itemprop="dateModified" datetime="2019-10-09T09:23:02+00:00">2019-10-09</time>
+                <time title="修改时间：2019-10-11 08:37:27" itemprop="dateModified" datetime="2019-10-11T08:37:27+00:00">2019-10-11</time>
               </span>
             
           
@@ -1118,7 +1009,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 09:23:02" itemprop="dateModified" datetime="2019-10-09T09:23:02+00:00">2019-10-09</time>
+                <time title="修改时间：2019-10-11 08:37:27" itemprop="dateModified" datetime="2019-10-11T08:37:27+00:00">2019-10-11</time>
               </span>
             
           
@@ -1240,7 +1131,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 09:23:02" itemprop="dateModified" datetime="2019-10-09T09:23:02+00:00">2019-10-09</time>
+                <time title="修改时间：2019-10-11 08:37:27" itemprop="dateModified" datetime="2019-10-11T08:37:27+00:00">2019-10-11</time>
               </span>
             
           
@@ -1549,7 +1440,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 09:23:02" itemprop="dateModified" datetime="2019-10-09T09:23:02+00:00">2019-10-09</time>
+                <time title="修改时间：2019-10-11 08:37:27" itemprop="dateModified" datetime="2019-10-11T08:37:27+00:00">2019-10-11</time>
               </span>
             
           
@@ -1813,11 +1704,343 @@
   
 
     
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/01Java基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/2019/10/04/01Java基础/" class="post-title-link" itemprop="url">Java基础</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:10" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:10+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-11 08:37:27" itemprop="dateModified" datetime="2019-10-11T08:37:27+00:00">2019-10-11</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java-基础"><a href="#Java-基础" class="headerlink" title="Java 基础"></a>Java 基础</h1><!-- TOC -->
+
+<ul>
+<li><a href="#java-基础">Java 基础</a><ul>
+<li><a href="#1-jdk-和-jre-有什么区别">1. JDK 和 JRE 有什么区别？</a></li>
+<li><a href="#2--和-equals-的区别是什么">2. == 和 equals 的区别是什么？</a></li>
+<li><a href="#3-两个对象的-hashcode相同则-equals也一定为-true对吗">3. 两个对象的 hashCode()相同,则 equals()也一定为 true,对吗？</a></li>
+<li><a href="#4-final-在-java-中有什么作用">4. final 在 java 中有什么作用？</a></li>
+<li><a href="#5-java-中的-mathround-15-等于多少">5. java 中的 Math.round(-1.5) 等于多少？</a></li>
+<li><a href="#6-string-属于基础的数据类型吗">6. String 属于基础的数据类型吗？</a></li>
+<li><a href="#7-java-中操作字符串都有哪些类它们之间有什么区别">7. java 中操作字符串都有哪些类？它们之间有什么区别？</a></li>
+<li><a href="#8-string-stri与-string-strnew-stringi一样吗">8. String str=&quot;i&quot;与 String str=new String(“i”)一样吗？</a></li>
+<li><a href="#9-如何将字符串反转">9. 如何将字符串反转？</a></li>
+<li><a href="#10-string-类的常用方法都有那些">10. String 类的常用方法都有那些？</a></li>
+<li><a href="#11-抽象类必须要有抽象方法吗">11. 抽象类必须要有抽象方法吗？</a></li>
+<li><a href="#12-普通类和抽象类有哪些区别">12. 普通类和抽象类有哪些区别？</a></li>
+<li><a href="#13-抽象类能使用-final-修饰吗">13. 抽象类能使用 final 修饰吗？</a></li>
+<li><a href="#14-接口和抽象类有什么区别">14. 接口和抽象类有什么区别？</a></li>
+<li><a href="#15-java-中-io-流分为几种">15. java 中 IO 流分为几种？</a></li>
+<li><a href="#16-bionioaio-有什么区别">16. BIO、NIO、AIO 有什么区别？</a></li>
+<li><a href="#17-files-的常用方法都有哪些">17. Files 的常用方法都有哪些？</a></li>
+<li><a href="#18-java-如何解决的多重继承">18. java 如何解决的多重继承</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h2 id="1-JDK-和-JRE-有什么区别？"><a href="#1-JDK-和-JRE-有什么区别？" class="headerlink" title="1. JDK 和 JRE 有什么区别？"></a>1. JDK 和 JRE 有什么区别？</h2><ul>
+<li>JDK:Java Development Kit--面向开发人员的 SDK.它提供了 JAVA 的开发环境和运行环境<blockquote>
+<p>SDK:Software Development Kit--软件开发包</p>
+</blockquote>
+</li>
+<li>JRE:Java Runtime Environment--面向使用者.提供了 JAVA 的运行环境，包含JVM</li>
+<li>JVM:Java Virtual Machine--是我们常说的 Java 虚拟机</li>
+</ul>
+<h2 id="2-和-equals-的区别是什么？"><a href="#2-和-equals-的区别是什么？" class="headerlink" title="2. == 和 equals 的区别是什么？"></a>2. == 和 equals 的区别是什么？</h2><ul>
+<li>==：基本数据类型比较的是数值，引用类型比较的是内存地址是否相等；</li>
+<li>equals：是调用equals方法来比较两个对象<ol>
+<li>在没有重写equals方法的情况下，默认调用Object类的equals方法，实际上使用==来比较对象的内存地址；</li>
+<li>字符串重写了equals方法，比较的是两个字符串的内容是否一致。</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-两个对象的-hashCode-相同-则-equals-也一定为-true-对吗？"><a href="#3-两个对象的-hashCode-相同-则-equals-也一定为-true-对吗？" class="headerlink" title="3. 两个对象的 hashCode()相同,则 equals()也一定为 true,对吗？"></a>3. 两个对象的 hashCode()相同,则 equals()也一定为 true,对吗？</h2><ul>
+<li>不对。</li>
+<li>需要注意的是当 equals 方法被重写时, hashCode 方法也要被重写.</li>
+<li>Java 对象的 eqauls 方法和 hashCode 方法是这样规定的：<ol>
+<li>相等(相同)的对象必须具有相等的哈希码(或者散列码).</li>
+<li>如果两个对象的 hashCode 相同,它们并不一定相同.</li>
+</ol>
+</li>
+</ul>
+<h2 id="4-final-在-java-中有什么作用？"><a href="#4-final-在-java-中有什么作用？" class="headerlink" title="4. final 在 java 中有什么作用？"></a>4. final 在 java 中有什么作用？</h2><ul>
+<li>final 的作用是告诉编译器一块数据是恒定不变得；</li>
+<li>final 修饰的类不能被集成，final 类的方法默认都是 final 修饰的，但 final 类的成员变量默认不是final的；</li>
+<li>final 修饰方法不能被子类重写，但可以被子类继承；</li>
+<li>final 修饰的成员变量表示常量，只能被赋值一次，初次赋值后值不能再被改变；</li>
+<li>final 不能修饰构造方法。</li>
+</ul>
+<h2 id="5-java-中的-Math-round-1-5-等于多少？"><a href="#5-java-中的-Math-round-1-5-等于多少？" class="headerlink" title="5. java 中的 Math.round(-1.5) 等于多少？"></a>5. java 中的 Math.round(-1.5) 等于多少？</h2><ul>
+<li>Math.round(11.5)的返回值是 12,Math.round(-11.5)的返回值是-11.</li>
+<li>四舍五入的原理是在参数上加 0.5 然后进行下取整.</li>
+</ul>
+<h2 id="6-String-属于基础的数据类型吗？"><a href="#6-String-属于基础的数据类型吗？" class="headerlink" title="6. String 属于基础的数据类型吗？"></a>6. String 属于基础的数据类型吗？</h2><ul>
+<li>基础数据类型 8 种：byte、short、int、long、float、double、char、boolean</li>
+<li>String 是对象,是引用类型.</li>
+</ul>
+<h2 id="7-java-中操作字符串都有哪些类？它们之间有什么区别？"><a href="#7-java-中操作字符串都有哪些类？它们之间有什么区别？" class="headerlink" title="7. java 中操作字符串都有哪些类？它们之间有什么区别？"></a>7. java 中操作字符串都有哪些类？它们之间有什么区别？</h2><ul>
+<li>主要有三种, String, StringBuffer, StringBuilder；</li>
+<li>String使用final修饰，所用方法都是返回new String，因此对String对象的任何修改操作都会生成新对象，不会影响原对象；</li>
+<li>StringBuffer对字符串操作的方法都加了synchronized关键字，保证线程安全；</li>
+<li>StringBuilder不保证线程安全；</li>
+<li>对于操作效率而言,一般来说,StringBuilder 大于 StringBuffer 大于 String；</li>
+<li>对于线程安全而言,StringBuffer 是线程安全的；而 StringBuilder 是非线程安全的；</li>
+<li>对于频繁的字符串操作而言,无论是 StringBuffer 还是 StringBuilder,都优于 String.</li>
+</ul>
+<h2 id="8-String-str-quot-i-quot-与-String-str-new-String-“i”-一样吗？"><a href="#8-String-str-quot-i-quot-与-String-str-new-String-“i”-一样吗？" class="headerlink" title="8. String str=&quot;i&quot;与 String str=new String(“i”)一样吗？"></a>8. String str=&quot;i&quot;与 String str=new String(“i”)一样吗？</h2><ul>
+<li>String str = &quot;a&quot;, 内存中如果有“a&quot;,str 就指向它；如果没有,才创建“a”，str指向被创建的“a”;</li>
+<li>String str = new String(&quot;a&quot;), 是构造一个 String 对象指向“a”,再将新对象的地址赋给 str.</li>
+</ul>
+<h2 id="9-如何将字符串反转？"><a href="#9-如何将字符串反转？" class="headerlink" title="9. 如何将字符串反转？"></a>9. 如何将字符串反转？</h2><ul>
+<li>利用 StringBuffer 的 reverse 方法</li>
+<li>将字符串，从后向前遍历一遍</li>
+<li>将字符串，依次放入栈里，再从栈里读出</li>
+<li>二分法，将字符串的前后一半分别翻转，再组合在一起</li>
+</ul>
+<h2 id="10-String-类的常用方法都有那些？"><a href="#10-String-类的常用方法都有那些？" class="headerlink" title="10. String 类的常用方法都有那些？"></a>10. String 类的常用方法都有那些？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 返回字符串长度</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">length</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 返回字符串是否长度为0</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 返回字符串某一位的字符 </span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">charAt</span><span class="params">(<span class="keyword">int</span> index)</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 提取子串</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">substring</span><span class="params">(<span class="keyword">int</span> beginIndex, <span class="keyword">int</span> endIndex)</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 字符串比较</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(String anotherString)</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 字符串是否相等</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object anotherObject)</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 字符串拼接</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">concat</span><span class="params">(String str)</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 返回特定字符在字符串中首次出现的位置</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">indexOf</span><span class="params">(<span class="keyword">int</span> ch/String str)</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 字符串转换成小写</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">toLowerCase</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"><span class="comment">//字符串转换成大写</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">toUpperCase</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 替换特殊的子字符串成新的子字符串</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">replace</span><span class="params">(<span class="keyword">char</span> oldChar, <span class="keyword">char</span> newChar)</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 去除字符串两端的空格</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">trim</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"><span class="comment">// 根据特定表达式分割字符串</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String[] <span class="title">split</span><span class="params">(String str)</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="11-抽象类必须要有抽象方法吗？"><a href="#11-抽象类必须要有抽象方法吗？" class="headerlink" title="11. 抽象类必须要有抽象方法吗？"></a>11. 抽象类必须要有抽象方法吗？</h2><ul>
+<li>抽象类不一定要有抽象方法；</li>
+<li>用 abstract 修饰的类就是抽象类,即使一个类中的方法全部实现过,也可以用 abstract 修饰为抽象类,所以抽象类不一定都有抽象方法.</li>
+<li>延伸：因为真有一种情况可以将类定义为 static 类型的,那就是内部类.</li>
+</ul>
+<h2 id="12-普通类和抽象类有哪些区别？"><a href="#12-普通类和抽象类有哪些区别？" class="headerlink" title="12. 普通类和抽象类有哪些区别？"></a>12. 普通类和抽象类有哪些区别？</h2><ul>
+<li>1、普通类可以去实例化调用；抽象类不能被实例化,因为它是存在于一种概念而不非具体.</li>
+<li>2、普通类和抽象类都可以被继承,但是抽象类被继承后子类必须重写继承的抽象方法,除非自类也是抽象类.</li>
+<li>包含抽象方法的类称为抽象类,但并不意味着抽象类中只能有抽象方法,它和普通类一样,同样可以拥有成员变量和普通的成员方法.</li>
+<li>注意,抽象类和普通类的主要有三点区别：<ul>
+<li>1)抽象方法必须为 public 或者 protected,缺省情况下默认为 public.(因为如果为 private,则不能被子类继承,子类便无法实现该方法)</li>
+<li>2)抽象类不能用来创建对象；</li>
+<li>3)如果一个类继承于一个抽象类,则子类必须实现父类的抽象方法.如果子类没有实现父类的抽象方法,则必须将子类也定义为为 abstract 类.</li>
+</ul>
+</li>
+</ul>
+<h2 id="13-抽象类能使用-final-修饰吗？"><a href="#13-抽象类能使用-final-修饰吗？" class="headerlink" title="13. 抽象类能使用 final 修饰吗？"></a>13. 抽象类能使用 final 修饰吗？</h2><ul>
+<li>不能,抽象类是为了让子类继承之后重写其方法的,而用 final 修饰的类,无法被继承</li>
+</ul>
+<h2 id="14-接口和抽象类有什么区别？"><a href="#14-接口和抽象类有什么区别？" class="headerlink" title="14. 接口和抽象类有什么区别？"></a>14. 接口和抽象类有什么区别？</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>抽象类</th>
+<th>接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>默认方法实现</td>
+<td>抽象类可以有默认的方法实现</td>
+<td>接口不能有默认的方法实现。java8以后有特别</td>
+</tr>
+<tr>
+<td>实现</td>
+<td>抽象类的子类使用 extends 来继承</td>
+<td>接口必须使用 implements 来实现接口</td>
+</tr>
+<tr>
+<td>构造函数</td>
+<td>抽象类可以有构造函数</td>
+<td>接口不能有</td>
+</tr>
+<tr>
+<td>main 方法</td>
+<td>抽象类可以有 main 方法，并且我们能运行它</td>
+<td>接口不能有 main 方法</td>
+</tr>
+<tr>
+<td>实现数量</td>
+<td>类只能有一个抽象类</td>
+<td>类可以有多个接口</td>
+</tr>
+<tr>
+<td>访问修饰符</td>
+<td>抽象类中的方法可以是任意访问修饰符</td>
+<td>接口中的方法默认使用 public 修饰</td>
+</tr>
+</tbody></table>
+<h2 id="15-java-中-IO-流分为几种？"><a href="#15-java-中-IO-流分为几种？" class="headerlink" title="15. java 中 IO 流分为几种？"></a>15. java 中 IO 流分为几种？</h2><ul>
+<li>按功能划分：输入流、输出流</li>
+<li>按类型划分：字符流、字节流</li>
+</ul>
+<h2 id="16-BIO、NIO、AIO-有什么区别？"><a href="#16-BIO、NIO、AIO-有什么区别？" class="headerlink" title="16. BIO、NIO、AIO 有什么区别？"></a>16. BIO、NIO、AIO 有什么区别？</h2><ul>
+<li>java支持方面<ul>
+<li>同步阻塞的 BIO, 服务器实现模式为一个连接一个线程，即客户端有连接请求时服务器端就需要启动一个线程进行处理，如果这个连接不做任何事情会造成不必要的线程开销，可以通过线程池机制改善;</li>
+<li>同步非阻塞的 NIO, 服务器实现模式为一个请求一个线程，即客户端发送的连接请求都会注册到多路复用器上，多路复用器轮询到连接有I/O请求时才启动一个线程进行处理;</li>
+<li>异步非阻塞的 AIO, 服务器实现模式为一个有效请求一个线程，客户端的I/O请求都是由OS先完成了再通知服务器应用去启动线程进行处理.</li>
+</ul>
+</li>
+<li>适用场景<ul>
+<li>BIO方式适用于连接数目比较小且固定的架构，这种方式对服务器资源要求比较高，并发局限于应用中，JDK1.4以前的唯一选择，但程序直观简单易理解。</li>
+<li>NIO方式适用于连接数目多且连接比较短（轻操作）的架构，比如聊天服务器，并发局限于应用中，编程比较复杂，JDK1.4开始支持。</li>
+<li>AIO方式使用于连接数目多且连接比较长（重操作）的架构，比如相册服务器，充分调用OS参与并发操作，编程比较复杂，JDK7开始支持。</li>
+</ul>
+</li>
+</ul>
+<h2 id="17-Files-的常用方法都有哪些？"><a href="#17-Files-的常用方法都有哪些？" class="headerlink" title="17. Files 的常用方法都有哪些？"></a>17. Files 的常用方法都有哪些？</h2><table>
+<thead>
+<tr>
+<th>方法声明</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>boolean exists()</td>
+<td>判断 File 对象对应的文件或者目录是否存在若存在则返回 true，否则返回 false</td>
+</tr>
+<tr>
+<td>boolean delete()</td>
+<td>删除 File 对象对应的文件或者目录若成功则返回 true，否则返回 false</td>
+</tr>
+<tr>
+<td>boolean createNewFile()</td>
+<td>当 File 对象对应的文件不存在时，该方法将新建一个此 File 对象所指定的新文件若创建成功则返回 true，否则返回 false</td>
+</tr>
+<tr>
+<td>String getName()</td>
+<td>返回 File 对象表示的文件或文件夹的名称</td>
+</tr>
+<tr>
+<td>String getPath()</td>
+<td>返回 File 对象对应的路径</td>
+</tr>
+<tr>
+<td>String getAbsolutePath()</td>
+<td>返回 File 对象对应的绝对路径（在 UNIX/Linux 等系统上，如果路径是以正斜线 / 开始的，则这个路径是绝对路径；在 Windows 等系统上，如果路径是从盘符开始的，则这个路径是绝对路径）</td>
+</tr>
+<tr>
+<td>String getParent()</td>
+<td>返回 File 对象对应目录的父目录，（即返回的目录不包含最后一级子目录）</td>
+</tr>
+<tr>
+<td>boolean canRead()</td>
+<td>判断 File 对象对应的文件或者目录是否可读若可读则返回 true，反之返回 false</td>
+</tr>
+<tr>
+<td>boolean canWrite()</td>
+<td>判断 File 对象对应的文件或者目录是否可写。若可写则返回 true，反之返回 false</td>
+</tr>
+<tr>
+<td>boolean isFile()</td>
+<td>判断 File 对象对应的是否是文件（不是目录）若是文件则返回 true，反之返回 false</td>
+</tr>
+<tr>
+<td>boolean isDirectory()</td>
+<td>判断 File 对象对应的是否是目录（不是文件）若是目录则返回 true，反之返回 false</td>
+</tr>
+<tr>
+<td>boolean isAbsolute()</td>
+<td>判断 File 对象对应的文件或者目录是否是绝对路径</td>
+</tr>
+<tr>
+<td>long lastModified()</td>
+<td>返回 1970 年 1 月 1 日 0 时 0 分 0 秒到文件最好修改时间的毫秒值</td>
+</tr>
+<tr>
+<td>long length()</td>
+<td>返回文件内容长度</td>
+</tr>
+<tr>
+<td>String [ ]list()</td>
+<td>返回指定目录的全部内容，只列出名称</td>
+</tr>
+<tr>
+<td>File[ ] listFiles()</td>
+<td>返回一个包含了 File 对象所有子文件和子目录的 File 数组</td>
+</tr>
+</tbody></table>
+<h2 id="18-java-如何解决的多重继承"><a href="#18-java-如何解决的多重继承" class="headerlink" title="18. java 如何解决的多重继承"></a>18. java 如何解决的多重继承</h2><p>多重继承指的是一个类可以同时从多于一个的父类那里继承行为和特征</p>
+<ol>
+<li>接口，实现多个接口；</li>
+<li>内部类，使用多个内部类分别继承不同的类，向外提供内部类的方法。</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span>
   </nav>
 
 
@@ -1865,7 +2088,7 @@
         
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
