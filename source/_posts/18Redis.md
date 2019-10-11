@@ -2,7 +2,7 @@
 title: Redis
 date: 2019-10-04 19:49:28
 tags: [Java,Redis]
-categories: []Java学习]
+categories: [Java学习]
 comments: true
 ---
 # Redis
