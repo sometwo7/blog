@@ -1,44 +1,137 @@
 ---
 title: Mybatis
 date: 2019-10-04 19:49:23
-tags: Java
-categories: Java学习
+tags: [Java,Mybatis]
+categories: [Java学习]
 comments: true
 ---
 # Mybatis
 
-<!-- TOC -->
+## 1. mybatis 中 #{}和 ${}的区别是什么？
 
-- [Mybatis](#mybatis)
-    - [1. mybatis 中 #{}和 \${}的区别是什么？](#1-mybatis-中-和-\的区别是什么)
-    - [2. mybatis 有几种分页方式？](#2-mybatis-有几种分页方式)
-    - [3. RowBounds 是一次性查询全部结果吗？为什么？](#3-rowbounds-是一次性查询全部结果吗为什么)
-    - [4. mybatis 逻辑分页和物理分页的区别是什么？](#4-mybatis-逻辑分页和物理分页的区别是什么)
-    - [5. mybatis 是否支持延迟加载？延迟加载的原理是什么？](#5-mybatis-是否支持延迟加载延迟加载的原理是什么)
-    - [6. 说一下 mybatis 的一级缓存和二级缓存？](#6-说一下-mybatis-的一级缓存和二级缓存)
-    - [7. mybatis 和 hibernate 的区别有哪些？](#7-mybatis-和-hibernate-的区别有哪些)
-    - [8. mybatis 有哪些执行器(Executor)？](#8-mybatis-有哪些执行器executor)
-    - [9. mybatis 分页插件的实现原理是什么？](#9-mybatis-分页插件的实现原理是什么)
-    - [10. mybatis 如何编写一个自定义插件？](#10-mybatis-如何编写一个自定义插件)
-
-<!-- /TOC -->
-
-## 1. mybatis 中 #{}和 \${}的区别是什么？
+- #{}是预编译处理，${}是字符串替换；
+- Mybatis在处理#{}时，会将sql中的#{}替换为?号，调用PreparedStatement的set方法来赋值；
+- Mybatis在处理${}时，就是把${}替换成变量的值；
+- 使用#{}可以有效的防止SQL注入，提高系统安全性。
 
 ## 2. mybatis 有几种分页方式？
 
+- 数组分页
+- sql分页
+- 拦截器分页
+- RowBounds分页
+
 ## 3. RowBounds 是一次性查询全部结果吗？为什么？
+
+- 是一次性查询全部结果，只不过会根据参数丢掉一部分
 
 ## 4. mybatis 逻辑分页和物理分页的区别是什么？
 
+- 物理分页速度上并不一定快于逻辑分页，逻辑分页速度上也并不一定快于物理分页。
+- 物理分页总是优于逻辑分页：没有必要将属于数据库端的压力加诸到应用端来，就算速度上存在优势,然而其它性能上的优点足以弥补这个缺点。
+
 ## 5. mybatis 是否支持延迟加载？延迟加载的原理是什么？
+
+- Mybatis仅支持association关联对象和collection关联集合对象的延迟加载，
+ - association指的就是一对一，collection指的就是一对多查询。
+ - 在Mybatis配置文件中，可以配置是否启用延迟加载lazyLoadingEnabled=true|false。
+
+- 它的原理是，使用CGLIB创建目标对象的代理对象，
+ - 当调用目标方法时，进入拦截器方法，比如调用a.getB().getName()，
+ - 拦截器invoke()方法发现a.getB()是null值，
+ - 那么就会单独发送事先保存好的查询关联B对象的sql，把B查询上来，
+ - 然后调用a.setB(b)，于是a的对象b属性就有值了，
+ - 接着完成a.getB().getName()方法的调用。
 
 ## 6. 说一下 mybatis 的一级缓存和二级缓存？
 
+- 一级缓存: 基于 PerpetualCache 的 HashMap 本地缓存，其存储作用域为 Session，当 Session flush 或 close 之后，该 Session 中的所有 Cache 就将清空，默认打开一级缓存。
+
+- 二级缓存与一级缓存其机制相同，默认也是采用 PerpetualCache，HashMap 存储，不同在于其存储作用域为 Mapper(Namespace)，并且可自定义存储源，如 Ehcache。默认不打开二级缓存，要开启二级缓存，使用二级缓存属性类需要实现Serializable序列化接口(可用来保存对象的状态),可在它的映射文件中配置 ；
+
+- 对于缓存数据更新机制，当某一个作用域(一级缓存 Session/二级缓存Namespaces)的进行了C/U/D 操作后，默认该作用域下所有 select 中的缓存将被 clear。
+
 ## 7. mybatis 和 hibernate 的区别有哪些？
+
+- Hibernate是一个开放源代码的对象关系映射框架,它对JDBC进行了非常轻量级的对象封装,建立对象与数据库表的映射。是一个全自动的、完全面向对象的持久层框架。
+
+- Mybatis是一个开源对象关系映射框架，原名：ibatis,2010年由谷歌接管以后更名。是一个半自动化的持久层框架。
+
+- 开发方面
+ - hibernate开发中，sql语句已经被封装，直接可以使用，加快系统开发；
+ - Mybatis 属于半自动化，sql需要手工完成，稍微繁琐；
+ - 但是，凡事都不是绝对的，如果对于庞大复杂的系统项目来说，发杂语句较多，选择hibernate 就不是一个好方案。
+
+- sql优化方面
+ - Hibernate 自动生成sql,有些语句较为繁琐，会多消耗一些性能；
+ - Mybatis 手动编写sql，可以避免不需要的查询，提高系统性能；
+
+- 对象管理比对
+ - Hibernate 是完整的对象-关系映射的框架，开发工程中，无需过多关注底层实现，只要去管理对象即可；
+ - Mybatis 需要自行管理 映射关系；
+
+- 缓存方面 
+ - 相同点：Hibernate和Mybatis的二级缓存除了采用系统默认的缓存机制外，都可以通过实现你自己的缓存或为其他第三方缓存方案，创建适配器来完全覆盖缓存行为。
+ - 不同点：
+  - Hibernate的二级缓存配置在SessionFactory生成的配置文件中进行详细配置，然后再在具体的表-对象映射中配置是那种缓存。
+  - MyBatis的二级缓存配置都是在每个具体的表-对象映射中进行详细配置，这样针对不同的表可以自定义不同的缓存机制。并且Mybatis可以在命名空间中共享相同的缓存配置和实例，通过Cache-ref来实现。
+
+- 比较：
+ - Hibernate 具有良好的管理机制，用户不需要关注SQL，如果二级缓存出现脏数据，系统会保存，；
+ - Mybatis 在使用的时候要谨慎，避免缓存Cache 的使用。
+
+- Hibernate优势
+ - Hibernate的DAO层开发比MyBatis简单，Mybatis需要维护SQL和结果映射。
+ - Hibernate对对象的维护和缓存要比MyBatis好，对增删改查的对象的维护要方便。
+ - Hibernate数据库移植性很好，MyBatis的数据库移植性不好，不同的数据库需要写不同SQL。
+ - Hibernate有更好的二级缓存机制，可以使用第三方缓存。MyBatis本身提供的缓存机制不佳。
+
+- Mybatis优势
+ - MyBatis可以进行更为细致的SQL优化，可以减少查询字段。
+ - MyBatis容易掌握，而Hibernate门槛较高。
+
+- 一句话总结
+ - Mybatis：小巧、方便、高效、简单、直接、半自动化
+ - Hibernate：强大、方便、高效、复杂、间接、全自动化
+
 
 ## 8. mybatis 有哪些执行器(Executor)？
 
+Mybatis有三种基本的执行器（Executor）：
+- SimpleExecutor：每执行一次update或select，就开启一个Statement对象，用完立刻关闭Statement对象。
+- ReuseExecutor：执行update或select，以sql作为key查找Statement对象，存在就使用，不存在就创建，用完后，不关闭Statement对象，而是放置于Map内，供下一次使用。简言之，就是重复使用Statement对象。
+- BatchExecutor：执行update（没有select，JDBC批处理不支持select），将所有sql都添加到批处理中（addBatch()），等待统一执行（executeBatch()），它缓存了多个Statement对象，每个Statement对象都是addBatch()完毕后，等待逐一执行executeBatch()批处理。与JDBC批处理相同。
+
 ## 9. mybatis 分页插件的实现原理是什么？
 
+ - 分页插件的基本原理是使用Mybatis提供的插件接口，实现自定义插件，
+ - 在插件的拦截方法内拦截待执行的sql，然后重写sql，
+ - 根据dialect方言，添加对应的物理分页语句和物理分页参数。
+
 ## 10. mybatis 如何编写一个自定义插件？
+
+Mybatis自定义插件针对Mybatis四大对象（Executor、StatementHandler 、ParameterHandler 、ResultSetHandler ）进行拦截，具体拦截方式为：
+
+- Executor：拦截执行器的方法(log记录)
+- StatementHandler ：拦截Sql语法构建的处理
+- ParameterHandler ：拦截参数的处理
+- ResultSetHandler ：拦截结果集的处理
+- Mybatis自定义插件必须实现Interceptor接口：
+
+```
+public interface Interceptor {
+    Object intercept(Invocation invocation) throws Throwable;
+    Object plugin(Object target);
+    void setProperties(Properties properties);
+}
+```
+>intercept方法：拦截器具体处理逻辑方法
+
+>plugin方法：根据签名signatureMap生成动态代理对象
+
+>setProperties方法：设置Properties属性
+
+一个@Intercepts可以配置多个@Signature，@Signature中的参数定义如下：
+- type：表示拦截的类，这里是Executor的实现类；
+- method：表示拦截的方法，这里是拦截Executor的update方法；
+- args：表示方法参数。
