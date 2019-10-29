@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="异常 Java 的异常处理是通过 5 个关键字来实现的：try，catch，throw，throws，finally。     异常 1. throw 和 throws 的区别？ 2. final、finally、finalize 有什么区别？ 3. try-catch-finally 中哪个部分可以省略？ 4. try-catch-finally 中,如果 catch 中 return 了,fi">
+  <meta name="description" content="异常 Java 的异常处理是通过 5 个关键字来实现的：try，catch，throw，throws，finally。  1. throw 和 throws 的区别？ throw：是真实抛出一个异常。 throws：是声明可能会抛出一个异常。  2. final、finally、finalize 有什么区别？ final：是修饰符，如果修饰类，此类不能被继承；如果修饰方法和变量，则表示此方法和此变">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="异常">
 <meta property="og:url" content="https://sometwo7.github.io/blog/2019/10/04/07异常/index.html">
 <meta property="og:site_name" content="佚名">
-<meta property="og:description" content="异常 Java 的异常处理是通过 5 个关键字来实现的：try，catch，throw，throws，finally。     异常 1. throw 和 throws 的区别？ 2. final、finally、finalize 有什么区别？ 3. try-catch-finally 中哪个部分可以省略？ 4. try-catch-finally 中,如果 catch 中 return 了,fi">
+<meta property="og:description" content="异常 Java 的异常处理是通过 5 个关键字来实现的：try，catch，throw，throws，finally。  1. throw 和 throws 的区别？ throw：是真实抛出一个异常。 throws：是声明可能会抛出一个异常。  2. final、finally、finalize 有什么区别？ final：是修饰符，如果修饰类，此类不能被继承；如果修饰方法和变量，则表示此方法和此变">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-29T09:09:13.371Z">
+<meta property="og:updated_time" content="2019-10-29T09:11:16.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常">
-<meta name="twitter:description" content="异常 Java 的异常处理是通过 5 个关键字来实现的：try，catch，throw，throws，finally。     异常 1. throw 和 throws 的区别？ 2. final、finally、finalize 有什么区别？ 3. try-catch-finally 中哪个部分可以省略？ 4. try-catch-finally 中,如果 catch 中 return 了,fi">
+<meta name="twitter:description" content="异常 Java 的异常处理是通过 5 个关键字来实现的：try，catch，throw，throws，finally。  1. throw 和 throws 的区别？ throw：是真实抛出一个异常。 throws：是声明可能会抛出一个异常。  2. final、finally、finalize 有什么区别？ final：是修饰符，如果修饰类，此类不能被继承；如果修饰方法和变量，则表示此方法和此变">
   <link rel="canonical" href="https://sometwo7.github.io/blog/2019/10/04/07异常/">
 
 
@@ -285,7 +285,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-29 09:09:13" itemprop="dateModified" datetime="2019-10-29T09:09:13+00:00">2019-10-29</time>
+                <time title="修改时间：2019-10-29 09:11:16" itemprop="dateModified" datetime="2019-10-29T09:11:16+00:00">2019-10-29</time>
               </span>
             
           
@@ -317,21 +317,33 @@
         <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><blockquote>
 <p>Java 的异常处理是通过 5 个关键字来实现的：try，catch，throw，throws，finally。</p>
 </blockquote>
-<!-- TOC -->
-
-<ul>
-<li><a href="#异常">异常</a><ul>
-<li><a href="#1-throw-和-throws-的区别">1. throw 和 throws 的区别？</a></li>
-<li><a href="#2-finalfinallyfinalize-有什么区别">2. final、finally、finalize 有什么区别？</a></li>
-<li><a href="#3-try-catch-finally-中哪个部分可以省略">3. try-catch-finally 中哪个部分可以省略？</a></li>
-<li><a href="#4-try-catch-finally-中如果-catch-中-return-了finally-还会执行吗">4. try-catch-finally 中,如果 catch 中 return 了,finally 还会执行吗？</a></li>
-<li><a href="#5-常见的异常类有哪些">5. 常见的异常类有哪些？</a></li>
+<h2 id="1-throw-和-throws-的区别？"><a href="#1-throw-和-throws-的区别？" class="headerlink" title="1. throw 和 throws 的区别？"></a>1. throw 和 throws 的区别？</h2><ul>
+<li>throw：是真实抛出一个异常。</li>
+<li>throws：是声明可能会抛出一个异常。</li>
 </ul>
-</li>
+<h2 id="2-final、finally、finalize-有什么区别？"><a href="#2-final、finally、finalize-有什么区别？" class="headerlink" title="2. final、finally、finalize 有什么区别？"></a>2. final、finally、finalize 有什么区别？</h2><ul>
+<li>final：是修饰符，如果修饰类，此类不能被继承；如果修饰方法和变量，则表示此方法和此变量不能在被改变，只能使用。</li>
+<li>finally：是 try{} catch{} finally{} 最后一部分，表示不论发生任何情况都会执行，finally 部分可以省略，但如果 finally 部分存在，则一定会执行 finally 里面的代码。</li>
+<li>finalize： 是 Object 类的一个方法，在垃圾收集器执行的时候会调用被回收对象的此方法。</li>
 </ul>
-<!-- /TOC -->
-
-<h2 id="1-throw-和-throws-的区别？"><a href="#1-throw-和-throws-的区别？" class="headerlink" title="1. throw 和 throws 的区别？"></a>1. throw 和 throws 的区别？</h2><h2 id="2-final、finally、finalize-有什么区别？"><a href="#2-final、finally、finalize-有什么区别？" class="headerlink" title="2. final、finally、finalize 有什么区别？"></a>2. final、finally、finalize 有什么区别？</h2><h2 id="3-try-catch-finally-中哪个部分可以省略？"><a href="#3-try-catch-finally-中哪个部分可以省略？" class="headerlink" title="3. try-catch-finally 中哪个部分可以省略？"></a>3. try-catch-finally 中哪个部分可以省略？</h2><h2 id="4-try-catch-finally-中-如果-catch-中-return-了-finally-还会执行吗？"><a href="#4-try-catch-finally-中-如果-catch-中-return-了-finally-还会执行吗？" class="headerlink" title="4. try-catch-finally 中,如果 catch 中 return 了,finally 还会执行吗？"></a>4. try-catch-finally 中,如果 catch 中 return 了,finally 还会执行吗？</h2><h2 id="5-常见的异常类有哪些？"><a href="#5-常见的异常类有哪些？" class="headerlink" title="5. 常见的异常类有哪些？"></a>5. 常见的异常类有哪些？</h2><p>S</p>
+<h2 id="3-try-catch-finally-中哪个部分可以省略？"><a href="#3-try-catch-finally-中哪个部分可以省略？" class="headerlink" title="3. try-catch-finally 中哪个部分可以省略？"></a>3. try-catch-finally 中哪个部分可以省略？</h2><ul>
+<li>try-catch-finally 其中 catch 和 finally 都可以被省略，但是不能同时省略，</li>
+<li>也就是说有 try 的时候，必须后面跟一个 catch 或者 finally。</li>
+</ul>
+<h2 id="4-try-catch-finally-中-如果-catch-中-return-了-finally-还会执行吗？"><a href="#4-try-catch-finally-中-如果-catch-中-return-了-finally-还会执行吗？" class="headerlink" title="4. try-catch-finally 中,如果 catch 中 return 了,finally 还会执行吗？"></a>4. try-catch-finally 中,如果 catch 中 return 了,finally 还会执行吗？</h2><ul>
+<li>finally 一定会执行，即使是 catch 中 return 了，catch 中的 return 会等 finally 中的代码执行完之后，才会执行。</li>
+</ul>
+<h2 id="5-常见的异常类有哪些？"><a href="#5-常见的异常类有哪些？" class="headerlink" title="5. 常见的异常类有哪些？"></a>5. 常见的异常类有哪些？</h2><ul>
+<li>NullPointerException 空指针异常</li>
+<li>ClassNotFoundException 指定类不存在</li>
+<li>NumberFormatException 字符串转换为数字异常</li>
+<li>IndexOutOfBoundsException 数组下标越界异常</li>
+<li>ClassCastException 数据类型转换异常</li>
+<li>FileNotFoundException 文件未找到异常</li>
+<li>NoSuchMethodException 方法不存在异常</li>
+<li>IOException IO 异常</li>
+<li>SocketException Socket 异常</li>
+</ul>
 
     </div>
 
