@@ -248,7 +248,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/9a7d5a13.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/77ebe21.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -262,7 +262,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/9a7d5a13.html" class="post-title-link" itemprop="url">Kafka</a>
+            <a href="/blog/post/77ebe21.html" class="post-title-link" itemprop="url">Leetcode 题解 - 动态规划</a>
           
         </h1>
 
@@ -277,19 +277,11 @@
                 
               
 
-              <time title="创建时间：2019-10-04 19:49:25" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:25+00:00">2019-10-04</time>
+              <time title="创建时间：2019-10-31 14:07:32 / 修改时间：08:32:57" itemprop="dateCreated datePublished" datetime="2019-10-31T14:07:32+00:00">2019-10-31</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 03:25:17" itemprop="dateModified" datetime="2019-10-31T03:25:17+00:00">2019-10-31</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -298,7 +290,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
 
                 
                 
@@ -317,14 +309,69 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h1><h2 id="1-kafka-可以脱离-zookeeper-单独使用吗？为什么？"><a href="#1-kafka-可以脱离-zookeeper-单独使用吗？为什么？" class="headerlink" title="1. kafka 可以脱离 zookeeper 单独使用吗？为什么？"></a>1. kafka 可以脱离 zookeeper 单独使用吗？为什么？</h2><ul>
-<li>kafka 不能脱离 zookeeper 单独使用，</li>
-<li>因为 kafka 使用 zookeeper 管理和协调 kafka 的节点服务器。</li>
+          <ul>
+<li><a href="#斐波那契数列">斐波那契数列</a><ul>
+<li><a href="#1-爬楼梯">1. 爬楼梯</a></li>
+<li><a href="#2-强盗抢劫">2. 强盗抢劫</a></li>
+<li><a href="#3-强盗在环形街区抢劫">3. 强盗在环形街区抢劫</a></li>
+<li><a href="#4-信件错排">4. 信件错排</a></li>
+<li><a href="#5-母牛生产">5. 母牛生产</a></li>
+</ul>
+</li>
+<li><a href="#矩阵路径">矩阵路径</a><ul>
+<li><a href="#1-矩阵的最小路径和">1. 矩阵的最小路径和</a></li>
+<li><a href="#2-矩阵的总路径数">2. 矩阵的总路径数</a></li>
+</ul>
+</li>
+<li><a href="#数组区间">数组区间</a><ul>
+<li><a href="#1-数组区间和">1. 数组区间和</a></li>
+<li><a href="#2-数组中等差递增子区间的个数">2. 数组中等差递增子区间的个数</a></li>
+</ul>
+</li>
+<li><a href="#分割整数">分割整数</a><ul>
+<li><a href="#1-分割整数的最大乘积">1. 分割整数的最大乘积</a></li>
+<li><a href="#2-按平方数来分割整数">2. 按平方数来分割整数</a></li>
+<li><a href="#3-分割整数构成字母字符串">3. 分割整数构成字母字符串</a></li>
+</ul>
+</li>
+<li><a href="#最长递增子序列">最长递增子序列</a><ul>
+<li><a href="#1-最长递增子序列">1. 最长递增子序列</a></li>
+<li><a href="#2-一组整数对能够构成的最长链">2. 一组整数对能够构成的最长链</a></li>
+<li><a href="#3-最长摆动子序列">3. 最长摆动子序列</a></li>
+</ul>
+</li>
+<li><a href="#最长公共子序列">最长公共子序列</a></li>
+<li><a href="#0-1-背包">0-1 背包</a><ul>
+<li><a href="#1-划分数组为和相等的两部分">1. 划分数组为和相等的两部分</a></li>
+<li><a href="#2-改变一组数的正负号使得它们的和为一给定数">2. 改变一组数的正负号使得它们的和为一给定数</a></li>
+<li><a href="#3-01-字符构成最多的字符串">3. 01 字符构成最多的字符串</a></li>
+<li><a href="#4-找零钱的最少硬币数">4. 找零钱的最少硬币数</a></li>
+<li><a href="#5-找零钱的硬币数组合">5. 找零钱的硬币数组合</a></li>
+<li><a href="#6-字符串按单词列表分割">6. 字符串按单词列表分割</a></li>
+<li><a href="#7-组合总和">7. 组合总和</a></li>
+</ul>
+</li>
+<li><a href="#股票交易">股票交易</a><ul>
+<li><a href="#1-需要冷却期的股票交易">1. 需要冷却期的股票交易</a></li>
+<li><a href="#2-需要交易费用的股票交易">2. 需要交易费用的股票交易</a></li>
+<li><a href="#3-只能进行两次的股票交易">3. 只能进行两次的股票交易</a></li>
+<li><a href="#4-只能进行-k-次的股票交易">4. 只能进行 k 次的股票交易</a></li>
+</ul>
+</li>
+<li><a href="#字符串编辑">字符串编辑</a><ul>
+<li><a href="#1-删除两个字符串的字符使它们相等">1. 删除两个字符串的字符使它们相等</a></li>
+<li><a href="#2-编辑距离">2. 编辑距离</a></li>
+<li><a href="#3-复制粘贴字符">3. 复制粘贴字符</a><!-- GFM-TOC -->
+
+
+</li>
+</ul>
+</li>
 </ul>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/9a7d5a13.html" rel="contents">
+              <a class="btn" href="/blog/post/77ebe21.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -351,7 +398,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/b543ced0.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/d7d172d4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -365,7 +412,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/b543ced0.html" class="post-title-link" itemprop="url">RabbitMQ</a>
+            <a href="/blog/post/d7d172d4.html" class="post-title-link" itemprop="url">Leetcode 题解 - 搜索</a>
           
         </h1>
 
@@ -380,19 +427,11 @@
                 
               
 
-              <time title="创建时间：2019-10-04 19:49:24" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:24+00:00">2019-10-04</time>
+              <time title="创建时间：2019-10-31 14:06:32 / 修改时间：08:32:57" itemprop="dateCreated datePublished" datetime="2019-10-31T14:06:32+00:00">2019-10-31</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 03:25:17" itemprop="dateModified" datetime="2019-10-31T03:25:17+00:00">2019-10-31</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -401,7 +440,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
 
                 
                 
@@ -420,13 +459,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h1><h2 id="1-rabbitmq-的使用场景有哪些？"><a href="#1-rabbitmq-的使用场景有哪些？" class="headerlink" title="1. rabbitmq 的使用场景有哪些？"></a>1. rabbitmq 的使用场景有哪些？</h2><ul>
-<li>跨系统的异步通信，所有需要异步交互的地方都可以使用消息队列。就像我们除了打电话（同步）以外，还需要发短信，发电子邮件（异步）的通讯方式。</li>
+          <ul>
+<li><a href="#bfs">BFS</a><ul>
+<li><a href="#1-计算在网格中从原点到特定点的最短路径长度">1. 计算在网格中从原点到特定点的最短路径长度</a></li>
+<li><a href="#2-组成整数的最小平方数数量">2. 组成整数的最小平方数数量</a></li>
+<li><a href="#3-最短单词路径">3. 最短单词路径</a></li>
+</ul>
+</li>
+<li><a href="#dfs">DFS</a><ul>
+<li><a href="#1-查找最大的连通面积">1. 查找最大的连通面积</a></li>
+<li><a href="#2-矩阵中的连通分量数目">2. 矩阵中的连通分量数目</a></li>
+<li><a href="#3-好友关系的连通分量数目">3. 好友关系的连通分量数目</a></li>
+<li><a href="#4-填充封闭区域">4. 填充封闭区域</a></li>
+<li><a href="#5-能到达的太平洋和大西洋的区域">5. 能到达的太平洋和大西洋的区域</a></li>
+</ul>
+</li>
+<li><a href="#backtracking">Backtracking</a><ul>
+<li><a href="#1-数字键盘组合">1. 数字键盘组合</a></li>
+<li><a href="#2-ip-地址划分">2. IP 地址划分</a></li>
+<li><a href="#3-在矩阵中寻找字符串">3. 在矩阵中寻找字符串</a></li>
+<li><a href="#4-输出二叉树中所有从根到叶子的路径">4. 输出二叉树中所有从根到叶子的路径</a></li>
+<li><a href="#5-排列">5. 排列</a></li>
+<li><a href="#6-含有相同元素求排列">6. 含有相同元素求排列</a></li>
+<li><a href="#7-组合">7. 组合</a></li>
+<li><a href="#8-组合求和">8. 组合求和</a></li>
+<li><a href="#9-含有相同元素的组合求和">9. 含有相同元素的组合求和</a></li>
+<li><a href="#10-1-9-数字的组合求和">10. 1-9 数字的组合求和</a></li>
+<li><a href="#11-子集">11. 子集</a></li>
+<li><a href="#12-含有相同元素求子集">12. 含有相同元素求子集</a></li>
+<li><a href="#13-分割字符串使得每个部分都是回文数">13. 分割字符串使得每个部分都是回文数</a></li>
+<li><a href="#14-数独">14. 数独</a></li>
+<li><a href="#15-n-皇后">15. N 皇后</a><!-- GFM-TOC -->
+
+
+</li>
+</ul>
+</li>
 </ul>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/b543ced0.html" rel="contents">
+              <a class="btn" href="/blog/post/d7d172d4.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -453,7 +526,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/da3e1361.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/d820eb3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -467,7 +540,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/da3e1361.html" class="post-title-link" itemprop="url">Mybatis</a>
+            <a href="/blog/post/d820eb3.html" class="post-title-link" itemprop="url">Leetcode 题解 - 分治</a>
           
         </h1>
 
@@ -482,19 +555,11 @@
                 
               
 
-              <time title="创建时间：2019-10-04 19:49:23" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:23+00:00">2019-10-04</time>
+              <time title="创建时间：2019-10-31 14:05:32 / 修改时间：08:32:57" itemprop="dateCreated datePublished" datetime="2019-10-31T14:05:32+00:00">2019-10-31</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 03:25:17" itemprop="dateModified" datetime="2019-10-31T03:25:17+00:00">2019-10-31</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -503,7 +568,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
 
                 
                 
@@ -522,16 +587,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1><h2 id="1-mybatis-中-和-的区别是什么？"><a href="#1-mybatis-中-和-的区别是什么？" class="headerlink" title="1. mybatis 中 #{}和 ${}的区别是什么？"></a>1. mybatis 中 #{}和 ${}的区别是什么？</h2><ul>
-<li>#{}是预编译处理，${}是字符串替换；</li>
-<li>Mybatis在处理#{}时，会将sql中的#{}替换为?号，调用PreparedStatement的set方法来赋值；</li>
-<li>Mybatis在处理${}时，就是把${}替换成变量的值；</li>
-<li>使用#{}可以有效的防止SQL注入，提高系统安全性。</li>
-</ul>
+          <ul>
+<li><a href="#1-给表达式加括号">1. 给表达式加括号</a></li>
+<li><a href="#2-不同的二叉搜索树">2. 不同的二叉搜索树</a><!-- GFM-TOC -->
+
+
+</li>
+</ul><h1 id="1-给表达式加括号"><a href="#1-给表达式加括号" class="headerlink" title="1. 给表达式加括号"></a>1. 给表达式加括号</h1><p>241. Different Ways to Add Parentheses (Medium)</p><p><a href="https://leetcode.com/problems/different-ways-to-add-parentheses/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/different-ways-to-add-parentheses/description/" target="_blank" rel="noopener">力扣</a></p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: "2-1-1".</span><br><span class="line"></span><br><span class="line">((2-1)-1) = 0</span><br><span class="line">(2-(1-1)) = 2</span><br><span class="line"></span><br><span class="line">Output : [0, 2]</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/da3e1361.html" rel="contents">
+              <a class="btn" href="/blog/post/d820eb3.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -558,7 +624,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/6f8276a9.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/4798ba91.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -572,7 +638,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/6f8276a9.html" class="post-title-link" itemprop="url">Hibernate</a>
+            <a href="/blog/post/4798ba91.html" class="post-title-link" itemprop="url">Leetcode 题解 - 二分查找</a>
           
         </h1>
 
@@ -587,19 +653,11 @@
                 
               
 
-              <time title="创建时间：2019-10-04 19:49:22" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:22+00:00">2019-10-04</time>
+              <time title="创建时间：2019-10-31 14:04:32 / 修改时间：08:32:57" itemprop="dateCreated datePublished" datetime="2019-10-31T14:04:32+00:00">2019-10-31</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 03:25:17" itemprop="dateModified" datetime="2019-10-31T03:25:17+00:00">2019-10-31</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -608,7 +666,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
 
                 
                 
@@ -627,16 +685,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate"></a>Hibernate</h1><h2 id="1-为什么要使用-hibernate？"><a href="#1-为什么要使用-hibernate？" class="headerlink" title="1. 为什么要使用 hibernate？"></a>1. 为什么要使用 hibernate？</h2><ul>
-<li>对 JDBC 访问数据库的代码做了封装，大大简化了数据访问层繁琐的重复性代码。</li>
-<li>hibernate 是一个基于JDBC的主流持久化框架，是一个优秀的ORM实现。他很大程度的简化DAO层的编码工作</li>
-<li>hibernate 使用 Java 反射机制，而不是字节码增强程序来实现透明性。</li>
-<li>hibernate 的性能非常好，因为它是个轻量级框架。映射的灵活性很出色。它支持各种关系数据库，从一对一到多对多的各种复杂关系。</li>
-</ul>
+          <ul>
+<li><a href="#1-求开方">1. 求开方</a></li>
+<li><a href="#2-大于给定元素的最小元素">2. 大于给定元素的最小元素</a></li>
+<li><a href="#3-有序数组的-single-element">3. 有序数组的 Single Element</a></li>
+<li><a href="#4-第一个错误的版本">4. 第一个错误的版本</a></li>
+<li><a href="#5-旋转数组的最小数字">5. 旋转数组的最小数字</a></li>
+<li><a href="#6-查找区间">6. 查找区间</a><!-- GFM-TOC -->
+
+
+</li>
+</ul><p><strong>正常实现</strong> </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input : [1,2,3,4,5]</span><br><span class="line">key : 3</span><br><span class="line">return the index : 2</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> l = <span class="number">0</span>, h = nums.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (l &lt;= h) &#123;</span><br><span class="line">        <span class="keyword">int</span> m = l + (h - l) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (nums[m] == key) &#123;</span><br><span class="line">            <span class="keyword">return</span> m;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[m] &gt; key) &#123;</span><br><span class="line">            h = m - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            l = m + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/6f8276a9.html" rel="contents">
+              <a class="btn" href="/blog/post/4798ba91.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -663,7 +726,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/b3383f7f.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/dce69e68.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -677,7 +740,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/b3383f7f.html" class="post-title-link" itemprop="url">Spring Boot/Spring Cloud</a>
+            <a href="/blog/post/dce69e68.html" class="post-title-link" itemprop="url">Leetcode 题解 - 贪心思想</a>
           
         </h1>
 
@@ -692,19 +755,11 @@
                 
               
 
-              <time title="创建时间：2019-10-04 19:49:21" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:21+00:00">2019-10-04</time>
+              <time title="创建时间：2019-10-31 14:03:32 / 修改时间：08:32:57" itemprop="dateCreated datePublished" datetime="2019-10-31T14:03:32+00:00">2019-10-31</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 03:25:17" itemprop="dateModified" datetime="2019-10-31T03:25:17+00:00">2019-10-31</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -713,7 +768,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
 
                 
                 
@@ -732,24 +787,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Spring-Boot-Spring-Cloud"><a href="#Spring-Boot-Spring-Cloud" class="headerlink" title="Spring Boot/Spring Cloud"></a>Spring Boot/Spring Cloud</h1><h2 id="1-什么是-spring-boot？"><a href="#1-什么是-spring-boot？" class="headerlink" title="1. 什么是 spring boot？"></a>1. 什么是 spring boot？</h2><ul>
-<li><p>在Spring框架这个大家族中，产生了很多衍生框架，比如 Spring、SpringMVC框架等，</p>
+          <ul>
+<li><a href="#1-分配饼干">1. 分配饼干</a></li>
+<li><a href="#2-不重叠的区间个数">2. 不重叠的区间个数</a></li>
+<li><a href="#3-投飞镖刺破气球">3. 投飞镖刺破气球</a></li>
+<li><a href="#4-根据身高和序号重组队列">4. 根据身高和序号重组队列</a></li>
+<li><a href="#5-买卖股票最大的收益">5. 买卖股票最大的收益</a></li>
+<li><a href="#6-买卖股票的最大收益-ii">6. 买卖股票的最大收益 II</a></li>
+<li><a href="#7-种植花朵">7. 种植花朵</a></li>
+<li><a href="#8-判断是否为子序列">8. 判断是否为子序列</a></li>
+<li><a href="#9-修改一个数成为非递减数组">9. 修改一个数成为非递减数组</a></li>
+<li><a href="#10-子数组最大的和">10. 子数组最大的和</a></li>
+<li><a href="#11-分隔字符串使同种字符出现在一起">11. 分隔字符串使同种字符出现在一起</a><!-- GFM-TOC -->
+
+
 </li>
-<li><p>Spring的核心内容在于控制反转(IOC)和依赖注入(DI),</p>
-</li>
-<li><p>在操作方面是指在spring配置文件中创建，依赖注入即为由spring容器为应用程序的某个对象提供资源，比如 引用对象、常量数据等。</p>
-</li>
-<li><p>SpringBoot是一个框架，一种全新的编程规范，他的产生简化了框架的使用，</p>
-</li>
-<li><p>所谓简化是指简化了Spring众多框架中所需的大量且繁琐的配置文件，</p>
-</li>
-<li><p>所以 SpringBoot是一个服务于框架的框架，服务范围是简化配置文件。</p>
-</li>
-</ul>
+</ul><p>保证每次操作都是局部最优的，并且最后得到的结果是全局最优的。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/b3383f7f.html" rel="contents">
+              <a class="btn" href="/blog/post/dce69e68.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -776,7 +833,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/ae9d29e2.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/30068991.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -790,7 +847,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/ae9d29e2.html" class="post-title-link" itemprop="url">Spring/Spring MVC</a>
+            <a href="/blog/post/30068991.html" class="post-title-link" itemprop="url">Leetcode 题解 - 排序</a>
           
         </h1>
 
@@ -805,19 +862,11 @@
                 
               
 
-              <time title="创建时间：2019-10-04 19:49:20" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:20+00:00">2019-10-04</time>
+              <time title="创建时间：2019-10-31 14:02:32 / 修改时间：08:32:57" itemprop="dateCreated datePublished" datetime="2019-10-31T14:02:32+00:00">2019-10-31</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 03:25:17" itemprop="dateModified" datetime="2019-10-31T03:25:17+00:00">2019-10-31</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -826,7 +875,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
 
                 
                 
@@ -845,19 +894,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Spring-Spring-MVC"><a href="#Spring-Spring-MVC" class="headerlink" title="Spring/Spring MVC"></a>Spring/Spring MVC</h1><h2 id="为什么要使用-spring？"><a href="#为什么要使用-spring？" class="headerlink" title="为什么要使用 spring？"></a>为什么要使用 spring？</h2><ul>
-<li>简介<ul>
-<li>目的：解决企业应用开发的复杂性</li>
-<li>功能：使用基本的JavaBean代替EJB，并提供了更多的企业应用功能</li>
-<li>范围：任何Java应用</li>
-<li>简单来说，Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。</li>
+          <ul>
+<li><a href="#快速选择">快速选择</a></li>
+<li><a href="#堆">堆</a><ul>
+<li><a href="#1-kth-element">1. Kth Element</a></li>
 </ul>
 </li>
+<li><a href="#桶排序">桶排序</a><ul>
+<li><a href="#1-出现频率最多的-k-个元素">1. 出现频率最多的 k 个元素</a></li>
+<li><a href="#2-按照字符出现次数对字符串排序">2. 按照字符出现次数对字符串排序</a></li>
 </ul>
+</li>
+<li><a href="#荷兰国旗问题">荷兰国旗问题</a><ul>
+<li><a href="#1-按颜色进行排序">1. 按颜色进行排序</a><!-- GFM-TOC -->
+
+
+</li>
+</ul>
+</li>
+</ul><h1 id="快速选择"><a href="#快速选择" class="headerlink" title="快速选择"></a>快速选择</h1><p>用于求解  <strong>Kth Element</strong>  问题，也就是第 K 个元素的问题。</p><p>可以使用快速排序的 partition() 进行实现。需要先打乱数组，否则最坏情况下时间复杂度为 O(N<sup>2</sup>)。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/ae9d29e2.html" rel="contents">
+              <a class="btn" href="/blog/post/30068991.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -884,7 +943,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/364ea8cc.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/a91249d8.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -898,7 +957,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/364ea8cc.html" class="post-title-link" itemprop="url">设计模式</a>
+            <a href="/blog/post/a91249d8.html" class="post-title-link" itemprop="url">Leetcode 题解 - 双指针</a>
           
         </h1>
 
@@ -913,19 +972,11 @@
                 
               
 
-              <time title="创建时间：2019-10-04 19:49:19" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:19+00:00">2019-10-04</time>
+              <time title="创建时间：2019-10-31 14:01:32 / 修改时间：08:32:57" itemprop="dateCreated datePublished" datetime="2019-10-31T14:01:32+00:00">2019-10-31</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 03:25:17" itemprop="dateModified" datetime="2019-10-31T03:25:17+00:00">2019-10-31</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -934,7 +985,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
 
                 
                 
@@ -953,23 +1004,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="1-说一下你熟悉的设计模式？"><a href="#1-说一下你熟悉的设计模式？" class="headerlink" title="1. 说一下你熟悉的设计模式？"></a>1. 说一下你熟悉的设计模式？</h2><ul>
-<li>根据目的来分可以可以分成3类，创建型、结构型、行为型；<ul>
-<li>创建型有5种，工厂方法，抽象工厂，原型，单例，建造者；</li>
-<li>结构型有7种，适配器，代理，桥接，装饰，外观，享元，组合；</li>
-<li>行为型有11种，模板方法，解释器，策略，命令，职责链，状态，观察者，中介者，迭代器，访问，备忘录；</li>
-</ul>
+          <ul>
+<li><a href="#1-有序数组的-two-sum">1. 有序数组的 Two Sum</a></li>
+<li><a href="#2-两数平方和">2. 两数平方和</a></li>
+<li><a href="#3-反转字符串中的元音字符">3. 反转字符串中的元音字符</a></li>
+<li><a href="#4-回文字符串">4. 回文字符串</a></li>
+<li><a href="#5-归并两个有序数组">5. 归并两个有序数组</a></li>
+<li><a href="#6-判断链表是否存在环">6. 判断链表是否存在环</a></li>
+<li><a href="#7-最长子序列">7. 最长子序列</a><!-- GFM-TOC -->
+
+
 </li>
-<li>根据作用范围来分，可以有两类，分别是类模式、对象模式；<ul>
-<li>类模式主要有4种，工厂方法，类的适配器，模板方法，解释器；</li>
-<li>对象模式有20种，单例，原型，抽象工厂，建造者，代理，对象的适配器，桥接，装饰，外观，享元，组合，策略，命令，责任链，状态，观察者，中介者，迭代器，访问者，备忘录；</li>
-</ul>
-</li>
-</ul>
+</ul><p>双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。</p><h1 id="1-有序数组的-Two-Sum"><a href="#1-有序数组的-Two-Sum" class="headerlink" title="1. 有序数组的 Two Sum"></a>1. 有序数组的 Two Sum</h1><p>167. Two Sum II - Input array is sorted (Easy)</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/364ea8cc.html" rel="contents">
+              <a class="btn" href="/blog/post/a91249d8.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -996,7 +1046,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/50daec4.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/41a885c9.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -1010,7 +1060,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/50daec4.html" class="post-title-link" itemprop="url">网络</a>
+            <a href="/blog/post/41a885c9.html" class="post-title-link" itemprop="url">Hexo 搭建 blog</a>
           
         </h1>
 
@@ -1025,19 +1075,11 @@
                 
               
 
-              <time title="创建时间：2019-10-04 19:49:18" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:18+00:00">2019-10-04</time>
+              <time title="创建时间：2019-10-31 09:49:32 / 修改时间：08:32:57" itemprop="dateCreated datePublished" datetime="2019-10-31T09:49:32+00:00">2019-10-31</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 03:25:17" itemprop="dateModified" datetime="2019-10-31T03:25:17+00:00">2019-10-31</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -1046,7 +1088,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
 
                 
                 
@@ -1065,124 +1107,95 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="1-http-响应码-301-和-302-代表的是什么？有什么区别？"><a href="#1-http-响应码-301-和-302-代表的是什么？有什么区别？" class="headerlink" title="1. http 响应码 301 和 302 代表的是什么？有什么区别？"></a>1. http 响应码 301 和 302 代表的是什么？有什么区别？</h2><ul>
-<li><p>301：永久重定向。</p>
-</li>
-<li><p>302：暂时重定向。</p>
-</li>
-<li><p>它们的区别是，301 对搜索引擎优化（SEO）更加有利；302 有被提示为网络拦截的风险。</p>
-</li>
-</ul>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/blog/post/50daec4.html" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/23a3bd72.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sometwo">
-      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="佚名">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/blog/post/23a3bd72.html" class="post-title-link" itemprop="url">异常</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-04 19:49:17" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:17+00:00">2019-10-04</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 03:25:17" itemprop="dateModified" datetime="2019-10-31T03:25:17+00:00">2019-10-31</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><blockquote>
-<p>Java 的异常处理是通过 5 个关键字来实现的：try，catch，throw，throws，finally。</p>
+          <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><blockquote>
+<p>http://www.likekeep.me/post/62703.html</p>
 </blockquote>
-<h2 id="1-throw-和-throws-的区别？"><a href="#1-throw-和-throws-的区别？" class="headerlink" title="1. throw 和 throws 的区别？"></a>1. throw 和 throws 的区别？</h2><ul>
-<li>throw：是真实抛出一个异常。</li>
-<li>throws：是声明可能会抛出一个异常。</li>
-</ul>
+<blockquote>
+<p>https://www.jianshu.com/p/efbeddc5eb19</p>
+</blockquote>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/f2bb9475.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/f2bb9475.html" class="post-title-link" itemprop="url">反击爬虫，前端工程师的脑洞可以有多大？</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-29 20:36:00" itemprop="dateCreated datePublished" datetime="2019-10-29T20:36:00+00:00">2019-10-29</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-31 08:32:57" itemprop="dateModified" datetime="2019-10-31T08:32:57+00:00">2019-10-31</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。<br>而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是<strong>爬虫与反爬虫</strong>这一话题的由来。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/23a3bd72.html" rel="contents">
+              <a class="btn" href="/blog/post/f2bb9475.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1209,7 +1222,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/fb60fea1.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/5fc62eb9.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -1223,7 +1236,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/fb60fea1.html" class="post-title-link" itemprop="url">Java Web</a>
+            <a href="/blog/post/5fc62eb9.html" class="post-title-link" itemprop="url">02 | 日志架构：一条SQL更新语句是如何执行的？</a>
           
         </h1>
 
@@ -1238,7 +1251,7 @@
                 
               
 
-              <time title="创建时间：2019-10-04 19:49:16" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:16+00:00">2019-10-04</time>
+              <time title="创建时间：2019-10-29 14:15:45" itemprop="dateCreated datePublished" datetime="2019-10-29T14:15:45+00:00">2019-10-29</time>
             </span>
           
             
@@ -1249,22 +1262,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 03:25:17" itemprop="dateModified" datetime="2019-10-31T03:25:17+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 08:32:57" itemprop="dateModified" datetime="2019-10-31T08:32:57+00:00">2019-10-31</time>
               </span>
             
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -1278,19 +1278,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Java-Web"><a href="#Java-Web" class="headerlink" title="Java Web"></a>Java Web</h1><h2 id="1-jsp-和-servlet-有什么区别？"><a href="#1-jsp-和-servlet-有什么区别？" class="headerlink" title="1. jsp 和 servlet 有什么区别？"></a>1. jsp 和 servlet 有什么区别？</h2><ul>
-<li>JSP是servlet技术的扩展，本质上就是servlet的简易方式。</li>
-<li>servlet和JSP最主要的不同点在于，<ul>
-<li>servlet的应用逻辑是在Java文件中，并且完全从表示层中的html里分离开来，</li>
-<li>而JSP的情况是Java和html可以组合成一个扩展名为JSP的文件。</li>
-</ul>
-</li>
-<li>JSP侧重于视图，servlet主要用于控制逻辑。</li>
-</ul>
+          <h1 id="02-日志架构：一条SQL更新语句是如何执行的？"><a href="#02-日志架构：一条SQL更新语句是如何执行的？" class="headerlink" title="02 | 日志架构：一条SQL更新语句是如何执行的？"></a>02 | 日志架构：一条SQL更新语句是如何执行的？</h1><p>前面我们系统了解了一个查询语句的执行流程，并介绍了执行过程中涉及的处理模块。相信你还记得，一条查询语句的执行过程一般是经过连接器、分析器、优化器、执行器等功能模块，最后到达存储引擎。</p><p>那么，一条更新语句的执行流程又是怎样的呢？</p><p>之前你可能经常听DBA同事说，MySQL可以恢复到半个月内任意一秒的状态，惊叹的同时，你是不是心中也不免会好奇，这是怎样做到的呢？</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/fb60fea1.html" rel="contents">
+              <a class="btn" href="/blog/post/5fc62eb9.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1317,7 +1309,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/5/">5</a><a class="extend next" rel="next" href="/blog/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1365,7 +1357,7 @@
         
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1378,7 +1370,7 @@
             <a href="/blog/categories/">
           
         
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1391,7 +1383,7 @@
             <a href="/blog/tags/">
           
         
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

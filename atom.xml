@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://sometwo7.github.io/blog/"/>
-  <updated>2019-10-31T03:25:17.593Z</updated>
+  <updated>2019-10-31T08:32:57.383Z</updated>
   <id>https://sometwo7.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,802 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Leetcode 题解 - Database</title>
+    <link href="https://sometwo7.github.io/blog/post/5d4aa9da.html"/>
+    <id>https://sometwo7.github.io/blog/post/5d4aa9da.html</id>
+    <published>2019-10-31T14:17:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#595-Big-Countries&quot;&gt;595. Big Countries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#627-Swap-Salary&quot;&gt;627. Swap Salary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#620-Not-Boring-Movies&quot;&gt;620. Not Boring Movies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#596-Classes-More-Than-5-Students&quot;&gt;596. Classes More Than 5 Students&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#182-Duplicate-Emails&quot;&gt;182. Duplicate Emails&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#196-Delete-Duplicate-Emails&quot;&gt;196. Delete Duplicate Emails&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#175-Combine-Two-Tables&quot;&gt;175. Combine Two Tables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#181-Employees-Earning-More-Than-Their-Managers&quot;&gt;181. Employees Earning More Than Their Managers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#183-Customers-Who-Never-Order&quot;&gt;183. Customers Who Never Order&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#184-Department-Highest-Salary&quot;&gt;184. Department Highest Salary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#176-Second-Highest-Salary&quot;&gt;176. Second Highest Salary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#177-Nth-Highest-Salary&quot;&gt;177. Nth Highest Salary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#178-Rank-Scores&quot;&gt;178. Rank Scores&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#180-Consecutive-Numbers&quot;&gt;180. Consecutive Numbers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#626-Exchange-Seats&quot;&gt;626. Exchange Seats&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="sql" scheme="https://sometwo7.github.io/blog/tags/sql/"/>
+    
+      <category term="database" scheme="https://sometwo7.github.io/blog/tags/database/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 位运算</title>
+    <link href="https://sometwo7.github.io/blog/post/3ad6972f.html"/>
+    <id>https://sometwo7.github.io/blog/post/3ad6972f.html</id>
+    <published>2019-10-31T14:16:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-统计两个数的二进制表示有多少位不同&quot;&gt;1. 统计两个数的二进制表示有多少位不同&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-数组中唯一一个不重复的元素&quot;&gt;2. 数组中唯一一个不重复的元素&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-找出数组中缺失的那个数&quot;&gt;3. 找出数组中缺失的那个数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-数组中不重复的两个元素&quot;&gt;4. 数组中不重复的两个元素&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-翻转一个数的比特位&quot;&gt;5. 翻转一个数的比特位&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-不用额外变量交换两个整数&quot;&gt;6. 不用额外变量交换两个整数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-判断一个数是不是-2-的-n-次方&quot;&gt;7. 判断一个数是不是 2 的 n 次方&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#8--判断一个数是不是-4-的-n-次方&quot;&gt;8.  判断一个数是不是 4 的 n 次方&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#9-判断一个数的位级表示是否不会出现连续的-0-和-1&quot;&gt;9. 判断一个数的位级表示是否不会出现连续的 0 和 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#10-求一个数的补码&quot;&gt;10. 求一个数的补码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#11-实现整数的加法&quot;&gt;11. 实现整数的加法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#12-字符串数组最大乘积&quot;&gt;12. 字符串数组最大乘积&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#13-统计从-0-~-n-每个数的二进制表示中-1-的个数&quot;&gt;13. 统计从 0 ~ n 每个数的二进制表示中 1 的个数&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="位运算" scheme="https://sometwo7.github.io/blog/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 图</title>
+    <link href="https://sometwo7.github.io/blog/post/83cef5af.html"/>
+    <id>https://sometwo7.github.io/blog/post/83cef5af.html</id>
+    <published>2019-10-31T14:15:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#二分图&quot;&gt;二分图&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-判断是否为二分图&quot;&gt;1. 判断是否为二分图&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#拓扑排序&quot;&gt;拓扑排序&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-课程安排的合法性&quot;&gt;1. 课程安排的合法性&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-课程安排的顺序&quot;&gt;2. 课程安排的顺序&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#并查集&quot;&gt;并查集&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-冗余连接&quot;&gt;1. 冗余连接&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;二分图&quot;&gt;&lt;a href=&quot;#二分图&quot; class=&quot;headerlink&quot; title=&quot;二分图&quot;&gt;&lt;/a&gt;二分图&lt;/h1&gt;&lt;p&gt;如果可以用两种颜色对图中的节点进行着色，并且保证相邻的节点颜色不同，那么这个图就是二分图。&lt;/p&gt;&lt;h2 id=&quot;1-判断是否为二分图&quot;&gt;&lt;a href=&quot;#1-判断是否为二分图&quot; class=&quot;headerlink&quot; title=&quot;1. 判断是否为二分图&quot;&gt;&lt;/a&gt;1. 判断是否为二分图&lt;/h2&gt;&lt;p&gt;785. Is Graph Bipartite? (Medium)&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="图" scheme="https://sometwo7.github.io/blog/tags/%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 数组与矩阵</title>
+    <link href="https://sometwo7.github.io/blog/post/49f04032.html"/>
+    <id>https://sometwo7.github.io/blog/post/49f04032.html</id>
+    <published>2019-10-31T14:14:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-把数组中的-0-移到末尾&quot;&gt;1. 把数组中的 0 移到末尾&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-改变矩阵维度&quot;&gt;2. 改变矩阵维度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-找出数组中最长的连续-1&quot;&gt;3. 找出数组中最长的连续 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-有序矩阵查找&quot;&gt;4. 有序矩阵查找&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-有序矩阵的-kth-element&quot;&gt;5. 有序矩阵的 Kth Element&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-一个数组元素在-[1,-n]-之间，其中一个数被替换为另一个数，找出重复的数和丢失的数&quot;&gt;6. 一个数组元素在 [1, n] 之间，其中一个数被替换为另一个数，找出重复的数和丢失的数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-找出数组中重复的数，数组值在-[1,-n]-之间&quot;&gt;7. 找出数组中重复的数，数组值在 [1, n] 之间&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#8-数组相邻差值的个数&quot;&gt;8. 数组相邻差值的个数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#9-数组的度&quot;&gt;9. 数组的度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#10-对角元素相等的矩阵&quot;&gt;10. 对角元素相等的矩阵&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#11-嵌套数组&quot;&gt;11. 嵌套数组&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#12-分隔数组&quot;&gt;12. 分隔数组&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="数组与矩阵" scheme="https://sometwo7.github.io/blog/tags/%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 字符串</title>
+    <link href="https://sometwo7.github.io/blog/post/c43456f4.html"/>
+    <id>https://sometwo7.github.io/blog/post/c43456f4.html</id>
+    <published>2019-10-31T14:13:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-字符串循环移位包含&quot;&gt;1. 字符串循环移位包含&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-字符串循环移位&quot;&gt;2. 字符串循环移位&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-字符串中单词的翻转&quot;&gt;3. 字符串中单词的翻转&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-两个字符串包含的字符是否完全相同&quot;&gt;4. 两个字符串包含的字符是否完全相同&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-计算一组字符集合可以组成的回文字符串的最大长度&quot;&gt;5. 计算一组字符集合可以组成的回文字符串的最大长度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-字符串同构&quot;&gt;6. 字符串同构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-回文子字符串个数&quot;&gt;7. 回文子字符串个数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#8-判断一个整数是否是回文数&quot;&gt;8. 判断一个整数是否是回文数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#9-统计二进制字符串中连续-1-和连续-0-数量相同的子字符串个数&quot;&gt;9. 统计二进制字符串中连续 1 和连续 0 数量相同的子字符串个数&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="字符串" scheme="https://sometwo7.github.io/blog/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 哈希表</title>
+    <link href="https://sometwo7.github.io/blog/post/bdba8d89.html"/>
+    <id>https://sometwo7.github.io/blog/post/bdba8d89.html</id>
+    <published>2019-10-31T14:12:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-数组中两个数的和为给定值&quot;&gt;1. 数组中两个数的和为给定值&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-判断数组是否含有重复元素&quot;&gt;2. 判断数组是否含有重复元素&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-最长和谐序列&quot;&gt;3. 最长和谐序列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-最长连续序列&quot;&gt;4. 最长连续序列&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;哈希表使用 O(N) 空间复杂度存储数据，并且以 O(1) 时间复杂度求解问题。&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Java 中的  &lt;strong&gt;HashSet&lt;/strong&gt;  用于存储一个集合，可以查找元素是否在集合中。如果元素有穷，并且范围不大，那么可以用一个布尔数组来存储一个元素是否存在。例如对于只有小写字符的元素，就可以用一个长度为 26 的布尔数组来存储一个字符集合，使得空间复杂度降低为 O(1)。&lt;/p&gt;
+&lt;p&gt;Java 中的  &lt;strong&gt;HashMap&lt;/strong&gt;  主要用于映射关系，从而把两个元素联系起来。HashMap 也可以用来对元素进行计数统计，此时键为元素，值为计数。和 HashSet 类似，如果元素有穷并且范围不大，可以用整型数组来进行统计。在对一个内容进行压缩或者其它转换时，利用 HashMap 可以把原始内容和转换后的内容联系起来。例如在一个简化 url 的系统中 [Leetcdoe : 535. Encode and Decode TinyURL (Medium)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="哈希表" scheme="https://sometwo7.github.io/blog/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 栈和队列</title>
+    <link href="https://sometwo7.github.io/blog/post/22150be2.html"/>
+    <id>https://sometwo7.github.io/blog/post/22150be2.html</id>
+    <published>2019-10-31T14:11:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-用栈实现队列&quot;&gt;1. 用栈实现队列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-用队列实现栈&quot;&gt;2. 用队列实现栈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-最小值栈&quot;&gt;3. 最小值栈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-用栈实现括号匹配&quot;&gt;4. 用栈实现括号匹配&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-数组中元素与下一个比它大的元素之间的距离&quot;&gt;5. 数组中元素与下一个比它大的元素之间的距离&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-循环数组中比当前元素大的下一个元素&quot;&gt;6. 循环数组中比当前元素大的下一个元素&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;1-用栈实现队列&quot;&gt;&lt;a href=&quot;#1-用栈实现队列&quot; class=&quot;headerlink&quot; title=&quot;1. 用栈实现队列&quot;&gt;&lt;/a&gt;1. 用栈实现队列&lt;/h1&gt;&lt;p&gt;232. Implement Queue using Stacks (Easy)&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/implement-queue-using-stacks/description/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Leetcode&lt;/a&gt; / &lt;a href=&quot;https://leetcode-cn.com/problems/implement-queue-using-stacks/description/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;力扣&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="栈和队列" scheme="https://sometwo7.github.io/blog/tags/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 树</title>
+    <link href="https://sometwo7.github.io/blog/post/16eb9997.html"/>
+    <id>https://sometwo7.github.io/blog/post/16eb9997.html</id>
+    <published>2019-10-31T14:10:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#递归&quot;&gt;递归&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-树的高度&quot;&gt;1. 树的高度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-平衡树&quot;&gt;2. 平衡树&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-两节点的最长路径&quot;&gt;3. 两节点的最长路径&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-翻转树&quot;&gt;4. 翻转树&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-归并两棵树&quot;&gt;5. 归并两棵树&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-判断路径和是否等于一个数&quot;&gt;6. 判断路径和是否等于一个数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-统计路径和等于一个数的路径数量&quot;&gt;7. 统计路径和等于一个数的路径数量&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#8-子树&quot;&gt;8. 子树&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#9-树的对称&quot;&gt;9. 树的对称&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#10-最小路径&quot;&gt;10. 最小路径&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#11-统计左叶子节点的和&quot;&gt;11. 统计左叶子节点的和&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#12-相同节点值的最大路径长度&quot;&gt;12. 相同节点值的最大路径长度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#13-间隔遍历&quot;&gt;13. 间隔遍历&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#14-找出二叉树中第二小的节点&quot;&gt;14. 找出二叉树中第二小的节点&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#层次遍历&quot;&gt;层次遍历&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-一棵树每层节点的平均数&quot;&gt;1. 一棵树每层节点的平均数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-得到左下角的节点&quot;&gt;2. 得到左下角的节点&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#前中后序遍历&quot;&gt;前中后序遍历&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-非递归实现二叉树的前序遍历&quot;&gt;1. 非递归实现二叉树的前序遍历&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-非递归实现二叉树的后序遍历&quot;&gt;2. 非递归实现二叉树的后序遍历&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-非递归实现二叉树的中序遍历&quot;&gt;3. 非递归实现二叉树的中序遍历&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#bst&quot;&gt;BST&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-修剪二叉查找树&quot;&gt;1. 修剪二叉查找树&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-寻找二叉查找树的第-k-个元素&quot;&gt;2. 寻找二叉查找树的第 k 个元素&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-把二叉查找树每个节点的值都加上比它大的节点的值&quot;&gt;3. 把二叉查找树每个节点的值都加上比它大的节点的值&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-二叉查找树的最近公共祖先&quot;&gt;4. 二叉查找树的最近公共祖先&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-二叉树的最近公共祖先&quot;&gt;5. 二叉树的最近公共祖先&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-从有序数组中构造二叉查找树&quot;&gt;6. 从有序数组中构造二叉查找树&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-根据有序链表构造平衡的二叉查找树&quot;&gt;7. 根据有序链表构造平衡的二叉查找树&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#8-在二叉查找树中寻找两个节点，使它们的和为一个给定值&quot;&gt;8. 在二叉查找树中寻找两个节点，使它们的和为一个给定值&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#9-在二叉查找树中查找两个节点之差的最小绝对值&quot;&gt;9. 在二叉查找树中查找两个节点之差的最小绝对值&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#10-寻找二叉查找树中出现次数最多的值&quot;&gt;10. 寻找二叉查找树中出现次数最多的值&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#trie&quot;&gt;Trie&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-实现一个-trie&quot;&gt;1. 实现一个 Trie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-实现一个-trie，用来求前缀和&quot;&gt;2. 实现一个 Trie，用来求前缀和&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="树" scheme="https://sometwo7.github.io/blog/tags/%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 链表</title>
+    <link href="https://sometwo7.github.io/blog/post/b7209553.html"/>
+    <id>https://sometwo7.github.io/blog/post/b7209553.html</id>
+    <published>2019-10-31T14:09:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-找出两个链表的交点&quot;&gt;1. 找出两个链表的交点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-链表反转&quot;&gt;2. 链表反转&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-归并两个有序的链表&quot;&gt;3. 归并两个有序的链表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-从有序链表中删除重复节点&quot;&gt;4. 从有序链表中删除重复节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-删除链表的倒数第-n-个节点&quot;&gt;5. 删除链表的倒数第 n 个节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-交换链表中的相邻结点&quot;&gt;6. 交换链表中的相邻结点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-链表求和&quot;&gt;7. 链表求和&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#8-回文链表&quot;&gt;8. 回文链表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#9-分隔链表&quot;&gt;9. 分隔链表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#10-链表元素按奇偶聚集&quot;&gt;10. 链表元素按奇偶聚集&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;链表是空节点，或者有一个值和一个指向下一个链表的指针，因此很多链表问题可以用递归来处理。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="链表" scheme="https://sometwo7.github.io/blog/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 数学</title>
+    <link href="https://sometwo7.github.io/blog/post/6a3c544d.html"/>
+    <id>https://sometwo7.github.io/blog/post/6a3c544d.html</id>
+    <published>2019-10-31T14:08:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#素数分解&quot;&gt;素数分解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#整除&quot;&gt;整除&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#最大公约数最小公倍数&quot;&gt;最大公约数最小公倍数&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-生成素数序列&quot;&gt;1. 生成素数序列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-最大公约数&quot;&gt;2. 最大公约数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-使用位操作和减法求解最大公约数&quot;&gt;3. 使用位操作和减法求解最大公约数&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#进制转换&quot;&gt;进制转换&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-7-进制&quot;&gt;1. 7 进制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-16-进制&quot;&gt;2. 16 进制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-26-进制&quot;&gt;3. 26 进制&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#阶乘&quot;&gt;阶乘&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-统计阶乘尾部有多少个-0&quot;&gt;1. 统计阶乘尾部有多少个 0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#字符串加法减法&quot;&gt;字符串加法减法&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-二进制加法&quot;&gt;1. 二进制加法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-字符串加法&quot;&gt;2. 字符串加法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#相遇问题&quot;&gt;相遇问题&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-改变数组元素使所有的数组元素都相等&quot;&gt;1. 改变数组元素使所有的数组元素都相等&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#多数投票问题&quot;&gt;多数投票问题&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-数组中出现次数多于-n--2-的元素&quot;&gt;1. 数组中出现次数多于 n / 2 的元素&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#其它&quot;&gt;其它&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-平方数&quot;&gt;1. 平方数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-3-的-n-次方&quot;&gt;2. 3 的 n 次方&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-乘积数组&quot;&gt;3. 乘积数组&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-找出数组中的乘积最大的三个数&quot;&gt;4. 找出数组中的乘积最大的三个数&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="数学" scheme="https://sometwo7.github.io/blog/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 动态规划</title>
+    <link href="https://sometwo7.github.io/blog/post/77ebe21.html"/>
+    <id>https://sometwo7.github.io/blog/post/77ebe21.html</id>
+    <published>2019-10-31T14:07:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#斐波那契数列&quot;&gt;斐波那契数列&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-爬楼梯&quot;&gt;1. 爬楼梯&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-强盗抢劫&quot;&gt;2. 强盗抢劫&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-强盗在环形街区抢劫&quot;&gt;3. 强盗在环形街区抢劫&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-信件错排&quot;&gt;4. 信件错排&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-母牛生产&quot;&gt;5. 母牛生产&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#矩阵路径&quot;&gt;矩阵路径&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-矩阵的最小路径和&quot;&gt;1. 矩阵的最小路径和&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-矩阵的总路径数&quot;&gt;2. 矩阵的总路径数&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#数组区间&quot;&gt;数组区间&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-数组区间和&quot;&gt;1. 数组区间和&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-数组中等差递增子区间的个数&quot;&gt;2. 数组中等差递增子区间的个数&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#分割整数&quot;&gt;分割整数&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-分割整数的最大乘积&quot;&gt;1. 分割整数的最大乘积&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-按平方数来分割整数&quot;&gt;2. 按平方数来分割整数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-分割整数构成字母字符串&quot;&gt;3. 分割整数构成字母字符串&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#最长递增子序列&quot;&gt;最长递增子序列&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-最长递增子序列&quot;&gt;1. 最长递增子序列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-一组整数对能够构成的最长链&quot;&gt;2. 一组整数对能够构成的最长链&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-最长摆动子序列&quot;&gt;3. 最长摆动子序列&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#最长公共子序列&quot;&gt;最长公共子序列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#0-1-背包&quot;&gt;0-1 背包&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-划分数组为和相等的两部分&quot;&gt;1. 划分数组为和相等的两部分&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-改变一组数的正负号使得它们的和为一给定数&quot;&gt;2. 改变一组数的正负号使得它们的和为一给定数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-01-字符构成最多的字符串&quot;&gt;3. 01 字符构成最多的字符串&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-找零钱的最少硬币数&quot;&gt;4. 找零钱的最少硬币数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-找零钱的硬币数组合&quot;&gt;5. 找零钱的硬币数组合&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-字符串按单词列表分割&quot;&gt;6. 字符串按单词列表分割&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-组合总和&quot;&gt;7. 组合总和&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#股票交易&quot;&gt;股票交易&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-需要冷却期的股票交易&quot;&gt;1. 需要冷却期的股票交易&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-需要交易费用的股票交易&quot;&gt;2. 需要交易费用的股票交易&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-只能进行两次的股票交易&quot;&gt;3. 只能进行两次的股票交易&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-只能进行-k-次的股票交易&quot;&gt;4. 只能进行 k 次的股票交易&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#字符串编辑&quot;&gt;字符串编辑&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-删除两个字符串的字符使它们相等&quot;&gt;1. 删除两个字符串的字符使它们相等&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-编辑距离&quot;&gt;2. 编辑距离&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-复制粘贴字符&quot;&gt;3. 复制粘贴字符&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="动态规划" scheme="https://sometwo7.github.io/blog/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 搜索</title>
+    <link href="https://sometwo7.github.io/blog/post/d7d172d4.html"/>
+    <id>https://sometwo7.github.io/blog/post/d7d172d4.html</id>
+    <published>2019-10-31T14:06:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#bfs&quot;&gt;BFS&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-计算在网格中从原点到特定点的最短路径长度&quot;&gt;1. 计算在网格中从原点到特定点的最短路径长度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-组成整数的最小平方数数量&quot;&gt;2. 组成整数的最小平方数数量&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-最短单词路径&quot;&gt;3. 最短单词路径&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#dfs&quot;&gt;DFS&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-查找最大的连通面积&quot;&gt;1. 查找最大的连通面积&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-矩阵中的连通分量数目&quot;&gt;2. 矩阵中的连通分量数目&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-好友关系的连通分量数目&quot;&gt;3. 好友关系的连通分量数目&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-填充封闭区域&quot;&gt;4. 填充封闭区域&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-能到达的太平洋和大西洋的区域&quot;&gt;5. 能到达的太平洋和大西洋的区域&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#backtracking&quot;&gt;Backtracking&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-数字键盘组合&quot;&gt;1. 数字键盘组合&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-ip-地址划分&quot;&gt;2. IP 地址划分&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-在矩阵中寻找字符串&quot;&gt;3. 在矩阵中寻找字符串&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-输出二叉树中所有从根到叶子的路径&quot;&gt;4. 输出二叉树中所有从根到叶子的路径&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-排列&quot;&gt;5. 排列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-含有相同元素求排列&quot;&gt;6. 含有相同元素求排列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-组合&quot;&gt;7. 组合&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#8-组合求和&quot;&gt;8. 组合求和&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#9-含有相同元素的组合求和&quot;&gt;9. 含有相同元素的组合求和&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#10-1-9-数字的组合求和&quot;&gt;10. 1-9 数字的组合求和&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#11-子集&quot;&gt;11. 子集&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#12-含有相同元素求子集&quot;&gt;12. 含有相同元素求子集&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#13-分割字符串使得每个部分都是回文数&quot;&gt;13. 分割字符串使得每个部分都是回文数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#14-数独&quot;&gt;14. 数独&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#15-n-皇后&quot;&gt;15. N 皇后&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="搜索" scheme="https://sometwo7.github.io/blog/tags/%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 分治</title>
+    <link href="https://sometwo7.github.io/blog/post/d820eb3.html"/>
+    <id>https://sometwo7.github.io/blog/post/d820eb3.html</id>
+    <published>2019-10-31T14:05:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-给表达式加括号&quot;&gt;1. 给表达式加括号&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-不同的二叉搜索树&quot;&gt;2. 不同的二叉搜索树&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;1-给表达式加括号&quot;&gt;&lt;a href=&quot;#1-给表达式加括号&quot; class=&quot;headerlink&quot; title=&quot;1. 给表达式加括号&quot;&gt;&lt;/a&gt;1. 给表达式加括号&lt;/h1&gt;&lt;p&gt;241. Different Ways to Add Parentheses (Medium)&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/different-ways-to-add-parentheses/description/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Leetcode&lt;/a&gt; / &lt;a href=&quot;https://leetcode-cn.com/problems/different-ways-to-add-parentheses/description/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;力扣&lt;/a&gt;&lt;/p&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Input: &quot;2-1-1&quot;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;((2-1)-1) = 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(2-(1-1)) = 2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Output : [0, 2]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="分治" scheme="https://sometwo7.github.io/blog/tags/%E5%88%86%E6%B2%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 二分查找</title>
+    <link href="https://sometwo7.github.io/blog/post/4798ba91.html"/>
+    <id>https://sometwo7.github.io/blog/post/4798ba91.html</id>
+    <published>2019-10-31T14:04:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-求开方&quot;&gt;1. 求开方&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-大于给定元素的最小元素&quot;&gt;2. 大于给定元素的最小元素&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-有序数组的-single-element&quot;&gt;3. 有序数组的 Single Element&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-第一个错误的版本&quot;&gt;4. 第一个错误的版本&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-旋转数组的最小数字&quot;&gt;5. 旋转数组的最小数字&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-查找区间&quot;&gt;6. 查找区间&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;正常实现&lt;/strong&gt; &lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Input : [1,2,3,4,5]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;key : 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;return the index : 2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;binarySearch&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; key)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; l = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, h = nums.length - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (l &amp;lt;= h) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; m = l + (h - l) / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (nums[m] == key) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; m;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (nums[m] &amp;gt; key) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            h = m - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            l = m + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; -&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="二分查找" scheme="https://sometwo7.github.io/blog/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 贪心思想</title>
+    <link href="https://sometwo7.github.io/blog/post/dce69e68.html"/>
+    <id>https://sometwo7.github.io/blog/post/dce69e68.html</id>
+    <published>2019-10-31T14:03:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-分配饼干&quot;&gt;1. 分配饼干&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-不重叠的区间个数&quot;&gt;2. 不重叠的区间个数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-投飞镖刺破气球&quot;&gt;3. 投飞镖刺破气球&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-根据身高和序号重组队列&quot;&gt;4. 根据身高和序号重组队列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-买卖股票最大的收益&quot;&gt;5. 买卖股票最大的收益&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-买卖股票的最大收益-ii&quot;&gt;6. 买卖股票的最大收益 II&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-种植花朵&quot;&gt;7. 种植花朵&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#8-判断是否为子序列&quot;&gt;8. 判断是否为子序列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#9-修改一个数成为非递减数组&quot;&gt;9. 修改一个数成为非递减数组&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#10-子数组最大的和&quot;&gt;10. 子数组最大的和&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#11-分隔字符串使同种字符出现在一起&quot;&gt;11. 分隔字符串使同种字符出现在一起&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;保证每次操作都是局部最优的，并且最后得到的结果是全局最优的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="贪心算法" scheme="https://sometwo7.github.io/blog/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 排序</title>
+    <link href="https://sometwo7.github.io/blog/post/30068991.html"/>
+    <id>https://sometwo7.github.io/blog/post/30068991.html</id>
+    <published>2019-10-31T14:02:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#快速选择&quot;&gt;快速选择&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#堆&quot;&gt;堆&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-kth-element&quot;&gt;1. Kth Element&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#桶排序&quot;&gt;桶排序&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-出现频率最多的-k-个元素&quot;&gt;1. 出现频率最多的 k 个元素&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-按照字符出现次数对字符串排序&quot;&gt;2. 按照字符出现次数对字符串排序&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#荷兰国旗问题&quot;&gt;荷兰国旗问题&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-按颜色进行排序&quot;&gt;1. 按颜色进行排序&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;快速选择&quot;&gt;&lt;a href=&quot;#快速选择&quot; class=&quot;headerlink&quot; title=&quot;快速选择&quot;&gt;&lt;/a&gt;快速选择&lt;/h1&gt;&lt;p&gt;用于求解  &lt;strong&gt;Kth Element&lt;/strong&gt;  问题，也就是第 K 个元素的问题。&lt;/p&gt;&lt;p&gt;可以使用快速排序的 partition() 进行实现。需要先打乱数组，否则最坏情况下时间复杂度为 O(N&lt;sup&gt;2&lt;/sup&gt;)。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="排序" scheme="https://sometwo7.github.io/blog/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 题解 - 双指针</title>
+    <link href="https://sometwo7.github.io/blog/post/a91249d8.html"/>
+    <id>https://sometwo7.github.io/blog/post/a91249d8.html</id>
+    <published>2019-10-31T14:01:32.000Z</published>
+    <updated>2019-10-31T08:32:57.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-有序数组的-two-sum&quot;&gt;1. 有序数组的 Two Sum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-两数平方和&quot;&gt;2. 两数平方和&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-反转字符串中的元音字符&quot;&gt;3. 反转字符串中的元音字符&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-回文字符串&quot;&gt;4. 回文字符串&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-归并两个有序数组&quot;&gt;5. 归并两个有序数组&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-判断链表是否存在环&quot;&gt;6. 判断链表是否存在环&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-最长子序列&quot;&gt;7. 最长子序列&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。&lt;/p&gt;&lt;h1 id=&quot;1-有序数组的-Two-Sum&quot;&gt;&lt;a href=&quot;#1-有序数组的-Two-Sum&quot; class=&quot;headerlink&quot; title=&quot;1. 有序数组的 Two Sum&quot;&gt;&lt;/a&gt;1. 有序数组的 Two Sum&lt;/h1&gt;&lt;p&gt;167. Two Sum II - Input array is sorted (Easy)&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+      <category term="双指针" scheme="https://sometwo7.github.io/blog/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo 搭建 blog</title>
     <link href="https://sometwo7.github.io/blog/post/41a885c9.html"/>
     <id>https://sometwo7.github.io/blog/post/41a885c9.html</id>
     <published>2019-10-31T09:49:32.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
+    <updated>2019-10-31T08:32:57.379Z</updated>
     
     <summary type="html">
     
@@ -49,7 +840,7 @@
     <link href="https://sometwo7.github.io/blog/post/f2bb9475.html"/>
     <id>https://sometwo7.github.io/blog/post/f2bb9475.html</id>
     <published>2019-10-29T20:36:00.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
+    <updated>2019-10-31T08:32:57.383Z</updated>
     
     <summary type="html">
     
@@ -66,30 +857,11 @@
   </entry>
   
   <entry>
-    <title>01 | 基础架构：一条SQL查询语句是如何执行的？</title>
-    <link href="https://sometwo7.github.io/blog/post/23046aa4.html"/>
-    <id>https://sometwo7.github.io/blog/post/23046aa4.html</id>
-    <published>2019-10-29T14:15:45.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;01-基础架构：一条SQL查询语句是如何执行的？&quot;&gt;&lt;a href=&quot;#01-基础架构：一条SQL查询语句是如何执行的？&quot; class=&quot;headerlink&quot; title=&quot;01 | 基础架构：一条SQL查询语句是如何执行的？&quot;&gt;&lt;/a&gt;01 | 基础架构：一条SQL查询语句是如何执行的？&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mysql&amp;gt; select * from T where ID=10；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;比如，你有个最简单的表，表里只有一个ID字段，在执行上面这个查询语句时，我们看到的只是输入一条语句，返回一个结果，却不知道这条语句在MySQL内部的执行过程。所以今天我想和你一起把MySQL拆解一下，看看里面都有哪些“零件”，希望借由这个拆解过程，让你对MySQL有更深入的理解。这样当我们碰到MySQL的一些异常或者问题时，就能够直戳本质，更为快速地定位并解决问题。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="MYSQL" scheme="https://sometwo7.github.io/blog/tags/MYSQL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>02 | 日志架构：一条SQL更新语句是如何执行的？</title>
     <link href="https://sometwo7.github.io/blog/post/5fc62eb9.html"/>
     <id>https://sometwo7.github.io/blog/post/5fc62eb9.html</id>
     <published>2019-10-29T14:15:45.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
+    <updated>2019-10-31T08:32:57.383Z</updated>
     
     <summary type="html">
     
@@ -100,477 +872,6 @@
     
     
       <category term="MYSQL" scheme="https://sometwo7.github.io/blog/tags/MYSQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优秀网站记录</title>
-    <link href="https://sometwo7.github.io/blog/post/e5ba9dfa.html"/>
-    <id>https://sometwo7.github.io/blog/post/e5ba9dfa.html</id>
-    <published>2019-10-08T19:49:19.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;计算机书籍&quot;&gt;&lt;a href=&quot;#计算机书籍&quot; class=&quot;headerlink&quot; title=&quot;计算机书籍&quot;&gt;&lt;/a&gt;计算机书籍&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://itpanda.net/book/&quot; target=&quot;_blank&quot; 
-      
-    
-    </summary>
-    
-    
-      <category term="website" scheme="https://sometwo7.github.io/blog/categories/website/"/>
-    
-    
-      <category term="nice web" scheme="https://sometwo7.github.io/blog/tags/nice-web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java基础(汇总)</title>
-    <link href="https://sometwo7.github.io/blog/post/8b7b30a1.html"/>
-    <id>https://sometwo7.github.io/blog/post/8b7b30a1.html</id>
-    <published>2019-10-04T19:49:32.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;JAVA&quot;&gt;&lt;a href=&quot;#JAVA&quot; class=&quot;headerlink&quot; title=&quot;JAVA&quot;&gt;&lt;/a&gt;JAVA&lt;/h1&gt;&lt;p&gt;想要面试的初/中/想要面试的初/中/高级 Java 程序员&lt;br&gt;想要查漏补缺的人&lt;br&gt;想要不断完善和扩充自己 Java 技术栈的人&lt;br&gt;原本就掌握了技术却不知道怎么表达的人&lt;br&gt;有上进心,也愿意学习的人&lt;/p&gt;
-&lt;p&gt;一、 面试题覆盖全,且解析全面&lt;/p&gt;
-&lt;p&gt;这份面试题总内容包含了十九个模块：Java 基础、容器、多线程、反射、对象拷贝、Java Web 模块、异常、网络、设计模式、Spring/Spring MVC、Spring Boot/Spring Cloud、Hibernate、Mybatis、RabbitMQ、Kafka、Zookeeper、MySql、Redis、JVM .&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM</title>
-    <link href="https://sometwo7.github.io/blog/post/66c016fb.html"/>
-    <id>https://sometwo7.github.io/blog/post/66c016fb.html</id>
-    <published>2019-10-04T19:49:29.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;JVM&quot;&gt;&lt;a href=&quot;#JVM&quot; class=&quot;headerlink&quot; title=&quot;JVM&quot;&gt;&lt;/a&gt;JVM&lt;/h1&gt;&lt;h2 id=&quot;1-说一下-jvm-的主要组成部分？及其作用？&quot;&gt;&lt;a href=&quot;#1-说一下-jvm-的主要组成部分？及其作用？&quot; class=&quot;headerlink&quot; title=&quot;1. 说一下 jvm 的主要组成部分？及其作用？&quot;&gt;&lt;/a&gt;1. 说一下 jvm 的主要组成部分？及其作用？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;jvm的主要组成有，类加载器子系统，运行时数据区，执行引擎，本地库接口，垃圾收集模块；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;首先通过类加载器（ClassLoader）会把 Java 字节码加载到内存中，&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;运行时数据区（Runtime Data Area）存储被加载的字节码，&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;而字节码文件只是 JVM 的一套指令集规范，并不能直接交个底层操作系统去执行，因此需要特定的命令解析器执行引擎（Execution Engine），将字节码翻译成底层系统指令，再交由 CPU 去执行，&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;而这个过程中需要调用其他语言的本地库接口（Native Interface）来实现整个程序的功能。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;垃圾收集模块，清除内存中多余的内容，回收可重复使用的内存空间。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="JVM" scheme="https://sometwo7.github.io/blog/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis</title>
-    <link href="https://sometwo7.github.io/blog/post/bae4ff13.html"/>
-    <id>https://sometwo7.github.io/blog/post/bae4ff13.html</id>
-    <published>2019-10-04T19:49:28.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Redis&quot;&gt;&lt;a href=&quot;#Redis&quot; class=&quot;headerlink&quot; title=&quot;Redis&quot;&gt;&lt;/a&gt;Redis&lt;/h1&gt;&lt;h2 id=&quot;1-redis-是什么？都有哪些使用场景？&quot;&gt;&lt;a href=&quot;#1-redis-是什么？都有哪些使用场景？&quot; class=&quot;headerlink&quot; title=&quot;1. redis 是什么？都有哪些使用场景？&quot;&gt;&lt;/a&gt;1. redis 是什么？都有哪些使用场景？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;redis 是一个开源的，使用 C 语言编写，支持网络，可基于内存，可持久化的日志型、键值对数据库，并提供多种语言的API接口；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;redis 使用场景主要有三种&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;高并发的数据读写&lt;/li&gt;
-&lt;li&gt;海量数据的读写&lt;/li&gt;
-&lt;li&gt;对扩展性要求的高的数据&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="Redis" scheme="https://sometwo7.github.io/blog/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mysql</title>
-    <link href="https://sometwo7.github.io/blog/post/54e1373e.html"/>
-    <id>https://sometwo7.github.io/blog/post/54e1373e.html</id>
-    <published>2019-10-04T19:49:27.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;MySql&quot;&gt;&lt;a href=&quot;#MySql&quot; class=&quot;headerlink&quot; title=&quot;MySql&quot;&gt;&lt;/a&gt;MySql&lt;/h1&gt;&lt;h2 id=&quot;数据库的三范式是什么？&quot;&gt;&lt;a href=&quot;#数据库的三范式是什么？&quot; class=&quot;headerlink&quot; title=&quot;数据库的三范式是什么？&quot;&gt;&lt;/a&gt;数据库的三范式是什么？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;第一范式，关系表中的每列都是原子不可分的项，即每个属性都是最基本的项；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;第二范式，在满足第一范式的前提下，关系表的所有非主属性完全依赖于每一个候选关键属性；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;第三范式，在满足第二范式的前提下，关系表的所有非主属性由主键直接决定。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="DB" scheme="https://sometwo7.github.io/blog/tags/DB/"/>
-    
-      <category term="Mysql" scheme="https://sometwo7.github.io/blog/tags/Mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Zookeeper</title>
-    <link href="https://sometwo7.github.io/blog/post/b829b66a.html"/>
-    <id>https://sometwo7.github.io/blog/post/b829b66a.html</id>
-    <published>2019-10-04T19:49:26.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Zookeeper&quot;&gt;&lt;a href=&quot;#Zookeeper&quot; class=&quot;headerlink&quot; title=&quot;Zookeeper&quot;&gt;&lt;/a&gt;Zookeeper&lt;/h1&gt;&lt;h2 id=&quot;1-zookeeper-是什么？&quot;&gt;&lt;a href=&quot;#1-zookeeper-是什么？&quot; class=&quot;headerlink&quot; title=&quot;1. zookeeper 是什么？&quot;&gt;&lt;/a&gt;1. zookeeper 是什么？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;zookeeper 是一个开源的分布式应用程序协调服务。&lt;/li&gt;
-&lt;li&gt;为分布式应用提供数据一致性服务，&lt;/li&gt;
-&lt;li&gt;功能包括，配置维护、域名服务、分布式同步、组服务。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="Zookeeper" scheme="https://sometwo7.github.io/blog/tags/Zookeeper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Kafka</title>
-    <link href="https://sometwo7.github.io/blog/post/9a7d5a13.html"/>
-    <id>https://sometwo7.github.io/blog/post/9a7d5a13.html</id>
-    <published>2019-10-04T19:49:25.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Kafka&quot;&gt;&lt;a href=&quot;#Kafka&quot; class=&quot;headerlink&quot; title=&quot;Kafka&quot;&gt;&lt;/a&gt;Kafka&lt;/h1&gt;&lt;h2 id=&quot;1-kafka-可以脱离-zookeeper-单独使用吗？为什么？&quot;&gt;&lt;a href=&quot;#1-kafka-可以脱离-zookeeper-单独使用吗？为什么？&quot; class=&quot;headerlink&quot; title=&quot;1. kafka 可以脱离 zookeeper 单独使用吗？为什么？&quot;&gt;&lt;/a&gt;1. kafka 可以脱离 zookeeper 单独使用吗？为什么？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;kafka 不能脱离 zookeeper 单独使用，&lt;/li&gt;
-&lt;li&gt;因为 kafka 使用 zookeeper 管理和协调 kafka 的节点服务器。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="Kafka" scheme="https://sometwo7.github.io/blog/tags/Kafka/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RabbitMQ</title>
-    <link href="https://sometwo7.github.io/blog/post/b543ced0.html"/>
-    <id>https://sometwo7.github.io/blog/post/b543ced0.html</id>
-    <published>2019-10-04T19:49:24.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;RabbitMQ&quot;&gt;&lt;a href=&quot;#RabbitMQ&quot; class=&quot;headerlink&quot; title=&quot;RabbitMQ&quot;&gt;&lt;/a&gt;RabbitMQ&lt;/h1&gt;&lt;h2 id=&quot;1-rabbitmq-的使用场景有哪些？&quot;&gt;&lt;a href=&quot;#1-rabbitmq-的使用场景有哪些？&quot; class=&quot;headerlink&quot; title=&quot;1. rabbitmq 的使用场景有哪些？&quot;&gt;&lt;/a&gt;1. rabbitmq 的使用场景有哪些？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;跨系统的异步通信，所有需要异步交互的地方都可以使用消息队列。就像我们除了打电话（同步）以外，还需要发短信，发电子邮件（异步）的通讯方式。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="MQ" scheme="https://sometwo7.github.io/blog/tags/MQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mybatis</title>
-    <link href="https://sometwo7.github.io/blog/post/da3e1361.html"/>
-    <id>https://sometwo7.github.io/blog/post/da3e1361.html</id>
-    <published>2019-10-04T19:49:23.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Mybatis&quot;&gt;&lt;a href=&quot;#Mybatis&quot; class=&quot;headerlink&quot; title=&quot;Mybatis&quot;&gt;&lt;/a&gt;Mybatis&lt;/h1&gt;&lt;h2 id=&quot;1-mybatis-中-和-的区别是什么？&quot;&gt;&lt;a href=&quot;#1-mybatis-中-和-的区别是什么？&quot; class=&quot;headerlink&quot; title=&quot;1. mybatis 中 #{}和 ${}的区别是什么？&quot;&gt;&lt;/a&gt;1. mybatis 中 #{}和 ${}的区别是什么？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;#{}是预编译处理，${}是字符串替换；&lt;/li&gt;
-&lt;li&gt;Mybatis在处理#{}时，会将sql中的#{}替换为?号，调用PreparedStatement的set方法来赋值；&lt;/li&gt;
-&lt;li&gt;Mybatis在处理${}时，就是把${}替换成变量的值；&lt;/li&gt;
-&lt;li&gt;使用#{}可以有效的防止SQL注入，提高系统安全性。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="Mybatis" scheme="https://sometwo7.github.io/blog/tags/Mybatis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hibernate</title>
-    <link href="https://sometwo7.github.io/blog/post/6f8276a9.html"/>
-    <id>https://sometwo7.github.io/blog/post/6f8276a9.html</id>
-    <published>2019-10-04T19:49:22.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Hibernate&quot;&gt;&lt;a href=&quot;#Hibernate&quot; class=&quot;headerlink&quot; title=&quot;Hibernate&quot;&gt;&lt;/a&gt;Hibernate&lt;/h1&gt;&lt;h2 id=&quot;1-为什么要使用-hibernate？&quot;&gt;&lt;a href=&quot;#1-为什么要使用-hibernate？&quot; class=&quot;headerlink&quot; title=&quot;1. 为什么要使用 hibernate？&quot;&gt;&lt;/a&gt;1. 为什么要使用 hibernate？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;对 JDBC 访问数据库的代码做了封装，大大简化了数据访问层繁琐的重复性代码。&lt;/li&gt;
-&lt;li&gt;hibernate 是一个基于JDBC的主流持久化框架，是一个优秀的ORM实现。他很大程度的简化DAO层的编码工作&lt;/li&gt;
-&lt;li&gt;hibernate 使用 Java 反射机制，而不是字节码增强程序来实现透明性。&lt;/li&gt;
-&lt;li&gt;hibernate 的性能非常好，因为它是个轻量级框架。映射的灵活性很出色。它支持各种关系数据库，从一对一到多对多的各种复杂关系。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="Hibernate" scheme="https://sometwo7.github.io/blog/tags/Hibernate/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot/Spring Cloud</title>
-    <link href="https://sometwo7.github.io/blog/post/b3383f7f.html"/>
-    <id>https://sometwo7.github.io/blog/post/b3383f7f.html</id>
-    <published>2019-10-04T19:49:21.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Spring-Boot-Spring-Cloud&quot;&gt;&lt;a href=&quot;#Spring-Boot-Spring-Cloud&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot/Spring Cloud&quot;&gt;&lt;/a&gt;Spring Boot/Spring Cloud&lt;/h1&gt;&lt;h2 id=&quot;1-什么是-spring-boot？&quot;&gt;&lt;a href=&quot;#1-什么是-spring-boot？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是 spring boot？&quot;&gt;&lt;/a&gt;1. 什么是 spring boot？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;在Spring框架这个大家族中，产生了很多衍生框架，比如 Spring、SpringMVC框架等，&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Spring的核心内容在于控制反转(IOC)和依赖注入(DI),&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在操作方面是指在spring配置文件中创建，依赖注入即为由spring容器为应用程序的某个对象提供资源，比如 引用对象、常量数据等。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SpringBoot是一个框架，一种全新的编程规范，他的产生简化了框架的使用，&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;所谓简化是指简化了Spring众多框架中所需的大量且繁琐的配置文件，&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;所以 SpringBoot是一个服务于框架的框架，服务范围是简化配置文件。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="Spring" scheme="https://sometwo7.github.io/blog/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring/Spring MVC</title>
-    <link href="https://sometwo7.github.io/blog/post/ae9d29e2.html"/>
-    <id>https://sometwo7.github.io/blog/post/ae9d29e2.html</id>
-    <published>2019-10-04T19:49:20.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Spring-Spring-MVC&quot;&gt;&lt;a href=&quot;#Spring-Spring-MVC&quot; class=&quot;headerlink&quot; title=&quot;Spring/Spring MVC&quot;&gt;&lt;/a&gt;Spring/Spring MVC&lt;/h1&gt;&lt;h2 id=&quot;为什么要使用-spring？&quot;&gt;&lt;a href=&quot;#为什么要使用-spring？&quot; class=&quot;headerlink&quot; title=&quot;为什么要使用 spring？&quot;&gt;&lt;/a&gt;为什么要使用 spring？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;简介&lt;ul&gt;
-&lt;li&gt;目的：解决企业应用开发的复杂性&lt;/li&gt;
-&lt;li&gt;功能：使用基本的JavaBean代替EJB，并提供了更多的企业应用功能&lt;/li&gt;
-&lt;li&gt;范围：任何Java应用&lt;/li&gt;
-&lt;li&gt;简单来说，Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="Spring" scheme="https://sometwo7.github.io/blog/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式</title>
-    <link href="https://sometwo7.github.io/blog/post/364ea8cc.html"/>
-    <id>https://sometwo7.github.io/blog/post/364ea8cc.html</id>
-    <published>2019-10-04T19:49:19.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式&quot;&gt;&lt;/a&gt;设计模式&lt;/h1&gt;&lt;h2 id=&quot;1-说一下你熟悉的设计模式？&quot;&gt;&lt;a href=&quot;#1-说一下你熟悉的设计模式？&quot; class=&quot;headerlink&quot; title=&quot;1. 说一下你熟悉的设计模式？&quot;&gt;&lt;/a&gt;1. 说一下你熟悉的设计模式？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;根据目的来分可以可以分成3类，创建型、结构型、行为型；&lt;ul&gt;
-&lt;li&gt;创建型有5种，工厂方法，抽象工厂，原型，单例，建造者；&lt;/li&gt;
-&lt;li&gt;结构型有7种，适配器，代理，桥接，装饰，外观，享元，组合；&lt;/li&gt;
-&lt;li&gt;行为型有11种，模板方法，解释器，策略，命令，职责链，状态，观察者，中介者，迭代器，访问，备忘录；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;根据作用范围来分，可以有两类，分别是类模式、对象模式；&lt;ul&gt;
-&lt;li&gt;类模式主要有4种，工厂方法，类的适配器，模板方法，解释器；&lt;/li&gt;
-&lt;li&gt;对象模式有20种，单例，原型，抽象工厂，建造者，代理，对象的适配器，桥接，装饰，外观，享元，组合，策略，命令，责任链，状态，观察者，中介者，迭代器，访问者，备忘录；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络</title>
-    <link href="https://sometwo7.github.io/blog/post/50daec4.html"/>
-    <id>https://sometwo7.github.io/blog/post/50daec4.html</id>
-    <published>2019-10-04T19:49:18.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;网络&quot;&gt;&lt;a href=&quot;#网络&quot; class=&quot;headerlink&quot; title=&quot;网络&quot;&gt;&lt;/a&gt;网络&lt;/h1&gt;&lt;h2 id=&quot;1-http-响应码-301-和-302-代表的是什么？有什么区别？&quot;&gt;&lt;a href=&quot;#1-http-响应码-301-和-302-代表的是什么？有什么区别？&quot; class=&quot;headerlink&quot; title=&quot;1. http 响应码 301 和 302 代表的是什么？有什么区别？&quot;&gt;&lt;/a&gt;1. http 响应码 301 和 302 代表的是什么？有什么区别？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;301：永久重定向。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;302：暂时重定向。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;它们的区别是，301 对搜索引擎优化（SEO）更加有利；302 有被提示为网络拦截的风险。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="网络" scheme="https://sometwo7.github.io/blog/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>异常</title>
-    <link href="https://sometwo7.github.io/blog/post/23a3bd72.html"/>
-    <id>https://sometwo7.github.io/blog/post/23a3bd72.html</id>
-    <published>2019-10-04T19:49:17.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;异常&quot;&gt;&lt;a href=&quot;#异常&quot; class=&quot;headerlink&quot; title=&quot;异常&quot;&gt;&lt;/a&gt;异常&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;Java 的异常处理是通过 5 个关键字来实现的：try，catch，throw，throws，finally。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;1-throw-和-throws-的区别？&quot;&gt;&lt;a href=&quot;#1-throw-和-throws-的区别？&quot; class=&quot;headerlink&quot; title=&quot;1. throw 和 throws 的区别？&quot;&gt;&lt;/a&gt;1. throw 和 throws 的区别？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;throw：是真实抛出一个异常。&lt;/li&gt;
-&lt;li&gt;throws：是声明可能会抛出一个异常。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java Web</title>
-    <link href="https://sometwo7.github.io/blog/post/fb60fea1.html"/>
-    <id>https://sometwo7.github.io/blog/post/fb60fea1.html</id>
-    <published>2019-10-04T19:49:16.000Z</published>
-    <updated>2019-10-31T03:25:17.593Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Java-Web&quot;&gt;&lt;a href=&quot;#Java-Web&quot; class=&quot;headerlink&quot; title=&quot;Java Web&quot;&gt;&lt;/a&gt;Java Web&lt;/h1&gt;&lt;h2 id=&quot;1-jsp-和-servlet-有什么区别？&quot;&gt;&lt;a href=&quot;#1-jsp-和-servlet-有什么区别？&quot; class=&quot;headerlink&quot; title=&quot;1. jsp 和 servlet 有什么区别？&quot;&gt;&lt;/a&gt;1. jsp 和 servlet 有什么区别？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;JSP是servlet技术的扩展，本质上就是servlet的简易方式。&lt;/li&gt;
-&lt;li&gt;servlet和JSP最主要的不同点在于，&lt;ul&gt;
-&lt;li&gt;servlet的应用逻辑是在Java文件中，并且完全从表示层中的html里分离开来，&lt;/li&gt;
-&lt;li&gt;而JSP的情况是Java和html可以组合成一个扩展名为JSP的文件。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;JSP侧重于视图，servlet主要用于控制逻辑。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java学习" scheme="https://sometwo7.github.io/blog/categories/Java%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="Web" scheme="https://sometwo7.github.io/blog/tags/Web/"/>
     
   </entry>
   
