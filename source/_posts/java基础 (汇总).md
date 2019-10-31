@@ -1,9 +1,12 @@
 ---
 title: Java基础(汇总)
-date: 2019-10-04 19:49:32
-tags: [Java]
-categories: [Java学习]
+tags:
+  - Java
+categories:
+  - Java学习
 comments: true
+abbrlink: 8b7b30a1
+date: 2019-10-04 19:49:32
 ---
 # JAVA
 
@@ -16,6 +19,8 @@ comments: true
 一、 面试题覆盖全,且解析全面
 
 这份面试题总内容包含了十九个模块：Java 基础、容器、多线程、反射、对象拷贝、Java Web 模块、异常、网络、设计模式、Spring/Spring MVC、Spring Boot/Spring Cloud、Hibernate、Mybatis、RabbitMQ、Kafka、Zookeeper、MySql、Redis、JVM .
+
+<!-- more -->
 
 具体面试题如下
 
