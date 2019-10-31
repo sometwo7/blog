@@ -14,11 +14,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png?v=7.4.1">
   <link rel="icon" type="image/png" sizes="16x16" href="http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png?v=7.4.1">
   <link rel="mask-icon" href="/blog/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/blog/atom.xml" title="佚名" type="application/atom+xml">
 
 <link rel="stylesheet" href="/blog/css/main.css?v=7.4.1">
 
 
 <link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="/blog/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+  <script src="/blog/lib/pace/pace.min.js?v=1.0.2"></script>
 
 
 <script id="hexo-configurations">
@@ -30,7 +33,7 @@
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
     mediumzoom: false,
@@ -44,7 +47,7 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.json',
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
@@ -290,7 +293,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/blog/2019/10/04/java基础 (汇总)/" itemprop="url">
+          <a class="post-title-link" href="/blog/post/8b7b30a1.html" itemprop="url">
             <span itemprop="name">Java基础(汇总)</span>
           </a>
         
@@ -319,7 +322,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/blog/2019/10/04/java/19JVM/" itemprop="url">
+          <a class="post-title-link" href="/blog/post/66c016fb.html" itemprop="url">
             <span itemprop="name">JVM</span>
           </a>
         
@@ -348,7 +351,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/blog/2019/10/04/java/18Redis/" itemprop="url">
+          <a class="post-title-link" href="/blog/post/bae4ff13.html" itemprop="url">
             <span itemprop="name">Redis</span>
           </a>
         
@@ -377,7 +380,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/blog/2019/10/04/java/17MySql/" itemprop="url">
+          <a class="post-title-link" href="/blog/post/54e1373e.html" itemprop="url">
             <span itemprop="name">Mysql</span>
           </a>
         
@@ -406,7 +409,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/blog/2019/10/04/java/16Zookeeper/" itemprop="url">
+          <a class="post-title-link" href="/blog/post/b829b66a.html" itemprop="url">
             <span itemprop="name">Zookeeper</span>
           </a>
         
@@ -435,7 +438,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/blog/2019/10/04/java/15Kafka/" itemprop="url">
+          <a class="post-title-link" href="/blog/post/9a7d5a13.html" itemprop="url">
             <span itemprop="name">Kafka</span>
           </a>
         
@@ -464,7 +467,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/blog/2019/10/04/java/14RabbitMQ/" itemprop="url">
+          <a class="post-title-link" href="/blog/post/b543ced0.html" itemprop="url">
             <span itemprop="name">RabbitMQ</span>
           </a>
         
@@ -493,7 +496,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/blog/2019/10/04/java/13Mybatis/" itemprop="url">
+          <a class="post-title-link" href="/blog/post/da3e1361.html" itemprop="url">
             <span itemprop="name">Mybatis</span>
           </a>
         
@@ -522,7 +525,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/blog/2019/10/04/java/12Hibernate/" itemprop="url">
+          <a class="post-title-link" href="/blog/post/6f8276a9.html" itemprop="url">
             <span itemprop="name">Hibernate</span>
           </a>
         
@@ -551,7 +554,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/blog/2019/10/04/java/11SpringBootSpringCloud/" itemprop="url">
+          <a class="post-title-link" href="/blog/post/b3383f7f.html" itemprop="url">
             <span itemprop="name">Spring Boot/Spring Cloud</span>
           </a>
         
@@ -651,6 +654,11 @@
     
   </nav>
 </div>
+  <div class="feed-link motion-element">
+    <a href="/blog/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
       
@@ -681,7 +689,7 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sometwo</span>
 </div>

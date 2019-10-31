@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png?v=7.4.1">
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/blog/atom.xml" title="佚名" type="application/atom+xml">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="/blog/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+  <script src="/blog/lib/pace/pace.min.js?v=1.0.2"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="MySql数据库的三范式是什么？ 第一范式，关系表中的每列都是原子不可分的项，即每个属性都是最基本的项；  第二范式，在满足第一范式的前提下，关系表的所有非主属性完全依赖于每一个候选关键属性；  第三范式，在满足第二范式的前提下，关系表的所有非主属性由主键直接决定。">
+<meta name="keywords" content="Java,DB,Mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mysql">
+<meta property="og:url" content="https://sometwo7.github.io/blog/post/54e1373e.html">
+<meta property="og:site_name" content="佚名">
+<meta property="og:description" content="MySql数据库的三范式是什么？ 第一范式，关系表中的每列都是原子不可分的项，即每个属性都是最基本的项；  第二范式，在满足第一范式的前提下，关系表的所有非主属性完全依赖于每一个候选关键属性；  第三范式，在满足第二范式的前提下，关系表的所有非主属性由主键直接决定。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-31T02:48:43.776Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mysql">
+<meta name="twitter:description" content="MySql数据库的三范式是什么？ 第一范式，关系表中的每列都是原子不可分的项，即每个属性都是最基本的项；  第二范式，在满足第一范式的前提下，关系表的所有非主属性完全依赖于每一个候选关键属性；  第三范式，在满足第二范式的前提下，关系表的所有非主属性由主键直接决定。">
+  <link rel="canonical" href="https://sometwo7.github.io/blog/post/54e1373e">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Mysql | 佚名</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">佚名</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">一生太短，请务必热情！(Life too short, just be active!)</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/54e1373e.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Mysql
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:27" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:27+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="MySql"><a href="#MySql" class="headerlink" title="MySql"></a>MySql</h1><h2 id="数据库的三范式是什么？"><a href="#数据库的三范式是什么？" class="headerlink" title="数据库的三范式是什么？"></a>数据库的三范式是什么？</h2><ul>
+<li><p>第一范式，关系表中的每列都是原子不可分的项，即每个属性都是最基本的项；</p>
+</li>
+<li><p>第二范式，在满足第一范式的前提下，关系表的所有非主属性完全依赖于每一个候选关键属性；</p>
+</li>
+<li><p>第三范式，在满足第二范式的前提下，关系表的所有非主属性由主键直接决定。</p>
+</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="一张自增表里面总共有-7-条数据-删除了最后-2-条数据-重启-mysql-数据库-又插入了一条数据-此时-id-是几？"><a href="#一张自增表里面总共有-7-条数据-删除了最后-2-条数据-重启-mysql-数据库-又插入了一条数据-此时-id-是几？" class="headerlink" title="一张自增表里面总共有 7 条数据,删除了最后 2 条数据,重启 mysql 数据库,又插入了一条数据,此时 id 是几？"></a>一张自增表里面总共有 7 条数据,删除了最后 2 条数据,重启 mysql 数据库,又插入了一条数据,此时 id 是几？</h2><ul>
+<li>表引擎 MyISAM， id 为 8；</li>
+<li>表引擎 InnoDB， id 为 6；</li>
+<li>InnoDB 把表自增主键的最大 id 记录在内存里， 所有重启后会丢失最大 id。</li>
+</ul>
+<h2 id="如何获取当前数据库版本？"><a href="#如何获取当前数据库版本？" class="headerlink" title="如何获取当前数据库版本？"></a>如何获取当前数据库版本？</h2><ul>
+<li>select version()</li>
+</ul>
+<h2 id="说一下-ACID-是什么？"><a href="#说一下-ACID-是什么？" class="headerlink" title="说一下 ACID 是什么？"></a>说一下 ACID 是什么？</h2><ul>
+<li>ACID，事务的四大特性，原子性(Atomicity)，一致性(Consistency)，隔离性(Isolation)，持久性(Durability)；</li>
+<li>A，原子性，事务是一个不可分割的工作单位，要么都发生，要么都不发生；</li>
+<li>C，事务必须使数据库，从一个一致性状态变换到另一个一致性状态；</li>
+<li>I，事务的隔离性是指，多个用户并发访问数据库时，数据库为每个用户开启的事务，不能被其他事务的操作数据所干扰，多个并发事务间相互隔离；</li>
+<li>D，持久性要求，一个事务一旦被提交，它对数据库中数据的修改是永久性的，即使数据库发生故障也不会丢失。</li>
+</ul>
+<h2 id="说一下数据库的事务隔离？"><a href="#说一下数据库的事务隔离？" class="headerlink" title="说一下数据库的事务隔离？"></a>说一下数据库的事务隔离？</h2><ul>
+<li>MySql的事务隔离是在 MySql.ini 配置文件里添加的，在文件的最后添加：transaction-isolation=REPEATABLE-READ</li>
+<li>READ-UNCOMMITTED：读未提交，最低的隔离级别，事务未提交前，就可被其他事务读取（会出现幻读、脏读、不可重复读）</li>
+<li>READ-COMMITTED：读已提交，一个事务提交后才能被其他事务读取到（oracle默认级别，会出现幻读、不重复读）</li>
+<li>REPEATABLE-READ：可重复读，就是在开始读取数据时，不再允许修改操作（mysql默认级别，会造成幻读）</li>
+<li>SERIALIZABLE：序列化，代价最高最可靠的隔离级别 脏读：表示一个事务能读取另一个事务中还未提交的数据 不可重复读：指在一个事务内，多次读取同一数据 幻读：指同一个事务内多次查询返回的结果集不一样</li>
+</ul>
+<h2 id="char-和-varchar-的区别是什么？"><a href="#char-和-varchar-的区别是什么？" class="headerlink" title="char 和 varchar 的区别是什么？"></a>char 和 varchar 的区别是什么？</h2><ul>
+<li><p>数据库中 char 固定长度，</p>
+<ul>
+<li>优点是效率高，缺点是占用多余空间，</li>
+<li>适用场景为存储定长数据；</li>
+</ul>
+</li>
+<li><p>数据库中 varchar 可变长度，</p>
+<ul>
+<li>存储的值是每个值占用的字节再加上一个用来记录其长度的字节的长度；</li>
+</ul>
+</li>
+<li><p>空间上考虑适用 varchar， 效率上适用 char。</p>
+</li>
+</ul>
+<h2 id="float-和-double-的区别是什么？"><a href="#float-和-double-的区别是什么？" class="headerlink" title="float 和 double 的区别是什么？"></a>float 和 double 的区别是什么？</h2><ul>
+<li><p>mysql 数据库的 float 最多可以存储 8 位十进制数， 占 4 个字节；</p>
+</li>
+<li><p>double 最多可以存储 16 位十进制数，占 8 个字节。</p>
+</li>
+</ul>
+<h2 id="mysql-的内连接、左连接、右连接有什么区别？"><a href="#mysql-的内连接、左连接、右连接有什么区别？" class="headerlink" title="mysql 的内连接、左连接、右连接有什么区别？"></a>mysql 的内连接、左连接、右连接有什么区别？</h2><ul>
+<li><p>内连接关键字：inner join；左连接：left join；右连接：right join；</p>
+</li>
+<li><p>内连接是把匹配的关联数据显示出来；</p>
+</li>
+<li><p>左连接是左边的表全部显示出来，右边的表显示出符合条件的数据；</p>
+</li>
+<li><p>右连接是右边的表全部显示出来，左边的表显示出符合条件的数据；。</p>
+</li>
+</ul>
+<h2 id="mysql-索引是怎么实现的？"><a href="#mysql-索引是怎么实现的？" class="headerlink" title="mysql 索引是怎么实现的？"></a>mysql 索引是怎么实现的？</h2><ul>
+<li>常见的主要有两种结构：Hash索引和B+树索引，InnoDB引擎默认是B+树；</li>
+<li>哈希索引适合等值查询，但是不无法进行范围查询，哈希索引没办法利用索引完成排序，也不支持多列联合索引的最左匹配原则，如果有大量重复键值的情况下，效率会很低，因此存在哈希碰撞的问题；</li>
+<li>而B+树是一种多路平衡查询树，他的节点是天然有序的，对于范围查询的时候不需要做全表扫描。</li>
+</ul>
+<h2 id="怎么验证-mysql-的索引是否满足需求？"><a href="#怎么验证-mysql-的索引是否满足需求？" class="headerlink" title="怎么验证 mysql 的索引是否满足需求？"></a>怎么验证 mysql 的索引是否满足需求？</h2><ul>
+<li>使用 explain 查看 SQL 是如何执行查询语句的，从而分析你的索引是否满足需求；</li>
+<li>在正常的 sql 语句前加 explain 关键字。</li>
+</ul>
+<h2 id="说一下-mysql-常用的引擎？"><a href="#说一下-mysql-常用的引擎？" class="headerlink" title="说一下 mysql 常用的引擎？"></a>说一下 mysql 常用的引擎？</h2><ul>
+<li><p>InnoDB 引擎：</p>
+<ul>
+<li>mysql 5.1 后默认的数据库引擎，</li>
+<li>提供了对数据库 acid 事务的支持，</li>
+<li>并且还提供了行级锁和外键的约束，</li>
+<li>它的设计的目标就是处理大数据容量的数据库系统。</li>
+<li>MySQL 运行的时候，InnoDB 会在内存中建立缓冲池，用于缓冲数据和索引。</li>
+<li>但是该引擎是不支持全文搜索，同时启动也比较的慢，</li>
+<li>它是不会保存表的行数的，所以当进行 select count(*) from table 指令的时候，需要进行扫描全表。</li>
+<li>由于锁的粒度小，写操作是不会锁定全表的,所以在并发度较高的场景下使用会提升效率的。</li>
+</ul>
+</li>
+<li><p>MyIASM 引擎：</p>
+<ul>
+<li>不提供事务的支持，也不支持行级锁和外键。</li>
+<li>因此当执行插入和更新语句时，即执行写操作的时候需要锁定这个表，所以会导致效率会降低。</li>
+<li>不过和 InnoDB 不同的是，MyIASM 引擎是保存了表的行数，于是当进行 select count(*) from table 语句时，可以直接的读取已经保存的值而不需要进行扫描全表。</li>
+<li>所以，如果表的读操作远远多于写操作时，并且不需要事务的支持的，可以将 MyIASM 作为数据库引擎的首选。</li>
+</ul>
+</li>
+</ul>
+<h2 id="说一下-mysql-的行锁和表锁？"><a href="#说一下-mysql-的行锁和表锁？" class="headerlink" title="说一下 mysql 的行锁和表锁？"></a>说一下 mysql 的行锁和表锁？</h2><ul>
+<li>MyISAM 只支持表锁，InnoDB 支持表锁和行锁，默认为行锁；</li>
+<li>表级锁：开销小，加锁快，不会出现死锁。锁定粒度大，发生锁冲突的概率最高，并发量最低。</li>
+<li>行级锁：开销大，加锁慢，会出现死锁。锁力度小，发生锁冲突的概率小，并发度最高。</li>
+</ul>
+<h2 id="说一下乐观锁和悲观锁？"><a href="#说一下乐观锁和悲观锁？" class="headerlink" title="说一下乐观锁和悲观锁？"></a>说一下乐观锁和悲观锁？</h2><ul>
+<li>乐观锁：每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在提交更新的时候会判断一下在此期间别人有没有去更新这个数据。</li>
+<li>悲观锁：每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会阻止，直到这个锁被释放。</li>
+<li>数据库的乐观锁需要自己实现，在表里面添加一个 version 字段，每次修改成功值加 1，这样每次修改的时候先对比一下，自己拥有的 version 和数据库现在的 version 是否一致，如果不一致就不修改，这样就实现了乐观锁。</li>
+</ul>
+<h2 id="mysql-问题排查都有哪些手段？"><a href="#mysql-问题排查都有哪些手段？" class="headerlink" title="mysql 问题排查都有哪些手段？"></a>mysql 问题排查都有哪些手段？</h2><ul>
+<li>使用 show processlist 命令查看当前所有连接信息；</li>
+<li>使用 explain 命令查询 SQL 语句执行计划；</li>
+<li>开启慢查询日志，查看慢查询的 SQL。</li>
+</ul>
+<h2 id="如何做-mysql-的性能优化？"><a href="#如何做-mysql-的性能优化？" class="headerlink" title="如何做 mysql 的性能优化？"></a>如何做 mysql 的性能优化？</h2><ul>
+<li>为搜索字段创建索引；</li>
+<li>避免sql语句不当使索引无效的情况</li>
+<li>避免使用 select *，列出需要查询的字段，返回更少的数据，只返回需要的字段；</li>
+<li>避免在where子句中使用!=，in，or；</li>
+<li>使用连接查询代替子查询；</li>
+<li>垂直分割分表；</li>
+<li>选择正确的存储引擎。</li>
+</ul>
+<h2 id="一条sql执行时间过长，如何优化，从哪些方面？"><a href="#一条sql执行时间过长，如何优化，从哪些方面？" class="headerlink" title="一条sql执行时间过长，如何优化，从哪些方面？"></a>一条sql执行时间过长，如何优化，从哪些方面？</h2><ul>
+<li>查看sql是否涉及多表的链表或者子查询，如果有，看看能否进行业务拆分，或者相关字段合并成临时表；</li>
+<li>涉及链表的查询，是否能进行分表查询，查询之后进行字段整合；</li>
+<li>是否可以对相应的字段做索引，加快查询速度；</li>
+<li>针对数据量大的表进行历史表分离；</li>
+<li>数据库主从分离，读写分离，降低读写对数据库同时操作的压力。MySQL自带binlog实现主从同步；</li>
+<li>explain分析sql语句，查看执行计划，分析索引是否用上，分析扫描行数等；</li>
+<li>查看MySQL日志，是否有其他问题。</li>
+</ul>
+<h2 id="当数据库中A-B字段做了组合索引，那么单独使用A或者单独使用B会有索引效果吗？"><a href="#当数据库中A-B字段做了组合索引，那么单独使用A或者单独使用B会有索引效果吗？" class="headerlink" title="当数据库中A,B字段做了组合索引，那么单独使用A或者单独使用B会有索引效果吗？"></a>当数据库中A,B字段做了组合索引，那么单独使用A或者单独使用B会有索引效果吗？</h2><ul>
+<li>当A，B字段做了组合索引的时候，如果A在前，那么单独使用A会有索引效果，单独使用B则没有。</li>
+</ul>
+<h2 id="使用like查询是否走索引"><a href="#使用like查询是否走索引" class="headerlink" title="使用like查询是否走索引"></a>使用like查询是否走索引</h2><ul>
+<li>后通配，走索引；</li>
+<li>前通配，走全表。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/blog/tags/Java/" rel="tag"># Java</a>
+            
+              <a href="/blog/tags/DB/" rel="tag"># DB</a>
+            
+              <a href="/blog/tags/Mysql/" rel="tag"># Mysql</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/blog/post/b829b66a.html" rel="next" title="Zookeeper">
+                  <i class="fa fa-chevron-left"></i> Zookeeper
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/blog/post/bae4ff13.html" rel="prev" title="Redis">
+                  Redis <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MySql"><span class="nav-number">1.</span> <span class="nav-text">MySql</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的三范式是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">数据库的三范式是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一张自增表里面总共有-7-条数据-删除了最后-2-条数据-重启-mysql-数据库-又插入了一条数据-此时-id-是几？"><span class="nav-number">1.2.</span> <span class="nav-text">一张自增表里面总共有 7 条数据,删除了最后 2 条数据,重启 mysql 数据库,又插入了一条数据,此时 id 是几？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何获取当前数据库版本？"><span class="nav-number">1.3.</span> <span class="nav-text">如何获取当前数据库版本？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说一下-ACID-是什么？"><span class="nav-number">1.4.</span> <span class="nav-text">说一下 ACID 是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说一下数据库的事务隔离？"><span class="nav-number">1.5.</span> <span class="nav-text">说一下数据库的事务隔离？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#char-和-varchar-的区别是什么？"><span class="nav-number">1.6.</span> <span class="nav-text">char 和 varchar 的区别是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#float-和-double-的区别是什么？"><span class="nav-number">1.7.</span> <span class="nav-text">float 和 double 的区别是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql-的内连接、左连接、右连接有什么区别？"><span class="nav-number">1.8.</span> <span class="nav-text">mysql 的内连接、左连接、右连接有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql-索引是怎么实现的？"><span class="nav-number">1.9.</span> <span class="nav-text">mysql 索引是怎么实现的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么验证-mysql-的索引是否满足需求？"><span class="nav-number">1.10.</span> <span class="nav-text">怎么验证 mysql 的索引是否满足需求？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说一下-mysql-常用的引擎？"><span class="nav-number">1.11.</span> <span class="nav-text">说一下 mysql 常用的引擎？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说一下-mysql-的行锁和表锁？"><span class="nav-number">1.12.</span> <span class="nav-text">说一下 mysql 的行锁和表锁？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说一下乐观锁和悲观锁？"><span class="nav-number">1.13.</span> <span class="nav-text">说一下乐观锁和悲观锁？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql-问题排查都有哪些手段？"><span class="nav-number">1.14.</span> <span class="nav-text">mysql 问题排查都有哪些手段？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何做-mysql-的性能优化？"><span class="nav-number">1.15.</span> <span class="nav-text">如何做 mysql 的性能优化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一条sql执行时间过长，如何优化，从哪些方面？"><span class="nav-number">1.16.</span> <span class="nav-text">一条sql执行时间过长，如何优化，从哪些方面？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#当数据库中A-B字段做了组合索引，那么单独使用A或者单独使用B会有索引效果吗？"><span class="nav-number">1.17.</span> <span class="nav-text">当数据库中A,B字段做了组合索引，那么单独使用A或者单独使用B会有索引效果吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用like查询是否走索引"><span class="nav-number">1.18.</span> <span class="nav-text">使用like查询是否走索引</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4"
+      alt="Sometwo">
+  <p class="site-author-name" itemprop="name">Sometwo</p>
+  <div class="site-description" itemprop="description">一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/blog/categories/">
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/blog/tags/">
+          
+        
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/blog/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/sometwo7" title="GitHub &rarr; https://github.com/sometwo7" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sometwo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/blog/js/utils.js?v=7.4.1"></script><script src="/blog/js/motion.js?v=7.4.1"></script>
+<script src="/blog/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/blog/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/blog/js/local-search.js?v=7.4.1"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

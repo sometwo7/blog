@@ -14,11 +14,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png?v=7.4.1">
   <link rel="icon" type="image/png" sizes="16x16" href="http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png?v=7.4.1">
   <link rel="mask-icon" href="/blog/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/blog/atom.xml" title="佚名" type="application/atom+xml">
 
 <link rel="stylesheet" href="/blog/css/main.css?v=7.4.1">
 
 
 <link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="/blog/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+  <script src="/blog/lib/pace/pace.min.js?v=1.0.2"></script>
 
 
 <script id="hexo-configurations">
@@ -30,7 +33,7 @@
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
     mediumzoom: false,
@@ -44,7 +47,7 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.json',
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
@@ -245,7 +248,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/java/14RabbitMQ/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/b543ced0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -259,7 +262,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/2019/10/04/java/14RabbitMQ/" class="post-title-link" itemprop="url">RabbitMQ</a>
+            <a href="/blog/post/b543ced0.html" class="post-title-link" itemprop="url">RabbitMQ</a>
           
         </h1>
 
@@ -285,7 +288,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 01:43:25" itemprop="dateModified" datetime="2019-10-31T01:43:25+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
               </span>
             
           
@@ -315,121 +318,17 @@
 
       
           <h1 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h1><h2 id="1-rabbitmq-的使用场景有哪些？"><a href="#1-rabbitmq-的使用场景有哪些？" class="headerlink" title="1. rabbitmq 的使用场景有哪些？"></a>1. rabbitmq 的使用场景有哪些？</h2><ul>
-<li><p>跨系统的异步通信，所有需要异步交互的地方都可以使用消息队列。就像我们除了打电话（同步）以外，还需要发短信，发电子邮件（异步）的通讯方式。</p>
-</li>
-<li><p>多个应用之间的耦合，由于消息是平台无关和语言无关的，而且语义上也不再是函数调用，因此更适合作为多个应用之间的松耦合的接口。基于消息队列的耦合，不需要发送方和接收方同时在线。在企业应用集成（EAI）中，文件传输，共享数据库，消息队列，远程过程调用都可以作为集成的方法。</p>
-</li>
-<li><p>应用内的同步变异步，比如订单处理，就可以由前端应用将订单信息放到队列，后端应用从队列里依次获得消息处理，高峰时的大量订单可以积压在队列里慢慢处理掉。由于同步通常意味着阻塞，而大量线程的阻塞会降低计算机的性能。</p>
-</li>
-<li><p>消息驱动的架构（EDA），系统分解为消息队列，和消息制造者和消息消费者，一个处理流程可以根据需要拆成多个阶段（Stage），阶段之间用队列连接起来，前一个阶段处理的结果放入队列，后一个阶段从队列中获取消息继续处理。</p>
-</li>
-<li><p>应用需要更灵活的耦合方式，如发布订阅，比如可以指定路由规则。</p>
-</li>
-<li><p>跨局域网，甚至跨城市的通讯（CDN行业），比如北京机房与广州机房的应用程序的通信。</p>
-</li>
+<li>跨系统的异步通信，所有需要异步交互的地方都可以使用消息队列。就像我们除了打电话（同步）以外，还需要发短信，发电子邮件（异步）的通讯方式。</li>
 </ul>
-<h2 id="2-rabbitmq-有哪些重要的角色？"><a href="#2-rabbitmq-有哪些重要的角色？" class="headerlink" title="2. rabbitmq 有哪些重要的角色？"></a>2. rabbitmq 有哪些重要的角色？</h2><ul>
-<li>RabbitMQ 中重要的角色有：生产者、消费者和代理：</li>
-<li>生产者：消息的创建者，负责创建和推送数据到消息服务器；</li>
-<li>消费者：消息的接收方，用于处理数据和确认消息；</li>
-<li>代理：就是 RabbitMQ 本身，用于扮演“快递”的角色，本身不生产消息，只是扮演“快递”的角色。</li>
-</ul>
-<h2 id="3-rabbitmq-有哪些重要的组件？"><a href="#3-rabbitmq-有哪些重要的组件？" class="headerlink" title="3. rabbitmq 有哪些重要的组件？"></a>3. rabbitmq 有哪些重要的组件？</h2><ul>
-<li>ConnectionFactory（连接管理器）：应用程序与Rabbit之间建立连接的管理器，程序代码中使用。</li>
-<li>Channel（信道）：消息推送使用的通道。</li>
-<li>Exchange（交换器）：用于接受、分配消息。</li>
-<li>Queue（队列）：用于存储生产者的消息。</li>
-<li>RoutingKey（路由键）：用于把生成者的数据分配到交换器上。</li>
-<li>BindingKey（绑定键）：用于把交换器的消息绑定到队列上。</li>
-</ul>
-<h2 id="4-rabbitmq-中-vhost-的作用是什么？"><a href="#4-rabbitmq-中-vhost-的作用是什么？" class="headerlink" title="4. rabbitmq 中 vhost 的作用是什么？"></a>4. rabbitmq 中 vhost 的作用是什么？</h2><ul>
-<li>vhost 可以理解为虚拟 broker ，即 mini-RabbitMQ server。</li>
-<li>其内部均含有独立的 queue、exchange 和 binding 等，</li>
-<li>但最最重要的是，其拥有独立的权限系统，</li>
-<li>可以做到 vhost 范围的用户控制。</li>
-<li>当然，从 RabbitMQ 的全局角度，vhost 可以作为不同权限隔离的手段</li>
-<li>一个典型的例子就是不同的应用可以跑在不同的 vhost 中。</li>
-</ul>
-<h2 id="5-rabbitmq-的消息是怎么发送的？"><a href="#5-rabbitmq-的消息是怎么发送的？" class="headerlink" title="5. rabbitmq 的消息是怎么发送的？"></a>5. rabbitmq 的消息是怎么发送的？</h2><ul>
-<li>首先客户端必须连接到 RabbitMQ 服务器才能发布和消费消息，</li>
-<li>客户端和 rabbit server 之间会创建一个 tcp 连接，</li>
-<li>一旦 tcp 打开并通过了认证（认证就是你发送给 rabbit 服务器的用户名和密码），</li>
-<li>你的客户端和 RabbitMQ 就创建了一条 amqp 信道（channel），</li>
-<li>信道是创建在“真实” tcp 上的虚拟连接，</li>
-<li>amqp 命令都是通过信道发送出去的，</li>
-<li>每个信道都会有一个唯一的 id，</li>
-<li>不论是发布消息，订阅队列都是通过这个信道完成的。</li>
-</ul>
-<h2 id="6-rabbitmq-怎么保证消息的稳定性？"><a href="#6-rabbitmq-怎么保证消息的稳定性？" class="headerlink" title="6. rabbitmq 怎么保证消息的稳定性？"></a>6. rabbitmq 怎么保证消息的稳定性？</h2><ul>
-<li>提供了事务的功能。</li>
-<li>通过将 channel 设置为 confirm（确认）模式。</li>
-</ul>
-<h2 id="7-rabbitmq-怎么避免消息丢失？"><a href="#7-rabbitmq-怎么避免消息丢失？" class="headerlink" title="7. rabbitmq 怎么避免消息丢失？"></a>7. rabbitmq 怎么避免消息丢失？</h2><ul>
-<li><p>消息持久化</p>
-</li>
-<li><p>ACK确认机制</p>
-</li>
-<li><p>设置集群镜像模式</p>
-</li>
-<li><p>消息补偿机制</p>
-</li>
-</ul>
-<h2 id="8-要保证消息持久化成功的条件有哪些？"><a href="#8-要保证消息持久化成功的条件有哪些？" class="headerlink" title="8. 要保证消息持久化成功的条件有哪些？"></a>8. 要保证消息持久化成功的条件有哪些？</h2><p>四个条件都满足才能保证消息持久化成功</p>
-<ul>
-<li>消息推送投递模式必须设置持久化，deliveryMode 设置为 2（持久）。</li>
-<li>声明队列必须设置持久化 durable 设置为 true.</li>
-<li>消息已经到达持久化交换器。</li>
-<li>消息已经到达持久化队列。</li>
-</ul>
-<h2 id="9-rabbitmq-持久化有什么缺点？"><a href="#9-rabbitmq-持久化有什么缺点？" class="headerlink" title="9. rabbitmq 持久化有什么缺点？"></a>9. rabbitmq 持久化有什么缺点？</h2><ul>
-<li>持久化的缺地就是降低了服务器的吞吐量，</li>
-<li>因为使用的是磁盘而非内存存储，从而降低了吞吐量。</li>
-<li>可尽量使用 ssd 硬盘来缓解吞吐量的问题。</li>
-</ul>
-<h2 id="10-rabbitmq-有几种广播类型？"><a href="#10-rabbitmq-有几种广播类型？" class="headerlink" title="10. rabbitmq 有几种广播类型？"></a>10. rabbitmq 有几种广播类型？</h2><p>三种广播模式：</p>
-<ul>
-<li>fanout: 所有bind到此exchange的queue都可以接收消息（纯广播，绑定到RabbitMQ的接受者都能收到消息）；</li>
-<li>direct: 通过routingKey和exchange决定的那个唯一的queue可以接收消息；</li>
-<li>topic:所有符合routingKey(此时可以是一个表达式)的routingKey所bind的queue可以接收消息。</li>
-</ul>
-<h2 id="11-rabbitmq-怎么实现延迟消息队列？"><a href="#11-rabbitmq-怎么实现延迟消息队列？" class="headerlink" title="11. rabbitmq 怎么实现延迟消息队列？"></a>11. rabbitmq 怎么实现延迟消息队列？</h2><ul>
-<li>通过消息过期后进入死信交换器，再由交换器转发到延迟消费队列，实现延迟功能；</li>
-<li>使用 RabbitMQ-delayed-message-exchange 插件实现延迟功能。</li>
-</ul>
-<h2 id="12-rabbitmq-集群有什么用？"><a href="#12-rabbitmq-集群有什么用？" class="headerlink" title="12. rabbitmq 集群有什么用？"></a>12. rabbitmq 集群有什么用？</h2><p>集群主要有以下两个用途：</p>
-<ul>
-<li>高可用：某个服务器出现问题，整个 RabbitMQ 还可以继续使用；</li>
-<li>高容量：集群可以承载更多的消息量。</li>
-</ul>
-<h2 id="13-rabbitmq-节点的类型有哪些？"><a href="#13-rabbitmq-节点的类型有哪些？" class="headerlink" title="13. rabbitmq 节点的类型有哪些？"></a>13. rabbitmq 节点的类型有哪些？</h2><ul>
-<li>磁盘节点：消息会存储到磁盘。</li>
-<li>内存节点：消息都存储在内存中，重启服务器消息丢失，性能高于磁盘类型。</li>
-</ul>
-<h2 id="14-rabbitmq-集群搭建需要注意哪些问题？"><a href="#14-rabbitmq-集群搭建需要注意哪些问题？" class="headerlink" title="14. rabbitmq 集群搭建需要注意哪些问题？"></a>14. rabbitmq 集群搭建需要注意哪些问题？</h2><ul>
-<li>各节点之间使用“--link”连接，此属性不能忽略。</li>
-<li>各节点使用的 erlang cookie 值必须相同，此值相当于“秘钥”的功能，用于各节点的认证。</li>
-<li>整个集群中必须包含一个磁盘节点。</li>
-</ul>
-<h2 id="15-rabbitmq-每个节点是其他节点的完整拷贝吗？为什么？"><a href="#15-rabbitmq-每个节点是其他节点的完整拷贝吗？为什么？" class="headerlink" title="15. rabbitmq 每个节点是其他节点的完整拷贝吗？为什么？"></a>15. rabbitmq 每个节点是其他节点的完整拷贝吗？为什么？</h2><p>不是，原因有以下两个：</p>
-<ul>
-<li>存储空间的考虑：如果每个节点都拥有所有队列的完全拷贝，这样新增节点不但没有新增存储空间，反而增加了更多的冗余数据；</li>
-<li>性能的考虑：如果每条消息都需要完整拷贝到每一个集群节点，那新增节点并没有提升处理消息的能力，最多是保持和单节点相同的性能甚至是更糟。</li>
-</ul>
-<h2 id="16-rabbitmq-集群中唯一一个磁盘节点崩溃了会发生什么情况？"><a href="#16-rabbitmq-集群中唯一一个磁盘节点崩溃了会发生什么情况？" class="headerlink" title="16. rabbitmq 集群中唯一一个磁盘节点崩溃了会发生什么情况？"></a>16. rabbitmq 集群中唯一一个磁盘节点崩溃了会发生什么情况？</h2><p>唯一磁盘节点崩溃了，集群是可以保持运行的，但你不能更改任何东西。</p>
-<ul>
-<li>不能创建队列</li>
-<li>不能创建交换器</li>
-<li>不能创建绑定</li>
-<li>不能添加用户</li>
-<li>不能更改权限</li>
-<li>不能添加和删除集群节点</li>
-</ul>
-<h2 id="17-rabbitmq-对集群节点停止顺序有要求吗？"><a href="#17-rabbitmq-对集群节点停止顺序有要求吗？" class="headerlink" title="17. rabbitmq 对集群节点停止顺序有要求吗？"></a>17. rabbitmq 对集群节点停止顺序有要求吗？</h2><ul>
-<li>RabbitMQ 对集群的停止的顺序是有要求的，</li>
-<li>应该先关闭内存节点，最后再关闭磁盘节点。</li>
-<li>如果顺序恰好相反的话，可能会造成消息的丢失。</li>
-</ul>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/b543ced0.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -451,7 +350,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/java/13Mybatis/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/da3e1361.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -465,7 +364,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/2019/10/04/java/13Mybatis/" class="post-title-link" itemprop="url">Mybatis</a>
+            <a href="/blog/post/da3e1361.html" class="post-title-link" itemprop="url">Mybatis</a>
           
         </h1>
 
@@ -491,7 +390,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 01:43:25" itemprop="dateModified" datetime="2019-10-31T01:43:25+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
               </span>
             
           
@@ -526,140 +425,15 @@
 <li>Mybatis在处理${}时，就是把${}替换成变量的值；</li>
 <li>使用#{}可以有效的防止SQL注入，提高系统安全性。</li>
 </ul>
-<h2 id="2-mybatis-有几种分页方式？"><a href="#2-mybatis-有几种分页方式？" class="headerlink" title="2. mybatis 有几种分页方式？"></a>2. mybatis 有几种分页方式？</h2><ul>
-<li>数组分页</li>
-<li>sql分页</li>
-<li>拦截器分页</li>
-<li>RowBounds分页</li>
-</ul>
-<h2 id="3-RowBounds-是一次性查询全部结果吗？为什么？"><a href="#3-RowBounds-是一次性查询全部结果吗？为什么？" class="headerlink" title="3. RowBounds 是一次性查询全部结果吗？为什么？"></a>3. RowBounds 是一次性查询全部结果吗？为什么？</h2><ul>
-<li>是一次性查询全部结果，只不过会根据参数丢掉一部分</li>
-</ul>
-<h2 id="4-mybatis-逻辑分页和物理分页的区别是什么？"><a href="#4-mybatis-逻辑分页和物理分页的区别是什么？" class="headerlink" title="4. mybatis 逻辑分页和物理分页的区别是什么？"></a>4. mybatis 逻辑分页和物理分页的区别是什么？</h2><ul>
-<li>物理分页速度上并不一定快于逻辑分页，逻辑分页速度上也并不一定快于物理分页。</li>
-<li>物理分页总是优于逻辑分页：没有必要将属于数据库端的压力加诸到应用端来，就算速度上存在优势,然而其它性能上的优点足以弥补这个缺点。</li>
-</ul>
-<h2 id="5-mybatis-是否支持延迟加载？延迟加载的原理是什么？"><a href="#5-mybatis-是否支持延迟加载？延迟加载的原理是什么？" class="headerlink" title="5. mybatis 是否支持延迟加载？延迟加载的原理是什么？"></a>5. mybatis 是否支持延迟加载？延迟加载的原理是什么？</h2><ul>
-<li><p>Mybatis仅支持association关联对象和collection关联集合对象的延迟加载，</p>
-<ul>
-<li>association指的就是一对一，collection指的就是一对多查询。</li>
-<li>在Mybatis配置文件中，可以配置是否启用延迟加载lazyLoadingEnabled=true|false。</li>
-</ul>
-</li>
-<li><p>它的原理是，使用CGLIB创建目标对象的代理对象，</p>
-<ul>
-<li>当调用目标方法时，进入拦截器方法，比如调用a.getB().getName()，</li>
-<li>拦截器invoke()方法发现a.getB()是null值，</li>
-<li>那么就会单独发送事先保存好的查询关联B对象的sql，把B查询上来，</li>
-<li>然后调用a.setB(b)，于是a的对象b属性就有值了，</li>
-<li>接着完成a.getB().getName()方法的调用。</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-说一下-mybatis-的一级缓存和二级缓存？"><a href="#6-说一下-mybatis-的一级缓存和二级缓存？" class="headerlink" title="6. 说一下 mybatis 的一级缓存和二级缓存？"></a>6. 说一下 mybatis 的一级缓存和二级缓存？</h2><ul>
-<li><p>一级缓存: 基于 PerpetualCache 的 HashMap 本地缓存，其存储作用域为 Session，当 Session flush 或 close 之后，该 Session 中的所有 Cache 就将清空，默认打开一级缓存。</p>
-</li>
-<li><p>二级缓存与一级缓存其机制相同，默认也是采用 PerpetualCache，HashMap 存储，不同在于其存储作用域为 Mapper(Namespace)，并且可自定义存储源，如 Ehcache。默认不打开二级缓存，要开启二级缓存，使用二级缓存属性类需要实现Serializable序列化接口(可用来保存对象的状态),可在它的映射文件中配置 ；</p>
-</li>
-<li><p>对于缓存数据更新机制，当某一个作用域(一级缓存 Session/二级缓存Namespaces)的进行了C/U/D 操作后，默认该作用域下所有 select 中的缓存将被 clear。</p>
-</li>
-</ul>
-<h2 id="7-mybatis-和-hibernate-的区别有哪些？"><a href="#7-mybatis-和-hibernate-的区别有哪些？" class="headerlink" title="7. mybatis 和 hibernate 的区别有哪些？"></a>7. mybatis 和 hibernate 的区别有哪些？</h2><ul>
-<li><p>Hibernate是一个开放源代码的对象关系映射框架,它对JDBC进行了非常轻量级的对象封装,建立对象与数据库表的映射。是一个全自动的、完全面向对象的持久层框架。</p>
-</li>
-<li><p>Mybatis是一个开源对象关系映射框架，原名：ibatis,2010年由谷歌接管以后更名。是一个半自动化的持久层框架。</p>
-</li>
-<li><p>开发方面</p>
-<ul>
-<li>hibernate开发中，sql语句已经被封装，直接可以使用，加快系统开发；</li>
-<li>Mybatis 属于半自动化，sql需要手工完成，稍微繁琐；</li>
-<li>但是，凡事都不是绝对的，如果对于庞大复杂的系统项目来说，发杂语句较多，选择hibernate 就不是一个好方案。</li>
-</ul>
-</li>
-<li><p>sql优化方面</p>
-<ul>
-<li>Hibernate 自动生成sql,有些语句较为繁琐，会多消耗一些性能；</li>
-<li>Mybatis 手动编写sql，可以避免不需要的查询，提高系统性能；</li>
-</ul>
-</li>
-<li><p>对象管理比对</p>
-<ul>
-<li>Hibernate 是完整的对象-关系映射的框架，开发工程中，无需过多关注底层实现，只要去管理对象即可；</li>
-<li>Mybatis 需要自行管理 映射关系；</li>
-</ul>
-</li>
-<li><p>缓存方面 </p>
-<ul>
-<li>相同点：Hibernate和Mybatis的二级缓存除了采用系统默认的缓存机制外，都可以通过实现你自己的缓存或为其他第三方缓存方案，创建适配器来完全覆盖缓存行为。</li>
-<li>不同点：</li>
-<li>Hibernate的二级缓存配置在SessionFactory生成的配置文件中进行详细配置，然后再在具体的表-对象映射中配置是那种缓存。</li>
-<li>MyBatis的二级缓存配置都是在每个具体的表-对象映射中进行详细配置，这样针对不同的表可以自定义不同的缓存机制。并且Mybatis可以在命名空间中共享相同的缓存配置和实例，通过Cache-ref来实现。</li>
-</ul>
-</li>
-<li><p>比较：</p>
-<ul>
-<li>Hibernate 具有良好的管理机制，用户不需要关注SQL，如果二级缓存出现脏数据，系统会保存，；</li>
-<li>Mybatis 在使用的时候要谨慎，避免缓存Cache 的使用。</li>
-</ul>
-</li>
-<li><p>Hibernate优势</p>
-<ul>
-<li>Hibernate的DAO层开发比MyBatis简单，Mybatis需要维护SQL和结果映射。</li>
-<li>Hibernate对对象的维护和缓存要比MyBatis好，对增删改查的对象的维护要方便。</li>
-<li>Hibernate数据库移植性很好，MyBatis的数据库移植性不好，不同的数据库需要写不同SQL。</li>
-<li>Hibernate有更好的二级缓存机制，可以使用第三方缓存。MyBatis本身提供的缓存机制不佳。</li>
-</ul>
-</li>
-<li><p>Mybatis优势</p>
-<ul>
-<li>MyBatis可以进行更为细致的SQL优化，可以减少查询字段。</li>
-<li>MyBatis容易掌握，而Hibernate门槛较高。</li>
-</ul>
-</li>
-<li><p>一句话总结</p>
-<ul>
-<li>Mybatis：小巧、方便、高效、简单、直接、半自动化</li>
-<li>Hibernate：强大、方便、高效、复杂、间接、全自动化</li>
-</ul>
-</li>
-</ul>
-<h2 id="8-mybatis-有哪些执行器-Executor-？"><a href="#8-mybatis-有哪些执行器-Executor-？" class="headerlink" title="8. mybatis 有哪些执行器(Executor)？"></a>8. mybatis 有哪些执行器(Executor)？</h2><p>Mybatis有三种基本的执行器（Executor）：</p>
-<ul>
-<li>SimpleExecutor：每执行一次update或select，就开启一个Statement对象，用完立刻关闭Statement对象。</li>
-<li>ReuseExecutor：执行update或select，以sql作为key查找Statement对象，存在就使用，不存在就创建，用完后，不关闭Statement对象，而是放置于Map内，供下一次使用。简言之，就是重复使用Statement对象。</li>
-<li>BatchExecutor：执行update（没有select，JDBC批处理不支持select），将所有sql都添加到批处理中（addBatch()），等待统一执行（executeBatch()），它缓存了多个Statement对象，每个Statement对象都是addBatch()完毕后，等待逐一执行executeBatch()批处理。与JDBC批处理相同。</li>
-</ul>
-<h2 id="9-mybatis-分页插件的实现原理是什么？"><a href="#9-mybatis-分页插件的实现原理是什么？" class="headerlink" title="9. mybatis 分页插件的实现原理是什么？"></a>9. mybatis 分页插件的实现原理是什么？</h2><ul>
-<li>分页插件的基本原理是使用Mybatis提供的插件接口，实现自定义插件，</li>
-<li>在插件的拦截方法内拦截待执行的sql，然后重写sql，</li>
-<li>根据dialect方言，添加对应的物理分页语句和物理分页参数。</li>
-</ul>
-<h2 id="10-mybatis-如何编写一个自定义插件？"><a href="#10-mybatis-如何编写一个自定义插件？" class="headerlink" title="10. mybatis 如何编写一个自定义插件？"></a>10. mybatis 如何编写一个自定义插件？</h2><p>Mybatis自定义插件针对Mybatis四大对象（Executor、StatementHandler 、ParameterHandler 、ResultSetHandler ）进行拦截，具体拦截方式为：</p>
-<ul>
-<li>Executor：拦截执行器的方法(log记录)</li>
-<li>StatementHandler ：拦截Sql语法构建的处理</li>
-<li>ParameterHandler ：拦截参数的处理</li>
-<li>ResultSetHandler ：拦截结果集的处理</li>
-<li>Mybatis自定义插件必须实现Interceptor接口：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public interface Interceptor &#123;</span><br><span class="line">    Object intercept(Invocation invocation) throws Throwable;</span><br><span class="line">    Object plugin(Object target);</span><br><span class="line">    void setProperties(Properties properties);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>intercept方法：拦截器具体处理逻辑方法</p>
-</blockquote>
-<blockquote>
-<p>plugin方法：根据签名signatureMap生成动态代理对象</p>
-</blockquote>
-<blockquote>
-<p>setProperties方法：设置Properties属性</p>
-</blockquote>
-<p>一个@Intercepts可以配置多个@Signature，@Signature中的参数定义如下：</p>
-<ul>
-<li>type：表示拦截的类，这里是Executor的实现类；</li>
-<li>method：表示拦截的方法，这里是拦截Executor的update方法；</li>
-<li>args：表示方法参数。</li>
-</ul>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/da3e1361.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -681,7 +455,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/java/12Hibernate/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/6f8276a9.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -695,7 +469,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/2019/10/04/java/12Hibernate/" class="post-title-link" itemprop="url">Hibernate</a>
+            <a href="/blog/post/6f8276a9.html" class="post-title-link" itemprop="url">Hibernate</a>
           
         </h1>
 
@@ -721,7 +495,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 01:43:25" itemprop="dateModified" datetime="2019-10-31T01:43:25+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
               </span>
             
           
@@ -756,136 +530,15 @@
 <li>hibernate 使用 Java 反射机制，而不是字节码增强程序来实现透明性。</li>
 <li>hibernate 的性能非常好，因为它是个轻量级框架。映射的灵活性很出色。它支持各种关系数据库，从一对一到多对多的各种复杂关系。</li>
 </ul>
-<h2 id="2-什么是-ORM-框架？"><a href="#2-什么是-ORM-框架？" class="headerlink" title="2. 什么是 ORM 框架？"></a>2. 什么是 ORM 框架？</h2><ul>
-<li>对象-关系映射（Object-Relational Mapping，简称ORM），</li>
-<li>面向对象的开发方法是当今企业级应用开发环境中的主流开发方法，</li>
-<li>关系数据库是企业级应用环境中永久存放数据的主流数据存储系统。</li>
-<li>对象和关系数据是业务实体的两种表现形式，<ul>
-<li>业务实体在内存中表现为对象，</li>
-<li>在数据库中表现为关系数据。</li>
-</ul>
-</li>
-<li>内存中的对象之间存在关联和继承关系，而在数据库中，关系数据无法直接表达多对多关联和继承关系。</li>
-<li>因此，对象-关系映射(ORM)系统一般以中间件的形式存在，主要实现程序对象到关系数据库数据的映射。</li>
-</ul>
-<h2 id="3-hibernate-中如何在控制台查看打印的-sql-语句？"><a href="#3-hibernate-中如何在控制台查看打印的-sql-语句？" class="headerlink" title="3. hibernate 中如何在控制台查看打印的 sql 语句？"></a>3. hibernate 中如何在控制台查看打印的 sql 语句？</h2><ul>
-<li>application.properties配置文件, spring.jpa.properties.hibernate.show_sql=true</li>
-</ul>
-<h2 id="4-hibernate-有几种查询方式？"><a href="#4-hibernate-有几种查询方式？" class="headerlink" title="4. hibernate 有几种查询方式？"></a>4. hibernate 有几种查询方式？</h2><p>主要有三种</p>
-<ul>
-<li>hql查询<ul>
-<li>属性查询</li>
-<li>参数查询、命名参数查询</li>
-<li>关联查询</li>
-<li>分页查询</li>
-<li>统计函数</li>
-</ul>
-</li>
-<li>sql查询</li>
-<li>条件查询</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">HQL:  Hibernate Query Language. 面向对象的写法:</span><br><span class="line">	Query query = session.createQuery(&quot;from Customer where name = ?&quot;);</span><br><span class="line">	query.setParameter(0, &quot;Good Luck&quot;);</span><br><span class="line">	Query.list();</span><br><span class="line"></span><br><span class="line">SQL:</span><br><span class="line">	SQLQuery query = session.createSQLQuery(&quot;select * from customer&quot;);</span><br><span class="line">	List&lt;Object[]&gt; list = query.list();</span><br><span class="line"></span><br><span class="line">	SQLQuery query = session.createSQLQuery(&quot;select * from customer&quot;);</span><br><span class="line">	query.addEntity(Customer.class);</span><br><span class="line">	List&lt;Customer&gt; list = query.list();</span><br><span class="line"></span><br><span class="line">QBC:  Query By Criteria.(条件查询):</span><br><span class="line">	Criteria criteria = session.createCriteria(Customer.class);</span><br><span class="line">	criteria.add(Restrictions.eq(&quot;name&quot;, &quot;大佬&quot;));</span><br><span class="line">	List&lt;Customer&gt; list = criteria.list();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>HQL和SQL的区别<ul>
-<li>HQL是面向对象查询操作的，</li>
-<li>SQL是结构化查询语言 是面向数据库表结构的。</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-hibernate-实体类可以被定义为-final-吗？"><a href="#5-hibernate-实体类可以被定义为-final-吗？" class="headerlink" title="5. hibernate 实体类可以被定义为 final 吗？"></a>5. hibernate 实体类可以被定义为 final 吗？</h2><ul>
-<li>可以将Hibernate的实体类定义为final类，但这种做法并不好。</li>
-<li>因为Hibernate会使用代理模式在延迟关联的情况下提高性能，</li>
-<li>如果你把实体类定义成final类之后，因为 Java不允许对final类进行扩展，所以Hibernate就无法再使用代理了，</li>
-<li>如此一来就限制了使用可以提升性能的手段。</li>
-<li>不过，如果你的持久化类实现了一个接口而且在该接口中声明了所有定义于实体类中的所有public的方法的话，</li>
-<li>你就能够避免出现前面所说的不利后果。</li>
-</ul>
-<h2 id="6-在-hibernate-中使用-Integer-和-int-做映射有什么区别？"><a href="#6-在-hibernate-中使用-Integer-和-int-做映射有什么区别？" class="headerlink" title="6. 在 hibernate 中使用 Integer 和 int 做映射有什么区别？"></a>6. 在 hibernate 中使用 Integer 和 int 做映射有什么区别？</h2><ul>
-<li>在Hibernate中，如果将OID定义为Integer类型，那么Hibernate就可以根据其值是否为null而判断一个对象是否是临时的，</li>
-<li>如果将OID定义为了int类型，还需要在hbm映射文件中设置其unsaved-value属性为0。</li>
-</ul>
-<h2 id="7-hibernate-是如何工作的？"><a href="#7-hibernate-是如何工作的？" class="headerlink" title="7. hibernate 是如何工作的？"></a>7. hibernate 是如何工作的？</h2><ul>
-<li>通过Configuration config = new Configuration().configure();//读取并解析hibernate.cfg.xml配置文件</li>
-<li>由hibernate.cfg.xml中的读取并解析映射信息</li>
-<li>通过SessionFactory sf = config.buildSessionFactory();//创建SessionFactory</li>
-<li>Session session = sf.openSession();//打开Sesssion</li>
-<li>Transaction tx = session.beginTransaction();//创建并启动事务Transation</li>
-<li>persistent operate操作数据，持久化操作</li>
-<li>tx.commit();//提交事务</li>
-<li>关闭Session</li>
-<li>关闭SesstionFactory</li>
-</ul>
-<h2 id="8-get-和-load-的区别？"><a href="#8-get-和-load-的区别？" class="headerlink" title="8. get()和 load()的区别？"></a>8. get()和 load()的区别？</h2><ul>
-<li>load() 没有使用对象的其他属性的时候，没有 SQL， 延迟加载</li>
-<li>get() 没有使用对象的其他属性的时候，也生成了 SQL， 立即加载</li>
-</ul>
-<h2 id="9-说一下-hibernate-的缓存机制？"><a href="#9-说一下-hibernate-的缓存机制？" class="headerlink" title="9. 说一下 hibernate 的缓存机制？"></a>9. 说一下 hibernate 的缓存机制？</h2><ul>
-<li><p>Hibernate中的缓存分为一级缓存和二级缓存。</p>
-<ul>
-<li>一级缓存就是 Session 级别的缓存，在事务范围内有效是,内置的不能被卸载。</li>
-<li>二级缓存是 SesionFactory级别的缓存，从应用启动到应用结束有效。是可选的，默认没有二级缓存，需要手动开启。保存数据库后，缓存在内存中保存一份，如果更新了数据库就要同步更新。</li>
-</ul>
-</li>
-<li><p>什么样的数据适合存放到第二级缓存中？</p>
-<ul>
-<li>很少被修改的数据 帖子的最后回复时间</li>
-<li>经常被查询的数据 电商的地点</li>
-<li>不是很重要的数据，允许出现偶尔并发的数据</li>
-<li>不会被并发访问的数据</li>
-<li>常量数据</li>
-</ul>
-</li>
-<li><p>扩展：hibernate的二级缓存默认是不支持分布式缓存的。使用 memcahe,redis等中央缓存来代替二级缓存。</p>
-</li>
-</ul>
-<h2 id="10-hibernate-对象有哪些状态？"><a href="#10-hibernate-对象有哪些状态？" class="headerlink" title="10. hibernate 对象有哪些状态？"></a>10. hibernate 对象有哪些状态？</h2><p>hibernate里对象有三种状态：</p>
-<ul>
-<li>Transient（瞬时）：对象刚new出来，还没设id，设了其他值。</li>
-<li>Persistent（持久）：调用了save()、saveOrUpdate()，就变成Persistent，有id。</li>
-<li>Detached（脱管）：当session close()完之后，变成Detached。</li>
-</ul>
-<h2 id="11-在-hibernate-中-getCurrentSession-和-openSession-的区别是什么？"><a href="#11-在-hibernate-中-getCurrentSession-和-openSession-的区别是什么？" class="headerlink" title="11. 在 hibernate 中 getCurrentSession 和 openSession 的区别是什么？"></a>11. 在 hibernate 中 getCurrentSession 和 openSession 的区别是什么？</h2><ul>
-<li><p>openSession </p>
-<ul>
-<li>从字面上可以看得出来，是打开一个新的session对象，</li>
-<li>而且每次使用都是打开一个新的session，</li>
-<li>假如连续使用多次，则获得的session不是同一个对象，</li>
-<li>并且使用完需要调用close方法关闭session。</li>
-</ul>
-</li>
-<li><p>getCurrentSession ，</p>
-<ul>
-<li>从字面上可以看得出来，是获取当前上下文一个session对象，</li>
-<li>当第一次使用此方法时，会自动产生一个session对象，</li>
-<li>并且连续使用多次时，得到的session都是同一个对象，这就是与openSession的区别之一，</li>
-<li>简单而言，getCurrentSession 就是：如果有已经使用的，用旧的，如果没有，建新的。</li>
-</ul>
-</li>
-<li><p>注意：</p>
-<ul>
-<li>在实际开发中，往往使用getCurrentSession多，因为一般是处理同一个事务（即是使用一个数据库的情况），</li>
-<li>所以在一般情况下比较少使用openSession或者说openSession是比较老旧的一套接口了。</li>
-</ul>
-</li>
-</ul>
-<h2 id="12-hibernate-实体类必须要有无参构造函数吗？为什么？"><a href="#12-hibernate-实体类必须要有无参构造函数吗？为什么？" class="headerlink" title="12. hibernate 实体类必须要有无参构造函数吗？为什么？"></a>12. hibernate 实体类必须要有无参构造函数吗？为什么？</h2><ul>
-<li><p>必须，</p>
-<ul>
-<li>因为hibernate框架会调用这个默认构造方法来构造实例对象，即Class类的newInstance方法，</li>
-<li>这个方法就是通过调用默认构造方法来创建实例对象的。</li>
-</ul>
-</li>
-<li><p>另外再提醒一点，</p>
-<ul>
-<li>如果你没有提供任何构造方法，虚拟机会自动提供默认构造方法（无参构造器），</li>
-<li>但是如果你提供了其他有参数的构造方法的话，虚拟机就不再为你提供默认构造方法，</li>
-<li>这时必须手动把无参构造器写在代码里，否则new Xxxx()是会报错的，所以默认的构造方法不是必须的，</li>
-<li>只在有多个构造方法时才是必须的，这里“必须”指的是“必须手动写出来”。</li>
-</ul>
-</li>
-</ul>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/6f8276a9.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -907,7 +560,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/java/11SpringBootSpringCloud/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/b3383f7f.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -921,7 +574,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/2019/10/04/java/11SpringBootSpringCloud/" class="post-title-link" itemprop="url">Spring Boot/Spring Cloud</a>
+            <a href="/blog/post/b3383f7f.html" class="post-title-link" itemprop="url">Spring Boot/Spring Cloud</a>
           
         </h1>
 
@@ -947,7 +600,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 01:43:25" itemprop="dateModified" datetime="2019-10-31T01:43:25+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
               </span>
             
           
@@ -990,119 +643,15 @@
 <li><p>所以 SpringBoot是一个服务于框架的框架，服务范围是简化配置文件。</p>
 </li>
 </ul>
-<h2 id="2-为什么要用-spring-boot？"><a href="#2-为什么要用-spring-boot？" class="headerlink" title="2. 为什么要用 spring boot？"></a>2. 为什么要用 spring boot？</h2><ul>
-<li>使编码变简单</li>
-<li>使配置变简单</li>
-<li>使部署变简单</li>
-<li>使监控变简单</li>
-<li>Spring的不足</li>
-</ul>
-<h2 id="3-spring-boot-核心配置文件是什么？"><a href="#3-spring-boot-核心配置文件是什么？" class="headerlink" title="3. spring boot 核心配置文件是什么？"></a>3. spring boot 核心配置文件是什么？</h2><p>Spring Boot提供了两种常用的配置文件：</p>
-<ul>
-<li>properties文件</li>
-<li>yml文件</li>
-</ul>
-<h2 id="4-spring-boot-配置文件有哪几种类型？它们有什么区别？"><a href="#4-spring-boot-配置文件有哪几种类型？它们有什么区别？" class="headerlink" title="4. spring boot 配置文件有哪几种类型？它们有什么区别？"></a>4. spring boot 配置文件有哪几种类型？它们有什么区别？</h2><ul>
-<li>Spring Boot提供了两种常用的配置文件，分别是properties文件和yml文件。</li>
-<li>相对于properties文件而言，yml文件更年轻，也有很多的坑。</li>
-<li>可谓成也萧何败萧何，yml通过空格来确定层级关系，使配置文件结构跟清晰，但也会因为微不足道的空格而破坏了层级关系。</li>
-</ul>
-<h2 id="5-spring-boot-有哪些方式可以实现热部署？"><a href="#5-spring-boot-有哪些方式可以实现热部署？" class="headerlink" title="5. spring boot 有哪些方式可以实现热部署？"></a>5. spring boot 有哪些方式可以实现热部署？</h2><ul>
-<li><p>SpringBoot热部署实现有两种方式：</p>
-</li>
-<li><p>使用spring loaded</p>
-</li>
-<li><p>使用spring-boot-devtools</p>
-</li>
-</ul>
-<h2 id="6-jpa-和-hibernate-有什么区别？"><a href="#6-jpa-和-hibernate-有什么区别？" class="headerlink" title="6. jpa 和 hibernate 有什么区别？"></a>6. jpa 和 hibernate 有什么区别？</h2><ul>
-<li>JPA Java Persistence API，是Java EE 5的标准ORM接口，也是ejb3规范的一部分。</li>
-<li>Hibernate，当今很流行的ORM框架，是JPA的一个实现，但是其功能是JPA的超集。</li>
-<li>JPA和Hibernate之间的关系，可以简单的理解为JPA是标准接口，Hibernate是实现。那么Hibernate是如何实现与JPA的这种关系的呢。Hibernate主要是通过三个组件来实现的，及hibernate-annotation、hibernate-entitymanager和hibernate-core。</li>
-<li>hibernate-annotation是Hibernate支持annotation方式配置的基础，它包括了标准的JPA annotation以及Hibernate自身特殊功能的annotation。</li>
-<li>hibernate-core是Hibernate的核心实现，提供了Hibernate所有的核心功能。</li>
-<li>hibernate-entitymanager实现了标准的JPA，可以把它看成hibernate-core和JPA之间的适配器，它并不直接提供ORM的功能，而是对hibernate-core进行封装，使得Hibernate符合JPA的规范。</li>
-</ul>
-<h2 id="7-什么是-spring-cloud？"><a href="#7-什么是-spring-cloud？" class="headerlink" title="7. 什么是 spring cloud？"></a>7. 什么是 spring cloud？</h2><ul>
-<li><p>从字面理解，Spring Cloud 就是致力于分布式系统、云服务的框架。</p>
-</li>
-<li><p>Spring Cloud 是整个 Spring 家族中新的成员，是最近云服务火爆的必然产物。</p>
-</li>
-<li><p>Spring Cloud 为开发人员提供了快速构建分布式系统中一些常见模式的工具，例如：</p>
-<ul>
-<li>配置管理</li>
-<li>服务注册与发现</li>
-<li>断路器</li>
-<li>智能路由</li>
-<li>服务间调用</li>
-<li>负载均衡</li>
-<li>微代理</li>
-<li>控制总线</li>
-<li>一次性令牌</li>
-<li>全局锁</li>
-<li>领导选举</li>
-<li>分布式会话</li>
-<li>集群状态</li>
-<li>分布式消息</li>
-</ul>
-</li>
-<li><p>使用 Spring Cloud 开发人员可以开箱即用的实现这些模式的服务和应用程序。这些服务可以任何环境下运行，包括分布式环境，也包括开发人员自己的笔记本电脑以及各种托管平台。</p>
-</li>
-</ul>
-<h2 id="8-spring-cloud-断路器的作用是什么？"><a href="#8-spring-cloud-断路器的作用是什么？" class="headerlink" title="8. spring cloud 断路器的作用是什么？"></a>8. spring cloud 断路器的作用是什么？</h2><ul>
-<li><p>在Spring Cloud中使用了 Hystrix 来实现断路器的功能，</p>
-</li>
-<li><p>断路器可以防止一个应用程序多次试图执行一个操作，即很可能失败，</p>
-</li>
-<li><p>允许它继续而不等待故障恢复或者浪费 CPU 周期，而它确定该故障是持久的。</p>
-</li>
-<li><p>断路器模式也使应用程序能够检测故障是否已经解决，如果问题似乎已经得到纠正，应用程序可以尝试调用操作。</p>
-</li>
-<li><p>断路器增加了稳定性和灵活性，以一个系统，提供稳定性，而系统从故障中恢复，并尽量减少此故障的对性能的影响。</p>
-</li>
-<li><p>它可以帮助快速地拒绝对一个操作，即很可能失败，而不是等待操作超时（或者不返回）的请求，以保持系统的响应时间。</p>
-</li>
-<li><p>如果断路器提高每次改变状态的时间的事件，该信息可以被用来监测由断路器保护系统的部件的健康状况，</p>
-</li>
-<li><p>或以提醒管理员当断路器跳闸，以在打开状态。</p>
-</li>
-</ul>
-<h2 id="9-spring-cloud-的核心组件有哪些？"><a href="#9-spring-cloud-的核心组件有哪些？" class="headerlink" title="9. spring cloud 的核心组件有哪些？"></a>9. spring cloud 的核心组件有哪些？</h2><ul>
-<li><p>服务发现——Netflix Eureka</p>
-<ul>
-<li>一个RESTful服务，用来定位运行在AWS地区（Region）中的中间层服务。</li>
-<li>由两个组件组成：Eureka服务器和Eureka客户端。Eureka服务器用作服务注册服务器。</li>
-<li>Eureka客户端是一个java客户端，用来简化与服务器的交互、作为轮询负载均衡器，并提供服务的故障切换支持。</li>
-<li>Netflix在其生产环境中使用的是另外的客户端，它提供基于流量、资源利用率以及出错状态的加权负载均衡。</li>
-</ul>
-</li>
-<li><p>客服端负载均衡——Netflix Ribbon</p>
-<ul>
-<li>Ribbon，主要提供客户侧的软件负载均衡算法。</li>
-<li>Ribbon客户端组件提供一系列完善的配置选项，比如连接超时、重试、重试算法等。</li>
-<li>Ribbon内置可插拔、可定制的负载均衡组件。</li>
-</ul>
-</li>
-<li><p>断路器——Netflix Hystrix</p>
-<ul>
-<li>断路器可以防止一个应用程序多次试图执行一个操作，即很可能失败，</li>
-<li>允许它继续而不等待故障恢复或者浪费 CPU 周期，而它确定该故障是持久的。</li>
-<li>断路器模式也使应用程序能够检测故障是否已经解决。</li>
-<li>如果问题似乎已经得到纠正，应用程序可以尝试调用操作。</li>
-</ul>
-</li>
-<li><p>服务网关——Netflix Zuul</p>
-<ul>
-<li>类似nginx，反向代理的功能，不过netflix自己增加了一些配合其他组件的特性。</li>
-</ul>
-</li>
-<li><p>分布式配置——Spring Cloud Config</p>
-<ul>
-<li>这个还是静态的，得配合Spring Cloud Bus实现动态的配置更新。</li>
-</ul>
-</li>
-</ul>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/b3383f7f.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1124,7 +673,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/java/10SpringSpringMVC/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/ae9d29e2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -1138,7 +687,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/2019/10/04/java/10SpringSpringMVC/" class="post-title-link" itemprop="url">Spring/Spring MVC</a>
+            <a href="/blog/post/ae9d29e2.html" class="post-title-link" itemprop="url">Spring/Spring MVC</a>
           
         </h1>
 
@@ -1164,7 +713,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 01:43:25" itemprop="dateModified" datetime="2019-10-31T01:43:25+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
               </span>
             
           
@@ -1194,394 +743,23 @@
 
       
           <h1 id="Spring-Spring-MVC"><a href="#Spring-Spring-MVC" class="headerlink" title="Spring/Spring MVC"></a>Spring/Spring MVC</h1><h2 id="为什么要使用-spring？"><a href="#为什么要使用-spring？" class="headerlink" title="为什么要使用 spring？"></a>为什么要使用 spring？</h2><ul>
-<li><p>简介</p>
-<ul>
+<li>简介<ul>
 <li>目的：解决企业应用开发的复杂性</li>
 <li>功能：使用基本的JavaBean代替EJB，并提供了更多的企业应用功能</li>
 <li>范围：任何Java应用</li>
 <li>简单来说，Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。</li>
 </ul>
 </li>
-<li><p>轻量　　</p>
-<ul>
-<li>从大小与开销两方面而言Spring都是轻量的。</li>
-<li>完整的Spring框架可以在一个大小只有1MB多的JAR文件里发布。</li>
-<li>并且Spring所需的处理开销也是微不足道的。</li>
-<li>此外，Spring是非侵入式的：典型地，Spring应用中的对象不依赖于Spring的特定类。</li>
 </ul>
-</li>
-<li><p>控制反转　　</p>
-<ul>
-<li>Sping通过一种称作控制反转（IoC）的技术促进了松耦合。</li>
-<li>当应用了IoC，一个对象依赖的其它对象会通过被动的方式传递进来，而不是这个对象自己创建或者查找依赖对象。</li>
-<li>你可以认为IoC与JNDI相反——不是对象从容器中查找依赖，而是容器在对象初始化时不等对象请求就主动将依赖传递给它。</li>
-</ul>
-</li>
-<li><p>面向切面　　</p>
-<ul>
-<li>Spring提供了面向切面编程的丰富支持，</li>
-<li>允许通过分离应用的业务逻辑与系统级服务（例如审计（auditing）和事务（transaction）管理）进行内聚性的开发。</li>
-<li>应用对象只实现它们应该做的——完成业务逻辑——仅此而已。</li>
-<li>它们并不负责（甚至是意识）其它的系统级关注点，例如日志或事务支持。</li>
-</ul>
-</li>
-<li><p>容器</p>
-<ul>
-<li>Spring包含并管理应用对象的配置和生命周期，在这个意义上它是一种容器，</li>
-<li>你可以配置你的每个bean如何被创建——基于一个可配置原型（prototype），</li>
-<li>你的bean可以创建一个单独的实例或者每次需要时都生成一个新的实例——以及它们是如何相互关联的。</li>
-<li>然而，Spring不应该被混同于传统的重量级的EJB容器，它们经常是庞大与笨重的，难以使用。</li>
-</ul>
-</li>
-<li><p>框架</p>
-<ul>
-<li>Spring可以将简单的组件配置、组合成为复杂的应用。</li>
-<li>在Spring中，应用对象被声明式地组合，典型地是在一个XML文件里。</li>
-<li>Spring也提供了很多基础功能（事务管理、持久化框架集成等等），将应用逻辑的开发留给了你。</li>
-</ul>
-</li>
-<li><p>所有Spring的这些特征使你能够编写更干净、更可管理、并且更易于测试的代码。它们也为Spring中的各种模块提供了基础支持。</p>
-</li>
-</ul>
-<h2 id="Spring的设计模式有几种？"><a href="#Spring的设计模式有几种？" class="headerlink" title="Spring的设计模式有几种？"></a>Spring的设计模式有几种？</h2><ul>
-<li><p>9种。</p>
-</li>
-<li><p>简单工厂：FactoryBean。</p>
-</li>
-<li><p>工厂方法：xml文件的factory-bean属性指定工厂方法。</p>
-</li>
-<li><p>单例模式：默认唯一的访问点是BeanFactory访问点。</p>
-</li>
-<li><p>适配器模式：HanderAdapter，AdvisorAdaptor。</p>
-</li>
-<li><p>装饰器模式：Wrapper，Decorator。</p>
-</li>
-<li><p>代理模式：AOP功能的原理就使用代理模式。</p>
-</li>
-<li><p>观察者模式：监听器。</p>
-</li>
-<li><p>策略模式：实例化对象的时候使用策略模式。</p>
-</li>
-<li><p>模板方法模式：JdbcTemplate。</p>
-</li>
-</ul>
-<h2 id="spring-有哪些主要模块？"><a href="#spring-有哪些主要模块？" class="headerlink" title="spring 有哪些主要模块？"></a>spring 有哪些主要模块？</h2><ul>
-<li><p>主要有七个模块；</p>
-</li>
-<li><p>核心容器（Spring Core）</p>
-<ul>
-<li>核心容器提供Spring框架的基本功能。</li>
-<li>Spring以bean的方式组织和管理Java应用中的各个组件及其关系。</li>
-<li>Spring使用BeanFactory来产生和管理Bean，它是工厂模式的实现。</li>
-<li>BeanFactory使用控制反转(IoC)模式将应用的配置和依赖性规范与实际的应用程序代码分开。</li>
-</ul>
-</li>
-<li><p>应用上下文（Spring Context）</p>
-<ul>
-<li>Spring上下文是一个配置文件，向Spring框架提供上下文信息。</li>
-<li>Spring上下文包括企业服务，如JNDI、EJB、电子邮件、国际化、校验和调度功能。</li>
-</ul>
-</li>
-<li><p>Spring面向切面编程（Spring AOP）</p>
-<ul>
-<li>通过配置管理特性，Spring AOP 模块直接将面向方面的编程功能集成到了 Spring框架中。</li>
-<li>所以，可以很容易地使 Spring框架管理的任何对象支持 AOP。</li>
-<li>Spring AOP 模块为基于 Spring 的应用程序中的对象提供了事务管理服务。</li>
-<li>通过使用 Spring AOP，不用依赖 EJB 组件，就可以将声明性事务管理集成到应用程序中。</li>
-</ul>
-</li>
-<li><p>JDBC和DAO模块（Spring DAO）</p>
-<ul>
-<li>JDBC、DAO的抽象层提供了有意义的异常层次结构，可用该结构来管理异常处理，和不同数据库供应商所抛出的错误信息。</li>
-<li>异常层次结构简化了错误处理，并且极大的降低了需要编写的代码数量，比如打开和关闭链接。</li>
-</ul>
-</li>
-<li><p>对象实体映射（Spring ORM）</p>
-<ul>
-<li>Spring框架插入了若干个ORM框架，从而提供了ORM对象的关系工具，</li>
-<li>其中包括了Hibernate、JDO和 IBatis SQL Map等，所有这些都遵从Spring的通用事物和DAO异常层次结构。</li>
-</ul>
-</li>
-<li><p>Web模块（Spring Web）</p>
-<ul>
-<li>Web上下文模块建立在应用程序上下文模块之上，为基于web的应用程序提供了上下文。</li>
-<li>所以Spring框架支持与Struts集成，web模块还简化了处理多部分请求以及将请求参数绑定到域对象的工作。</li>
-</ul>
-</li>
-<li><p>MVC模块（Spring Web MVC）</p>
-<ul>
-<li>MVC框架是一个全功能的构建Web应用程序的MVC实现。</li>
-<li>通过策略接口，MVC框架变成为高度可配置的。</li>
-<li>MVC容纳了大量视图技术，其中包括JSP、POI等，</li>
-<li>模型来有JavaBean来构成，存放于 model 当中，而视图是一个接口，负责实现模型，控制器表示逻辑代码，由c的事情。</li>
-<li>Spring框架的功能可以用在任何J2EE服务器当中，大多数功能也适用于不受管理的环境。</li>
-<li>Spring的核心要点就是支持不绑定到特定J2EE服务的可重用业务和数据的访问的对象，</li>
-<li>毫无疑问这样的对象可以在不同的J2EE环境，独立应用程序和测试环境之间重用。</li>
-</ul>
-</li>
-</ul>
-<h2 id="Spring容器有几种？"><a href="#Spring容器有几种？" class="headerlink" title="Spring容器有几种？"></a>Spring容器有几种？</h2><ul>
-<li>BeanFactory是最简答的容器，提供了基本的DI支持。最常用的BeanFactory实现就是XmlBeanFactory类。</li>
-<li>ApplicationContext扩展了BeanFactory的功能，提供面向应用的服务。</li>
-<li>通过缓存在map中，实现了类的复用。</li>
-</ul>
-<h2 id="beanfactory和applicationcontext是什么关系，使用有什么区别。"><a href="#beanfactory和applicationcontext是什么关系，使用有什么区别。" class="headerlink" title="beanfactory和applicationcontext是什么关系，使用有什么区别。"></a>beanfactory和applicationcontext是什么关系，使用有什么区别。</h2><ul>
-<li>ApplicationContex提供了一种解析文本消息的方法，一种加载文件资源（如图像）的通用方法，它们可以将事件发布到注册为侦听器的bean。</li>
-<li>此外，可以在应用程序上下文中以声明方式处理容器中的容器或容器上的操作，这些操作必须以编程方式与Bean Factory一起处理。</li>
-<li>ApplicationContex实现MessageSource，一个用于获取本地化消息的接口，实际的实现是可插入的。</li>
-</ul>
-<h2 id="FactoryBean如何使用？"><a href="#FactoryBean如何使用？" class="headerlink" title="FactoryBean如何使用？"></a>FactoryBean如何使用？</h2><ul>
-<li>一般情况下，Spring通过反射机制利用bean的class属性指定实现类来实例化bean. </li>
-<li>如果类的配置复杂，那么就可以实现一个FactoryBean接口的工厂类，在getObject()方法中定制实例化逻辑。</li>
-<li>当使用这个类的时候，Spring通过反射机制发现这个类实现了该工厂接口，就通过getObject()方法返回实例。</li>
-<li>如果要获得工厂类本身的实例，则需要在beanName前面加&quot;&amp;&quot;。</li>
-</ul>
-<h1 id="AOP和IOC"><a href="#AOP和IOC" class="headerlink" title="AOP和IOC"></a>AOP和IOC</h1><h2 id="解释一下什么是-aop？"><a href="#解释一下什么是-aop？" class="headerlink" title="解释一下什么是 aop？"></a>解释一下什么是 aop？</h2><ul>
-<li><p>面向方面的编程（AOP）是一种编程技术，它允许程序员模块化横切关注点或行为，这些问题或行为跨越典型的责任分工，例如日志记录和事务管理。</p>
-</li>
-<li><p>AOP（Aspect-Oriented Programming，面向方面编程），可以说是OOP（Object-Oriented Programing，面向对象编程）的补充和完善。</p>
-</li>
-<li><p>OOP（Object-Oriented Programing，面向对象编程）</p>
-<ul>
-<li>OOP引入封装、继承和多态性等概念来建立一种对象层次结构，用以模拟公共行为的一个集合。</li>
-<li>当我们需要为分散的对象引入公共行为的时候，OOP则显得无能为力。</li>
-<li>也就是说，OOP允许你定义从上到下的关系，但并不适合定义从左到右的关系。</li>
-<li>例如日志功能。日志代码往往水平地散布在所有对象层次中，而与它所散布到的对象的核心功能毫无关系。</li>
-<li>对于其他类型的代码，如安全性、异常处理和透明的持续性也是如此。</li>
-<li>这种散布在各处的无关的代码被称为横切（cross-cutting）代码，在OOP设计中，它导致了大量代码的重复，而不利于各个模块的重用。</li>
-</ul>
-</li>
-<li><p>AOP（Aspect-Oriented Programming，面向方面编程）</p>
-<ul>
-<li>它利用一种称为“横切”的技术，剖解开封装的对象内部，</li>
-<li>并将那些影响了多个类的公共行为封装到一个可重用模块，并将其名为“Aspect”，即方面。</li>
-<li>所谓“方面”，简单地说，就是将那些与业务无关，却为业务模块所共同调用的逻辑或责任封装起来，</li>
-<li>便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可操作性和可维护性。</li>
-<li>AOP代表的是一个横向的关系，如果说“对象”是一个空心的圆柱体，其中封装的是对象的属性和行为；</li>
-<li>那么面向方面编程的方法，就仿佛一把利刃，将这些空心圆柱体剖开，以获得其内部的消息。而剖开的切面，也就是所谓的“方面”了。</li>
-<li>然后它又以巧夺天功的妙手将这些剖开的切面复原，不留痕迹。</li>
-</ul>
-</li>
-<li><p>使用“横切”技术，AOP把软件系统分为两个部分：核心关注点和横切关注点。</p>
-<ul>
-<li>业务处理的主要流程是核心关注点，与之关系不大的部分是横切关注点。</li>
-<li>横切关注点的一个特点是，他们经常发生在核心关注点的多处，而各处都基本相似。</li>
-<li>比如权限认证、日志、事务处理。</li>
-<li>AOP 的作用在于分离系统中的各种关注点，将核心关注点和横切关注点分离开来。</li>
-<li>AOP的核心思想就是，将应用程序中的商业逻辑同对其提供支持的通用服务进行分离。</li>
-</ul>
-</li>
-</ul>
-<h2 id="Spring-AOP中的关注点和交叉关注点之间有什么区别？"><a href="#Spring-AOP中的关注点和交叉关注点之间有什么区别？" class="headerlink" title="Spring AOP中的关注点和交叉关注点之间有什么区别？"></a>Spring AOP中的关注点和交叉关注点之间有什么区别？</h2><ul>
-<li><p>关注点是我们希望在应用程序模块中拥有的行为。关注点可以定义为我们想要实现的功能。</p>
-</li>
-<li><p>跨领域的关注点是一个适用于整个应用程序的问题，它会影响整个应用程序。例如，日志记录，安全性和数据传输是应用程序几乎每个模块都需要的问题，因此它们是跨领域的问题。</p>
-</li>
-</ul>
-<h2 id="解释一下什么是-ioc？"><a href="#解释一下什么是-ioc？" class="headerlink" title="解释一下什么是 ioc？"></a>解释一下什么是 ioc？</h2><ul>
-<li>IOC是Inversion of Control的缩写，多数书籍翻译成“控制反转”。</li>
-<li>把复杂系统分解成相互合作的对象，这些对象类通过封装以后，内部实现对外部是透明的，从而降低了解决问题的复杂度，而且可以灵活地被重用和扩展。</li>
-</ul>
-<h2 id="AOP和IOC的原理是什么？"><a href="#AOP和IOC的原理是什么？" class="headerlink" title="AOP和IOC的原理是什么？"></a>AOP和IOC的原理是什么？</h2><ul>
-<li><p>ioc控制反转是由Spring容器负责创建对象，管理对象（DI），装配对象，配置对象，并且管理这些对象的整个生命周期。</p>
-</li>
-<li><p>di依赖注入是spring容器根据描述配置将被依赖的类通过构造器或者setter方法注入正在被实例化的类。</p>
-</li>
-<li><p>aop切面编程是通过抽取公共的日志、权限、事务等切面逻辑，通过jdk或者cglib的动态代理生成代理类将增强代码织入原代码中。合并类的公共处理逻辑可以减少重复代码和耦合，侵入性小，便于容器测试。</p>
-</li>
-<li><p>AOP 和 IOC是Spring精华部分，AOP可以看做是对OOP的补充，对代码进行横向的扩展，通过代理模式实现，代理模式有静态代理，动态代理，Spring利用的是动态代理，在程序运行过程中将增强代码织入原代码中。</p>
-</li>
-</ul>
-<h2 id="spring-常用的注入方式有哪些？"><a href="#spring-常用的注入方式有哪些？" class="headerlink" title="spring 常用的注入方式有哪些？"></a>spring 常用的注入方式有哪些？</h2><ul>
-<li>set 注入</li>
-<li>构造方法注入</li>
-<li>接口注入</li>
-</ul>
-<h2 id="如何创建动态AOP代理？"><a href="#如何创建动态AOP代理？" class="headerlink" title="如何创建动态AOP代理？"></a>如何创建动态AOP代理？</h2><ul>
-<li><p>创建代理的步骤：获取增强方法/增强器，根据增强方法/增强器进行代理。</p>
-</li>
-<li><p>目标对象如果实现了接口，默认通过JDK代理，也可以强制cglib代理。如果没有实现接口，就必须使用cglib库，Spring会自动实现jdk动态代理和cglib之间的转换。</p>
-</li>
-<li><p>加载时织入(LTW)是在虚拟机载入字节码文件是动态植入AspectJ切面。LTM参数在虚拟机层面的的设置不够具体，Spring的对LTW的设置可以在类加载器的粒度上打开，通过外部增强实现效果，就不必在工程内部修改代码。</p>
-</li>
-</ul>
-<h2 id="如何创建静态AOP代理？"><a href="#如何创建静态AOP代理？" class="headerlink" title="如何创建静态AOP代理？"></a>如何创建静态AOP代理？</h2><ul>
-<li>将动态代理改为静态代理，配置文件需要添加：<code>&lt;context:load-time-weaver /&gt;</code>，然后在META-INF文件夹下建立aop.xml：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE aspectj PUBLIC &quot;-//AspectJ//DTD//EN&quot; &quot;http://www.eclipse.org/aspectj/dtd/aspectj.dtd&quot;&gt;</span><br><span class="line">&lt;aspectj&gt;</span><br><span class="line">	&lt;weaver&gt;&lt;include within=&quot;xx.*&quot; /&gt;&lt;/weaver&gt;</span><br><span class="line">	&lt;aspects&gt;&lt;aspect name=&quot;xx.AspectConfig&quot; /&gt;&lt;/aspects&gt;</span><br><span class="line">&lt;/aspectj&gt;</span><br></pre></td></tr></table></figure>
-
-<h1 id="Spring-Bean"><a href="#Spring-Bean" class="headerlink" title="Spring Bean"></a>Spring Bean</h1><h2 id="Spring-bean的定义和作用域是什么？"><a href="#Spring-bean的定义和作用域是什么？" class="headerlink" title="Spring bean的定义和作用域是什么？"></a>Spring bean的定义和作用域是什么？</h2><ul>
-<li><p>Spring Beans是构成Spring应用程序主干的Java对象。</p>
-<ul>
-<li>它们由Spring IoC容器实例化，组装和管理。</li>
-<li>这些bean是使用提供给容器的配置元数据创建的，例如，以XML定义的形式。</li>
-</ul>
-</li>
-<li><p>bean的作用域包括单例，原型，请求，回话，全局。</p>
-</li>
-</ul>
-<h2 id="Bean的生命周期是什么？"><a href="#Bean的生命周期是什么？" class="headerlink" title="Bean的生命周期是什么？"></a>Bean的生命周期是什么？</h2><ul>
-<li>创建Bean的实例；</li>
-<li>按照配置注入属性；</li>
-<li>调用可能实现的BeanNameAware接口方法，传参id。</li>
-<li>调用可能实现的BeanFactoryAware接口方法，传参Spring工厂。</li>
-<li>调用可能实现的ApplicationContextAware接口方法，传参Spring上下文。</li>
-<li>调用可能关联的BeanPostProcessor接口的初始化前方法。</li>
-<li>调用可能配置的init-method初始化方法。</li>
-<li>调用可能关联的BeanPostProcessor接口的初始化后方法。开始使用。</li>
-<li>销毁时，调用可能实现的DisposableBean的destroy方法。</li>
-<li>最后，调用可能配置的destroy-method销毁方法。</li>
-</ul>
-<h2 id="bean的加载过程是什么？"><a href="#bean的加载过程是什么？" class="headerlink" title="bean的加载过程是什么？"></a>bean的加载过程是什么？</h2><ul>
-<li>转换对应的beanName。</li>
-<li>尝试从缓存中加载单例。</li>
-<li>bean的实例化。</li>
-<li>对原型模式检查类的依赖。</li>
-<li>检查父类工厂。</li>
-<li>转化bean的定义类。</li>
-<li>寻找依赖。</li>
-<li>针对不同的scope创建bean。</li>
-<li>类型转换。</li>
-</ul>
-<h2 id="Spring中如何让A和B两个bean按顺序加载？"><a href="#Spring中如何让A和B两个bean按顺序加载？" class="headerlink" title="Spring中如何让A和B两个bean按顺序加载？"></a>Spring中如何让A和B两个bean按顺序加载？</h2><ul>
-<li>用dependon注解依赖关系。</li>
-</ul>
-<h2 id="什么是循环依赖，Spring如何解决？"><a href="#什么是循环依赖，Spring如何解决？" class="headerlink" title="什么是循环依赖，Spring如何解决？"></a>什么是循环依赖，Spring如何解决？</h2><ul>
-<li><p>循环依赖就是循环引用，方法之间的环调用，构成有向环。 </p>
-<ul>
-<li>Spring的构造器循环依赖将正在创建的 beanName(id) 标志符记录到“当前创建bean池”（构造状态表），</li>
-<li>构造所需的类的beanName继续添加到表中，如果已有记录，就说明有环结构，抛出循环依赖的异常。</li>
-</ul>
-</li>
-<li><p>Spring的setter注入的循环依赖是通过提前暴露刚构造完（尚未setter注入）的bean来完成的，且只能解决单例范围的依赖。</p>
-<ul>
-<li>通过提前暴露一个单例工厂方法，使其他bean能引用到该bean，把beanName标志符加入到“当前创建bean池”中，</li>
-<li>然后setter注入后续类，后续类因此创建单例，加入自己的标志符。</li>
-<li>当后续类检测到setter需要的类已经位于池中，就通过该标志符在另一个表中找到对应的ObjectFactory工厂，</li>
-<li>进而返回工厂类创建的bean. 然后在第二个循环中依次setter注入工厂类创建的bean。</li>
-</ul>
-</li>
-<li><p>Spring的prototype作用域的bean, Spring容器无法完成依赖注入，因为不缓存该作用域的bean,因此无法提前暴露。</p>
-</li>
-</ul>
-<h2 id="如何获取单例？"><a href="#如何获取单例？" class="headerlink" title="如何获取单例？"></a>如何获取单例？</h2><ul>
-<li>在全局变量加锁的情况下。</li>
-<li>检查singletonObjects缓存类中是否已加载，</li>
-<li>没有加载就把beanName记录到加载状态表，</li>
-<li>通过ObjectFactory的方法得到实例化bean，</li>
-<li>从加载状态表中移除这个beanName，</li>
-<li>缓存实例并删除其他状态表的记录。</li>
-</ul>
-<h2 id="如何从缓存中获取单例bean？"><a href="#如何从缓存中获取单例bean？" class="headerlink" title="如何从缓存中获取单例bean？"></a>如何从缓存中获取单例bean？</h2><ul>
-<li>创建单例的时候会存在依赖注入的情况，</li>
-<li>而在创建依赖的时候为了避免循环依赖，</li>
-<li>Spring创建Bean的原则是不等bean创建完成就会将创建bean的ObjectFactory加入到缓存，</li>
-<li>一旦下一个bean创建时需要依赖上个bean，就直接使用ObjectFactory.</li>
-</ul>
-<h2 id="Bean-是线程安全的吗？"><a href="#Bean-是线程安全的吗？" class="headerlink" title="Bean 是线程安全的吗？"></a>Bean 是线程安全的吗？</h2><ul>
-<li>单例的bean不安全，prototype和request作用域的，安全。</li>
-<li>通过无状态的设计实现线程安全。</li>
-</ul>
-<h2 id="创建bean的实例"><a href="#创建bean的实例" class="headerlink" title="创建bean的实例"></a>创建bean的实例</h2><ul>
-<li>初始化前先解析，如果已经创建了代理或者在初始化前的后处理器方法中改变了bean, 则直接返回就可以了。否则需要进行常规bean的创建。</li>
-<li>创建过程包括：清除单例缓存，创建bean的实例(将BeanDefinition转换为BeanWrapper)，合并类定义的后处理器类解析父类和注解等，依赖处理，属性填充，检查循环依赖，注册DisposableBean, 完成创建并返回。</li>
-<li>创建bean的实例，优先使用根定义类的工厂方法实例化，解析构造函数并构造实例。构造实例，要先检查缓存的构造器的唯一解析结果，没解析过的要重新先解析。然后对这个解析结果进行自动注入构造或者默认构造器构造(直接实例化)。</li>
-<li>自动注入构造，初始化一个新的类包装器，依次从指定传参、根类定义缓存和配置中获取构造方法参数列表（并转换类型）和参数的个数，从指定传参或者反射获取构造器数组，按照构造器参数从多到少和公开优先的顺序排序，遍历解析构造器并加入缓存，参数类型转换，验证构造函数不是父类重写关系，根据实例化策略和构造函数与参数实例化bean.</li>
-<li>实例化策略，如果没有使用replace(覆盖方法)或者lookup(动态替换)配置的方法，直接反射即可实例化。否则就需要使用cglib进行动态代理，将动态的拦截器增强切面方法织入类中，返回代理类。</li>
-<li>记录创建bean的ObjectFactory。属性注入，包括根据根据名称、类型注入。</li>
-<li>初始化bean，包括激活Aware三个方法，后处理器的前后使用，激活自定义的init方法。</li>
-<li>ApplicationContext是对BeanFactory的功能扩展，详见refresh()函数对AC的初始化：</li>
-<li>准备刷新上下文环境（准备并验证系统属性或者环境变量），初始化FactoryBean并读取xml，填充FB的功能(如自动注入的注解)，开发者定制的子类覆盖方法(postProcessBeanFactory)执行，FB的后处理器执行，注册拦截bean创建的bean处理器（获取bean时调用），为上下文初始化Message国际化语言源，初始化应用消息广播器并AEM中，留给子类来初始化其他的bean, 在注册的bean中查找监听器bean并注册，初始化剩下的单例，完成刷新过程后，通知生命周期处理器刷新过程，同时发出上下文刷新时间通知其他类。</li>
-<li>开发者定制的工厂类后处理方法，为类的创建提供了灵活性。</li>
-</ul>
-<h2 id="Bean-的创建过程是什么？"><a href="#Bean-的创建过程是什么？" class="headerlink" title="Bean 的创建过程是什么？"></a>Bean 的创建过程是什么？</h2><ul>
-<li><p>根据class属性或名称解析类，通过override属性的同名方法个数验证合理性或者标记为没有重载方法，然后进行初始化前的预处理，创建bean.</p>
-</li>
-<li><p>lookup-method和replace-method两个配置功能的加载就是设置到RootBeanDefinition的methodOverrides属性中。实现原理是在bean实例化时如果检测到存在methodOverrides属性，就会动态地为当前bean生成代理并使用对应的拦截器为bean作增强处理。</p>
-</li>
-<li><p>实例化的前置处理过程的bean经短路判断非空，则直接返回这个bean，忽略后续bean的创建。AOP功能就是基于这种判断。</p>
-</li>
-</ul>
-<h2 id="如何从bean的实例中获取对象？"><a href="#如何从bean的实例中获取对象？" class="headerlink" title="如何从bean的实例中获取对象？"></a>如何从bean的实例中获取对象？</h2><ul>
-<li>加载bean后通过getObjectForBeanInstance方法检测当前bean是否是FactoryBean类型，</li>
-<li>是则调用该类型的工厂方法返回真正需要的bean实例，并进行后处理。</li>
-</ul>
-<h2 id="spring-支持几种-bean-的作用域？"><a href="#spring-支持几种-bean-的作用域？" class="headerlink" title="spring 支持几种 bean 的作用域？"></a>spring 支持几种 bean 的作用域？</h2><ul>
-<li>spring 支持 5 种作用域，如下：<ul>
-<li>singleton：spring ioc 容器中只存在一个 bean 实例，bean 以单例模式存在，是系统默认值；</li>
-<li>prototype：每次从容器调用 bean 时都会创建一个新的示例，既每次 getBean()相当于执行 new Bean()操作；</li>
-<li>Web 环境下的作用域：</li>
-<li>request：每次 http 请求都会创建一个 bean；</li>
-<li>session：同一个 http session 共享一个 bean 实例；</li>
-<li>global-session：用于 portlet 容器，因为每个 portlet 有单独的 session，globalsession 提供一个全局性的 http session。</li>
-</ul>
-</li>
-<li>注意： 使用 prototype 作用域需要慎重的思考，因为频繁创建和销毁 bean 会带来很大的性能开销。</li>
-</ul>
-<h2 id="spring-自动装配-bean-有哪些方式？"><a href="#spring-自动装配-bean-有哪些方式？" class="headerlink" title="spring 自动装配 bean 有哪些方式？"></a>spring 自动装配 bean 有哪些方式？</h2><ul>
-<li>no：默认值，表示没有自动装配，应使用显式 bean 引用进行装配。</li>
-<li>byName：它根据 bean 的名称注入对象依赖项。</li>
-<li>byType：它根据类型注入对象依赖项。</li>
-<li>构造函数：通过构造函数来注入依赖项，需要设置大量的参数。</li>
-<li>autodetect：容器首先通过构造函数使用 autowire 装配，如果不能，则通过 byType 自动装配。</li>
-</ul>
-<h1 id="Spring-事务"><a href="#Spring-事务" class="headerlink" title="Spring 事务"></a>Spring 事务</h1><h2 id="spring-事务实现方式有哪些？"><a href="#spring-事务实现方式有哪些？" class="headerlink" title="spring 事务实现方式有哪些？"></a>spring 事务实现方式有哪些？</h2><ul>
-<li>声明式事务：声明式事务也有两种实现方式，基于 xml 配置文件的方式和注解方式（在类上添加 @Transaction 注解）。</li>
-<li>程序化事务：提供编码的形式管理和维护事务。</li>
-</ul>
-<h2 id="哪种事务管理类型更可取？"><a href="#哪种事务管理类型更可取？" class="headerlink" title="哪种事务管理类型更可取？"></a>哪种事务管理类型更可取？</h2><ul>
-<li>Spring Framework的大多数用户选择声明式事务管理，因为它是对应用程序代码影响最小的选项，因此最符合非侵入式轻量级容器的理想。</li>
-<li>声明式事务管理优于程序化事务管理，但它不如程序化事务管理灵活，后者允许您通过代码控制事务。</li>
-</ul>
-<h2 id="说一下-spring-的事务隔离？"><a href="#说一下-spring-的事务隔离？" class="headerlink" title="说一下 spring 的事务隔离？"></a>说一下 spring 的事务隔离？</h2><ul>
-<li><p>spring 有五大隔离级别，默认值为 ISOLATION_DEFAULT（使用数据库的设置），其他四个隔离级别和数据库的隔离级别一致：</p>
-</li>
-<li><p>ISOLATION_DEFAULT：用底层数据库的设置隔离级别，数据库设置的是什么我就用什么；</p>
-</li>
-<li><p>ISOLATIONREADUNCOMMITTED：未提交读，最低隔离级别、事务未提交前，就可被其他事务读取（会出现幻读、脏读、不可重复读）；</p>
-</li>
-<li><p>ISOLATIONREADCOMMITTED：提交读，一个事务提交后才能被其他事务读取到（会造成幻读、不可重复读），SQL server 的默认级别；</p>
-</li>
-<li><p>ISOLATIONREPEATABLEREAD：可重复读，保证多次读取同一个数据时，其值都和事务开始时候的内容是一致，禁止读取到别的事务未提交的数据（会造成幻读），MySQL 的默认级别；</p>
-</li>
-<li><p>ISOLATION_SERIALIZABLE：序列化，代价最高最可靠的隔离级别，该隔离级别能防止脏读、不可重复读、幻读。</p>
-</li>
-<li><p>脏读 ：表示一个事务能够读取另一个事务中还未提交的数据。比如，某个事务尝试插入记录 A，此时该事务还未提交，然后另一个事务尝试读取到了记录 A。</p>
-</li>
-<li><p>不可重复读 ：是指在一个事务内，多次读同一数据。</p>
-</li>
-<li><p>幻读 ：指同一个事务内多次查询返回的结果集不一样。比如同一个事务 A 第一次查询时候有 n 条记录，但是第二次同等条件下查询却有 n+1 条记录，这就好像产生了幻觉。发生幻读的原因也是另外一个事务新增或者删除或者修改了第一个事务结果集里面的数据，同一个记录的数据内容被修改了，所有数据行的记录就变多或者变少了。</p>
-</li>
-</ul>
-<h2 id="Spring-Framework的事务管理有哪些好处？"><a href="#Spring-Framework的事务管理有哪些好处？" class="headerlink" title="Spring Framework的事务管理有哪些好处？"></a>Spring Framework的事务管理有哪些好处？</h2><ul>
-<li>它在不同的事务API（如JTA，JDBC，Hibernate，JPA和JDO）之间提供了一致的编程模型。 </li>
-<li>与许多复杂的事务API（如JTA）相比，它为程序化事务管理提供了更简单的API。 </li>
-<li>它支持声明式事务管理。 </li>
-<li>它与Spring的各种数据访问抽象集成得非常好。</li>
-</ul>
-<h1 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h1><h2 id="说一下-spring-mvc-运行流程？"><a href="#说一下-spring-mvc-运行流程？" class="headerlink" title="说一下 spring mvc 运行流程？"></a>说一下 spring mvc 运行流程？</h2><ul>
-<li>spring mvc 先将请求发送给 DispatcherServlet。</li>
-<li>DispatcherServlet 查询一个或多个 HandlerMapping，找到处理请求的 Controller。</li>
-<li>DispatcherServlet 再把请求提交到对应的 Controller。</li>
-<li>Controller 进行业务逻辑处理后，会返回一个ModelAndView。</li>
-<li>Dispathcher 查询一个或多个 ViewResolver 视图解析器，找到 ModelAndView 对象指定的视图对象。</li>
-<li>视图对象负责渲染返回给客户端。</li>
-</ul>
-<h2 id="spring-mvc-有哪些组件？"><a href="#spring-mvc-有哪些组件？" class="headerlink" title="spring mvc 有哪些组件？"></a>spring mvc 有哪些组件？</h2><ul>
-<li>前置控制器 DispatcherServlet。</li>
-<li>映射控制器 HandlerMapping。</li>
-<li>处理器 Controller。</li>
-<li>模型和视图 ModelAndView。</li>
-<li>视图解析器 ViewResolver。</li>
-</ul>
-<h2 id="RequestMapping-的作用是什么？"><a href="#RequestMapping-的作用是什么？" class="headerlink" title="@RequestMapping 的作用是什么？"></a>@RequestMapping 的作用是什么？</h2><ul>
-<li>将 http 请求映射到相应的类/方法上。</li>
-</ul>
-<h2 id="Autowired-的作用是什么？"><a href="#Autowired-的作用是什么？" class="headerlink" title="@Autowired 的作用是什么？"></a>@Autowired 的作用是什么？</h2><ul>
-<li>@Autowired 它可以对类成员变量、方法及构造函数进行标注，完成自动装配的工作，</li>
-<li>通过@Autowired 的使用来消除 set/get 方法。</li>
-</ul>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/ae9d29e2.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1603,7 +781,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/java/09设计模式/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/364ea8cc.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -1617,7 +795,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/2019/10/04/java/09设计模式/" class="post-title-link" itemprop="url">设计模式</a>
+            <a href="/blog/post/364ea8cc.html" class="post-title-link" itemprop="url">设计模式</a>
           
         </h1>
 
@@ -1643,7 +821,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 01:43:25" itemprop="dateModified" datetime="2019-10-31T01:43:25+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
               </span>
             
           
@@ -1685,75 +863,15 @@
 </ul>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>范围\目的</th>
-<th>创建型模式</th>
-<th>结构型模式</th>
-<th>行为型模式</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>类模式</td>
-<td>工厂方法</td>
-<td>(类）适配器</td>
-<td>模板方法、解释器</td>
-</tr>
-<tr>
-<td>对象模式</td>
-<td>单例，原型，抽象工厂，建造者</td>
-<td>代理，(对象）适配器，桥接，装饰，外观，享元，组合</td>
-<td>策略，命令，职责链，状态，观察者，中介者，迭代器，访问，备忘录</td>
-</tr>
-</tbody></table>
-<h2 id="2-简单工厂和抽象工厂有什么区别？"><a href="#2-简单工厂和抽象工厂有什么区别？" class="headerlink" title="2. 简单工厂和抽象工厂有什么区别？"></a>2. 简单工厂和抽象工厂有什么区别？</h2><ul>
-<li>简单工厂，可以理解为专门生产某一个产品的工厂；</li>
-<li>工厂方法，是生产某一类产品的工厂，是生产具体产品的工厂的父类；</li>
-<li>抽象工厂，生产多类产品的工厂；</li>
-</ul>
-<h2 id="3-设计的基本原则有哪些？"><a href="#3-设计的基本原则有哪些？" class="headerlink" title="3. 设计的基本原则有哪些？"></a>3. 设计的基本原则有哪些？</h2><ul>
-<li><p>设置模式的六大原则，开闭原则，里氏代换原则，依赖倒转原则，接口隔离原则，迪米特法则，合成复用原则；</p>
-</li>
-<li><p>开闭原则的意思是：对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果；</p>
-</li>
-<li><p>里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现；</p>
-</li>
-<li><p>依赖倒转原则，针对接口编程，依赖于抽象而不依赖于具体；</p>
-</li>
-<li><p>接口隔离原则，使用多个隔离的接口，比使用单个接口要好。它还有另外一个意思是：降低类之间的耦合度；</p>
-</li>
-<li><p>迪米特法则又称为，最少知道原则，是指一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立；</p>
-</li>
-<li><p>合成复用原则是指：尽量使用合成/聚合的方式，而不是使用继承。</p>
-</li>
-</ul>
-<h2 id="4-设计模式简介"><a href="#4-设计模式简介" class="headerlink" title="4. 设计模式简介"></a>4. 设计模式简介</h2><ol>
-<li>单例（Singleton）模式：某个类只能生成一个实例，该类提供了一个全局访问点供外部获取该实例，其拓展是有限多例模式。</li>
-<li>原型（Prototype）模式：将一个对象作为原型，通过对其进行复制而克隆出多个和原型类似的新实例。</li>
-<li>工厂方法（Factory Method）模式：定义一个用于创建产品的接口，由子类决定生产什么产品。</li>
-<li>抽象工厂（AbstractFactory）模式：提供一个创建产品族的接口，其每个子类可以生产一系列相关的产品。</li>
-<li>建造者（Builder）模式：将一个复杂对象分解成多个相对简单的部分，然后根据不同需要分别创建它们，最后构建成该复杂对象。</li>
-<li>代理（Proxy）模式：为某对象提供一种代理以控制对该对象的访问。即客户端通过代理间接地访问该对象，从而限制、增强或修改该对象的一些特性。</li>
-<li>适配器（Adapter）模式：将一个类的接口转换成客户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的那些类能一起工作。</li>
-<li>桥接（Bridge）模式：将抽象与实现分离，使它们可以独立变化。它是用组合关系代替继承关系来实现，从而降低了抽象和实现这两个可变维度的耦合度。</li>
-<li>装饰（Decorator）模式：动态的给对象增加一些职责，即增加其额外的功能。</li>
-<li>外观（Facade）模式：为多个复杂的子系统提供一个一致的接口，使这些子系统更加容易被访问。</li>
-<li>享元（Flyweight）模式：运用共享技术来有效地支持大量细粒度对象的复用。</li>
-<li>组合（Composite）模式：将对象组合成树状层次结构，使用户对单个对象和组合对象具有一致的访问性。</li>
-<li>模板方法（TemplateMethod）模式：定义一个操作中的算法骨架，而将算法的一些步骤延迟到子类中，使得子类可以不改变该算法结构的情况下重定义该算法的某些特定步骤。</li>
-<li>策略（Strategy）模式：定义了一系列算法，并将每个算法封装起来，使它们可以相互替换，且算法的改变不会影响使用算法的客户。</li>
-<li>命令（Command）模式：将一个请求封装为一个对象，使发出请求的责任和执行请求的责任分割开。</li>
-<li>职责链（Chain of Responsibility）模式：把请求从链中的一个对象传到下一个对象，直到请求被响应为止。通过这种方式去除对象之间的耦合。</li>
-<li>状态（State）模式：允许一个对象在其内部状态发生改变时改变其行为能力。</li>
-<li>观察者（Observer）模式：多个对象间存在一对多关系，当一个对象发生改变时，把这种改变通知给其他多个对象，从而影响其他对象的行为。</li>
-<li>中介者（Mediator）模式：定义一个中介对象来简化原有对象之间的交互关系，降低系统中对象间的耦合度，使原有对象之间不必相互了解。</li>
-<li>迭代器（Iterator）模式：提供一种方法来顺序访问聚合对象中的一系列数据，而不暴露聚合对象的内部表示。</li>
-<li>访问者（Visitor）模式：在不改变集合元素的前提下，为一个集合中的每个元素提供多种访问方式，即每个元素有多个访问者对象访问。</li>
-<li>备忘录（Memento）模式：在不破坏封装性的前提下，获取并保存一个对象的内部状态，以便以后恢复它。</li>
-<li>解释器（Interpreter）模式：提供如何定义语言的文法，以及对语言句子的解释方法，即解释器。</li>
-</ol>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/364ea8cc.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1775,7 +893,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/java/08网络/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/50daec4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -1789,7 +907,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/2019/10/04/java/08网络/" class="post-title-link" itemprop="url">网络</a>
+            <a href="/blog/post/50daec4.html" class="post-title-link" itemprop="url">网络</a>
           
         </h1>
 
@@ -1815,7 +933,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 01:43:25" itemprop="dateModified" datetime="2019-10-31T01:43:25+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
               </span>
             
           
@@ -1852,68 +970,15 @@
 <li><p>它们的区别是，301 对搜索引擎优化（SEO）更加有利；302 有被提示为网络拦截的风险。</p>
 </li>
 </ul>
-<h2 id="2-forward-和-redirect-的区别？"><a href="#2-forward-和-redirect-的区别？" class="headerlink" title="2. forward 和 redirect 的区别？"></a>2. forward 和 redirect 的区别？</h2><ul>
-<li>forward 是转发 和 redirect 是重定向：</li>
-<li>地址栏 url 显示：foward url 不会发生改变，redirect url 会发生改变；</li>
-<li>数据共享：forward 可以共享 request 里的数据，redirect 不能共享；</li>
-<li>效率：forward 比 redirect 效率高。</li>
-</ul>
-<h2 id="3-简述-tcp-和-udp-的区别？"><a href="#3-简述-tcp-和-udp-的区别？" class="headerlink" title="3. 简述 tcp 和 udp 的区别？"></a>3. 简述 tcp 和 udp 的区别？</h2><ul>
-<li><p>tcp 和 udp 是 OSI 模型中的运输层中的协议。tcp 提供可靠的通信传输，而 udp 则常被用于让广播和细节控制交给应用的通信传输。</p>
-</li>
-<li><p>两者的区别大致如下：</p>
-<ul>
-<li>tcp 面向连接，udp 面向非连接即发送数据前不需要建立链接；</li>
-<li>tcp 提供可靠的服务（数据传输），udp 无法保证；</li>
-<li>tcp 面向字节流，udp 面向报文；</li>
-<li>tcp 数据传输慢，udp 数据传输快；</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-tcp-为什么要三次握手-两次不行吗？为什么？"><a href="#4-tcp-为什么要三次握手-两次不行吗？为什么？" class="headerlink" title="4. tcp 为什么要三次握手,两次不行吗？为什么？"></a>4. tcp 为什么要三次握手,两次不行吗？为什么？</h2><ul>
-<li>如果采用两次握手，<ul>
-<li>那么只要服务器发出确认数据包就会建立连接，</li>
-<li>但由于客户端此时并未响应服务器端的请求，那此时服务器端就会一直在等待客户端，</li>
-<li>这样服务器端就白白浪费了一定的资源。</li>
-</ul>
-</li>
-<li>若采用三次握手，<ul>
-<li>服务器端没有收到来自客户端的再此确认，</li>
-<li>则就会知道客户端并没有要求建立请求，就不会浪费服务器的资源。</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-说一下-tcp-粘包是怎么产生的？"><a href="#5-说一下-tcp-粘包是怎么产生的？" class="headerlink" title="5. 说一下 tcp 粘包是怎么产生的？"></a>5. 说一下 tcp 粘包是怎么产生的？</h2><ul>
-<li>tcp 粘包可能发生在发送端或者接收端，分别来看两端各种产生粘包的原因：<ul>
-<li>发送端粘包：发送端需要等缓冲区满才发送出去，造成粘包；</li>
-<li>接收方粘包：接收方不及时接收缓冲区的包，造成多个包接收。</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-OSI-的七层模型都有哪些？"><a href="#6-OSI-的七层模型都有哪些？" class="headerlink" title="6. OSI 的七层模型都有哪些？"></a>6. OSI 的七层模型都有哪些？</h2><ul>
-<li>物理层：利用传输介质为数据链路层提供物理连接，实现比特流的透明传输。</li>
-<li>数据链路层：负责建立和管理节点间的链路。</li>
-<li>网络层：通过路由选择算法，为报文或分组通过通信子网选择最适当的路径。</li>
-<li>传输层：向用户提供可靠的端到端的差错和流量控制，保证报文的正确传输。</li>
-<li>会话层：向两个实体的表示层提供建立和使用连接的方法。</li>
-<li>表示层：处理用户信息的表示问题，如编码、数据格式转换和加密解密等。</li>
-<li>应用层：直接向用户提供服务，完成用户希望在网络上完成的各种工作。</li>
-</ul>
-<h2 id="7-get-和-post-请求有哪些区别？"><a href="#7-get-和-post-请求有哪些区别？" class="headerlink" title="7. get 和 post 请求有哪些区别？"></a>7. get 和 post 请求有哪些区别？</h2><ul>
-<li>get 请求会被浏览器主动缓存，而 post 不会。</li>
-<li>get 传递参数有大小限制，而 post 没有。</li>
-<li>post 参数传输更安全，get 的参数会明文限制在 url 上，post 不会。</li>
-</ul>
-<h2 id="8-如何实现跨域？"><a href="#8-如何实现跨域？" class="headerlink" title="8. 如何实现跨域？"></a>8. 如何实现跨域？</h2><ul>
-<li>服务器端运行跨域 设置 CORS 等于 *；</li>
-<li>在单个接口使用注解 @CrossOrigin 运行跨域；</li>
-<li>使用 jsonp 跨域；</li>
-</ul>
-<h2 id="9-说一下-JSONP-实现原理？"><a href="#9-说一下-JSONP-实现原理？" class="headerlink" title="9. 说一下 JSONP 实现原理？"></a>9. 说一下 JSONP 实现原理？</h2><ul>
-<li>jsonp：JSON with Padding，</li>
-<li>它是利用script标签的 src 连接可以访问不同源的特性，加载远程返回的“JS 函数”来执行的。</li>
-</ul>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/50daec4.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1935,7 +1000,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/java/07异常/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/23a3bd72.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -1949,7 +1014,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/2019/10/04/java/07异常/" class="post-title-link" itemprop="url">异常</a>
+            <a href="/blog/post/23a3bd72.html" class="post-title-link" itemprop="url">异常</a>
           
         </h1>
 
@@ -1975,7 +1040,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 01:43:25" itemprop="dateModified" datetime="2019-10-31T01:43:25+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
               </span>
             
           
@@ -2011,30 +1076,15 @@
 <li>throw：是真实抛出一个异常。</li>
 <li>throws：是声明可能会抛出一个异常。</li>
 </ul>
-<h2 id="2-final、finally、finalize-有什么区别？"><a href="#2-final、finally、finalize-有什么区别？" class="headerlink" title="2. final、finally、finalize 有什么区别？"></a>2. final、finally、finalize 有什么区别？</h2><ul>
-<li>final：是修饰符，如果修饰类，此类不能被继承；如果修饰方法和变量，则表示此方法和此变量不能在被改变，只能使用。</li>
-<li>finally：是 try{} catch{} finally{} 最后一部分，表示不论发生任何情况都会执行，finally 部分可以省略，但如果 finally 部分存在，则一定会执行 finally 里面的代码。</li>
-<li>finalize： 是 Object 类的一个方法，在垃圾收集器执行的时候会调用被回收对象的此方法。</li>
-</ul>
-<h2 id="3-try-catch-finally-中哪个部分可以省略？"><a href="#3-try-catch-finally-中哪个部分可以省略？" class="headerlink" title="3. try-catch-finally 中哪个部分可以省略？"></a>3. try-catch-finally 中哪个部分可以省略？</h2><ul>
-<li>try-catch-finally 其中 catch 和 finally 都可以被省略，但是不能同时省略，</li>
-<li>也就是说有 try 的时候，必须后面跟一个 catch 或者 finally。</li>
-</ul>
-<h2 id="4-try-catch-finally-中-如果-catch-中-return-了-finally-还会执行吗？"><a href="#4-try-catch-finally-中-如果-catch-中-return-了-finally-还会执行吗？" class="headerlink" title="4. try-catch-finally 中,如果 catch 中 return 了,finally 还会执行吗？"></a>4. try-catch-finally 中,如果 catch 中 return 了,finally 还会执行吗？</h2><ul>
-<li>finally 一定会执行，即使是 catch 中 return 了，catch 中的 return 会等 finally 中的代码执行完之后，才会执行。</li>
-</ul>
-<h2 id="5-常见的异常类有哪些？"><a href="#5-常见的异常类有哪些？" class="headerlink" title="5. 常见的异常类有哪些？"></a>5. 常见的异常类有哪些？</h2><ul>
-<li>NullPointerException 空指针异常</li>
-<li>ClassNotFoundException 指定类不存在</li>
-<li>NumberFormatException 字符串转换为数字异常</li>
-<li>IndexOutOfBoundsException 数组下标越界异常</li>
-<li>ClassCastException 数据类型转换异常</li>
-<li>FileNotFoundException 文件未找到异常</li>
-<li>NoSuchMethodException 方法不存在异常</li>
-<li>IOException IO 异常</li>
-<li>SocketException Socket 异常</li>
-</ul>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/23a3bd72.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -2056,7 +1106,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/java/06JavaWeb模块/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/fb60fea1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -2070,7 +1120,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/2019/10/04/java/06JavaWeb模块/" class="post-title-link" itemprop="url">Java Web</a>
+            <a href="/blog/post/fb60fea1.html" class="post-title-link" itemprop="url">Java Web</a>
           
         </h1>
 
@@ -2096,7 +1146,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 01:43:25" itemprop="dateModified" datetime="2019-10-31T01:43:25+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
               </span>
             
           
@@ -2134,73 +1184,15 @@
 </li>
 <li>JSP侧重于视图，servlet主要用于控制逻辑。</li>
 </ul>
-<h2 id="2-jsp-有哪些内置对象？作用分别是什么？"><a href="#2-jsp-有哪些内置对象？作用分别是什么？" class="headerlink" title="2. jsp 有哪些内置对象？作用分别是什么？"></a>2. jsp 有哪些内置对象？作用分别是什么？</h2><ul>
-<li>JSP有9大内置对象：<ul>
-<li>request：封装客户端的请求，其中包含来自get或post请求的参数；</li>
-<li>response：封装服务器对客户端的响应；</li>
-<li>pageContext：通过该对象可以获取其他对象；</li>
-<li>session：封装用户会话的对象；</li>
-<li>application：封装服务器运行环境的对象；</li>
-<li>out：输出服务器响应的输出流对象；</li>
-<li>config：Web应用的配置对象；</li>
-<li>page：JSP页面对象（相当于java程序中的this）；</li>
-<li>exception：封装页面抛出异常的对象。</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-说一下-jsp-的-4-种作用域？"><a href="#3-说一下-jsp-的-4-种作用域？" class="headerlink" title="3. 说一下 jsp 的 4 种作用域？"></a>3. 说一下 jsp 的 4 种作用域？</h2><ul>
-<li>page：代表与一个页面相关的对象和属性。</li>
-<li>request：代表与客户端发出的一个请求相关的对象和属性。一个请求可能跨越多个页面，涉及多个Web组件；需要在页面显示的临时数据可以置于此作用域。</li>
-<li>session：代表与某个用户与服务器建立的一次会话相关的对象和属性。跟某个用户相关的数据应该放在用户自己的session中。</li>
-<li>application：代表与整个Web应用程序相关的对象和属性，它实质上是跨越整个Web应用程序，包括多个页面、请求和会话的一个全局作用域。</li>
-</ul>
-<h2 id="4-session-和-cookie-有什么区别？"><a href="#4-session-和-cookie-有什么区别？" class="headerlink" title="4. session 和 cookie 有什么区别？"></a>4. session 和 cookie 有什么区别？</h2><ul>
-<li>存储位置不同：session存储在服务器端；cookie存储在浏览器端。</li>
-<li>安全性不同：cookie安全性一般，在浏览器存储，可以被伪造和修改。</li>
-<li>容量和个数限制：cookie有容量限制，每个站点下的cookie也有个数限制。</li>
-<li>存储的多样性：session可以存储在Redis中、数据库中、应用程序中；而cookie只能存储在浏览器中。</li>
-</ul>
-<h2 id="5-说一下-session-的工作原理？"><a href="#5-说一下-session-的工作原理？" class="headerlink" title="5. 说一下 session 的工作原理？"></a>5. 说一下 session 的工作原理？</h2><ul>
-<li>session的工作原理是客户端登录完成之后，服务器会创建对应的session，</li>
-<li>session创建完之后，会把session的id发送给客户端，客户端再存储到浏览器中。</li>
-<li>这样客户端每次访问服务器时，都会带着sessionid，服务器拿到sessionid之后，</li>
-<li>在内存找到与之对应的session这样就可以正常工作了。</li>
-</ul>
-<h2 id="6-如果客户端禁止-cookie-能实现-session-还能用吗？"><a href="#6-如果客户端禁止-cookie-能实现-session-还能用吗？" class="headerlink" title="6. 如果客户端禁止 cookie 能实现 session 还能用吗？"></a>6. 如果客户端禁止 cookie 能实现 session 还能用吗？</h2><ul>
-<li>可以用，session只是依赖cookie存储sessionid，如果cookie被禁用了，</li>
-<li>可以使用url中添加sessionid的方式保证session能正常使用。</li>
-</ul>
-<h2 id="7-spring-mvc-和-struts-的区别是什么？"><a href="#7-spring-mvc-和-struts-的区别是什么？" class="headerlink" title="7. spring mvc 和 struts 的区别是什么？"></a>7. spring mvc 和 struts 的区别是什么？</h2><ul>
-<li>拦截级别：struts2是类级别的拦截；spring mvc是方法级别的拦截。</li>
-<li>数据独立性：spring mvc的方法之间基本上独立的，独享request和response数据，请求数据通过参数获取，处理结果通过ModelMap交回给框架，方法之间不共享变量；而struts2虽然方法之间也是独立的，但其所有action变量是共享的，这不会影响程序运行，却给我们编码和读程序时带来了一定的麻烦。</li>
-<li>拦截机制：struts2有以自己的interceptor机制，spring mvc用的是独立的aop方式，这样导致struts2的配置文件量比spring mvc大。</li>
-<li>对ajax的支持：spring mvc集成了ajax，所有ajax使用很方便，只需要一个注解@ResponseBody就可以实现了；而struts2一般需要安装插件或者自己写代码才行。</li>
-</ul>
-<h2 id="8-如何避免-sql-注入？"><a href="#8-如何避免-sql-注入？" class="headerlink" title="8. 如何避免 sql 注入？"></a>8. 如何避免 sql 注入？</h2><ul>
-<li>使用预处理PreparedStatement。</li>
-<li>使用正则表达式过滤掉字符中的特殊字符。</li>
-</ul>
-<h2 id="9-什么是-XSS-攻击-如何避免？"><a href="#9-什么是-XSS-攻击-如何避免？" class="headerlink" title="9. 什么是 XSS 攻击,如何避免？"></a>9. 什么是 XSS 攻击,如何避免？</h2><ul>
-<li><p>XSS攻击：即跨站脚本攻击，它是Web程序中常见的漏洞。</p>
-<ul>
-<li>原理是攻击者往Web页面里插入恶意的脚本代码（css代码、JavaScript代码等），</li>
-<li>当用户浏览该页面时，嵌入其中的脚本代码会被执行，从而达到恶意攻击用户的目的，</li>
-<li>如盗取用户cookie、破坏页面结构、重定向到其他网站等。</li>
-</ul>
-</li>
-<li><p>预防XSS的核心是必须对输入的数据做过滤处理。</p>
-</li>
-</ul>
-<h2 id="10-什么是-CSRF-攻击-如何避免？"><a href="#10-什么是-CSRF-攻击-如何避免？" class="headerlink" title="10. 什么是 CSRF 攻击,如何避免？"></a>10. 什么是 CSRF 攻击,如何避免？</h2><ul>
-<li>CSRF：Cross-Site Request Forgery（中文：跨站请求伪造），可以理解为攻击者盗用了你的身份，以你的名义发送恶意请求，比如：以你名义发送邮件、发消息、购买商品、虚拟货币转账等。</li>
-<li>防御手段：<ul>
-<li>验证请求来源地址；</li>
-<li>关键操作添加验证码；</li>
-<li>在请求地址添加token并验证。</li>
-</ul>
-</li>
-</ul>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/fb60fea1.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -2222,7 +1214,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/2019/10/04/java/05对象拷贝/">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/ee837b98.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -2236,7 +1228,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/2019/10/04/java/05对象拷贝/" class="post-title-link" itemprop="url">对象拷贝</a>
+            <a href="/blog/post/ee837b98.html" class="post-title-link" itemprop="url">对象拷贝</a>
           
         </h1>
 
@@ -2262,7 +1254,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-31 01:43:25" itemprop="dateModified" datetime="2019-10-31T01:43:25+00:00">2019-10-31</time>
+                <time title="修改时间：2019-10-31 02:48:43" itemprop="dateModified" datetime="2019-10-31T02:48:43+00:00">2019-10-31</time>
               </span>
             
           
@@ -2292,28 +1284,15 @@
 
       
           <h1 id="对象拷贝"><a href="#对象拷贝" class="headerlink" title="对象拷贝"></a>对象拷贝</h1><h2 id="1-为什么要使用克隆？"><a href="#1-为什么要使用克隆？" class="headerlink" title="1. 为什么要使用克隆？"></a>1. 为什么要使用克隆？</h2><p>克隆的对象可能包含一些已经修改过的属性，而 new 出来的对象的属性都还是初始化时候的值，所以当需要一个新的对象来保存当前对象的“状态”就靠 clone 方法了</p>
-<h2 id="2-如何实现对象克隆？"><a href="#2-如何实现对象克隆？" class="headerlink" title="2. 如何实现对象克隆？"></a>2. 如何实现对象克隆？</h2><ul>
-<li><p>实现Cloneable接口并重写Object类中的clone()方法。</p>
-</li>
-<li><p>实现Serializable接口，通过对象的序列化和反序列化实现克隆，可以实现真正的深度克隆。</p>
-</li>
-</ul>
-<h2 id="3-深拷贝和浅拷贝区别是什么？"><a href="#3-深拷贝和浅拷贝区别是什么？" class="headerlink" title="3. 深拷贝和浅拷贝区别是什么？"></a>3. 深拷贝和浅拷贝区别是什么？</h2><ul>
-<li>在浅克隆中，<ul>
-<li>如果原型对象的成员变量是值类型，将复制一份给克隆对象；</li>
-<li>如果原型对象的成员变量是引用类型，则将引用对象的地址复制一份给克隆对象，</li>
-<li>也就是说原型对象和克隆对象的成员变量指向相同的内存地址。</li>
-<li>(在浅克隆中，当对象被复制时只复制它本身和其中包含的值类型的成员变量，而引用类型的成员对象并没有复制。)</li>
-</ul>
-</li>
-<li>在深克隆中，<ul>
-<li>无论原型对象的成员变量是值类型还是引用类型，都将复制一份给克隆对象，</li>
-<li>深克隆将原型对象的所有引用对象也复制一份给克隆对象。</li>
-<li>(在深克隆中，除了对象本身被复制外，对象所包含的所有成员变量也将复制。)</li>
-</ul>
-</li>
-</ul>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/ee837b98.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -2416,6 +1395,11 @@
     
   </nav>
 </div>
+  <div class="feed-link motion-element">
+    <a href="/blog/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
       
@@ -2446,7 +1430,7 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sometwo</span>
 </div>
