@@ -8,7 +8,6 @@ comments: true
 abbrlink: 8b7b30a1
 date: 2019-10-04 19:49:32
 ---
-# JAVA
 
 想要面试的初/中/想要面试的初/中/高级 Java 程序员
 想要查漏补缺的人
