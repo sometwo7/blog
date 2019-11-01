@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://sometwo7.github.io/blog/"/>
-  <updated>2019-10-31T09:38:24.067Z</updated>
+  <updated>2019-11-01T09:58:43.911Z</updated>
   <id>https://sometwo7.github.io/blog/</id>
   
   <author>
@@ -17,64 +17,107 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>剑指 Offer 题解 - 60~68</title>
-    <link href="https://sometwo7.github.io/blog/post/75f4fee9.html"/>
-    <id>https://sometwo7.github.io/blog/post/75f4fee9.html</id>
-    <published>2019-10-31T17:07:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
+    <title>从春招惨败到秋招收获 BAT OFFER</title>
+    <link href="https://sometwo7.github.io/blog/post/3c20f5a2.html"/>
+    <id>https://sometwo7.github.io/blog/post/3c20f5a2.html</id>
+    <published>2019-11-01T18:11:11.000Z</published>
+    <updated>2019-11-01T09:58:43.911Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#60-n-个骰子的点数&quot;&gt;60. n 个骰子的点数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#61-扑克牌顺子&quot;&gt;61. 扑克牌顺子&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#62-圆圈中最后剩下的数&quot;&gt;62. 圆圈中最后剩下的数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#63-股票的最大利润&quot;&gt;63. 股票的最大利润&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#64-求-123n&quot;&gt;64. 求 1+2+3+...+n&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#65-不用加减乘除做加法&quot;&gt;65. 不用加减乘除做加法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#66-构建乘积数组&quot;&gt;66. 构建乘积数组&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#67-把字符串转换成整数&quot;&gt;67. 把字符串转换成整数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#68-树中两个节点的最低公共祖先&quot;&gt;68. 树中两个节点的最低公共祖先&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;60-n-个骰子的点数&quot;&gt;&lt;a href=&quot;#60-n-个骰子的点数&quot; class=&quot;headerlink&quot; title=&quot;60. n 个骰子的点数&quot;&gt;&lt;/a&gt;60. n 个骰子的点数&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.lintcode.com/en/problem/dices-sum/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Lintcode&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;
+      &lt;p&gt;🚀&lt;/p&gt;&lt;h1 id=&quot;1-Offer-情况&quot;&gt;&lt;a href=&quot;#1-Offer-情况&quot; class=&quot;headerlink&quot; title=&quot;1. Offer 情况&quot;&gt;&lt;/a&gt;1. Offer 情况&lt;/h1&gt;&lt;p&gt;经过了长达一年左右的复习，秋招也收到了几个比较满意的 Offer，参加面试的都通过了。&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;百度，企业智能平台； &lt;/li&gt;
+&lt;li&gt;阿里，高德地图； &lt;/li&gt;
+&lt;li&gt;腾讯，IEG 游戏平台，后台研发，SP； &lt;/li&gt;
+&lt;li&gt;字节跳动，头条后台研发，SSP； &lt;/li&gt;
+&lt;li&gt;华为，Cloud Bu； &lt;/li&gt;
+&lt;li&gt;网易游戏，梦幻事业部； &lt;/li&gt;
+&lt;li&gt;顺丰科技。 &lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
     
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/categories/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="面试问题" scheme="https://sometwo7.github.io/blog/categories/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/"/>
     
     
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+      <category term="面试" scheme="https://sometwo7.github.io/blog/tags/%E9%9D%A2%E8%AF%95/"/>
     
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/tags/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="问题" scheme="https://sometwo7.github.io/blog/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="搬运" scheme="https://sometwo7.github.io/blog/tags/%E6%90%AC%E8%BF%90/"/>
+    
+      <category term="BAT" scheme="https://sometwo7.github.io/blog/tags/BAT/"/>
+    
+      <category term="offer" scheme="https://sometwo7.github.io/blog/tags/offer/"/>
     
   </entry>
   
   <entry>
-    <title>剑指 Offer 题解 - 50~59</title>
-    <link href="https://sometwo7.github.io/blog/post/6e7ee76c.html"/>
-    <id>https://sometwo7.github.io/blog/post/6e7ee76c.html</id>
-    <published>2019-10-31T17:06:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
+    <title>数据库系统原理 - 数据库</title>
+    <link href="https://sometwo7.github.io/blog/post/bac22ccf.html"/>
+    <id>https://sometwo7.github.io/blog/post/bac22ccf.html</id>
+    <published>2019-11-01T18:01:32.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#50-第一个只出现一次的字符位置&quot;&gt;50. 第一个只出现一次的字符位置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#51-数组中的逆序对&quot;&gt;51. 数组中的逆序对&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#52-两个链表的第一个公共结点&quot;&gt;52. 两个链表的第一个公共结点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#53-数字在排序数组中出现的次数&quot;&gt;53. 数字在排序数组中出现的次数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#54-二叉查找树的第-k-个结点&quot;&gt;54. 二叉查找树的第 K 个结点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#551-二叉树的深度&quot;&gt;55.1 二叉树的深度&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#552-平衡二叉树&quot;&gt;55.2 平衡二叉树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#56-数组中只出现一次的数字&quot;&gt;56. 数组中只出现一次的数字&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#571-和为-s-的两个数字&quot;&gt;57.1 和为 S 的两个数字&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#572-和为-s-的连续正数序列&quot;&gt;57.2 和为 S 的连续正数序列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#581-翻转单词顺序列&quot;&gt;58.1 翻转单词顺序列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#582-左旋转字符串&quot;&gt;58.2 左旋转字符串&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#59-滑动窗口的最大值&quot;&gt;59. 滑动窗口的最大值&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+&lt;li&gt;&lt;a href=&quot;#一事务&quot;&gt;一、事务&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#概念&quot;&gt;概念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#acid&quot;&gt;ACID&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#autocommit&quot;&gt;AUTOCOMMIT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#二并发一致性问题&quot;&gt;二、并发一致性问题&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#丢失修改&quot;&gt;丢失修改&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#读脏数据&quot;&gt;读脏数据&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#不可重复读&quot;&gt;不可重复读&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#幻影读&quot;&gt;幻影读&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#三封锁&quot;&gt;三、封锁&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#封锁粒度&quot;&gt;封锁粒度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#封锁类型&quot;&gt;封锁类型&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#封锁协议&quot;&gt;封锁协议&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#mysql-隐式与显示锁定&quot;&gt;MySQL 隐式与显示锁定&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#四隔离级别&quot;&gt;四、隔离级别&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#未提交读read-uncommitted&quot;&gt;未提交读（READ UNCOMMITTED）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#提交读read-committed&quot;&gt;提交读（READ COMMITTED）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#可重复读repeatable-read&quot;&gt;可重复读（REPEATABLE READ）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#可串行化serializable&quot;&gt;可串行化（SERIALIZABLE）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#五多版本并发控制&quot;&gt;五、多版本并发控制&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#版本号&quot;&gt;版本号&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#隐藏的列&quot;&gt;隐藏的列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#undo-日志&quot;&gt;Undo 日志&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#实现过程&quot;&gt;实现过程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#快照读与当前读&quot;&gt;快照读与当前读&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#六next-key-locks&quot;&gt;六、Next-Key Locks&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#record-locks&quot;&gt;Record Locks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#gap-locks&quot;&gt;Gap Locks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#next-key-locks&quot;&gt;Next-Key Locks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#七关系数据库设计理论&quot;&gt;七、关系数据库设计理论&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#函数依赖&quot;&gt;函数依赖&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#异常&quot;&gt;异常&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#范式&quot;&gt;范式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#八er-图&quot;&gt;八、ER 图&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#实体的三种联系&quot;&gt;实体的三种联系&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#表示出现多次的关系&quot;&gt;表示出现多次的关系&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#联系的多向性&quot;&gt;联系的多向性&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#表示子类&quot;&gt;表示子类&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
 
 
 &lt;/li&gt;
@@ -83,36 +126,134 @@
     </summary>
     
     
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/categories/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="基础知识" scheme="https://sometwo7.github.io/blog/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/tags/%E5%89%91%E6%8C%87-Offer/"/>
     
   </entry>
   
   <entry>
-    <title>剑指 Offer 题解 - 40~49</title>
-    <link href="https://sometwo7.github.io/blog/post/4a05ff9d.html"/>
-    <id>https://sometwo7.github.io/blog/post/4a05ff9d.html</id>
-    <published>2019-10-31T17:05:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
+    <title>计算机网络 - 传输层</title>
+    <link href="https://sometwo7.github.io/blog/post/faf47b10.html"/>
+    <id>https://sometwo7.github.io/blog/post/faf47b10.html</id>
+    <published>2019-11-01T17:15:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#40-最小的-k-个数&quot;&gt;40. 最小的 K 个数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#411-数据流中的中位数&quot;&gt;41.1 数据流中的中位数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#412-字符流中第一个不重复的字符&quot;&gt;41.2 字符流中第一个不重复的字符&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#42-连续子数组的最大和&quot;&gt;42. 连续子数组的最大和&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#43-从-1-到-n-整数中-1-出现的次数&quot;&gt;43. 从 1 到 n 整数中 1 出现的次数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#44-数字序列中的某一位数字&quot;&gt;44. 数字序列中的某一位数字&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#45-把数组排成最小的数&quot;&gt;45. 把数组排成最小的数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#46-把数字翻译成字符串&quot;&gt;46. 把数字翻译成字符串&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#47-礼物的最大价值&quot;&gt;47. 礼物的最大价值&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#48-最长不含重复字符的子字符串&quot;&gt;48. 最长不含重复字符的子字符串&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#49-丑数&quot;&gt;49. 丑数&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+&lt;li&gt;&lt;a href=&quot;#udp-和-tcp-的特点&quot;&gt;UDP 和 TCP 的特点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#udp-首部格式&quot;&gt;UDP 首部格式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tcp-首部格式&quot;&gt;TCP 首部格式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tcp-的三次握手&quot;&gt;TCP 的三次握手&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tcp-的四次挥手&quot;&gt;TCP 的四次挥手&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tcp-可靠传输&quot;&gt;TCP 可靠传输&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tcp-滑动窗口&quot;&gt;TCP 滑动窗口&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tcp-流量控制&quot;&gt;TCP 流量控制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tcp-拥塞控制&quot;&gt;TCP 拥塞控制&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-慢开始与拥塞避免&quot;&gt;1. 慢开始与拥塞避免&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-快重传与快恢复&quot;&gt;2. 快重传与快恢复&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;网络层只把分组发送到目的主机，但是真正通信的并不是主机而是主机中的进程。传输层提供了进程间的逻辑通信，传输层向高层用户屏蔽了下面网络层的核心细节，使应用程序看起来像是在两个传输层实体之间有一条端到端的逻辑通信信道。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="网络" scheme="https://sometwo7.github.io/blog/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络 - 网络层</title>
+    <link href="https://sometwo7.github.io/blog/post/6012c45e.html"/>
+    <id>https://sometwo7.github.io/blog/post/6012c45e.html</id>
+    <published>2019-11-01T17:14:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#概述&quot;&gt;概述&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#ip-数据报格式&quot;&gt;IP 数据报格式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#ip-地址编址方式&quot;&gt;IP 地址编址方式&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-分类&quot;&gt;1. 分类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-子网划分&quot;&gt;2. 子网划分&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-无分类&quot;&gt;3. 无分类&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#地址解析协议-arp&quot;&gt;地址解析协议 ARP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#网际控制报文协议-icmp&quot;&gt;网际控制报文协议 ICMP&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-ping&quot;&gt;1. Ping&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-traceroute&quot;&gt;2. Traceroute&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#虚拟专用网-vpn&quot;&gt;虚拟专用网 VPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#网络地址转换-nat&quot;&gt;网络地址转换 NAT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#路由器的结构&quot;&gt;路由器的结构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#路由器分组转发流程&quot;&gt;路由器分组转发流程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#路由选择协议&quot;&gt;路由选择协议&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-内部网关协议-rip&quot;&gt;1. 内部网关协议 RIP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-内部网关协议-ospf&quot;&gt;2. 内部网关协议 OSPF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-外部网关协议-bgp&quot;&gt;3. 外部网关协议 BGP&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="网络" scheme="https://sometwo7.github.io/blog/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络 - 链路层</title>
+    <link href="https://sometwo7.github.io/blog/post/abe12e46.html"/>
+    <id>https://sometwo7.github.io/blog/post/abe12e46.html</id>
+    <published>2019-11-01T17:13:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#基本问题&quot;&gt;基本问题&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-封装成帧&quot;&gt;1. 封装成帧&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-透明传输&quot;&gt;2. 透明传输&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-差错检测&quot;&gt;3. 差错检测&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#信道分类&quot;&gt;信道分类&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-广播信道&quot;&gt;1. 广播信道&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-点对点信道&quot;&gt;2. 点对点信道&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#信道复用技术&quot;&gt;信道复用技术&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-频分复用&quot;&gt;1. 频分复用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-时分复用&quot;&gt;2. 时分复用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-统计时分复用&quot;&gt;3. 统计时分复用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-波分复用&quot;&gt;4. 波分复用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-码分复用&quot;&gt;5. 码分复用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#csmacd-协议&quot;&gt;CSMA/CD 协议&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#ppp-协议&quot;&gt;PPP 协议&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#mac-地址&quot;&gt;MAC 地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#局域网&quot;&gt;局域网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#以太网&quot;&gt;以太网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#交换机&quot;&gt;交换机&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#虚拟局域网&quot;&gt;虚拟局域网&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
 
 
 &lt;/li&gt;
@@ -121,501 +262,664 @@
     </summary>
     
     
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/categories/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="计算机网络" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/tags/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="网络" scheme="https://sometwo7.github.io/blog/tags/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
-    <title>剑指 Offer 题解 - 30~39</title>
-    <link href="https://sometwo7.github.io/blog/post/b764b54a.html"/>
-    <id>https://sometwo7.github.io/blog/post/b764b54a.html</id>
-    <published>2019-10-31T17:04:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
+    <title>计算机网络 - 物理层</title>
+    <link href="https://sometwo7.github.io/blog/post/73acdb02.html"/>
+    <id>https://sometwo7.github.io/blog/post/73acdb02.html</id>
+    <published>2019-11-01T17:12:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- GFM-TOC --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#通信方式&quot;&gt;通信方式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#带通调制&quot;&gt;带通调制&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;通信方式&quot;&gt;&lt;a href=&quot;#通
+      
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="网络" scheme="https://sometwo7.github.io/blog/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一文帮你理清面试知识点</title>
+    <link href="https://sometwo7.github.io/blog/post/e0ea4e35.html"/>
+    <id>https://sometwo7.github.io/blog/post/e0ea4e35.html</id>
+    <published>2019-11-01T17:11:11.000Z</published>
+    <updated>2019-11-01T09:58:43.911Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;⭐️&lt;/p&gt;&lt;h1 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1. 前言&quot;&gt;&lt;/a&gt;1. 前言&lt;/h1&gt;&lt;p&gt;面试考察的知识点多而杂，要完全掌握需要花费大量的时间和精力。但是面试中经常被问到的知识点却没有多少，你完全可以用 20% 的时间去掌握 80% 常问的知识点。在这里我将这 80% 常问的知识点整理出来，方便大家快速地掌握。这些知识点也标注了重要程度，从而让大家可以根据知识点的重要程度去制定学习计划。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="面试问题" scheme="https://sometwo7.github.io/blog/categories/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="https://sometwo7.github.io/blog/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="问题" scheme="https://sometwo7.github.io/blog/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="搬运" scheme="https://sometwo7.github.io/blog/tags/%E6%90%AC%E8%BF%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络 - 概述</title>
+    <link href="https://sometwo7.github.io/blog/post/6779a5f9.html"/>
+    <id>https://sometwo7.github.io/blog/post/6779a5f9.html</id>
+    <published>2019-11-01T17:11:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#30-包含-min-函数的栈&quot;&gt;30. 包含 min 函数的栈&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#31-栈的压入弹出序列&quot;&gt;31. 栈的压入、弹出序列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#321-从上往下打印二叉树&quot;&gt;32.1 从上往下打印二叉树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#322-把二叉树打印成多行&quot;&gt;32.2 把二叉树打印成多行&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#323-按之字形顺序打印二叉树&quot;&gt;32.3 按之字形顺序打印二叉树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#33-二叉搜索树的后序遍历序列&quot;&gt;33. 二叉搜索树的后序遍历序列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#34-二叉树中和为某一值的路径&quot;&gt;34. 二叉树中和为某一值的路径&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#35-复杂链表的复制&quot;&gt;35. 复杂链表的复制&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#36-二叉搜索树与双向链表&quot;&gt;36. 二叉搜索树与双向链表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#37-序列化二叉树&quot;&gt;37. 序列化二叉树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#38-字符串的排列&quot;&gt;38. 字符串的排列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#39-数组中出现次数超过一半的数字&quot;&gt;39. 数组中出现次数超过一半的数字&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+&lt;li&gt;&lt;a href=&quot;#网络的网络&quot;&gt;网络的网络&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#isp&quot;&gt;ISP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#主机之间的通信方式&quot;&gt;主机之间的通信方式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#电路交换与分组交换&quot;&gt;电路交换与分组交换&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-电路交换&quot;&gt;1. 电路交换&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-分组交换&quot;&gt;2. 分组交换&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#时延&quot;&gt;时延&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-排队时延&quot;&gt;1. 排队时延&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-处理时延&quot;&gt;2. 处理时延&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-传输时延&quot;&gt;3. 传输时延&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-传播时延&quot;&gt;4. 传播时延&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#计算机网络体系结构&quot;&gt;计算机网络体系结构&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-五层协议&quot;&gt;1. 五层协议&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-osi&quot;&gt;2. OSI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-tcpip&quot;&gt;3. TCP/IP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-数据在各层之间的传递过程&quot;&gt;4. 数据在各层之间的传递过程&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
 
 
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;网络的网络&quot;&gt;&lt;a href=&quot;#网络的网络&quot; class=&quot;headerlink&quot; title=&quot;网络的网络&quot;&gt;&lt;/a&gt;网络的网络&lt;/h1&gt;&lt;p&gt;网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="网络" scheme="https://sometwo7.github.io/blog/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机操作系统 - 链接</title>
+    <link href="https://sometwo7.github.io/blog/post/d925e7e6.html"/>
+    <id>https://sometwo7.github.io/blog/post/d925e7e6.html</id>
+    <published>2019-11-01T17:06:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#编译系统&quot;&gt;编译系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#静态链接&quot;&gt;静态链接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#目标文件&quot;&gt;目标文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#动态链接&quot;&gt;动态链接&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;编译系统&quot;&gt;&lt;a href=&quot;#编译系统&quot; class=&quot;headerlink&quot; title=&quot;编译系统&quot;&gt;&lt;/a&gt;编译系统&lt;/h1&gt;&lt;p&gt;以下是一个 hello.c 程序：&lt;/p&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;hello, world\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在 Unix 系统上，由编译器把源文件转换为目标文件。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机操作系统" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="操作系统" scheme="https://sometwo7.github.io/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络 - 应用层</title>
+    <link href="https://sometwo7.github.io/blog/post/2ac11d45.html"/>
+    <id>https://sometwo7.github.io/blog/post/2ac11d45.html</id>
+    <published>2019-11-01T17:06:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#域名系统&quot;&gt;域名系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#文件传送协议&quot;&gt;文件传送协议&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#动态主机配置协议&quot;&gt;动态主机配置协议&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#远程登录协议&quot;&gt;远程登录协议&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#电子邮件协议&quot;&gt;电子邮件协议&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-smtp&quot;&gt;1. SMTP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-pop3&quot;&gt;2. POP3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-imap&quot;&gt;3. IMAP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#常用端口&quot;&gt;常用端口&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#web-页面请求过程&quot;&gt;Web 页面请求过程&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-dhcp-配置主机信息&quot;&gt;1. DHCP 配置主机信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-arp-解析-mac-地址&quot;&gt;2. ARP 解析 MAC 地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-dns-解析域名&quot;&gt;3. DNS 解析域名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-http-请求页面&quot;&gt;4. HTTP 请求页面&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;域名系统&quot;&gt;&lt;a href=&quot;#域名系统&quot; class=&quot;headerlink&quot; title=&quot;域名系统&quot;&gt;&lt;/a&gt;域名系统&lt;/h1&gt;&lt;p&gt;DNS 是一个分布式数据库，提供了主机名和 IP 地址之间相互转换的服务。这里的分布式数据库是指，每个站点只保留它自己的那部分数据。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="网络" scheme="https://sometwo7.github.io/blog/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机操作系统 - 设备管理</title>
+    <link href="https://sometwo7.github.io/blog/post/676b2d5d.html"/>
+    <id>https://sometwo7.github.io/blog/post/676b2d5d.html</id>
+    <published>2019-11-01T17:05:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#磁盘结构&quot;&gt;磁盘结构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#磁盘调度算法&quot;&gt;磁盘调度算法&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-先来先服务&quot;&gt;1. 先来先服务&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-最短寻道时间优先&quot;&gt;2. 最短寻道时间优先&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-电梯算法&quot;&gt;3. 电梯算法&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;磁盘结构&quot;&gt;&lt;a href=&quot;#磁盘结构&quot; class=&quot;headerlink&quot; title=&quot;磁盘结构&quot;&gt;&lt;/a&gt;磁盘结构&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;盘面（Platter）：一个磁盘有多个盘面；&lt;/li&gt;
+&lt;li&gt;磁道（Track）：盘面上的圆形带状区域，一个盘面可以有多个磁道；&lt;/li&gt;
+&lt;li&gt;扇区（Track Sector）：磁道上的一个弧段，一个磁道可以有多个扇区，它是最小的物理储存单位，目前主要有 512 bytes 与 4 K 两种大小；&lt;/li&gt;
+&lt;li&gt;磁头（Head）：与盘面非常接近，能够将盘面上的磁场转换为电信号（读），或者将电信号转换为盘面的磁场（写）；&lt;/li&gt;
+&lt;li&gt;制动手臂（Actuator arm）：用于在磁道之间移动磁头；&lt;/li&gt;
+&lt;li&gt;主轴（Spindle）：使整个盘面转动。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机操作系统" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="操作系统" scheme="https://sometwo7.github.io/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="设备" scheme="https://sometwo7.github.io/blog/tags/%E8%AE%BE%E5%A4%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机操作系统 - 内存管理</title>
+    <link href="https://sometwo7.github.io/blog/post/db51cce2.html"/>
+    <id>https://sometwo7.github.io/blog/post/db51cce2.html</id>
+    <published>2019-11-01T17:04:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#虚拟内存&quot;&gt;虚拟内存&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#分页系统地址映射&quot;&gt;分页系统地址映射&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#页面置换算法&quot;&gt;页面置换算法&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-最佳&quot;&gt;1. 最佳&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-最近最久未使用&quot;&gt;2. 最近最久未使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-最近未使用&quot;&gt;3. 最近未使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-先进先出&quot;&gt;4. 先进先出&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-第二次机会算法&quot;&gt;5. 第二次机会算法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-时钟&quot;&gt;6. 时钟&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#分段&quot;&gt;分段&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#段页式&quot;&gt;段页式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#分页与分段的比较&quot;&gt;分页与分段的比较&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;虚拟内存&quot;&gt;&lt;a href=&quot;#虚拟内存&quot; class=&quot;headerlink&quot; title=&quot;虚拟内存&quot;&gt;&lt;/a&gt;虚拟内存&lt;/h1&gt;&lt;p&gt;虚拟内存的目的是为了让物理内存扩充成更大的逻辑内存，从而让程序获得更多的可用内存。&lt;/p&gt;&lt;p&gt;为了更好的管理内存，操作系统将内存抽象成地址空间。每个程序拥有自己的地址空间，这个地址空间被分割成多个块，每一块称为一页。这些页被映射到物理内存，但不需要映射到连续的物理内存，也不需要所有页都必须在物理内存中。当程序引用到不在物理内存中的页时，由硬件执行必要的映射，将缺失的部分装入物理内存并重新执行失败的指令。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机操作系统" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="操作系统" scheme="https://sometwo7.github.io/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="内存" scheme="https://sometwo7.github.io/blog/tags/%E5%86%85%E5%AD%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机操作系统 - 死锁</title>
+    <link href="https://sometwo7.github.io/blog/post/86cefad1.html"/>
+    <id>https://sometwo7.github.io/blog/post/86cefad1.html</id>
+    <published>2019-11-01T17:03:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#必要条件&quot;&gt;必要条件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#处理方法&quot;&gt;处理方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#鸵鸟策略&quot;&gt;鸵鸟策略&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#死锁检测与死锁恢复&quot;&gt;死锁检测与死锁恢复&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-每种类型一个资源的死锁检测&quot;&gt;1. 每种类型一个资源的死锁检测&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-每种类型多个资源的死锁检测&quot;&gt;2. 每种类型多个资源的死锁检测&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-死锁恢复&quot;&gt;3. 死锁恢复&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#死锁预防&quot;&gt;死锁预防&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-破坏互斥条件&quot;&gt;1. 破坏互斥条件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-破坏占有和等待条件&quot;&gt;2. 破坏占有和等待条件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-破坏不可抢占条件&quot;&gt;3. 破坏不可抢占条件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-破坏环路等待&quot;&gt;4. 破坏环路等待&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#死锁避免&quot;&gt;死锁避免&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-安全状态&quot;&gt;1. 安全状态&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-单个资源的银行家算法&quot;&gt;2. 单个资源的银行家算法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-多个资源的银行家算法&quot;&gt;3. 多个资源的银行家算法&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
     
     
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/categories/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="计算机操作系统" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+      <category term="操作系统" scheme="https://sometwo7.github.io/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/tags/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="死锁" scheme="https://sometwo7.github.io/blog/tags/%E6%AD%BB%E9%94%81/"/>
     
   </entry>
   
   <entry>
-    <title>剑指 Offer 题解 - 20~29</title>
-    <link href="https://sometwo7.github.io/blog/post/931fadbb.html"/>
-    <id>https://sometwo7.github.io/blog/post/931fadbb.html</id>
-    <published>2019-10-31T17:03:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
+    <title>计算机操作系统 - 进程管理</title>
+    <link href="https://sometwo7.github.io/blog/post/1f9ea97f.html"/>
+    <id>https://sometwo7.github.io/blog/post/1f9ea97f.html</id>
+    <published>2019-11-01T17:02:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#20-表示数值的字符串&quot;&gt;20. 表示数值的字符串&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#21-调整数组顺序使奇数位于偶数前面&quot;&gt;21. 调整数组顺序使奇数位于偶数前面&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#22-链表中倒数第-k-个结点&quot;&gt;22. 链表中倒数第 K 个结点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#23-链表中环的入口结点&quot;&gt;23. 链表中环的入口结点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#24-反转链表&quot;&gt;24. 反转链表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#25-合并两个排序的链表&quot;&gt;25. 合并两个排序的链表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#26-树的子结构&quot;&gt;26. 树的子结构&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#27-二叉树的镜像&quot;&gt;27. 二叉树的镜像&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#28-对称的二叉树&quot;&gt;28 对称的二叉树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#29-顺时针打印矩阵&quot;&gt;29. 顺时针打印矩阵&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+&lt;li&gt;&lt;a href=&quot;#进程与线程&quot;&gt;进程与线程&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-进程&quot;&gt;1. 进程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-线程&quot;&gt;2. 线程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-区别&quot;&gt;3. 区别&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#进程状态的切换&quot;&gt;进程状态的切换&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#进程调度算法&quot;&gt;进程调度算法&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-批处理系统&quot;&gt;1. 批处理系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-交互式系统&quot;&gt;2. 交互式系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-实时系统&quot;&gt;3. 实时系统&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#进程同步&quot;&gt;进程同步&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-临界区&quot;&gt;1. 临界区&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-同步与互斥&quot;&gt;2. 同步与互斥&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-信号量&quot;&gt;3. 信号量&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-管程&quot;&gt;4. 管程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#经典同步问题&quot;&gt;经典同步问题&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-读者-写者问题&quot;&gt;1. 读者-写者问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-哲学家进餐问题&quot;&gt;2. 哲学家进餐问题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#进程通信&quot;&gt;进程通信&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-管道&quot;&gt;1. 管道&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-fifo&quot;&gt;2. FIFO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-消息队列&quot;&gt;3. 消息队列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-信号量&quot;&gt;4. 信号量&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-共享存储&quot;&gt;5. 共享存储&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-套接字&quot;&gt;6. 套接字&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
 
 
 &lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;20-表示数值的字符串&quot;&gt;&lt;a href=&quot;#20-表示数值的字符串&quot; class=&quot;headerlink&quot; title=&quot;20. 表示数值的字符串&quot;&gt;&lt;/a&gt;20. 表示数值的字符串&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2?tpId=13&amp;tqId=11206&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking&amp;from=cyc_github&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;NowCoder&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/categories/%E5%89%91%E6%8C%87-Offer/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/tags/%E5%89%91%E6%8C%87-Offer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>剑指 Offer 题解 - 10~19</title>
-    <link href="https://sometwo7.github.io/blog/post/ff9284a8.html"/>
-    <id>https://sometwo7.github.io/blog/post/ff9284a8.html</id>
-    <published>2019-10-31T17:02:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#101-斐波那契数列&quot;&gt;10.1 斐波那契数列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#102-矩形覆盖&quot;&gt;10.2 矩形覆盖&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#103-跳台阶&quot;&gt;10.3 跳台阶&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#104-变态跳台阶&quot;&gt;10.4 变态跳台阶&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#11-旋转数组的最小数字&quot;&gt;11. 旋转数组的最小数字&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#12-矩阵中的路径&quot;&gt;12. 矩阵中的路径&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#13-机器人的运动范围&quot;&gt;13. 机器人的运动范围&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#14-剪绳子&quot;&gt;14. 剪绳子&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#15-二进制中-1-的个数&quot;&gt;15. 二进制中 1 的个数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#16-数值的整数次方&quot;&gt;16. 数值的整数次方&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#17-打印从-1-到最大的-n-位数&quot;&gt;17. 打印从 1 到最大的 n 位数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#181-在-o1-时间内删除链表节点&quot;&gt;18.1 在 O(1) 时间内删除链表节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#182-删除链表中重复的结点&quot;&gt;18.2 删除链表中重复的结点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#19-正则表达式匹配&quot;&gt;19. 正则表达式匹配&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
     
     
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/categories/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="计算机操作系统" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+      <category term="操作系统" scheme="https://sometwo7.github.io/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/tags/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="进程" scheme="https://sometwo7.github.io/blog/tags/%E8%BF%9B%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
-    <title>剑指 Offer 题解 - 3~9</title>
-    <link href="https://sometwo7.github.io/blog/post/dc8a4f0d.html"/>
-    <id>https://sometwo7.github.io/blog/post/dc8a4f0d.html</id>
-    <published>2019-10-31T17:01:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
+    <title>计算机操作系统 - 概述</title>
+    <link href="https://sometwo7.github.io/blog/post/5a51eb8f.html"/>
+    <id>https://sometwo7.github.io/blog/post/5a51eb8f.html</id>
+    <published>2019-11-01T17:01:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#3-数组中重复的数字&quot;&gt;3. 数组中重复的数字&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-二维数组中的查找&quot;&gt;4. 二维数组中的查找&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-替换空格&quot;&gt;5. 替换空格&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-从尾到头打印链表&quot;&gt;6. 从尾到头打印链表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-重建二叉树&quot;&gt;7. 重建二叉树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#8-二叉树的下一个结点&quot;&gt;8. 二叉树的下一个结点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#9-用两个栈实现队列&quot;&gt;9. 用两个栈实现队列&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+&lt;li&gt;&lt;a href=&quot;#基本特征&quot;&gt;基本特征&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-并发&quot;&gt;1. 并发&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-共享&quot;&gt;2. 共享&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-虚拟&quot;&gt;3. 虚拟&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-异步&quot;&gt;4. 异步&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#基本功能&quot;&gt;基本功能&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-进程管理&quot;&gt;1. 进程管理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-内存管理&quot;&gt;2. 内存管理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-文件管理&quot;&gt;3. 文件管理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-设备管理&quot;&gt;4. 设备管理&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#系统调用&quot;&gt;系统调用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#大内核和微内核&quot;&gt;大内核和微内核&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-大内核&quot;&gt;1. 大内核&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-微内核&quot;&gt;2. 微内核&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#中断分类&quot;&gt;中断分类&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-外中断&quot;&gt;1. 外中断&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-异常&quot;&gt;2. 异常&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-陷入&quot;&gt;3. 陷入&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
 
 
 &lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;3-数组中重复的数字&quot;&gt;&lt;a href=&quot;#3-数组中重复的数字&quot; class=&quot;headerlink&quot; title=&quot;3. 数组中重复的数字&quot;&gt;&lt;/a&gt;3. 数组中重复的数字&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8?tpId=13&amp;tqId=11203&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking&amp;from=cyc_github&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;NowCoder&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;在一个长度为 n 的数组里的所有数字都在 0 到 n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字是重复的，也不知道每个数字重复几次。请找出数组中任意一个重复的数字。&lt;/p&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;基本特征&quot;&gt;&lt;a href=&quot;#基本特征&quot; class=&quot;headerlink&quot; title=&quot;基本特征&quot;&gt;&lt;/a&gt;基本特征&lt;/h1&gt;&lt;h2 id=&quot;1-并发&quot;&gt;&lt;a href=&quot;#1-并发&quot; class=&quot;headerlink&quot; title=&quot;1. 并发&quot;&gt;&lt;/a&gt;1. 并发&lt;/h2&gt;&lt;p&gt;并发是指宏观上在一段时间内能同时运行多个程序，而并行则指同一时刻能运行多个指令。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/categories/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="计算机操作系统" scheme="https://sometwo7.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="剑指 Offer" scheme="https://sometwo7.github.io/blog/tags/%E5%89%91%E6%8C%87-Offer/"/>
+      <category term="操作系统" scheme="https://sometwo7.github.io/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
-    <title>Leetcode 题解 - Database</title>
-    <link href="https://sometwo7.github.io/blog/post/5d4aa9da.html"/>
-    <id>https://sometwo7.github.io/blog/post/5d4aa9da.html</id>
-    <published>2019-10-31T14:17:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
+    <title>算法 - 其他</title>
+    <link href="https://sometwo7.github.io/blog/post/72a552fe.html"/>
+    <id>https://sometwo7.github.io/blog/post/72a552fe.html</id>
+    <published>2019-11-01T16:11:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#595-Big-Countries&quot;&gt;595. Big Countries&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#627-Swap-Salary&quot;&gt;627. Swap Salary&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#620-Not-Boring-Movies&quot;&gt;620. Not Boring Movies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#596-Classes-More-Than-5-Students&quot;&gt;596. Classes More Than 5 Students&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#182-Duplicate-Emails&quot;&gt;182. Duplicate Emails&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#196-Delete-Duplicate-Emails&quot;&gt;196. Delete Duplicate Emails&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#175-Combine-Two-Tables&quot;&gt;175. Combine Two Tables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#181-Employees-Earning-More-Than-Their-Managers&quot;&gt;181. Employees Earning More Than Their Managers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#183-Customers-Who-Never-Order&quot;&gt;183. Customers Who Never Order&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#184-Department-Highest-Salary&quot;&gt;184. Department Highest Salary&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#176-Second-Highest-Salary&quot;&gt;176. Second Highest Salary&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#177-Nth-Highest-Salary&quot;&gt;177. Nth Highest Salary&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#178-Rank-Scores&quot;&gt;178. Rank Scores&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#180-Consecutive-Numbers&quot;&gt;180. Consecutive Numbers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#626-Exchange-Seats&quot;&gt;626. Exchange Seats&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+&lt;li&gt;&lt;a href=&quot;#汉诺塔&quot;&gt;汉诺塔&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#哈夫曼编码&quot;&gt;哈夫曼编码&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
 
 
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;汉诺塔&quot;&gt;&lt;a href=&quot;#汉诺塔&quot; class=&quot;headerlink&quot; title=&quot;汉诺塔&quot;&gt;&lt;/a&gt;汉诺塔&lt;/h1&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;../pics/69d6c38d-1dec-4f72-ae60-60dbc10e9d15.png&quot; width=&quot;300&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;有三个柱子，分别为 from、buffer、to。需要将 from 上的圆盘全部移动到 to 上，并且要保证小圆盘始终在大圆盘上。&lt;/p&gt;&lt;p&gt;这是一个经典的递归问题，分为三步求解：&lt;/p&gt;&lt;p&gt;① 将 n-1 个圆盘从 from -&amp;gt; buffer&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;../pics/f9240aa1-8d48-4959-b28a-7ca45c3e4d91.png&quot; width=&quot;300&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;② 将 1 个圆盘从 from -&amp;gt; to&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="算法1.0" scheme="https://sometwo7.github.io/blog/categories/%E7%AE%97%E6%B3%951-0/"/>
+    
+    
+      <category term="算法" scheme="https://sometwo7.github.io/blog/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="汉诺塔" scheme="https://sometwo7.github.io/blog/tags/%E6%B1%89%E8%AF%BA%E5%A1%94/"/>
+    
+      <category term="哈夫曼编码" scheme="https://sometwo7.github.io/blog/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法 - 符号表</title>
+    <link href="https://sometwo7.github.io/blog/post/8ea800ec.html"/>
+    <id>https://sometwo7.github.io/blog/post/8ea800ec.html</id>
+    <published>2019-11-01T15:11:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#前言&quot;&gt;前言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#初级实现&quot;&gt;初级实现&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-链表实现无序符号表&quot;&gt;1. 链表实现无序符号表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-二分查找实现有序符号表&quot;&gt;2. 二分查找实现有序符号表&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#二叉查找树&quot;&gt;二叉查找树&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-get&quot;&gt;1. get()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-put&quot;&gt;2. put()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-分析&quot;&gt;3. 分析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-floor&quot;&gt;4. floor()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-rank&quot;&gt;5. rank()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-min&quot;&gt;6. min()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-deletemin&quot;&gt;7. deleteMin()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#8-delete&quot;&gt;8. delete()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#9-keys&quot;&gt;9. keys()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#10-分析&quot;&gt;10. 分析&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-3-查找树&quot;&gt;2-3 查找树&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-插入操作&quot;&gt;1. 插入操作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-性质&quot;&gt;2. 性质&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#红黑树&quot;&gt;红黑树&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-左旋转&quot;&gt;1. 左旋转&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-右旋转&quot;&gt;2. 右旋转&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-颜色转换&quot;&gt;3. 颜色转换&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-插入&quot;&gt;4. 插入&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-分析&quot;&gt;5. 分析&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#散列表&quot;&gt;散列表&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-散列函数&quot;&gt;1. 散列函数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-拉链法&quot;&gt;2. 拉链法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-线性探测法&quot;&gt;3. 线性探测法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#小结&quot;&gt;小结&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-符号表算法比较&quot;&gt;1. 符号表算法比较&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-java-的符号表实现&quot;&gt;2. Java 的符号表实现&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-稀疏向量乘法&quot;&gt;3. 稀疏向量乘法&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
     
     
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+      <category term="算法1.0" scheme="https://sometwo7.github.io/blog/categories/%E7%AE%97%E6%B3%951-0/"/>
     
     
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+      <category term="算法" scheme="https://sometwo7.github.io/blog/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="sql" scheme="https://sometwo7.github.io/blog/tags/sql/"/>
-    
-      <category term="database" scheme="https://sometwo7.github.io/blog/tags/database/"/>
+      <category term="符号表" scheme="https://sometwo7.github.io/blog/tags/%E7%AC%A6%E5%8F%B7%E8%A1%A8/"/>
     
   </entry>
   
   <entry>
-    <title>Leetcode 题解 - 位运算</title>
-    <link href="https://sometwo7.github.io/blog/post/3ad6972f.html"/>
-    <id>https://sometwo7.github.io/blog/post/3ad6972f.html</id>
-    <published>2019-10-31T14:16:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
+    <title>算法 - 栈和队列</title>
+    <link href="https://sometwo7.github.io/blog/post/32cc2cbe.html"/>
+    <id>https://sometwo7.github.io/blog/post/32cc2cbe.html</id>
+    <published>2019-11-01T14:11:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-统计两个数的二进制表示有多少位不同&quot;&gt;1. 统计两个数的二进制表示有多少位不同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-数组中唯一一个不重复的元素&quot;&gt;2. 数组中唯一一个不重复的元素&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-找出数组中缺失的那个数&quot;&gt;3. 找出数组中缺失的那个数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-数组中不重复的两个元素&quot;&gt;4. 数组中不重复的两个元素&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-翻转一个数的比特位&quot;&gt;5. 翻转一个数的比特位&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-不用额外变量交换两个整数&quot;&gt;6. 不用额外变量交换两个整数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-判断一个数是不是-2-的-n-次方&quot;&gt;7. 判断一个数是不是 2 的 n 次方&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#8--判断一个数是不是-4-的-n-次方&quot;&gt;8.  判断一个数是不是 4 的 n 次方&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#9-判断一个数的位级表示是否不会出现连续的-0-和-1&quot;&gt;9. 判断一个数的位级表示是否不会出现连续的 0 和 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#10-求一个数的补码&quot;&gt;10. 求一个数的补码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#11-实现整数的加法&quot;&gt;11. 实现整数的加法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#12-字符串数组最大乘积&quot;&gt;12. 字符串数组最大乘积&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#13-统计从-0-~-n-每个数的二进制表示中-1-的个数&quot;&gt;13. 统计从 0 ~ n 每个数的二进制表示中 1 的个数&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+&lt;li&gt;&lt;a href=&quot;#栈&quot;&gt;栈&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-数组实现&quot;&gt;1. 数组实现&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-链表实现&quot;&gt;2. 链表实现&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#队列&quot;&gt;队列&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
 
 
 &lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;栈&quot;&gt;&lt;a href=&quot;#栈&quot; class=&quot;headerlink&quot; title=&quot;栈&quot;&gt;&lt;/a&gt;栈&lt;/h1&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;MyStack&lt;/span&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Item&lt;/span&gt;&amp;gt; &lt;span class=&quot;keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Iterable&lt;/span&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Item&lt;/span&gt;&amp;gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;MyStack&amp;lt;Item&amp;gt; &lt;span class=&quot;title&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(Item item)&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;Item &lt;span class=&quot;title&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;throws&lt;/span&gt; Exception&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
     
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+      <category term="算法1.0" scheme="https://sometwo7.github.io/blog/categories/%E7%AE%97%E6%B3%951-0/"/>
     
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="位运算" scheme="https://sometwo7.github.io/blog/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 题解 - 图</title>
-    <link href="https://sometwo7.github.io/blog/post/83cef5af.html"/>
-    <id>https://sometwo7.github.io/blog/post/83cef5af.html</id>
-    <published>2019-10-31T14:15:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#二分图&quot;&gt;二分图&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-判断是否为二分图&quot;&gt;1. 判断是否为二分图&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#拓扑排序&quot;&gt;拓扑排序&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-课程安排的合法性&quot;&gt;1. 课程安排的合法性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-课程安排的顺序&quot;&gt;2. 课程安排的顺序&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#并查集&quot;&gt;并查集&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-冗余连接&quot;&gt;1. 冗余连接&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;二分图&quot;&gt;&lt;a href=&quot;#二分图&quot; class=&quot;headerlink&quot; title=&quot;二分图&quot;&gt;&lt;/a&gt;二分图&lt;/h1&gt;&lt;p&gt;如果可以用两种颜色对图中的节点进行着色，并且保证相邻的节点颜色不同，那么这个图就是二分图。&lt;/p&gt;&lt;h2 id=&quot;1-判断是否为二分图&quot;&gt;&lt;a href=&quot;#1-判断是否为二分图&quot; class=&quot;headerlink&quot; title=&quot;1. 判断是否为二分图&quot;&gt;&lt;/a&gt;1. 判断是否为二分图&lt;/h2&gt;&lt;p&gt;785. Is Graph Bipartite? (Medium)&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="图" scheme="https://sometwo7.github.io/blog/tags/%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 题解 - 数组与矩阵</title>
-    <link href="https://sometwo7.github.io/blog/post/49f04032.html"/>
-    <id>https://sometwo7.github.io/blog/post/49f04032.html</id>
-    <published>2019-10-31T14:14:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-把数组中的-0-移到末尾&quot;&gt;1. 把数组中的 0 移到末尾&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-改变矩阵维度&quot;&gt;2. 改变矩阵维度&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-找出数组中最长的连续-1&quot;&gt;3. 找出数组中最长的连续 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-有序矩阵查找&quot;&gt;4. 有序矩阵查找&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-有序矩阵的-kth-element&quot;&gt;5. 有序矩阵的 Kth Element&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-一个数组元素在-[1,-n]-之间，其中一个数被替换为另一个数，找出重复的数和丢失的数&quot;&gt;6. 一个数组元素在 [1, n] 之间，其中一个数被替换为另一个数，找出重复的数和丢失的数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-找出数组中重复的数，数组值在-[1,-n]-之间&quot;&gt;7. 找出数组中重复的数，数组值在 [1, n] 之间&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#8-数组相邻差值的个数&quot;&gt;8. 数组相邻差值的个数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#9-数组的度&quot;&gt;9. 数组的度&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#10-对角元素相等的矩阵&quot;&gt;10. 对角元素相等的矩阵&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#11-嵌套数组&quot;&gt;11. 嵌套数组&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#12-分隔数组&quot;&gt;12. 分隔数组&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="数组与矩阵" scheme="https://sometwo7.github.io/blog/tags/%E6%95%B0%E7%BB%84%E4%B8%8E%E7%9F%A9%E9%98%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 题解 - 字符串</title>
-    <link href="https://sometwo7.github.io/blog/post/c43456f4.html"/>
-    <id>https://sometwo7.github.io/blog/post/c43456f4.html</id>
-    <published>2019-10-31T14:13:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-字符串循环移位包含&quot;&gt;1. 字符串循环移位包含&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-字符串循环移位&quot;&gt;2. 字符串循环移位&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-字符串中单词的翻转&quot;&gt;3. 字符串中单词的翻转&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-两个字符串包含的字符是否完全相同&quot;&gt;4. 两个字符串包含的字符是否完全相同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-计算一组字符集合可以组成的回文字符串的最大长度&quot;&gt;5. 计算一组字符集合可以组成的回文字符串的最大长度&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-字符串同构&quot;&gt;6. 字符串同构&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-回文子字符串个数&quot;&gt;7. 回文子字符串个数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#8-判断一个整数是否是回文数&quot;&gt;8. 判断一个整数是否是回文数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#9-统计二进制字符串中连续-1-和连续-0-数量相同的子字符串个数&quot;&gt;9. 统计二进制字符串中连续 1 和连续 0 数量相同的子字符串个数&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="字符串" scheme="https://sometwo7.github.io/blog/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 题解 - 哈希表</title>
-    <link href="https://sometwo7.github.io/blog/post/bdba8d89.html"/>
-    <id>https://sometwo7.github.io/blog/post/bdba8d89.html</id>
-    <published>2019-10-31T14:12:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-数组中两个数的和为给定值&quot;&gt;1. 数组中两个数的和为给定值&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-判断数组是否含有重复元素&quot;&gt;2. 判断数组是否含有重复元素&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-最长和谐序列&quot;&gt;3. 最长和谐序列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-最长连续序列&quot;&gt;4. 最长连续序列&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;哈希表使用 O(N) 空间复杂度存储数据，并且以 O(1) 时间复杂度求解问题。&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Java 中的  &lt;strong&gt;HashSet&lt;/strong&gt;  用于存储一个集合，可以查找元素是否在集合中。如果元素有穷，并且范围不大，那么可以用一个布尔数组来存储一个元素是否存在。例如对于只有小写字符的元素，就可以用一个长度为 26 的布尔数组来存储一个字符集合，使得空间复杂度降低为 O(1)。&lt;/p&gt;
-&lt;p&gt;Java 中的  &lt;strong&gt;HashMap&lt;/strong&gt;  主要用于映射关系，从而把两个元素联系起来。HashMap 也可以用来对元素进行计数统计，此时键为元素，值为计数。和 HashSet 类似，如果元素有穷并且范围不大，可以用整型数组来进行统计。在对一个内容进行压缩或者其它转换时，利用 HashMap 可以把原始内容和转换后的内容联系起来。例如在一个简化 url 的系统中 [Leetcdoe : 535. Encode and Decode TinyURL (Medium)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="哈希表" scheme="https://sometwo7.github.io/blog/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 题解 - 栈和队列</title>
-    <link href="https://sometwo7.github.io/blog/post/22150be2.html"/>
-    <id>https://sometwo7.github.io/blog/post/22150be2.html</id>
-    <published>2019-10-31T14:11:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-用栈实现队列&quot;&gt;1. 用栈实现队列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-用队列实现栈&quot;&gt;2. 用队列实现栈&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-最小值栈&quot;&gt;3. 最小值栈&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-用栈实现括号匹配&quot;&gt;4. 用栈实现括号匹配&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-数组中元素与下一个比它大的元素之间的距离&quot;&gt;5. 数组中元素与下一个比它大的元素之间的距离&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-循环数组中比当前元素大的下一个元素&quot;&gt;6. 循环数组中比当前元素大的下一个元素&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;1-用栈实现队列&quot;&gt;&lt;a href=&quot;#1-用栈实现队列&quot; class=&quot;headerlink&quot; title=&quot;1. 用栈实现队列&quot;&gt;&lt;/a&gt;1. 用栈实现队列&lt;/h1&gt;&lt;p&gt;232. Implement Queue using Stacks (Easy)&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/implement-queue-using-stacks/description/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Leetcode&lt;/a&gt; / &lt;a href=&quot;https://leetcode-cn.com/problems/implement-queue-using-stacks/description/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;力扣&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
     
       <category term="栈和队列" scheme="https://sometwo7.github.io/blog/tags/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/"/>
     
+      <category term="算法" scheme="https://sometwo7.github.io/blog/tags/%E7%AE%97%E6%B3%95/"/>
+    
   </entry>
   
   <entry>
-    <title>Leetcode 题解 - 树</title>
-    <link href="https://sometwo7.github.io/blog/post/16eb9997.html"/>
-    <id>https://sometwo7.github.io/blog/post/16eb9997.html</id>
-    <published>2019-10-31T14:10:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
+    <title>算法 - 并查集</title>
+    <link href="https://sometwo7.github.io/blog/post/17024852.html"/>
+    <id>https://sometwo7.github.io/blog/post/17024852.html</id>
+    <published>2019-11-01T13:11:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#递归&quot;&gt;递归&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-树的高度&quot;&gt;1. 树的高度&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-平衡树&quot;&gt;2. 平衡树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-两节点的最长路径&quot;&gt;3. 两节点的最长路径&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-翻转树&quot;&gt;4. 翻转树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-归并两棵树&quot;&gt;5. 归并两棵树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-判断路径和是否等于一个数&quot;&gt;6. 判断路径和是否等于一个数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-统计路径和等于一个数的路径数量&quot;&gt;7. 统计路径和等于一个数的路径数量&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#8-子树&quot;&gt;8. 子树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#9-树的对称&quot;&gt;9. 树的对称&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#10-最小路径&quot;&gt;10. 最小路径&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#11-统计左叶子节点的和&quot;&gt;11. 统计左叶子节点的和&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#12-相同节点值的最大路径长度&quot;&gt;12. 相同节点值的最大路径长度&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#13-间隔遍历&quot;&gt;13. 间隔遍历&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#14-找出二叉树中第二小的节点&quot;&gt;14. 找出二叉树中第二小的节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#前言&quot;&gt;前言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#quick-find&quot;&gt;Quick Find&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#quick-union&quot;&gt;Quick Union&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#加权-quick-union&quot;&gt;加权 Quick Union&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#路径压缩的加权-quick-union&quot;&gt;路径压缩的加权 Quick Union&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#比较&quot;&gt;比较&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;用于解决动态连通性问题，能动态连接两个点，并且判断两个点是否连通。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;../pics/02943a90-7dd4-4e9a-9325-f8217d3cc54d.jpg&quot; width=&quot;350&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;方法&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;UF(int N)&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;构造一个大小为 N 的并查集&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;void union(int p, int q)&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;连接 p 和 q 节点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;int find(int p)&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;查找 p 所在的连通分量编号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;boolean connected(int p, int q)&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;判断 p 和 q 节点是否连通&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+    
+    </summary>
+    
+    
+      <category term="算法1.0" scheme="https://sometwo7.github.io/blog/categories/%E7%AE%97%E6%B3%951-0/"/>
+    
+    
+      <category term="算法" scheme="https://sometwo7.github.io/blog/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="并查集" scheme="https://sometwo7.github.io/blog/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法 - 排序</title>
+    <link href="https://sometwo7.github.io/blog/post/d003da9e.html"/>
+    <id>https://sometwo7.github.io/blog/post/d003da9e.html</id>
+    <published>2019-11-01T11:11:11.000Z</published>
+    <updated>2019-11-01T09:58:43.915Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#约定&quot;&gt;约定&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#选择排序&quot;&gt;选择排序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#冒泡排序&quot;&gt;冒泡排序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#插入排序&quot;&gt;插入排序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#希尔排序&quot;&gt;希尔排序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#归并排序&quot;&gt;归并排序&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-归并方法&quot;&gt;1. 归并方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-自顶向下归并排序&quot;&gt;2. 自顶向下归并排序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-自底向上归并排序&quot;&gt;3. 自底向上归并排序&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#层次遍历&quot;&gt;层次遍历&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-一棵树每层节点的平均数&quot;&gt;1. 一棵树每层节点的平均数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-得到左下角的节点&quot;&gt;2. 得到左下角的节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#快速排序&quot;&gt;快速排序&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-基本算法&quot;&gt;1. 基本算法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-切分&quot;&gt;2. 切分&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-性能分析&quot;&gt;3. 性能分析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-算法改进&quot;&gt;4. 算法改进&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-基于切分的快速选择算法&quot;&gt;5. 基于切分的快速选择算法&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#前中后序遍历&quot;&gt;前中后序遍历&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-非递归实现二叉树的前序遍历&quot;&gt;1. 非递归实现二叉树的前序遍历&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-非递归实现二叉树的后序遍历&quot;&gt;2. 非递归实现二叉树的后序遍历&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-非递归实现二叉树的中序遍历&quot;&gt;3. 非递归实现二叉树的中序遍历&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#堆排序&quot;&gt;堆排序&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-堆&quot;&gt;1. 堆&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-上浮和下沉&quot;&gt;2. 上浮和下沉&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-插入元素&quot;&gt;3. 插入元素&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-删除最大元素&quot;&gt;4. 删除最大元素&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-堆排序&quot;&gt;5. 堆排序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-分析&quot;&gt;6. 分析&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#bst&quot;&gt;BST&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-修剪二叉查找树&quot;&gt;1. 修剪二叉查找树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-寻找二叉查找树的第-k-个元素&quot;&gt;2. 寻找二叉查找树的第 k 个元素&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-把二叉查找树每个节点的值都加上比它大的节点的值&quot;&gt;3. 把二叉查找树每个节点的值都加上比它大的节点的值&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-二叉查找树的最近公共祖先&quot;&gt;4. 二叉查找树的最近公共祖先&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-二叉树的最近公共祖先&quot;&gt;5. 二叉树的最近公共祖先&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-从有序数组中构造二叉查找树&quot;&gt;6. 从有序数组中构造二叉查找树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-根据有序链表构造平衡的二叉查找树&quot;&gt;7. 根据有序链表构造平衡的二叉查找树&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#8-在二叉查找树中寻找两个节点，使它们的和为一个给定值&quot;&gt;8. 在二叉查找树中寻找两个节点，使它们的和为一个给定值&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#9-在二叉查找树中查找两个节点之差的最小绝对值&quot;&gt;9. 在二叉查找树中查找两个节点之差的最小绝对值&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#10-寻找二叉查找树中出现次数最多的值&quot;&gt;10. 寻找二叉查找树中出现次数最多的值&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#trie&quot;&gt;Trie&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-实现一个-trie&quot;&gt;1. 实现一个 Trie&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-实现一个-trie，用来求前缀和&quot;&gt;2. 实现一个 Trie，用来求前缀和&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+&lt;li&gt;&lt;a href=&quot;#小结&quot;&gt;小结&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-排序算法的比较&quot;&gt;1. 排序算法的比较&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-java-的排序算法实现&quot;&gt;2. Java 的排序算法实现&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
 
 
 &lt;/li&gt;
@@ -626,295 +930,12 @@
     </summary>
     
     
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+      <category term="算法1.0" scheme="https://sometwo7.github.io/blog/categories/%E7%AE%97%E6%B3%951-0/"/>
     
     
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+      <category term="排序" scheme="https://sometwo7.github.io/blog/tags/%E6%8E%92%E5%BA%8F/"/>
     
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="树" scheme="https://sometwo7.github.io/blog/tags/%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 题解 - 链表</title>
-    <link href="https://sometwo7.github.io/blog/post/b7209553.html"/>
-    <id>https://sometwo7.github.io/blog/post/b7209553.html</id>
-    <published>2019-10-31T14:09:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-找出两个链表的交点&quot;&gt;1. 找出两个链表的交点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-链表反转&quot;&gt;2. 链表反转&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-归并两个有序的链表&quot;&gt;3. 归并两个有序的链表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-从有序链表中删除重复节点&quot;&gt;4. 从有序链表中删除重复节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-删除链表的倒数第-n-个节点&quot;&gt;5. 删除链表的倒数第 n 个节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-交换链表中的相邻结点&quot;&gt;6. 交换链表中的相邻结点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-链表求和&quot;&gt;7. 链表求和&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#8-回文链表&quot;&gt;8. 回文链表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#9-分隔链表&quot;&gt;9. 分隔链表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#10-链表元素按奇偶聚集&quot;&gt;10. 链表元素按奇偶聚集&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;链表是空节点，或者有一个值和一个指向下一个链表的指针，因此很多链表问题可以用递归来处理。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="链表" scheme="https://sometwo7.github.io/blog/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 题解 - 数学</title>
-    <link href="https://sometwo7.github.io/blog/post/6a3c544d.html"/>
-    <id>https://sometwo7.github.io/blog/post/6a3c544d.html</id>
-    <published>2019-10-31T14:08:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#素数分解&quot;&gt;素数分解&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#整除&quot;&gt;整除&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#最大公约数最小公倍数&quot;&gt;最大公约数最小公倍数&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-生成素数序列&quot;&gt;1. 生成素数序列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-最大公约数&quot;&gt;2. 最大公约数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-使用位操作和减法求解最大公约数&quot;&gt;3. 使用位操作和减法求解最大公约数&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#进制转换&quot;&gt;进制转换&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-7-进制&quot;&gt;1. 7 进制&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-16-进制&quot;&gt;2. 16 进制&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-26-进制&quot;&gt;3. 26 进制&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#阶乘&quot;&gt;阶乘&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-统计阶乘尾部有多少个-0&quot;&gt;1. 统计阶乘尾部有多少个 0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#字符串加法减法&quot;&gt;字符串加法减法&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-二进制加法&quot;&gt;1. 二进制加法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-字符串加法&quot;&gt;2. 字符串加法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#相遇问题&quot;&gt;相遇问题&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-改变数组元素使所有的数组元素都相等&quot;&gt;1. 改变数组元素使所有的数组元素都相等&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#多数投票问题&quot;&gt;多数投票问题&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-数组中出现次数多于-n--2-的元素&quot;&gt;1. 数组中出现次数多于 n / 2 的元素&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#其它&quot;&gt;其它&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-平方数&quot;&gt;1. 平方数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-3-的-n-次方&quot;&gt;2. 3 的 n 次方&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-乘积数组&quot;&gt;3. 乘积数组&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-找出数组中的乘积最大的三个数&quot;&gt;4. 找出数组中的乘积最大的三个数&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="数学" scheme="https://sometwo7.github.io/blog/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 题解 - 动态规划</title>
-    <link href="https://sometwo7.github.io/blog/post/77ebe21.html"/>
-    <id>https://sometwo7.github.io/blog/post/77ebe21.html</id>
-    <published>2019-10-31T14:07:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#斐波那契数列&quot;&gt;斐波那契数列&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-爬楼梯&quot;&gt;1. 爬楼梯&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-强盗抢劫&quot;&gt;2. 强盗抢劫&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-强盗在环形街区抢劫&quot;&gt;3. 强盗在环形街区抢劫&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-信件错排&quot;&gt;4. 信件错排&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-母牛生产&quot;&gt;5. 母牛生产&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#矩阵路径&quot;&gt;矩阵路径&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-矩阵的最小路径和&quot;&gt;1. 矩阵的最小路径和&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-矩阵的总路径数&quot;&gt;2. 矩阵的总路径数&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#数组区间&quot;&gt;数组区间&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-数组区间和&quot;&gt;1. 数组区间和&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-数组中等差递增子区间的个数&quot;&gt;2. 数组中等差递增子区间的个数&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#分割整数&quot;&gt;分割整数&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-分割整数的最大乘积&quot;&gt;1. 分割整数的最大乘积&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-按平方数来分割整数&quot;&gt;2. 按平方数来分割整数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-分割整数构成字母字符串&quot;&gt;3. 分割整数构成字母字符串&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#最长递增子序列&quot;&gt;最长递增子序列&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-最长递增子序列&quot;&gt;1. 最长递增子序列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-一组整数对能够构成的最长链&quot;&gt;2. 一组整数对能够构成的最长链&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-最长摆动子序列&quot;&gt;3. 最长摆动子序列&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#最长公共子序列&quot;&gt;最长公共子序列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#0-1-背包&quot;&gt;0-1 背包&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-划分数组为和相等的两部分&quot;&gt;1. 划分数组为和相等的两部分&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-改变一组数的正负号使得它们的和为一给定数&quot;&gt;2. 改变一组数的正负号使得它们的和为一给定数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-01-字符构成最多的字符串&quot;&gt;3. 01 字符构成最多的字符串&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-找零钱的最少硬币数&quot;&gt;4. 找零钱的最少硬币数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-找零钱的硬币数组合&quot;&gt;5. 找零钱的硬币数组合&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-字符串按单词列表分割&quot;&gt;6. 字符串按单词列表分割&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-组合总和&quot;&gt;7. 组合总和&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#股票交易&quot;&gt;股票交易&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-需要冷却期的股票交易&quot;&gt;1. 需要冷却期的股票交易&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-需要交易费用的股票交易&quot;&gt;2. 需要交易费用的股票交易&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-只能进行两次的股票交易&quot;&gt;3. 只能进行两次的股票交易&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-只能进行-k-次的股票交易&quot;&gt;4. 只能进行 k 次的股票交易&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#字符串编辑&quot;&gt;字符串编辑&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-删除两个字符串的字符使它们相等&quot;&gt;1. 删除两个字符串的字符使它们相等&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-编辑距离&quot;&gt;2. 编辑距离&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-复制粘贴字符&quot;&gt;3. 复制粘贴字符&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="动态规划" scheme="https://sometwo7.github.io/blog/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 题解 - 搜索</title>
-    <link href="https://sometwo7.github.io/blog/post/d7d172d4.html"/>
-    <id>https://sometwo7.github.io/blog/post/d7d172d4.html</id>
-    <published>2019-10-31T14:06:32.000Z</published>
-    <updated>2019-10-31T09:38:24.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#bfs&quot;&gt;BFS&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-计算在网格中从原点到特定点的最短路径长度&quot;&gt;1. 计算在网格中从原点到特定点的最短路径长度&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-组成整数的最小平方数数量&quot;&gt;2. 组成整数的最小平方数数量&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-最短单词路径&quot;&gt;3. 最短单词路径&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#dfs&quot;&gt;DFS&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-查找最大的连通面积&quot;&gt;1. 查找最大的连通面积&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-矩阵中的连通分量数目&quot;&gt;2. 矩阵中的连通分量数目&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-好友关系的连通分量数目&quot;&gt;3. 好友关系的连通分量数目&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-填充封闭区域&quot;&gt;4. 填充封闭区域&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-能到达的太平洋和大西洋的区域&quot;&gt;5. 能到达的太平洋和大西洋的区域&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#backtracking&quot;&gt;Backtracking&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-数字键盘组合&quot;&gt;1. 数字键盘组合&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-ip-地址划分&quot;&gt;2. IP 地址划分&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-在矩阵中寻找字符串&quot;&gt;3. 在矩阵中寻找字符串&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-输出二叉树中所有从根到叶子的路径&quot;&gt;4. 输出二叉树中所有从根到叶子的路径&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-排列&quot;&gt;5. 排列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-含有相同元素求排列&quot;&gt;6. 含有相同元素求排列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-组合&quot;&gt;7. 组合&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#8-组合求和&quot;&gt;8. 组合求和&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#9-含有相同元素的组合求和&quot;&gt;9. 含有相同元素的组合求和&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#10-1-9-数字的组合求和&quot;&gt;10. 1-9 数字的组合求和&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#11-子集&quot;&gt;11. 子集&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#12-含有相同元素求子集&quot;&gt;12. 含有相同元素求子集&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#13-分割字符串使得每个部分都是回文数&quot;&gt;13. 分割字符串使得每个部分都是回文数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#14-数独&quot;&gt;14. 数独&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#15-n-皇后&quot;&gt;15. N 皇后&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="搜索" scheme="https://sometwo7.github.io/blog/tags/%E6%90%9C%E7%B4%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 题解 - 分治</title>
-    <link href="https://sometwo7.github.io/blog/post/d820eb3.html"/>
-    <id>https://sometwo7.github.io/blog/post/d820eb3.html</id>
-    <published>2019-10-31T14:05:32.000Z</published>
-    <updated>2019-10-31T09:38:24.063Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-给表达式加括号&quot;&gt;1. 给表达式加括号&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-不同的二叉搜索树&quot;&gt;2. 不同的二叉搜索树&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;1-给表达式加括号&quot;&gt;&lt;a href=&quot;#1-给表达式加括号&quot; class=&quot;headerlink&quot; title=&quot;1. 给表达式加括号&quot;&gt;&lt;/a&gt;1. 给表达式加括号&lt;/h1&gt;&lt;p&gt;241. Different Ways to Add Parentheses (Medium)&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/different-ways-to-add-parentheses/description/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Leetcode&lt;/a&gt; / &lt;a href=&quot;https://leetcode-cn.com/problems/different-ways-to-add-parentheses/description/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;力扣&lt;/a&gt;&lt;/p&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Input: &quot;2-1-1&quot;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;((2-1)-1) = 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(2-(1-1)) = 2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Output : [0, 2]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
-    
-    
-      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
-    
-      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
-    
-      <category term="分治" scheme="https://sometwo7.github.io/blog/tags/%E5%88%86%E6%B2%BB/"/>
+      <category term="算法" scheme="https://sometwo7.github.io/blog/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   

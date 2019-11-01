@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png?v=7.4.1">
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/blog/atom.xml" title="佚名" type="application/atom+xml">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="一些学习笔记与人生的妄想。Nameless want to be someone,  but end to nobody.  Maybe sometwo this time.">
+<meta name="keywords" content="blog, life, naive, sometwo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="佚名">
+<meta property="og:url" content="https://sometwo7.github.io/blog/page/7/index.html">
+<meta property="og:site_name" content="佚名">
+<meta property="og:description" content="一些学习笔记与人生的妄想。Nameless want to be someone,  but end to nobody.  Maybe sometwo this time.">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="佚名">
+<meta name="twitter:description" content="一些学习笔记与人生的妄想。Nameless want to be someone,  but end to nobody.  Maybe sometwo this time.">
+  <link rel="canonical" href="https://sometwo7.github.io/blog/page/7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>佚名</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">佚名</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">一生太短，请务必热情！(Life too short, just be active!)</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/ae9d29e2.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/ae9d29e2.html" class="post-title-link" itemprop="url">Spring/Spring MVC</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:20" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:20+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 09:58:43" itemprop="dateModified" datetime="2019-11-01T09:58:43+00:00">2019-11-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Spring-Spring-MVC"><a href="#Spring-Spring-MVC" class="headerlink" title="Spring/Spring MVC"></a>Spring/Spring MVC</h1><h2 id="为什么要使用-spring？"><a href="#为什么要使用-spring？" class="headerlink" title="为什么要使用 spring？"></a>为什么要使用 spring？</h2><ul>
+<li>简介<ul>
+<li>目的：解决企业应用开发的复杂性</li>
+<li>功能：使用基本的JavaBean代替EJB，并提供了更多的企业应用功能</li>
+<li>范围：任何Java应用</li>
+<li>简单来说，Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。</li>
+</ul>
+</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/ae9d29e2.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/364ea8cc.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/364ea8cc.html" class="post-title-link" itemprop="url">设计模式</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:19" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:19+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 09:58:43" itemprop="dateModified" datetime="2019-11-01T09:58:43+00:00">2019-11-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="1-说一下你熟悉的设计模式？"><a href="#1-说一下你熟悉的设计模式？" class="headerlink" title="1. 说一下你熟悉的设计模式？"></a>1. 说一下你熟悉的设计模式？</h2><ul>
+<li>根据目的来分可以可以分成3类，创建型、结构型、行为型；<ul>
+<li>创建型有5种，工厂方法，抽象工厂，原型，单例，建造者；</li>
+<li>结构型有7种，适配器，代理，桥接，装饰，外观，享元，组合；</li>
+<li>行为型有11种，模板方法，解释器，策略，命令，职责链，状态，观察者，中介者，迭代器，访问，备忘录；</li>
+</ul>
+</li>
+<li>根据作用范围来分，可以有两类，分别是类模式、对象模式；<ul>
+<li>类模式主要有4种，工厂方法，类的适配器，模板方法，解释器；</li>
+<li>对象模式有20种，单例，原型，抽象工厂，建造者，代理，对象的适配器，桥接，装饰，外观，享元，组合，策略，命令，责任链，状态，观察者，中介者，迭代器，访问者，备忘录；</li>
+</ul>
+</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/364ea8cc.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/50daec4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/50daec4.html" class="post-title-link" itemprop="url">网络</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:18" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:18+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 09:58:43" itemprop="dateModified" datetime="2019-11-01T09:58:43+00:00">2019-11-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="1-http-响应码-301-和-302-代表的是什么？有什么区别？"><a href="#1-http-响应码-301-和-302-代表的是什么？有什么区别？" class="headerlink" title="1. http 响应码 301 和 302 代表的是什么？有什么区别？"></a>1. http 响应码 301 和 302 代表的是什么？有什么区别？</h2><ul>
+<li><p>301：永久重定向。</p>
+</li>
+<li><p>302：暂时重定向。</p>
+</li>
+<li><p>它们的区别是，301 对搜索引擎优化（SEO）更加有利；302 有被提示为网络拦截的风险。</p>
+</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/50daec4.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/23a3bd72.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/23a3bd72.html" class="post-title-link" itemprop="url">异常</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:17" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:17+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 09:58:43" itemprop="dateModified" datetime="2019-11-01T09:58:43+00:00">2019-11-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><blockquote>
+<p>Java 的异常处理是通过 5 个关键字来实现的：try，catch，throw，throws，finally。</p>
+</blockquote>
+<h2 id="1-throw-和-throws-的区别？"><a href="#1-throw-和-throws-的区别？" class="headerlink" title="1. throw 和 throws 的区别？"></a>1. throw 和 throws 的区别？</h2><ul>
+<li>throw：是真实抛出一个异常。</li>
+<li>throws：是声明可能会抛出一个异常。</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/23a3bd72.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/fb60fea1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/fb60fea1.html" class="post-title-link" itemprop="url">Java Web</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:16" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:16+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 09:58:43" itemprop="dateModified" datetime="2019-11-01T09:58:43+00:00">2019-11-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java-Web"><a href="#Java-Web" class="headerlink" title="Java Web"></a>Java Web</h1><h2 id="1-jsp-和-servlet-有什么区别？"><a href="#1-jsp-和-servlet-有什么区别？" class="headerlink" title="1. jsp 和 servlet 有什么区别？"></a>1. jsp 和 servlet 有什么区别？</h2><ul>
+<li>JSP是servlet技术的扩展，本质上就是servlet的简易方式。</li>
+<li>servlet和JSP最主要的不同点在于，<ul>
+<li>servlet的应用逻辑是在Java文件中，并且完全从表示层中的html里分离开来，</li>
+<li>而JSP的情况是Java和html可以组合成一个扩展名为JSP的文件。</li>
+</ul>
+</li>
+<li>JSP侧重于视图，servlet主要用于控制逻辑。</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/fb60fea1.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/ee837b98.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/ee837b98.html" class="post-title-link" itemprop="url">对象拷贝</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:15" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:15+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 09:58:43" itemprop="dateModified" datetime="2019-11-01T09:58:43+00:00">2019-11-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="对象拷贝"><a href="#对象拷贝" class="headerlink" title="对象拷贝"></a>对象拷贝</h1><h2 id="1-为什么要使用克隆？"><a href="#1-为什么要使用克隆？" class="headerlink" title="1. 为什么要使用克隆？"></a>1. 为什么要使用克隆？</h2><p>克隆的对象可能包含一些已经修改过的属性，而 new 出来的对象的属性都还是初始化时候的值，所以当需要一个新的对象来保存当前对象的“状态”就靠 clone 方法了</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/ee837b98.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/7af799fd.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/7af799fd.html" class="post-title-link" itemprop="url">反射</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:14" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:14+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 09:58:43" itemprop="dateModified" datetime="2019-11-01T09:58:43+00:00">2019-11-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><h2 id="1-什么是反射？"><a href="#1-什么是反射？" class="headerlink" title="1. 什么是反射？"></a>1. 什么是反射？</h2><ul>
+<li>反射 (Reflection) 是 Java 的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可以操作类或对象的内部属性。</li>
+<li>简而言之，通过反射，我们可以在运行时获得程序或程序集中每一个类型的成员和成员的信息。程序中一般的对象的类型都是在编译期就确定下来的，而 Java 反射机制可以动态地创建对象并调用其属性，这样的对象的类型在编译期是未知的。所以我们可以通过反射机制直接创建对象，即使这个对象的类型在编译期是未知的。</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/7af799fd.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/5729df21.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/5729df21.html" class="post-title-link" itemprop="url">多线程</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:13" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:13+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 09:58:43" itemprop="dateModified" datetime="2019-11-01T09:58:43+00:00">2019-11-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h1><h2 id="1-并行和并发有什么区别？"><a href="#1-并行和并发有什么区别？" class="headerlink" title="1. 并行和并发有什么区别？"></a>1. 并行和并发有什么区别？</h2><ul>
+<li><p>并发:一个处理器同时处理多个任务；</p>
+</li>
+<li><p>并行:多个处理器或者是多核的处理器同时处理多个不同的任务。</p>
+</li>
+</ul>
+<blockquote>
+<p>前者是逻辑上的同时发生（simultaneous），而后者是物理上的同时发生</p>
+</blockquote>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/5729df21.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/8f8103b7.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/8f8103b7.html" class="post-title-link" itemprop="url">容器</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:12" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:12+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 09:58:43" itemprop="dateModified" datetime="2019-11-01T09:58:43+00:00">2019-11-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h1><ul>
+<li><a href="https://blog.csdn.net/dengpeng0419/article/details/47983033" target="_blank" rel="noopener">链接</a></li>
+<li><a href="https://wiki.jikexueyuan.com/project/java-collection/hashmap.html" target="_blank" rel="noopener">极客学院的 java 集合</a></li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/8f8103b7.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/f7ede91d.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/post/f7ede91d.html" class="post-title-link" itemprop="url">Java基础</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-04 19:49:10" itemprop="dateCreated datePublished" datetime="2019-10-04T19:49:10+00:00">2019-10-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-01 09:58:43" itemprop="dateModified" datetime="2019-11-01T09:58:43+00:00">2019-11-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Java学习/" itemprop="url" rel="index"><span itemprop="name">Java学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java-基础"><a href="#Java-基础" class="headerlink" title="Java 基础"></a>Java 基础</h1><h2 id="1-JDK-和-JRE-有什么区别？"><a href="#1-JDK-和-JRE-有什么区别？" class="headerlink" title="1. JDK 和 JRE 有什么区别？"></a>1. JDK 和 JRE 有什么区别？</h2><ul>
+<li>JDK:Java Development Kit--面向开发人员的 SDK.它提供了 JAVA 的开发环境和运行环境<blockquote>
+<p>SDK:Software Development Kit--软件开发包</p>
+</blockquote>
+</li>
+<li>JRE:Java Runtime Environment--面向使用者.提供了 JAVA 的运行环境，包含JVM</li>
+<li>JVM:Java Virtual Machine--是我们常说的 Java 虚拟机</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/post/f7ede91d.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/blog/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/6/">6</a><span class="page-number current">7</span>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="https://avatars2.githubusercontent.com/u/29475073?s=88&v=4"
+      alt="Sometwo">
+  <p class="site-author-name" itemprop="name">Sometwo</p>
+  <div class="site-description" itemprop="description">一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/blog/categories/">
+          
+        
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/blog/tags/">
+          
+        
+        <span class="site-state-item-count">55</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/blog/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/sometwo7" title="GitHub &rarr; https://github.com/sometwo7" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sometwo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/blog/js/utils.js?v=7.4.1"></script><script src="/blog/js/motion.js?v=7.4.1"></script>
+<script src="/blog/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/blog/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/blog/js/local-search.js?v=7.4.1"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
