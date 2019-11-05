@@ -246,7 +246,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/676b2d5d.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/2355d11.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -260,7 +260,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/676b2d5d.html" class="post-title-link" itemprop="url">计算机操作系统 - 设备管理</a>
+            <a href="/blog/post/2355d11.html" class="post-title-link" itemprop="url">网络技术 - Redis</a>
           
         </h1>
 
@@ -275,7 +275,7 @@
                 
               
 
-              <time title="创建时间：2019-11-01 17:05:11 / 修改时间：09:58:43" itemprop="dateCreated datePublished" datetime="2019-11-01T17:05:11+00:00">2019-11-01</time>
+              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
@@ -288,7 +288,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/计算机操作系统/" itemprop="url" rel="index"><span itemprop="name">计算机操作系统</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
 
                 
                 
@@ -308,28 +308,73 @@
 
       
           <ul>
-<li><a href="#磁盘结构">磁盘结构</a></li>
-<li><a href="#磁盘调度算法">磁盘调度算法</a><ul>
-<li><a href="#1-先来先服务">1. 先来先服务</a></li>
-<li><a href="#2-最短寻道时间优先">2. 最短寻道时间优先</a></li>
-<li><a href="#3-电梯算法">3. 电梯算法</a><!-- GFM-TOC -->
-
-
-</li>
+<li><a href="#一概述">一、概述</a></li>
+<li><a href="#二数据类型">二、数据类型</a><ul>
+<li><a href="#string">STRING</a></li>
+<li><a href="#list">LIST</a></li>
+<li><a href="#set">SET</a></li>
+<li><a href="#hash">HASH</a></li>
+<li><a href="#zset">ZSET</a></li>
 </ul>
 </li>
-</ul><h1 id="磁盘结构"><a href="#磁盘结构" class="headerlink" title="磁盘结构"></a>磁盘结构</h1><ul>
-<li>盘面（Platter）：一个磁盘有多个盘面；</li>
-<li>磁道（Track）：盘面上的圆形带状区域，一个盘面可以有多个磁道；</li>
-<li>扇区（Track Sector）：磁道上的一个弧段，一个磁道可以有多个扇区，它是最小的物理储存单位，目前主要有 512 bytes 与 4 K 两种大小；</li>
-<li>磁头（Head）：与盘面非常接近，能够将盘面上的磁场转换为电信号（读），或者将电信号转换为盘面的磁场（写）；</li>
-<li>制动手臂（Actuator arm）：用于在磁道之间移动磁头；</li>
-<li>主轴（Spindle）：使整个盘面转动。</li>
+<li><a href="#三数据结构">三、数据结构</a><ul>
+<li><a href="#字典">字典</a></li>
+<li><a href="#跳跃表">跳跃表</a></li>
+</ul>
+</li>
+<li><a href="#四使用场景">四、使用场景</a><ul>
+<li><a href="#计数器">计数器</a></li>
+<li><a href="#缓存">缓存</a></li>
+<li><a href="#查找表">查找表</a></li>
+<li><a href="#消息队列">消息队列</a></li>
+<li><a href="#会话缓存">会话缓存</a></li>
+<li><a href="#分布式锁实现">分布式锁实现</a></li>
+<li><a href="#其它">其它</a></li>
+</ul>
+</li>
+<li><a href="#五redis-与-memcached">五、Redis 与 Memcached</a><ul>
+<li><a href="#数据类型">数据类型</a></li>
+<li><a href="#数据持久化">数据持久化</a></li>
+<li><a href="#分布式">分布式</a></li>
+<li><a href="#内存管理机制">内存管理机制</a></li>
+</ul>
+</li>
+<li><a href="#六键的过期时间">六、键的过期时间</a></li>
+<li><a href="#七数据淘汰策略">七、数据淘汰策略</a></li>
+<li><a href="#八持久化">八、持久化</a><ul>
+<li><a href="#rdb-持久化">RDB 持久化</a></li>
+<li><a href="#aof-持久化">AOF 持久化</a></li>
+</ul>
+</li>
+<li><a href="#九事务">九、事务</a></li>
+<li><a href="#十事件">十、事件</a><ul>
+<li><a href="#文件事件">文件事件</a></li>
+<li><a href="#时间事件">时间事件</a></li>
+<li><a href="#事件的调度与执行">事件的调度与执行</a></li>
+</ul>
+</li>
+<li><a href="#十一复制">十一、复制</a><ul>
+<li><a href="#连接过程">连接过程</a></li>
+<li><a href="#主从链">主从链</a></li>
+</ul>
+</li>
+<li><a href="#十二sentinel">十二、Sentinel</a></li>
+<li><a href="#十三分片">十三、分片</a></li>
+<li><a href="#十四一个简单的论坛系统分析">十四、一个简单的论坛系统分析</a><ul>
+<li><a href="#文章信息">文章信息</a></li>
+<li><a href="#点赞功能">点赞功能</a></li>
+<li><a href="#对文章进行排序">对文章进行排序</a></li>
+</ul>
+</li>
+<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
+
+
+</li>
 </ul>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/676b2d5d.html" rel="contents">
+              <a class="btn" href="/blog/post/2355d11.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -356,7 +401,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/db51cce2.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/7a97d7b6.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -370,7 +415,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/db51cce2.html" class="post-title-link" itemprop="url">计算机操作系统 - 内存管理</a>
+            <a href="/blog/post/7a97d7b6.html" class="post-title-link" itemprop="url">网络技术 - MySQL</a>
           
         </h1>
 
@@ -385,7 +430,7 @@
                 
               
 
-              <time title="创建时间：2019-11-01 17:04:11 / 修改时间：09:58:43" itemprop="dateCreated datePublished" datetime="2019-11-01T17:04:11+00:00">2019-11-01</time>
+              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
@@ -398,7 +443,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/计算机操作系统/" itemprop="url" rel="index"><span itemprop="name">计算机操作系统</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
 
                 
                 
@@ -418,28 +463,54 @@
 
       
           <ul>
-<li><a href="#虚拟内存">虚拟内存</a></li>
-<li><a href="#分页系统地址映射">分页系统地址映射</a></li>
-<li><a href="#页面置换算法">页面置换算法</a><ul>
-<li><a href="#1-最佳">1. 最佳</a></li>
-<li><a href="#2-最近最久未使用">2. 最近最久未使用</a></li>
-<li><a href="#3-最近未使用">3. 最近未使用</a></li>
-<li><a href="#4-先进先出">4. 先进先出</a></li>
-<li><a href="#5-第二次机会算法">5. 第二次机会算法</a></li>
-<li><a href="#6-时钟">6. 时钟</a></li>
+<li><a href="#一索引">一、索引</a><ul>
+<li><a href="#b-tree-原理">B+ Tree 原理</a></li>
+<li><a href="#mysql-索引">MySQL 索引</a></li>
+<li><a href="#索引优化">索引优化</a></li>
+<li><a href="#索引的优点">索引的优点</a></li>
+<li><a href="#索引的使用条件">索引的使用条件</a></li>
 </ul>
 </li>
-<li><a href="#分段">分段</a></li>
-<li><a href="#段页式">段页式</a></li>
-<li><a href="#分页与分段的比较">分页与分段的比较</a><!-- GFM-TOC -->
+<li><a href="#二查询性能优化">二、查询性能优化</a><ul>
+<li><a href="#使用-explain-进行分析">使用 Explain 进行分析</a></li>
+<li><a href="#优化数据访问">优化数据访问</a></li>
+<li><a href="#重构查询方式">重构查询方式</a></li>
+</ul>
+</li>
+<li><a href="#三存储引擎">三、存储引擎</a><ul>
+<li><a href="#innodb">InnoDB</a></li>
+<li><a href="#myisam">MyISAM</a></li>
+<li><a href="#比较">比较</a></li>
+</ul>
+</li>
+<li><a href="#四数据类型">四、数据类型</a><ul>
+<li><a href="#整型">整型</a></li>
+<li><a href="#浮点数">浮点数</a></li>
+<li><a href="#字符串">字符串</a></li>
+<li><a href="#时间和日期">时间和日期</a></li>
+</ul>
+</li>
+<li><a href="#五切分">五、切分</a><ul>
+<li><a href="#水平切分">水平切分</a></li>
+<li><a href="#垂直切分">垂直切分</a></li>
+<li><a href="#sharding-策略">Sharding 策略</a></li>
+<li><a href="#sharding-存在的问题">Sharding 存在的问题</a></li>
+</ul>
+</li>
+<li><a href="#六复制">六、复制</a><ul>
+<li><a href="#主从复制">主从复制</a></li>
+<li><a href="#读写分离">读写分离</a></li>
+</ul>
+</li>
+<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
 
 
 </li>
-</ul><h1 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h1><p>虚拟内存的目的是为了让物理内存扩充成更大的逻辑内存，从而让程序获得更多的可用内存。</p><p>为了更好的管理内存，操作系统将内存抽象成地址空间。每个程序拥有自己的地址空间，这个地址空间被分割成多个块，每一块称为一页。这些页被映射到物理内存，但不需要映射到连续的物理内存，也不需要所有页都必须在物理内存中。当程序引用到不在物理内存中的页时，由硬件执行必要的映射，将缺失的部分装入物理内存并重新执行失败的指令。</p>
+</ul>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/db51cce2.html" rel="contents">
+              <a class="btn" href="/blog/post/7a97d7b6.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -466,7 +537,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/86cefad1.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/ecffdd03.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -480,7 +551,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/86cefad1.html" class="post-title-link" itemprop="url">计算机操作系统 - 死锁</a>
+            <a href="/blog/post/ecffdd03.html" class="post-title-link" itemprop="url">网络技术 - Socket</a>
           
         </h1>
 
@@ -495,7 +566,7 @@
                 
               
 
-              <time title="创建时间：2019-11-01 17:03:11 / 修改时间：09:58:43" itemprop="dateCreated datePublished" datetime="2019-11-01T17:03:11+00:00">2019-11-01</time>
+              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
@@ -508,7 +579,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/计算机操作系统/" itemprop="url" rel="index"><span itemprop="name">计算机操作系统</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
 
                 
                 
@@ -528,36 +599,36 @@
 
       
           <ul>
-<li><a href="#必要条件">必要条件</a></li>
-<li><a href="#处理方法">处理方法</a></li>
-<li><a href="#鸵鸟策略">鸵鸟策略</a></li>
-<li><a href="#死锁检测与死锁恢复">死锁检测与死锁恢复</a><ul>
-<li><a href="#1-每种类型一个资源的死锁检测">1. 每种类型一个资源的死锁检测</a></li>
-<li><a href="#2-每种类型多个资源的死锁检测">2. 每种类型多个资源的死锁检测</a></li>
-<li><a href="#3-死锁恢复">3. 死锁恢复</a></li>
+<li><a href="#一io-模型">一、I/O 模型</a><ul>
+<li><a href="#阻塞式-io">阻塞式 I/O</a></li>
+<li><a href="#非阻塞式-io">非阻塞式 I/O</a></li>
+<li><a href="#io-复用">I/O 复用</a></li>
+<li><a href="#信号驱动-io">信号驱动 I/O</a></li>
+<li><a href="#异步-io">异步 I/O</a></li>
+<li><a href="#五大-io-模型比较">五大 I/O 模型比较</a></li>
 </ul>
 </li>
-<li><a href="#死锁预防">死锁预防</a><ul>
-<li><a href="#1-破坏互斥条件">1. 破坏互斥条件</a></li>
-<li><a href="#2-破坏占有和等待条件">2. 破坏占有和等待条件</a></li>
-<li><a href="#3-破坏不可抢占条件">3. 破坏不可抢占条件</a></li>
-<li><a href="#4-破坏环路等待">4. 破坏环路等待</a></li>
+<li><a href="#二io-复用">二、I/O 复用</a><ul>
+<li><a href="#select">select</a></li>
+<li><a href="#poll">poll</a></li>
+<li><a href="#比较">比较</a></li>
+<li><a href="#epoll">epoll</a></li>
+<li><a href="#工作模式">工作模式</a></li>
+<li><a href="#应用场景">应用场景</a></li>
 </ul>
 </li>
-<li><a href="#死锁避免">死锁避免</a><ul>
-<li><a href="#1-安全状态">1. 安全状态</a></li>
-<li><a href="#2-单个资源的银行家算法">2. 单个资源的银行家算法</a></li>
-<li><a href="#3-多个资源的银行家算法">3. 多个资源的银行家算法</a><!-- GFM-TOC -->
+<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
 
 
 </li>
-</ul>
-</li>
+</ul><h1 id="一、I-O-模型"><a href="#一、I-O-模型" class="headerlink" title="一、I/O 模型"></a>一、I/O 模型</h1><p>一个输入操作通常包括两个阶段：</p><ul>
+<li>等待数据准备好</li>
+<li>从内核向进程复制数据</li>
 </ul>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/86cefad1.html" rel="contents">
+              <a class="btn" href="/blog/post/ecffdd03.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -584,7 +655,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/1f9ea97f.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/bf574124.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -598,7 +669,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/1f9ea97f.html" class="post-title-link" itemprop="url">计算机操作系统 - 进程管理</a>
+            <a href="/blog/post/bf574124.html" class="post-title-link" itemprop="url">网络技术 - 系统设计基础</a>
           
         </h1>
 
@@ -613,7 +684,7 @@
                 
               
 
-              <time title="创建时间：2019-11-01 17:02:11 / 修改时间：09:58:43" itemprop="dateCreated datePublished" datetime="2019-11-01T17:02:11+00:00">2019-11-01</time>
+              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
@@ -626,7 +697,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/计算机操作系统/" itemprop="url" rel="index"><span itemprop="name">计算机操作系统</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
 
                 
                 
@@ -646,48 +717,20 @@
 
       
           <ul>
-<li><a href="#进程与线程">进程与线程</a><ul>
-<li><a href="#1-进程">1. 进程</a></li>
-<li><a href="#2-线程">2. 线程</a></li>
-<li><a href="#3-区别">3. 区别</a></li>
-</ul>
-</li>
-<li><a href="#进程状态的切换">进程状态的切换</a></li>
-<li><a href="#进程调度算法">进程调度算法</a><ul>
-<li><a href="#1-批处理系统">1. 批处理系统</a></li>
-<li><a href="#2-交互式系统">2. 交互式系统</a></li>
-<li><a href="#3-实时系统">3. 实时系统</a></li>
-</ul>
-</li>
-<li><a href="#进程同步">进程同步</a><ul>
-<li><a href="#1-临界区">1. 临界区</a></li>
-<li><a href="#2-同步与互斥">2. 同步与互斥</a></li>
-<li><a href="#3-信号量">3. 信号量</a></li>
-<li><a href="#4-管程">4. 管程</a></li>
-</ul>
-</li>
-<li><a href="#经典同步问题">经典同步问题</a><ul>
-<li><a href="#1-读者-写者问题">1. 读者-写者问题</a></li>
-<li><a href="#2-哲学家进餐问题">2. 哲学家进餐问题</a></li>
-</ul>
-</li>
-<li><a href="#进程通信">进程通信</a><ul>
-<li><a href="#1-管道">1. 管道</a></li>
-<li><a href="#2-fifo">2. FIFO</a></li>
-<li><a href="#3-消息队列">3. 消息队列</a></li>
-<li><a href="#4-信号量">4. 信号量</a></li>
-<li><a href="#5-共享存储">5. 共享存储</a></li>
-<li><a href="#6-套接字">6. 套接字</a><!-- GFM-TOC -->
+<li><a href="#一性能">一、性能</a></li>
+<li><a href="#二伸缩性">二、伸缩性</a></li>
+<li><a href="#三扩展性">三、扩展性</a></li>
+<li><a href="#四可用性">四、可用性</a></li>
+<li><a href="#五安全性">五、安全性</a></li>
+<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
 
 
 </li>
-</ul>
-</li>
-</ul>
+</ul><h1 id="一、性能"><a href="#一、性能" class="headerlink" title="一、性能"></a>一、性能</h1><h2 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h2><h3 id="1-响应时间"><a href="#1-响应时间" class="headerlink" title="1. 响应时间"></a>1. 响应时间</h3><p>指某个请求从发出到接收到响应消耗的时间。</p><p>在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。</p><h3 id="2-吞吐量"><a href="#2-吞吐量" class="headerlink" title="2. 吞吐量"></a>2. 吞吐量</h3><p>指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。</p><h3 id="3-并发用户数"><a href="#3-并发用户数" class="headerlink" title="3. 并发用户数"></a>3. 并发用户数</h3>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/1f9ea97f.html" rel="contents">
+              <a class="btn" href="/blog/post/bf574124.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -714,7 +757,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/5a51eb8f.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/4ad173cd.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -728,7 +771,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/5a51eb8f.html" class="post-title-link" itemprop="url">计算机操作系统 - 概述</a>
+            <a href="/blog/post/4ad173cd.html" class="post-title-link" itemprop="url">网络技术 - 构建工具</a>
           
         </h1>
 
@@ -743,7 +786,7 @@
                 
               
 
-              <time title="创建时间：2019-11-01 17:01:11 / 修改时间：09:58:43" itemprop="dateCreated datePublished" datetime="2019-11-01T17:01:11+00:00">2019-11-01</time>
+              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
@@ -756,7 +799,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/计算机操作系统/" itemprop="url" rel="index"><span itemprop="name">计算机操作系统</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
 
                 
                 
@@ -776,40 +819,18 @@
 
       
           <ul>
-<li><a href="#基本特征">基本特征</a><ul>
-<li><a href="#1-并发">1. 并发</a></li>
-<li><a href="#2-共享">2. 共享</a></li>
-<li><a href="#3-虚拟">3. 虚拟</a></li>
-<li><a href="#4-异步">4. 异步</a></li>
-</ul>
-</li>
-<li><a href="#基本功能">基本功能</a><ul>
-<li><a href="#1-进程管理">1. 进程管理</a></li>
-<li><a href="#2-内存管理">2. 内存管理</a></li>
-<li><a href="#3-文件管理">3. 文件管理</a></li>
-<li><a href="#4-设备管理">4. 设备管理</a></li>
-</ul>
-</li>
-<li><a href="#系统调用">系统调用</a></li>
-<li><a href="#大内核和微内核">大内核和微内核</a><ul>
-<li><a href="#1-大内核">1. 大内核</a></li>
-<li><a href="#2-微内核">2. 微内核</a></li>
-</ul>
-</li>
-<li><a href="#中断分类">中断分类</a><ul>
-<li><a href="#1-外中断">1. 外中断</a></li>
-<li><a href="#2-异常">2. 异常</a></li>
-<li><a href="#3-陷入">3. 陷入</a><!-- GFM-TOC -->
+<li><a href="#一构建工具的作用">一、构建工具的作用</a></li>
+<li><a href="#二java-主流构建工具">二、Java 主流构建工具</a></li>
+<li><a href="#三maven">三、Maven</a></li>
+<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
 
 
 </li>
-</ul>
-</li>
-</ul><h1 id="基本特征"><a href="#基本特征" class="headerlink" title="基本特征"></a>基本特征</h1><h2 id="1-并发"><a href="#1-并发" class="headerlink" title="1. 并发"></a>1. 并发</h2><p>并发是指宏观上在一段时间内能同时运行多个程序，而并行则指同一时刻能运行多个指令。</p>
+</ul><h1 id="一、构建工具的作用"><a href="#一、构建工具的作用" class="headerlink" title="一、构建工具的作用"></a>一、构建工具的作用</h1><p>构建工具是用于构建项目的自动化工具，主要包含以下工作：</p><h2 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h2><p>不再需要手动导入 Jar 依赖包，并且可以自动处理依赖关系，也就是说某个依赖如果依赖于其它依赖，构建工具可以帮助我们自动处理这种依赖关系。</p><h2 id="运行单元测试"><a href="#运行单元测试" class="headerlink" title="运行单元测试"></a>运行单元测试</h2>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/5a51eb8f.html" rel="contents">
+              <a class="btn" href="/blog/post/4ad173cd.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -836,7 +857,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/72a552fe.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/877061f8.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -850,7 +871,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/72a552fe.html" class="post-title-link" itemprop="url">算法 - 其他</a>
+            <a href="/blog/post/877061f8.html" class="post-title-link" itemprop="url">网络技术 - 攻击技术</a>
           
         </h1>
 
@@ -865,7 +886,7 @@
                 
               
 
-              <time title="创建时间：2019-11-01 16:11:11 / 修改时间：09:58:43" itemprop="dateCreated datePublished" datetime="2019-11-01T16:11:11+00:00">2019-11-01</time>
+              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
@@ -878,7 +899,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/算法1-0/" itemprop="url" rel="index"><span itemprop="name">算法1.0</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
 
                 
                 
@@ -898,16 +919,19 @@
 
       
           <ul>
-<li><a href="#汉诺塔">汉诺塔</a></li>
-<li><a href="#哈夫曼编码">哈夫曼编码</a><!-- GFM-TOC -->
+<li><a href="#一跨站脚本攻击">一、跨站脚本攻击</a></li>
+<li><a href="#二跨站请求伪造">二、跨站请求伪造</a></li>
+<li><a href="#三sql-注入攻击">三、SQL 注入攻击</a></li>
+<li><a href="#四拒绝服务攻击">四、拒绝服务攻击</a></li>
+<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
 
 
 </li>
-</ul><h1 id="汉诺塔"><a href="#汉诺塔" class="headerlink" title="汉诺塔"></a>汉诺塔</h1><div align="center"> <img src="../pics/69d6c38d-1dec-4f72-ae60-60dbc10e9d15.png" width="300"> </div><br><p>有三个柱子，分别为 from、buffer、to。需要将 from 上的圆盘全部移动到 to 上，并且要保证小圆盘始终在大圆盘上。</p><p>这是一个经典的递归问题，分为三步求解：</p><p>① 将 n-1 个圆盘从 from -&gt; buffer</p><div align="center"> <img src="../pics/f9240aa1-8d48-4959-b28a-7ca45c3e4d91.png" width="300"> </div><br><p>② 将 1 个圆盘从 from -&gt; to</p>
+</ul><h1 id="一、跨站脚本攻击"><a href="#一、跨站脚本攻击" class="headerlink" title="一、跨站脚本攻击"></a>一、跨站脚本攻击</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>跨站脚本攻击（Cross-Site Scripting, XSS），可以将代码注入到用户浏览的网页上，这种代码包括 HTML 和 JavaScript。</p><h2 id="攻击原理"><a href="#攻击原理" class="headerlink" title="攻击原理"></a>攻击原理</h2><p>例如有一个论坛网站，攻击者可以在上面发布以下内容：</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/72a552fe.html" rel="contents">
+              <a class="btn" href="/blog/post/877061f8.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -934,7 +958,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/8ea800ec.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/685bfdc8.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -948,7 +972,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/8ea800ec.html" class="post-title-link" itemprop="url">算法 - 符号表</a>
+            <a href="/blog/post/685bfdc8.html" class="post-title-link" itemprop="url">网络技术 - Git</a>
           
         </h1>
 
@@ -963,7 +987,7 @@
                 
               
 
-              <time title="创建时间：2019-11-01 15:11:11 / 修改时间：09:58:43" itemprop="dateCreated datePublished" datetime="2019-11-01T15:11:11+00:00">2019-11-01</time>
+              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
@@ -976,7 +1000,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/算法1-0/" itemprop="url" rel="index"><span itemprop="name">算法1.0</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
 
                 
                 
@@ -996,58 +1020,26 @@
 
       
           <ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#初级实现">初级实现</a><ul>
-<li><a href="#1-链表实现无序符号表">1. 链表实现无序符号表</a></li>
-<li><a href="#2-二分查找实现有序符号表">2. 二分查找实现有序符号表</a></li>
-</ul>
-</li>
-<li><a href="#二叉查找树">二叉查找树</a><ul>
-<li><a href="#1-get">1. get()</a></li>
-<li><a href="#2-put">2. put()</a></li>
-<li><a href="#3-分析">3. 分析</a></li>
-<li><a href="#4-floor">4. floor()</a></li>
-<li><a href="#5-rank">5. rank()</a></li>
-<li><a href="#6-min">6. min()</a></li>
-<li><a href="#7-deletemin">7. deleteMin()</a></li>
-<li><a href="#8-delete">8. delete()</a></li>
-<li><a href="#9-keys">9. keys()</a></li>
-<li><a href="#10-分析">10. 分析</a></li>
-</ul>
-</li>
-<li><a href="#2-3-查找树">2-3 查找树</a><ul>
-<li><a href="#1-插入操作">1. 插入操作</a></li>
-<li><a href="#2-性质">2. 性质</a></li>
-</ul>
-</li>
-<li><a href="#红黑树">红黑树</a><ul>
-<li><a href="#1-左旋转">1. 左旋转</a></li>
-<li><a href="#2-右旋转">2. 右旋转</a></li>
-<li><a href="#3-颜色转换">3. 颜色转换</a></li>
-<li><a href="#4-插入">4. 插入</a></li>
-<li><a href="#5-分析">5. 分析</a></li>
-</ul>
-</li>
-<li><a href="#散列表">散列表</a><ul>
-<li><a href="#1-散列函数">1. 散列函数</a></li>
-<li><a href="#2-拉链法">2. 拉链法</a></li>
-<li><a href="#3-线性探测法">3. 线性探测法</a></li>
-</ul>
-</li>
-<li><a href="#小结">小结</a><ul>
-<li><a href="#1-符号表算法比较">1. 符号表算法比较</a></li>
-<li><a href="#2-java-的符号表实现">2. Java 的符号表实现</a></li>
-<li><a href="#3-稀疏向量乘法">3. 稀疏向量乘法</a><!-- GFM-TOC -->
+<li><a href="#集中式与分布式">集中式与分布式</a></li>
+<li><a href="#中心服务器">中心服务器</a></li>
+<li><a href="#工作流">工作流</a></li>
+<li><a href="#分支实现">分支实现</a></li>
+<li><a href="#冲突">冲突</a></li>
+<li><a href="#fast-forward">Fast forward</a></li>
+<li><a href="#分支管理策略">分支管理策略</a></li>
+<li><a href="#储藏stashing">储藏（Stashing）</a></li>
+<li><a href="#ssh-传输设置">SSH 传输设置</a></li>
+<li><a href="#gitignore-文件">.gitignore 文件</a></li>
+<li><a href="#git-命令一览">Git 命令一览</a></li>
+<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
 
 
 </li>
-</ul>
-</li>
-</ul>
+</ul><h1 id="集中式与分布式"><a href="#集中式与分布式" class="headerlink" title="集中式与分布式"></a>集中式与分布式</h1><p>Git 属于分布式版本控制系统，而 SVN 属于集中式。</p><div align="center"> <img src="pics/1fe2dc77-9a2d-4643-90b3-bbf50f649bac.png" width="600px"> </div><br><p>集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/8ea800ec.html" rel="contents">
+              <a class="btn" href="/blog/post/685bfdc8.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1074,7 +1066,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/32cc2cbe.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/7a9a193e.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -1088,7 +1080,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/32cc2cbe.html" class="post-title-link" itemprop="url">算法 - 栈和队列</a>
+            <a href="/blog/post/7a9a193e.html" class="post-title-link" itemprop="url">网络技术 - 面向对象思想</a>
           
         </h1>
 
@@ -1103,7 +1095,7 @@
                 
               
 
-              <time title="创建时间：2019-11-01 14:11:11 / 修改时间：09:58:43" itemprop="dateCreated datePublished" datetime="2019-11-01T14:11:11+00:00">2019-11-01</time>
+              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
@@ -1116,7 +1108,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/算法1-0/" itemprop="url" rel="index"><span itemprop="name">算法1.0</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
 
                 
                 
@@ -1136,20 +1128,35 @@
 
       
           <ul>
-<li><a href="#栈">栈</a><ul>
-<li><a href="#1-数组实现">1. 数组实现</a></li>
-<li><a href="#2-链表实现">2. 链表实现</a></li>
+<li><a href="#一三大特性">一、三大特性</a><ul>
+<li><a href="#封装">封装</a></li>
+<li><a href="#继承">继承</a></li>
+<li><a href="#多态">多态</a></li>
 </ul>
 </li>
-<li><a href="#队列">队列</a><!-- GFM-TOC -->
+<li><a href="#二类图">二、类图</a><ul>
+<li><a href="#泛化关系-generalization">泛化关系 (Generalization)</a></li>
+<li><a href="#实现关系-realization">实现关系 (Realization)</a></li>
+<li><a href="#聚合关系-aggregation">聚合关系 (Aggregation)</a></li>
+<li><a href="#组合关系-composition">组合关系 (Composition)</a></li>
+<li><a href="#关联关系-association">关联关系 (Association)</a></li>
+<li><a href="#依赖关系-dependency">依赖关系 (Dependency)</a></li>
+</ul>
+</li>
+<li><a href="#三设计原则">三、设计原则</a><ul>
+<li><a href="#solid">S.O.L.I.D</a></li>
+<li><a href="#其他常见原则">其他常见原则</a></li>
+</ul>
+</li>
+<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
 
 
 </li>
-</ul><h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MyStack</span>&lt;<span class="title">Item</span>&gt; <span class="keyword">extends</span> <span class="title">Iterable</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">MyStack&lt;Item&gt; <span class="title">push</span><span class="params">(Item item)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">Item <span class="title">pop</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</ul>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/32cc2cbe.html" rel="contents">
+              <a class="btn" href="/blog/post/7a9a193e.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1176,7 +1183,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/17024852.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/1b4f4a15.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -1190,7 +1197,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/17024852.html" class="post-title-link" itemprop="url">算法 - 并查集</a>
+            <a href="/blog/post/1b4f4a15.html" class="post-title-link" itemprop="url">网络技术 - Docker</a>
           
         </h1>
 
@@ -1205,7 +1212,7 @@
                 
               
 
-              <time title="创建时间：2019-11-01 13:11:11 / 修改时间：09:58:43" itemprop="dateCreated datePublished" datetime="2019-11-01T13:11:11+00:00">2019-11-01</time>
+              <time title="创建时间：2019-11-05 10:01:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:01:11+00:00">2019-11-05</time>
             </span>
           
             
@@ -1218,7 +1225,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/算法1-0/" itemprop="url" rel="index"><span itemprop="name">算法1.0</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
 
                 
                 
@@ -1238,43 +1245,20 @@
 
       
           <ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#quick-find">Quick Find</a></li>
-<li><a href="#quick-union">Quick Union</a></li>
-<li><a href="#加权-quick-union">加权 Quick Union</a></li>
-<li><a href="#路径压缩的加权-quick-union">路径压缩的加权 Quick Union</a></li>
-<li><a href="#比较">比较</a><!-- GFM-TOC -->
+<li><a href="#一解决的问题">一、解决的问题</a></li>
+<li><a href="#二与虚拟机的比较">二、与虚拟机的比较</a></li>
+<li><a href="#三优势">三、优势</a></li>
+<li><a href="#四使用场景">四、使用场景</a></li>
+<li><a href="#五镜像与容器">五、镜像与容器</a></li>
+<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
 
 
 </li>
-</ul><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>用于解决动态连通性问题，能动态连接两个点，并且判断两个点是否连通。</p><div align="center"> <img src="../pics/02943a90-7dd4-4e9a-9325-f8217d3cc54d.jpg" width="350"> </div><br><table>
-<thead>
-<tr>
-<th align="center">方法</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">UF(int N)</td>
-<td align="center">构造一个大小为 N 的并查集</td>
-</tr>
-<tr>
-<td align="center">void union(int p, int q)</td>
-<td align="center">连接 p 和 q 节点</td>
-</tr>
-<tr>
-<td align="center">int find(int p)</td>
-<td align="center">查找 p 所在的连通分量编号</td>
-</tr>
-<tr>
-<td align="center">boolean connected(int p, int q)</td>
-<td align="center">判断 p 和 q 节点是否连通</td>
-</tr>
-</tbody></table>
+</ul><h1 id="一、解决的问题"><a href="#一、解决的问题" class="headerlink" title="一、解决的问题"></a>一、解决的问题</h1><p>由于不同的机器有不同的操作系统，以及不同的库和组件，在将一个应用部署到多台机器上需要进行大量的环境配置操作。</p><p>Docker 主要解决环境配置问题，它是一种虚拟化技术，对进程进行隔离，被隔离的进程独立于宿主操作系统和其它隔离的进程。使用 Docker 可以不修改应用程序代码，不需要开发人员学习特定环境下的技术，就能够将现有的应用程序部署在其它机器上。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/17024852.html" rel="contents">
+              <a class="btn" href="/blog/post/1b4f4a15.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1301,7 +1285,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/d003da9e.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/post/3c20f5a2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -1315,7 +1299,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/post/d003da9e.html" class="post-title-link" itemprop="url">算法 - 排序</a>
+            <a href="/blog/post/3c20f5a2.html" class="post-title-link" itemprop="url">从春招惨败到秋招收获 BAT OFFER</a>
           
         </h1>
 
@@ -1330,11 +1314,19 @@
                 
               
 
-              <time title="创建时间：2019-11-01 11:11:11 / 修改时间：09:58:43" itemprop="dateCreated datePublished" datetime="2019-11-01T11:11:11+00:00">2019-11-01</time>
+              <time title="创建时间：2019-11-01 18:11:11" itemprop="dateCreated datePublished" datetime="2019-11-01T18:11:11+00:00">2019-11-01</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-05 13:02:39" itemprop="dateModified" datetime="2019-11-05T13:02:39+00:00">2019-11-05</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -1343,7 +1335,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/算法1-0/" itemprop="url" rel="index"><span itemprop="name">算法1.0</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/面试问题/" itemprop="url" rel="index"><span itemprop="name">面试问题</span></a></span>
 
                 
                 
@@ -1362,48 +1354,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ul>
-<li><a href="#约定">约定</a></li>
-<li><a href="#选择排序">选择排序</a></li>
-<li><a href="#冒泡排序">冒泡排序</a></li>
-<li><a href="#插入排序">插入排序</a></li>
-<li><a href="#希尔排序">希尔排序</a></li>
-<li><a href="#归并排序">归并排序</a><ul>
-<li><a href="#1-归并方法">1. 归并方法</a></li>
-<li><a href="#2-自顶向下归并排序">2. 自顶向下归并排序</a></li>
-<li><a href="#3-自底向上归并排序">3. 自底向上归并排序</a></li>
-</ul>
-</li>
-<li><a href="#快速排序">快速排序</a><ul>
-<li><a href="#1-基本算法">1. 基本算法</a></li>
-<li><a href="#2-切分">2. 切分</a></li>
-<li><a href="#3-性能分析">3. 性能分析</a></li>
-<li><a href="#4-算法改进">4. 算法改进</a></li>
-<li><a href="#5-基于切分的快速选择算法">5. 基于切分的快速选择算法</a></li>
-</ul>
-</li>
-<li><a href="#堆排序">堆排序</a><ul>
-<li><a href="#1-堆">1. 堆</a></li>
-<li><a href="#2-上浮和下沉">2. 上浮和下沉</a></li>
-<li><a href="#3-插入元素">3. 插入元素</a></li>
-<li><a href="#4-删除最大元素">4. 删除最大元素</a></li>
-<li><a href="#5-堆排序">5. 堆排序</a></li>
-<li><a href="#6-分析">6. 分析</a></li>
-</ul>
-</li>
-<li><a href="#小结">小结</a><ul>
-<li><a href="#1-排序算法的比较">1. 排序算法的比较</a></li>
-<li><a href="#2-java-的排序算法实现">2. Java 的排序算法实现</a><!-- GFM-TOC -->
-
-
-</li>
-</ul>
-</li>
+          <p>🚀</p><h1 id="1-Offer-情况"><a href="#1-Offer-情况" class="headerlink" title="1. Offer 情况"></a>1. Offer 情况</h1><p>经过了长达一年左右的复习，秋招也收到了几个比较满意的 Offer，参加面试的都通过了。</p><ul>
+<li>百度，企业智能平台； </li>
+<li>阿里，高德地图； </li>
+<li>腾讯，IEG 游戏平台，后台研发，SP； </li>
+<li>字节跳动，头条后台研发，SSP； </li>
+<li>华为，Cloud Bu； </li>
+<li>网易游戏，梦幻事业部； </li>
+<li>顺丰科技。 </li>
 </ul>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/post/d003da9e.html" rel="contents">
+              <a class="btn" href="/blog/post/3c20f5a2.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1430,7 +1393,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/7/">7</a><a class="extend next" rel="next" href="/blog/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/9/">9</a><a class="extend next" rel="next" href="/blog/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1478,7 +1441,7 @@
         
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-count">89</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1491,7 +1454,7 @@
             <a href="/blog/categories/">
           
         
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1504,7 +1467,7 @@
             <a href="/blog/tags/">
           
         
-        <span class="site-state-item-count">55</span>
+        <span class="site-state-item-count">73</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
