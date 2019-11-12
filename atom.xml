@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://sometwo7.github.io/blog/"/>
-  <updated>2019-11-12T08:49:36.067Z</updated>
+  <updated>2019-11-12T08:53:36.609Z</updated>
   <id>https://sometwo7.github.io/blog/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>网络技术 - Linux</title>
-    <link href="https://sometwo7.github.io/blog/post/eb01ca49.html"/>
-    <id>https://sometwo7.github.io/blog/post/eb01ca49.html</id>
+    <link href="https://sometwo7.github.io/blog/eb01ca49.html"/>
+    <id>https://sometwo7.github.io/blog/eb01ca49.html</id>
     <published>2019-11-05T10:04:11.000Z</published>
-    <updated>2019-11-12T08:49:36.067Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -43,10 +43,10 @@
   
   <entry>
     <title>网络技术 - Http</title>
-    <link href="https://sometwo7.github.io/blog/post/5b4dafbb.html"/>
-    <id>https://sometwo7.github.io/blog/post/5b4dafbb.html</id>
+    <link href="https://sometwo7.github.io/blog/5b4dafbb.html"/>
+    <id>https://sometwo7.github.io/blog/5b4dafbb.html</id>
     <published>2019-11-05T10:03:11.000Z</published>
-    <updated>2019-11-12T08:49:36.067Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -68,10 +68,10 @@
   
   <entry>
     <title>网络技术 - 消息队列</title>
-    <link href="https://sometwo7.github.io/blog/post/51d10326.html"/>
-    <id>https://sometwo7.github.io/blog/post/51d10326.html</id>
+    <link href="https://sometwo7.github.io/blog/51d10326.html"/>
+    <id>https://sometwo7.github.io/blog/51d10326.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -92,10 +92,10 @@
   
   <entry>
     <title>网络技术 - 缓存</title>
-    <link href="https://sometwo7.github.io/blog/post/64a35ad1.html"/>
-    <id>https://sometwo7.github.io/blog/post/64a35ad1.html</id>
+    <link href="https://sometwo7.github.io/blog/64a35ad1.html"/>
+    <id>https://sometwo7.github.io/blog/64a35ad1.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -120,10 +120,10 @@
   
   <entry>
     <title>网络技术 - 设计模式</title>
-    <link href="https://sometwo7.github.io/blog/post/9956399c.html"/>
-    <id>https://sometwo7.github.io/blog/post/9956399c.html</id>
+    <link href="https://sometwo7.github.io/blog/9956399c.html"/>
+    <id>https://sometwo7.github.io/blog/9956399c.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -141,10 +141,10 @@
   
   <entry>
     <title>网络技术 - 正则表达式</title>
-    <link href="https://sometwo7.github.io/blog/post/38ddab86.html"/>
-    <id>https://sometwo7.github.io/blog/post/38ddab86.html</id>
+    <link href="https://sometwo7.github.io/blog/38ddab86.html"/>
+    <id>https://sometwo7.github.io/blog/38ddab86.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -162,10 +162,10 @@
   
   <entry>
     <title>网络技术 - 分布式</title>
-    <link href="https://sometwo7.github.io/blog/post/d350a2b7.html"/>
-    <id>https://sometwo7.github.io/blog/post/d350a2b7.html</id>
+    <link href="https://sometwo7.github.io/blog/d350a2b7.html"/>
+    <id>https://sometwo7.github.io/blog/d350a2b7.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -186,10 +186,10 @@
   
   <entry>
     <title>网络技术 - 代码可读性</title>
-    <link href="https://sometwo7.github.io/blog/post/1c7cd43d.html"/>
-    <id>https://sometwo7.github.io/blog/post/1c7cd43d.html</id>
+    <link href="https://sometwo7.github.io/blog/1c7cd43d.html"/>
+    <id>https://sometwo7.github.io/blog/1c7cd43d.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -206,11 +206,74 @@
   </entry>
   
   <entry>
-    <title>网络技术 - Socket</title>
-    <link href="https://sometwo7.github.io/blog/post/ecffdd03.html"/>
-    <id>https://sometwo7.github.io/blog/post/ecffdd03.html</id>
+    <title>网络技术 - SQL</title>
+    <link href="https://sometwo7.github.io/blog/4ce9f201.html"/>
+    <id>https://sometwo7.github.io/blog/4ce9f201.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h1&gt;&lt;p&gt;模式定义了数据如何存储、存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。&lt;/p&gt;&lt;p&gt;主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋给新数据行的主键）。&lt;/p&gt;&lt;p&gt;SQL（Structured Query Language)，标准 SQL 由 ANSI 标准委员会管理，从而称为 ANSI SQL。各个 DBMS 都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="sql" scheme="https://sometwo7.github.io/blog/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - Redis</title>
+    <link href="https://sometwo7.github.io/blog/2355d11.html"/>
+    <id>https://sometwo7.github.io/blog/2355d11.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-12T08:53:36.609Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。&lt;/p&gt;&lt;p&gt;键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。&lt;/p&gt;&lt;p&gt;Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。&lt;/p&gt;&lt;h1 id=&quot;二、数据类型&quot;&gt;&lt;a href=&quot;#二、数据类型&quot; class=&quot;headerlink&quot; title=&quot;二、数据类型&quot;&gt;&lt;/a&gt;二、数据类型&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="redis" scheme="https://sometwo7.github.io/blog/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - MySQL</title>
+    <link href="https://sometwo7.github.io/blog/7a97d7b6.html"/>
+    <id>https://sometwo7.github.io/blog/7a97d7b6.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-12T08:53:36.609Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、索引&quot;&gt;&lt;a href=&quot;#一、索引&quot; class=&quot;headerlink&quot; title=&quot;一、索引&quot;&gt;&lt;/a&gt;一、索引&lt;/h1&gt;&lt;h2 id=&quot;B-Tree-原理&quot;&gt;&lt;a href=&quot;#B-Tree-原理&quot; class=&quot;headerlink&quot; title=&quot;B+ Tree 原理&quot;&gt;&lt;/a&gt;B+ Tree 原理&lt;/h2&gt;&lt;h3 id=&quot;1-数据结构&quot;&gt;&lt;a href=&quot;#1-数据结构&quot; class=&quot;headerlink&quot; title=&quot;1. 数据结构&quot;&gt;&lt;/a&gt;1. 数据结构&lt;/h3&gt;&lt;p&gt;B Tree 指的是 Balance Tree，也就是平衡树。平衡树是一颗查找树，并且所有叶子节点位于同一层。&lt;/p&gt;&lt;p&gt;B+ Tree 是基于 B Tree 和叶子节点顺序访问指针进行实现，它具有 B Tree 的平衡性，并且通过顺序访问指针来提高区间查询的性能。&lt;/p&gt;&lt;p&gt;在 B+ Tree 中，一个节点中的 key 从左到右非递减排列，如果某个指针的左右相邻 key 分别是 key&lt;sub&gt;i&lt;/sub&gt; 和 key&lt;sub&gt;i+1&lt;/sub&gt;，且不为 null，则该指针指向节点的所有 key 大于等于 key&lt;sub&gt;i&lt;/sub&gt; 且小于等于 key&lt;sub&gt;i+1&lt;/sub&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="mysql" scheme="https://sometwo7.github.io/blog/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - Socket</title>
+    <link href="https://sometwo7.github.io/blog/ecffdd03.html"/>
+    <id>https://sometwo7.github.io/blog/ecffdd03.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -236,74 +299,11 @@
   </entry>
   
   <entry>
-    <title>网络技术 - SQL</title>
-    <link href="https://sometwo7.github.io/blog/post/4ce9f201.html"/>
-    <id>https://sometwo7.github.io/blog/post/4ce9f201.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h1&gt;&lt;p&gt;模式定义了数据如何存储、存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。&lt;/p&gt;&lt;p&gt;主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋给新数据行的主键）。&lt;/p&gt;&lt;p&gt;SQL（Structured Query Language)，标准 SQL 由 ANSI 标准委员会管理，从而称为 ANSI SQL。各个 DBMS 都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="sql" scheme="https://sometwo7.github.io/blog/tags/sql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - Redis</title>
-    <link href="https://sometwo7.github.io/blog/post/2355d11.html"/>
-    <id>https://sometwo7.github.io/blog/post/2355d11.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。&lt;/p&gt;&lt;p&gt;键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。&lt;/p&gt;&lt;p&gt;Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。&lt;/p&gt;&lt;h1 id=&quot;二、数据类型&quot;&gt;&lt;a href=&quot;#二、数据类型&quot; class=&quot;headerlink&quot; title=&quot;二、数据类型&quot;&gt;&lt;/a&gt;二、数据类型&lt;/h1&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="redis" scheme="https://sometwo7.github.io/blog/tags/redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - MySQL</title>
-    <link href="https://sometwo7.github.io/blog/post/7a97d7b6.html"/>
-    <id>https://sometwo7.github.io/blog/post/7a97d7b6.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.067Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、索引&quot;&gt;&lt;a href=&quot;#一、索引&quot; class=&quot;headerlink&quot; title=&quot;一、索引&quot;&gt;&lt;/a&gt;一、索引&lt;/h1&gt;&lt;h2 id=&quot;B-Tree-原理&quot;&gt;&lt;a href=&quot;#B-Tree-原理&quot; class=&quot;headerlink&quot; title=&quot;B+ Tree 原理&quot;&gt;&lt;/a&gt;B+ Tree 原理&lt;/h2&gt;&lt;h3 id=&quot;1-数据结构&quot;&gt;&lt;a href=&quot;#1-数据结构&quot; class=&quot;headerlink&quot; title=&quot;1. 数据结构&quot;&gt;&lt;/a&gt;1. 数据结构&lt;/h3&gt;&lt;p&gt;B Tree 指的是 Balance Tree，也就是平衡树。平衡树是一颗查找树，并且所有叶子节点位于同一层。&lt;/p&gt;&lt;p&gt;B+ Tree 是基于 B Tree 和叶子节点顺序访问指针进行实现，它具有 B Tree 的平衡性，并且通过顺序访问指针来提高区间查询的性能。&lt;/p&gt;&lt;p&gt;在 B+ Tree 中，一个节点中的 key 从左到右非递减排列，如果某个指针的左右相邻 key 分别是 key&lt;sub&gt;i&lt;/sub&gt; 和 key&lt;sub&gt;i+1&lt;/sub&gt;，且不为 null，则该指针指向节点的所有 key 大于等于 key&lt;sub&gt;i&lt;/sub&gt; 且小于等于 key&lt;sub&gt;i+1&lt;/sub&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="mysql" scheme="https://sometwo7.github.io/blog/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
     <title>网络技术 - 面向对象思想</title>
-    <link href="https://sometwo7.github.io/blog/post/7a9a193e.html"/>
-    <id>https://sometwo7.github.io/blog/post/7a9a193e.html</id>
+    <link href="https://sometwo7.github.io/blog/7a9a193e.html"/>
+    <id>https://sometwo7.github.io/blog/7a9a193e.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -327,10 +327,10 @@
   
   <entry>
     <title>网络技术 - 系统设计基础</title>
-    <link href="https://sometwo7.github.io/blog/post/bf574124.html"/>
-    <id>https://sometwo7.github.io/blog/post/bf574124.html</id>
+    <link href="https://sometwo7.github.io/blog/bf574124.html"/>
+    <id>https://sometwo7.github.io/blog/bf574124.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -348,10 +348,10 @@
   
   <entry>
     <title>网络技术 - 构建工具</title>
-    <link href="https://sometwo7.github.io/blog/post/4ad173cd.html"/>
-    <id>https://sometwo7.github.io/blog/post/4ad173cd.html</id>
+    <link href="https://sometwo7.github.io/blog/4ad173cd.html"/>
+    <id>https://sometwo7.github.io/blog/4ad173cd.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -369,10 +369,10 @@
   
   <entry>
     <title>网络技术 - 攻击技术</title>
-    <link href="https://sometwo7.github.io/blog/post/877061f8.html"/>
-    <id>https://sometwo7.github.io/blog/post/877061f8.html</id>
+    <link href="https://sometwo7.github.io/blog/877061f8.html"/>
+    <id>https://sometwo7.github.io/blog/877061f8.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -390,10 +390,10 @@
   
   <entry>
     <title>网络技术 - Git</title>
-    <link href="https://sometwo7.github.io/blog/post/685bfdc8.html"/>
-    <id>https://sometwo7.github.io/blog/post/685bfdc8.html</id>
+    <link href="https://sometwo7.github.io/blog/685bfdc8.html"/>
+    <id>https://sometwo7.github.io/blog/685bfdc8.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.067Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -411,10 +411,10 @@
   
   <entry>
     <title>网络技术 - 集群</title>
-    <link href="https://sometwo7.github.io/blog/post/78b8663.html"/>
-    <id>https://sometwo7.github.io/blog/post/78b8663.html</id>
+    <link href="https://sometwo7.github.io/blog/78b8663.html"/>
+    <id>https://sometwo7.github.io/blog/78b8663.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T08:49:36.071Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -435,10 +435,10 @@
   
   <entry>
     <title>网络技术 - Docker</title>
-    <link href="https://sometwo7.github.io/blog/post/1b4f4a15.html"/>
-    <id>https://sometwo7.github.io/blog/post/1b4f4a15.html</id>
+    <link href="https://sometwo7.github.io/blog/1b4f4a15.html"/>
+    <id>https://sometwo7.github.io/blog/1b4f4a15.html</id>
     <published>2019-11-05T10:01:11.000Z</published>
-    <updated>2019-11-12T08:49:36.067Z</updated>
+    <updated>2019-11-12T08:53:36.609Z</updated>
     
     <summary type="html">
     
@@ -456,10 +456,10 @@
   
   <entry>
     <title>从春招惨败到秋招收获 BAT OFFER</title>
-    <link href="https://sometwo7.github.io/blog/post/3c20f5a2.html"/>
-    <id>https://sometwo7.github.io/blog/post/3c20f5a2.html</id>
+    <link href="https://sometwo7.github.io/blog/3c20f5a2.html"/>
+    <id>https://sometwo7.github.io/blog/3c20f5a2.html</id>
     <published>2019-11-01T18:11:11.000Z</published>
-    <updated>2019-11-12T08:49:36.067Z</updated>
+    <updated>2019-11-12T08:53:36.605Z</updated>
     
     <summary type="html">
     

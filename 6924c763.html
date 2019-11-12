@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png?v=7.4.1">
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/blog/atom.xml" title="佚名" type="application/atom+xml">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="数学模型 1. 近似 2. 增长数量级 3. 内循环 4. 成本模型   注意事项 1. 大常数 2. 缓存 3. 对最坏情况下的性能的保证 4. 随机化算法 5. 均摊分析   ThreeSum 1. ThreeSumSlow 2. ThreeSumBinarySearch 3. ThreeSumTwoPointer   倍率实验">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法 - 算法分析">
+<meta property="og:url" content="https://sometwo7.github.io/blog/6924c763.html">
+<meta property="og:site_name" content="佚名">
+<meta property="og:description" content="数学模型 1. 近似 2. 增长数量级 3. 内循环 4. 成本模型   注意事项 1. 大常数 2. 缓存 3. 对最坏情况下的性能的保证 4. 随机化算法 5. 均摊分析   ThreeSum 1. ThreeSumSlow 2. ThreeSumBinarySearch 3. ThreeSumTwoPointer   倍率实验">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-12T08:53:36.609Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法 - 算法分析">
+<meta name="twitter:description" content="数学模型 1. 近似 2. 增长数量级 3. 内循环 4. 成本模型   注意事项 1. 大常数 2. 缓存 3. 对最坏情况下的性能的保证 4. 随机化算法 5. 均摊分析   ThreeSum 1. ThreeSumSlow 2. ThreeSumBinarySearch 3. ThreeSumTwoPointer   倍率实验">
+  <link rel="canonical" href="https://sometwo7.github.io/blog/6924c763">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>算法 - 算法分析 | 佚名</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">佚名</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">一生太短，请务必热情！(Life too short, just be active!)</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/6924c763.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">算法 - 算法分析
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-01 10:11:11" itemprop="dateCreated datePublished" datetime="2019-11-01T10:11:11+00:00">2019-11-01</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-12 08:53:36" itemprop="dateModified" datetime="2019-11-12T08:53:36+00:00">2019-11-12</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/算法1-0/" itemprop="url" rel="index"><span itemprop="name">算法1.0</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <ul>
+<li><a href="#数学模型">数学模型</a><ul>
+<li><a href="#1-近似">1. 近似</a></li>
+<li><a href="#2-增长数量级">2. 增长数量级</a></li>
+<li><a href="#3-内循环">3. 内循环</a></li>
+<li><a href="#4-成本模型">4. 成本模型</a></li>
+</ul>
+</li>
+<li><a href="#注意事项">注意事项</a><ul>
+<li><a href="#1-大常数">1. 大常数</a></li>
+<li><a href="#2-缓存">2. 缓存</a></li>
+<li><a href="#3-对最坏情况下的性能的保证">3. 对最坏情况下的性能的保证</a></li>
+<li><a href="#4-随机化算法">4. 随机化算法</a></li>
+<li><a href="#5-均摊分析">5. 均摊分析</a></li>
+</ul>
+</li>
+<li><a href="#threesum">ThreeSum</a><ul>
+<li><a href="#1-threesumslow">1. ThreeSumSlow</a></li>
+<li><a href="#2-threesumbinarysearch">2. ThreeSumBinarySearch</a></li>
+<li><a href="#3-threesumtwopointer">3. ThreeSumTwoPointer</a></li>
+</ul>
+</li>
+<li><a href="#倍率实验">倍率实验</a><!-- GFM-TOC -->
+
+
+</li>
+</ul><a id="more"></a><!-- GFM-TOC -->
+
+<h1 id="数学模型"><a href="#数学模型" class="headerlink" title="数学模型"></a>数学模型</h1><h2 id="1-近似"><a href="#1-近似" class="headerlink" title="1. 近似"></a>1. 近似</h2><p>N<sup>3</sup>/6-N<sup>2</sup>/2+N/3 ~ N<sup>3</sup>/6。使用 ~f(N) 来表示所有随着 N 的增大除以 f(N) 的结果趋近于 1 的函数。</p>
+<h2 id="2-增长数量级"><a href="#2-增长数量级" class="headerlink" title="2. 增长数量级"></a>2. 增长数量级</h2><p>N<sup>3</sup>/6-N<sup>2</sup>/2+N/3 的增长数量级为 O(N<sup>3</sup>)。增长数量级将算法与它的具体实现隔离开来，一个算法的增长数量级为 O(N<sup>3</sup>) 与它是否用 Java 实现，是否运行于特定计算机上无关。</p>
+<h2 id="3-内循环"><a href="#3-内循环" class="headerlink" title="3. 内循环"></a>3. 内循环</h2><p>执行最频繁的指令决定了程序执行的总时间，把这些指令称为程序的内循环。</p>
+<h2 id="4-成本模型"><a href="#4-成本模型" class="headerlink" title="4. 成本模型"></a>4. 成本模型</h2><p>使用成本模型来评估算法，例如数组的访问次数就是一种成本模型。</p>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><h2 id="1-大常数"><a href="#1-大常数" class="headerlink" title="1. 大常数"></a>1. 大常数</h2><p>在求近似时，如果低级项的常数系数很大，那么近似的结果是错误的。</p>
+<h2 id="2-缓存"><a href="#2-缓存" class="headerlink" title="2. 缓存"></a>2. 缓存</h2><p>计算机系统会使用缓存技术来组织内存，访问数组相邻的元素会比访问不相邻的元素快很多。</p>
+<h2 id="3-对最坏情况下的性能的保证"><a href="#3-对最坏情况下的性能的保证" class="headerlink" title="3. 对最坏情况下的性能的保证"></a>3. 对最坏情况下的性能的保证</h2><p>在核反应堆、心脏起搏器或者刹车控制器中的软件，最坏情况下的性能是十分重要的。</p>
+<h2 id="4-随机化算法"><a href="#4-随机化算法" class="headerlink" title="4. 随机化算法"></a>4. 随机化算法</h2><p>通过打乱输入，去除算法对输入的依赖。</p>
+<h2 id="5-均摊分析"><a href="#5-均摊分析" class="headerlink" title="5. 均摊分析"></a>5. 均摊分析</h2><p>将所有操作的总成本除于操作总数来将成本均摊。例如对一个空栈进行 N 次连续的 push() 调用需要访问数组的次数为 N+4+8+16+...+2N=5N-4（N 是向数组写入元素的次数，其余都是调整数组大小时进行复制需要的访问数组次数），均摊后访问数组的平均次数为常数。</p>
+<h1 id="ThreeSum"><a href="#ThreeSum" class="headerlink" title="ThreeSum"></a>ThreeSum</h1><p>ThreeSum 用于统计一个数组中和为 0 的三元组数量。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ThreeSum</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-ThreeSumSlow"><a href="#1-ThreeSumSlow" class="headerlink" title="1. ThreeSumSlow"></a>1. ThreeSumSlow</h2><p>该算法的内循环为 <code>if (nums[i] + nums[j] + nums[k] == 0)</code> 语句，总共执行的次数为 N(N-1)(N-2) = N<sup>3</sup>/6-N<sup>2</sup>/2+N/3，因此它的近似执行次数为 ~N<sup>3</sup>/6，增长数量级为 O(N<sup>3</sup>)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreeSumSlow</span> <span class="keyword">implements</span> <span class="title">ThreeSum</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> N = nums.length;</span><br><span class="line">        <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; N; j++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k = j + <span class="number">1</span>; k &lt; N; k++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (nums[i] + nums[j] + nums[k] == <span class="number">0</span>) &#123;</span><br><span class="line">                        cnt++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cnt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-ThreeSumBinarySearch"><a href="#2-ThreeSumBinarySearch" class="headerlink" title="2. ThreeSumBinarySearch"></a>2. ThreeSumBinarySearch</h2><p>将数组进行排序，对两个元素求和，并用二分查找方法查找是否存在该和的相反数，如果存在，就说明存在和为 0 的三元组。</p>
+<p>应该注意的是，只有数组不含有相同元素才能使用这种解法，否则二分查找的结果会出错。</p>
+<p>该方法可以将 ThreeSum 算法增长数量级降低为 O(N<sup>2</sup>logN)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreeSumBinarySearch</span> <span class="keyword">implements</span> <span class="title">ThreeSum</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">int</span> N = nums.length;</span><br><span class="line">        <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; N; j++) &#123;</span><br><span class="line">                <span class="keyword">int</span> target = -nums[i] - nums[j];</span><br><span class="line">                <span class="keyword">int</span> index = BinarySearch.search(nums, target);</span><br><span class="line">                <span class="comment">// 应该注意这里的下标必须大于 j，否则会重复统计。</span></span><br><span class="line">                <span class="keyword">if</span> (index &gt; j) &#123;</span><br><span class="line">                    cnt++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cnt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySearch</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>, h = nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt;= h) &#123;</span><br><span class="line">            <span class="keyword">int</span> m = l + (h - l) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (target == nums[m]) &#123;</span><br><span class="line">                <span class="keyword">return</span> m;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (target &gt; nums[m]) &#123;</span><br><span class="line">                l = m + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                h = m - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-ThreeSumTwoPointer"><a href="#3-ThreeSumTwoPointer" class="headerlink" title="3. ThreeSumTwoPointer"></a>3. ThreeSumTwoPointer</h2><p>更有效的方法是先将数组排序，然后使用双指针进行查找，时间复杂度为 O(N<sup>2</sup>)。</p>
+<p>同样不适用与数组存在重复元素的情况。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreeSumTwoPointer</span> <span class="keyword">implements</span> <span class="title">ThreeSum</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">count</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> N = nums.length;</span><br><span class="line">        <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N - <span class="number">2</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> l = i + <span class="number">1</span>, h = N - <span class="number">1</span>, target = -nums[i];</span><br><span class="line">            <span class="keyword">while</span> (l &lt; h) &#123;</span><br><span class="line">                <span class="keyword">int</span> sum = nums[l] + nums[h];</span><br><span class="line">                <span class="keyword">if</span> (sum == target) &#123;</span><br><span class="line">                    cnt++;</span><br><span class="line">                    l++;</span><br><span class="line">                    h--;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; target) &#123;</span><br><span class="line">                    l++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    h--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cnt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="倍率实验"><a href="#倍率实验" class="headerlink" title="倍率实验"></a>倍率实验</h1><p>如果 T(N) ~ aN<sup>b</sup>logN，那么 T(2N)/T(N) ~ 2<sup>b</sup>。</p>
+<p>例如对于暴力的 ThreeSum 算法，近似时间为 ~N<sup>3</sup>/6。进行如下实验：多次运行该算法，每次取的 N 值为前一次的两倍，统计每次执行的时间，并统计本次运行时间与前一次运行时间的比值，得到如下结果：</p>
+<table>
+<thead>
+<tr>
+<th align="center">N</th>
+<th align="center">Time(ms)</th>
+<th align="center">Ratio</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">500</td>
+<td align="center">48</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">1000</td>
+<td align="center">320</td>
+<td align="center">6.7</td>
+</tr>
+<tr>
+<td align="center">2000</td>
+<td align="center">555</td>
+<td align="center">1.7</td>
+</tr>
+<tr>
+<td align="center">4000</td>
+<td align="center">4105</td>
+<td align="center">7.4</td>
+</tr>
+<tr>
+<td align="center">8000</td>
+<td align="center">33575</td>
+<td align="center">8.2</td>
+</tr>
+<tr>
+<td align="center">16000</td>
+<td align="center">268909</td>
+<td align="center">8.0</td>
+</tr>
+</tbody></table>
+<p>可以看到，T(2N)/T(N) ~ 2<sup>3</sup>，因此可以确定 T(N) ~ aN<sup>3</sup>logN。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RatioTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> N = <span class="number">500</span>;</span><br><span class="line">        <span class="keyword">int</span> loopTimes = <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">double</span> preTime = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (loopTimes-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span>[] nums = <span class="keyword">new</span> <span class="keyword">int</span>[N];</span><br><span class="line">            StopWatch.start();</span><br><span class="line">            ThreeSum threeSum = <span class="keyword">new</span> ThreeSumSlow();</span><br><span class="line">            <span class="keyword">int</span> cnt = threeSum.count(nums);</span><br><span class="line">            System.out.println(cnt);</span><br><span class="line">            <span class="keyword">double</span> elapsedTime = StopWatch.elapsedTime();</span><br><span class="line">            <span class="keyword">double</span> ratio = preTime == -<span class="number">1</span> ? <span class="number">0</span> : elapsedTime / preTime;</span><br><span class="line">            System.out.println(N + <span class="string">"  "</span> + elapsedTime + <span class="string">"  "</span> + ratio);</span><br><span class="line">            preTime = elapsedTime;</span><br><span class="line">            N *= <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StopWatch</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">long</span> start;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        start = System.currentTimeMillis();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">elapsedTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> now = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">return</span> (now - start) / <span class="number">1000.0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/blog/tags/算法/" rel="tag"># 算法</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/blog/75f4fee9.html" rel="next" title="剑指 Offer 题解 - 60~68">
+                  <i class="fa fa-chevron-left"></i> 剑指 Offer 题解 - 60~68
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/blog/d003da9e.html" rel="prev" title="算法 - 排序">
+                  算法 - 排序 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数学模型"><span class="nav-number">1.</span> <span class="nav-text">数学模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-近似"><span class="nav-number">1.1.</span> <span class="nav-text">1. 近似</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-增长数量级"><span class="nav-number">1.2.</span> <span class="nav-text">2. 增长数量级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-内循环"><span class="nav-number">1.3.</span> <span class="nav-text">3. 内循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-成本模型"><span class="nav-number">1.4.</span> <span class="nav-text">4. 成本模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注意事项"><span class="nav-number">2.</span> <span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-大常数"><span class="nav-number">2.1.</span> <span class="nav-text">1. 大常数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-缓存"><span class="nav-number">2.2.</span> <span class="nav-text">2. 缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-对最坏情况下的性能的保证"><span class="nav-number">2.3.</span> <span class="nav-text">3. 对最坏情况下的性能的保证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-随机化算法"><span class="nav-number">2.4.</span> <span class="nav-text">4. 随机化算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-均摊分析"><span class="nav-number">2.5.</span> <span class="nav-text">5. 均摊分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ThreeSum"><span class="nav-number">3.</span> <span class="nav-text">ThreeSum</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ThreeSumSlow"><span class="nav-number">3.1.</span> <span class="nav-text">1. ThreeSumSlow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-ThreeSumBinarySearch"><span class="nav-number">3.2.</span> <span class="nav-text">2. ThreeSumBinarySearch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ThreeSumTwoPointer"><span class="nav-number">3.3.</span> <span class="nav-text">3. ThreeSumTwoPointer</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#倍率实验"><span class="nav-number">4.</span> <span class="nav-text">倍率实验</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png"
+      alt="Sometwo">
+  <p class="site-author-name" itemprop="name">Sometwo</p>
+  <div class="site-description" itemprop="description">一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/blog/categories/">
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/blog/tags/">
+          
+        
+        <span class="site-state-item-count">73</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/blog/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/sometwo7" title="GitHub &rarr; https://github.com/sometwo7" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sometwo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/blog/js/utils.js?v=7.4.1"></script><script src="/blog/js/motion.js?v=7.4.1"></script>
+<script src="/blog/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/blog/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/blog/js/local-search.js?v=7.4.1"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
