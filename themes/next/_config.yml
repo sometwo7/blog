@@ -40,8 +40,8 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png #/images/favicon-16x16-next.png
-  medium: http://sometwo.org/wp-content/themes/JieStyle-Two-master/images/icon_32.png #/images/favicon-32x32-next.png
+  small: pics/e4a8b75f94b06499ad0078f58954e6a8.png #/images/favicon-16x16-next.png
+  medium: pics/e4a8b75f94b06499ad0078f58954e6a8.png #/images/favicon-32x32-next.png
   apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
