@@ -56,18 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="一、性能 二、伸缩性 三、扩展性 四、可用性 五、安全性 参考资料    一、性能性能指标1. 响应时间指某个请求从发出到接收到响应消耗的时间。在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。2. 吞吐量指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。3. 并发用户数">
+  <meta name="description" content="一、性能性能指标1. 响应时间指某个请求从发出到接收到响应消耗的时间。在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。2. 吞吐量指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。3. 并发用户数指系统能同时处理的并发用户请求数量。在没有并发存在的系统中，请求被顺序执行，此时响应时间为吞吐量的倒数。例如系统支持的吞吐量为 100 req/s，那么平均响应时间应">
 <meta name="keywords" content="系统设计">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络技术 - 系统设计基础">
 <meta property="og:url" content="https://sometwo7.github.io/blog/post/bf574124.html">
 <meta property="og:site_name" content="佚名">
-<meta property="og:description" content="一、性能 二、伸缩性 三、扩展性 四、可用性 五、安全性 参考资料    一、性能性能指标1. 响应时间指某个请求从发出到接收到响应消耗的时间。在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。2. 吞吐量指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。3. 并发用户数">
+<meta property="og:description" content="一、性能性能指标1. 响应时间指某个请求从发出到接收到响应消耗的时间。在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。2. 吞吐量指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。3. 并发用户数指系统能同时处理的并发用户请求数量。在没有并发存在的系统中，请求被顺序执行，此时响应时间为吞吐量的倒数。例如系统支持的吞吐量为 100 req/s，那么平均响应时间应">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-05T13:02:39.948Z">
+<meta property="og:updated_time" content="2019-11-12T06:21:18.312Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络技术 - 系统设计基础">
-<meta name="twitter:description" content="一、性能 二、伸缩性 三、扩展性 四、可用性 五、安全性 参考资料    一、性能性能指标1. 响应时间指某个请求从发出到接收到响应消耗的时间。在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。2. 吞吐量指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。3. 并发用户数">
+<meta name="twitter:description" content="一、性能性能指标1. 响应时间指某个请求从发出到接收到响应消耗的时间。在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。2. 吞吐量指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。3. 并发用户数指系统能同时处理的并发用户请求数量。在没有并发存在的系统中，请求被顺序执行，此时响应时间为吞吐量的倒数。例如系统支持的吞吐量为 100 req/s，那么平均响应时间应">
   <link rel="canonical" href="https://sometwo7.github.io/blog/post/bf574124">
 
 
@@ -275,11 +275,19 @@
                 
               
 
-              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
+              <time title="创建时间：2019-11-05 10:02:11" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-12 06:21:18" itemprop="dateModified" datetime="2019-11-12T06:21:18+00:00">2019-11-12</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -307,23 +315,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li><a href="#一性能">一、性能</a></li>
-<li><a href="#二伸缩性">二、伸缩性</a></li>
-<li><a href="#三扩展性">三、扩展性</a></li>
-<li><a href="#四可用性">四、可用性</a></li>
-<li><a href="#五安全性">五、安全性</a></li>
-<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
-
-
-</li>
-</ul><h1 id="一、性能"><a href="#一、性能" class="headerlink" title="一、性能"></a>一、性能</h1><h2 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h2><h3 id="1-响应时间"><a href="#1-响应时间" class="headerlink" title="1. 响应时间"></a>1. 响应时间</h3><p>指某个请求从发出到接收到响应消耗的时间。</p><p>在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。</p><h3 id="2-吞吐量"><a href="#2-吞吐量" class="headerlink" title="2. 吞吐量"></a>2. 吞吐量</h3><p>指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。</p><h3 id="3-并发用户数"><a href="#3-并发用户数" class="headerlink" title="3. 并发用户数"></a>3. 并发用户数</h3><a id="more"></a><!-- GFM-TOC -->
+        <h1 id="一、性能"><a href="#一、性能" class="headerlink" title="一、性能"></a>一、性能</h1><h2 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h2><h3 id="1-响应时间"><a href="#1-响应时间" class="headerlink" title="1. 响应时间"></a>1. 响应时间</h3><p>指某个请求从发出到接收到响应消耗的时间。</p><p>在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。</p><h3 id="2-吞吐量"><a href="#2-吞吐量" class="headerlink" title="2. 吞吐量"></a>2. 吞吐量</h3><p>指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。</p><h3 id="3-并发用户数"><a href="#3-并发用户数" class="headerlink" title="3. 并发用户数"></a>3. 并发用户数</h3><p>指系统能同时处理的并发用户请求数量。</p><p>在没有并发存在的系统中，请求被顺序执行，此时响应时间为吞吐量的倒数。例如系统支持的吞吐量为 100 req/s，那么平均响应时间应该为 0.01s。</p><a id="more"></a>
 
 
 
 
-<p>指系统能同时处理的并发用户请求数量。</p>
-<p>在没有并发存在的系统中，请求被顺序执行，此时响应时间为吞吐量的倒数。例如系统支持的吞吐量为 100 req/s，那么平均响应时间应该为 0.01s。</p>
 <p>目前的大型系统都支持多线程来处理并发请求，多线程能够提高吞吐量以及缩短响应时间，主要有两个原因：</p>
 <ul>
 <li>多 CPU</li>
@@ -392,8 +388,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/blog/post/ecffdd03.html" rel="prev" title="网络技术 - Socket">
-                  网络技术 - Socket <i class="fa fa-chevron-right"></i>
+                <a href="/blog/post/7a9a193e.html" rel="prev" title="网络技术 - 面向对象思想">
+                  网络技术 - 面向对象思想 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>

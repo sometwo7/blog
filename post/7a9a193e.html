@@ -56,13 +56,13 @@
   };
 </script>
 
-  <meta name="description" content="一、三大特性 封装 继承 多态   二、类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association) 依赖关系 (Dependency)   三、设计原则 S.O.L.I.D 其他常见原则   参考资料">
+  <meta name="description" content="一、三大特性封装利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。优点： 减少耦合：可以独立地开发、测试、优化、使用、理解和修改 减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模">
 <meta name="keywords" content="对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络技术 - 面向对象思想">
 <meta property="og:url" content="https://sometwo7.github.io/blog/post/7a9a193e.html">
 <meta property="og:site_name" content="佚名">
-<meta property="og:description" content="一、三大特性 封装 继承 多态   二、类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association) 依赖关系 (Dependency)   三、设计原则 S.O.L.I.D 其他常见原则   参考资料">
+<meta property="og:description" content="一、三大特性封装利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。优点： 减少耦合：可以独立地开发、测试、优化、使用、理解和修改 减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/c0874e0a-dba3-467e-9c86-dd9313e0843e.jpg">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/83d466bd-946b-4430-854a-cf7b0696d4c8.jpg">
@@ -70,10 +70,10 @@
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/6a88a398-c494-41f5-bb62-9f7fb811df7c.jpg">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/a3e4dc62-0da5-4d22-94f2-140078281812.jpg">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/379444c9-f1d1-45cd-b7aa-b0c18427d388.jpg">
-<meta property="og:updated_time" content="2019-11-05T13:02:39.948Z">
+<meta property="og:updated_time" content="2019-11-12T06:21:18.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络技术 - 面向对象思想">
-<meta name="twitter:description" content="一、三大特性 封装 继承 多态   二、类图 泛化关系 (Generalization) 实现关系 (Realization) 聚合关系 (Aggregation) 组合关系 (Composition) 关联关系 (Association) 依赖关系 (Dependency)   三、设计原则 S.O.L.I.D 其他常见原则   参考资料">
+<meta name="twitter:description" content="一、三大特性封装利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。优点： 减少耦合：可以独立地开发、测试、优化、使用、理解和修改 减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模">
 <meta name="twitter:image" content="https://sometwo7.github.io/blog/post/pics/c0874e0a-dba3-467e-9c86-dd9313e0843e.jpg">
   <link rel="canonical" href="https://sometwo7.github.io/blog/post/7a9a193e">
 
@@ -282,11 +282,19 @@
                 
               
 
-              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
+              <time title="创建时间：2019-11-05 10:02:11" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-12 06:21:18" itemprop="dateModified" datetime="2019-11-12T06:21:18+00:00">2019-11-12</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -314,42 +322,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li><a href="#一三大特性">一、三大特性</a><ul>
-<li><a href="#封装">封装</a></li>
-<li><a href="#继承">继承</a></li>
-<li><a href="#多态">多态</a></li>
-</ul>
-</li>
-<li><a href="#二类图">二、类图</a><ul>
-<li><a href="#泛化关系-generalization">泛化关系 (Generalization)</a></li>
-<li><a href="#实现关系-realization">实现关系 (Realization)</a></li>
-<li><a href="#聚合关系-aggregation">聚合关系 (Aggregation)</a></li>
-<li><a href="#组合关系-composition">组合关系 (Composition)</a></li>
-<li><a href="#关联关系-association">关联关系 (Association)</a></li>
-<li><a href="#依赖关系-dependency">依赖关系 (Dependency)</a></li>
-</ul>
-</li>
-<li><a href="#三设计原则">三、设计原则</a><ul>
-<li><a href="#solid">S.O.L.I.D</a></li>
-<li><a href="#其他常见原则">其他常见原则</a></li>
-</ul>
-</li>
-<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
-
-
-</li>
-</ul><a id="more"></a><!-- GFM-TOC -->
-
-<h1 id="一、三大特性"><a href="#一、三大特性" class="headerlink" title="一、三大特性"></a>一、三大特性</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。</p>
-<p>优点：</p>
-<ul>
+        <h1 id="一、三大特性"><a href="#一、三大特性" class="headerlink" title="一、三大特性"></a>一、三大特性</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。</p><p>优点：</p><ul>
 <li>减少耦合：可以独立地开发、测试、优化、使用、理解和修改</li>
 <li>减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模块</li>
 <li>有效地调节性能：可以通过剖析来确定哪些模块影响了系统的性能</li>
 <li>提高软件的可重用性</li>
 <li>降低了构建大型系统的风险：即使整个系统不可用，但是这些独立的模块却有可能是可用的</li>
-</ul>
+</ul><a id="more"></a>
+
+
 <p>以下 Person 类封装 name、gender、age 等属性，外界只能通过 get() 方法获取一个 Person 对象的 name 属性和 gender 属性，而无法获取 age 属性，但是 age 属性可以供 work() 方法使用。</p>
 <p>注意到 gender 属性使用 int 数据类型进行存储，封装使得用户注意不到这种实现细节。并且在需要修改 gender 属性使用的数据类型时，也可以在不影响客户端代码的情况下进行。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> gender;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getGender</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> gender == <span class="number">0</span> ? <span class="string">"man"</span> : <span class="string">"woman"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="number">18</span> &lt;= age &amp;&amp; age &lt;= <span class="number">50</span>) &#123;</span><br><span class="line">            System.out.println(name + <span class="string">" is working very hard!"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(name + <span class="string">" can't work any more!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -545,8 +526,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/blog/post/1b4f4a15.html" rel="next" title="网络技术 - Docker">
-                  <i class="fa fa-chevron-left"></i> 网络技术 - Docker
+                <a href="/blog/post/bf574124.html" rel="next" title="网络技术 - 系统设计基础">
+                  <i class="fa fa-chevron-left"></i> 网络技术 - 系统设计基础
                 </a>
               
             </div>
@@ -555,8 +536,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/blog/post/685bfdc8.html" rel="prev" title="网络技术 - Git">
-                  网络技术 - Git <i class="fa fa-chevron-right"></i>
+                <a href="/blog/post/ecffdd03.html" rel="prev" title="网络技术 - Socket">
+                  网络技术 - Socket <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>

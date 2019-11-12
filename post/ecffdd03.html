@@ -56,13 +56,13 @@
   };
 </script>
 
-  <meta name="description" content="一、I/O 模型 阻塞式 I/O 非阻塞式 I/O I/O 复用 信号驱动 I/O 异步 I/O 五大 I/O 模型比较   二、I/O 复用 select poll 比较 epoll 工作模式 应用场景   参考资料    一、I/O 模型一个输入操作通常包括两个阶段： 等待数据准备好 从内核向进程复制数据">
+  <meta name="description" content="一、I/O 模型一个输入操作通常包括两个阶段： 等待数据准备好 从内核向进程复制数据 对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。Unix 有五种 I/O 模型： 阻塞式 I/O 非阻塞式 I/O I/O 复用（select 和 poll） 信号驱动式 I/O（SIGIO） 异步">
 <meta name="keywords" content="socket">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络技术 - Socket">
 <meta property="og:url" content="https://sometwo7.github.io/blog/post/ecffdd03.html">
 <meta property="og:site_name" content="佚名">
-<meta property="og:description" content="一、I/O 模型 阻塞式 I/O 非阻塞式 I/O I/O 复用 信号驱动 I/O 异步 I/O 五大 I/O 模型比较   二、I/O 复用 select poll 比较 epoll 工作模式 应用场景   参考资料    一、I/O 模型一个输入操作通常包括两个阶段： 等待数据准备好 从内核向进程复制数据">
+<meta property="og:description" content="一、I/O 模型一个输入操作通常包括两个阶段： 等待数据准备好 从内核向进程复制数据 对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。Unix 有五种 I/O 模型： 阻塞式 I/O 非阻塞式 I/O I/O 复用（select 和 poll） 信号驱动式 I/O（SIGIO） 异步">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/1492928416812_4.png">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/1492929000361_5.png">
@@ -71,10 +71,10 @@
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/1492930243286_8.png">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/1492928105791_3.png">
 <meta property="og:image" content="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/githubio/公众号二维码-1.png">
-<meta property="og:updated_time" content="2019-11-05T13:02:39.948Z">
+<meta property="og:updated_time" content="2019-11-12T06:21:18.312Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络技术 - Socket">
-<meta name="twitter:description" content="一、I/O 模型 阻塞式 I/O 非阻塞式 I/O I/O 复用 信号驱动 I/O 异步 I/O 五大 I/O 模型比较   二、I/O 复用 select poll 比较 epoll 工作模式 应用场景   参考资料    一、I/O 模型一个输入操作通常包括两个阶段： 等待数据准备好 从内核向进程复制数据">
+<meta name="twitter:description" content="一、I/O 模型一个输入操作通常包括两个阶段： 等待数据准备好 从内核向进程复制数据 对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。Unix 有五种 I/O 模型： 阻塞式 I/O 非阻塞式 I/O I/O 复用（select 和 poll） 信号驱动式 I/O（SIGIO） 异步">
 <meta name="twitter:image" content="https://sometwo7.github.io/blog/post/pics/1492928416812_4.png">
   <link rel="canonical" href="https://sometwo7.github.io/blog/post/ecffdd03">
 
@@ -283,11 +283,19 @@
                 
               
 
-              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
+              <time title="创建时间：2019-11-05 10:02:11" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-12 06:21:18" itemprop="dateModified" datetime="2019-11-12T06:21:18+00:00">2019-11-12</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -315,45 +323,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li><a href="#一io-模型">一、I/O 模型</a><ul>
-<li><a href="#阻塞式-io">阻塞式 I/O</a></li>
-<li><a href="#非阻塞式-io">非阻塞式 I/O</a></li>
-<li><a href="#io-复用">I/O 复用</a></li>
-<li><a href="#信号驱动-io">信号驱动 I/O</a></li>
-<li><a href="#异步-io">异步 I/O</a></li>
-<li><a href="#五大-io-模型比较">五大 I/O 模型比较</a></li>
-</ul>
-</li>
-<li><a href="#二io-复用">二、I/O 复用</a><ul>
-<li><a href="#select">select</a></li>
-<li><a href="#poll">poll</a></li>
-<li><a href="#比较">比较</a></li>
-<li><a href="#epoll">epoll</a></li>
-<li><a href="#工作模式">工作模式</a></li>
-<li><a href="#应用场景">应用场景</a></li>
-</ul>
-</li>
-<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
-
-
-</li>
-</ul><h1 id="一、I-O-模型"><a href="#一、I-O-模型" class="headerlink" title="一、I/O 模型"></a>一、I/O 模型</h1><p>一个输入操作通常包括两个阶段：</p><ul>
+        <h1 id="一、I-O-模型"><a href="#一、I-O-模型" class="headerlink" title="一、I/O 模型"></a>一、I/O 模型</h1><p>一个输入操作通常包括两个阶段：</p><ul>
 <li>等待数据准备好</li>
 <li>从内核向进程复制数据</li>
-</ul><a id="more"></a><!-- GFM-TOC -->
-
-
-
-<p>对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。</p>
-<p>Unix 有五种 I/O 模型：</p>
-<ul>
+</ul><p>对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。</p><p>Unix 有五种 I/O 模型：</p><ul>
 <li>阻塞式 I/O</li>
 <li>非阻塞式 I/O</li>
 <li>I/O 复用（select 和 poll）</li>
 <li>信号驱动式 I/O（SIGIO）</li>
 <li>异步 I/O（AIO）</li>
-</ul>
+</ul><a id="more"></a>
+
+
+
+
 <h2 id="阻塞式-I-O"><a href="#阻塞式-I-O" class="headerlink" title="阻塞式 I/O"></a>阻塞式 I/O</h2><p>应用进程被阻塞，直到数据从内核缓冲区复制到应用进程缓冲区中才返回。</p>
 <p>应该注意到，在阻塞的过程中，其它应用进程还可以执行，因此阻塞不意味着整个操作系统都被阻塞。因为其它应用进程还可以执行，所以不消耗 CPU 时间，这种模型的 CPU 利用率会比较高。</p>
 <p>下图中，recvfrom() 用于接收 Socket 传来的数据，并复制到应用进程的缓冲区 buf 中。这里把 recvfrom() 当成系统调用。</p>
@@ -474,8 +457,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/blog/post/bf574124.html" rel="next" title="网络技术 - 系统设计基础">
-                  <i class="fa fa-chevron-left"></i> 网络技术 - 系统设计基础
+                <a href="/blog/post/7a9a193e.html" rel="next" title="网络技术 - 面向对象思想">
+                  <i class="fa fa-chevron-left"></i> 网络技术 - 面向对象思想
                 </a>
               
             </div>

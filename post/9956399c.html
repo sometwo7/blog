@@ -56,13 +56,13 @@
   };
 </script>
 
-  <meta name="description" content="一、概述 二、创建型 1. 单例（Singleton） 2. 简单工厂（Simple Factory） 3. 工厂方法（Factory Method） 4. 抽象工厂（Abstract Factory） 5. 生成器（Builder） 6. 原型模式（Prototype）   三、行为型 1. 责任链（Chain Of Responsibility） 2. 命令（Command） 3. 解释器（">
+  <meta name="description" content="一、概述设计模式是解决问题的方案，学习现有的设计模式可以做到经验复用。拥有设计模式词汇，在沟通时就能用更少的词汇来讨论，并且不需要了解底层细节。二、创建型1. 单例（Singleton）Intent确保一个类只有一个实例，并提供该实例的全局访问点。Class Diagram使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。">
 <meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络技术 - 设计模式">
 <meta property="og:url" content="https://sometwo7.github.io/blog/post/9956399c.html">
 <meta property="og:site_name" content="佚名">
-<meta property="og:description" content="一、概述 二、创建型 1. 单例（Singleton） 2. 简单工厂（Simple Factory） 3. 工厂方法（Factory Method） 4. 抽象工厂（Abstract Factory） 5. 生成器（Builder） 6. 原型模式（Prototype）   三、行为型 1. 责任链（Chain Of Responsibility） 2. 命令（Command） 3. 解释器（">
+<meta property="og:description" content="一、概述设计模式是解决问题的方案，学习现有的设计模式可以做到经验复用。拥有设计模式词汇，在沟通时就能用更少的词汇来讨论，并且不需要了解底层细节。二、创建型1. 单例（Singleton）Intent确保一个类只有一个实例，并提供该实例的全局访问点。Class Diagram使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/eca1f422-8381-409b-ad04-98ef39ae38ba.png">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/40c0c17e-bba6-4493-9857-147c0044a018.png">
@@ -98,10 +98,10 @@
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/f9978fa6-9f49-4a0f-8540-02d269ac448f.png">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/5f5c22d5-9c0e-49e1-b5b0-6cc7032724d4.png">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/9b679ff5-94c6-48a7-b9b7-2ea868e828ed.png">
-<meta property="og:updated_time" content="2019-11-05T13:02:39.948Z">
+<meta property="og:updated_time" content="2019-11-12T06:21:18.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络技术 - 设计模式">
-<meta name="twitter:description" content="一、概述 二、创建型 1. 单例（Singleton） 2. 简单工厂（Simple Factory） 3. 工厂方法（Factory Method） 4. 抽象工厂（Abstract Factory） 5. 生成器（Builder） 6. 原型模式（Prototype）   三、行为型 1. 责任链（Chain Of Responsibility） 2. 命令（Command） 3. 解释器（">
+<meta name="twitter:description" content="一、概述设计模式是解决问题的方案，学习现有的设计模式可以做到经验复用。拥有设计模式词汇，在沟通时就能用更少的词汇来讨论，并且不需要了解底层细节。二、创建型1. 单例（Singleton）Intent确保一个类只有一个实例，并提供该实例的全局访问点。Class Diagram使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。">
 <meta name="twitter:image" content="https://sometwo7.github.io/blog/post/pics/eca1f422-8381-409b-ad04-98ef39ae38ba.png">
   <link rel="canonical" href="https://sometwo7.github.io/blog/post/9956399c">
 
@@ -310,11 +310,19 @@
                 
               
 
-              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
+              <time title="创建时间：2019-11-05 10:02:11" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-12 06:21:18" itemprop="dateModified" datetime="2019-11-12T06:21:18+00:00">2019-11-12</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -342,52 +350,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li><a href="#一概述">一、概述</a></li>
-<li><a href="#二创建型">二、创建型</a><ul>
-<li><a href="#1-单例singleton">1. 单例（Singleton）</a></li>
-<li><a href="#2-简单工厂simple-factory">2. 简单工厂（Simple Factory）</a></li>
-<li><a href="#3-工厂方法factory-method">3. 工厂方法（Factory Method）</a></li>
-<li><a href="#4-抽象工厂abstract-factory">4. 抽象工厂（Abstract Factory）</a></li>
-<li><a href="#5-生成器builder">5. 生成器（Builder）</a></li>
-<li><a href="#6-原型模式prototype">6. 原型模式（Prototype）</a></li>
-</ul>
-</li>
-<li><a href="#三行为型">三、行为型</a><ul>
-<li><a href="#1-责任链chain-of-responsibility">1. 责任链（Chain Of Responsibility）</a></li>
-<li><a href="#2-命令command">2. 命令（Command）</a></li>
-<li><a href="#3-解释器interpreter">3. 解释器（Interpreter）</a></li>
-<li><a href="#4-迭代器iterator">4. 迭代器（Iterator）</a></li>
-<li><a href="#5-中介者mediator">5. 中介者（Mediator）</a></li>
-<li><a href="#6-备忘录memento">6. 备忘录（Memento）</a></li>
-<li><a href="#7-观察者observer">7. 观察者（Observer）</a></li>
-<li><a href="#8-状态state">8. 状态（State）</a></li>
-<li><a href="#9-策略strategy">9. 策略（Strategy）</a></li>
-<li><a href="#10-模板方法template-method">10. 模板方法（Template Method）</a></li>
-<li><a href="#11-访问者visitor">11. 访问者（Visitor）</a></li>
-<li><a href="#12-空对象null">12. 空对象（Null）</a></li>
-</ul>
-</li>
-<li><a href="#四结构型">四、结构型</a><ul>
-<li><a href="#1-适配器adapter">1. 适配器（Adapter）</a></li>
-<li><a href="#2-桥接bridge">2. 桥接（Bridge）</a></li>
-<li><a href="#3-组合composite">3. 组合（Composite）</a></li>
-<li><a href="#4-装饰decorator">4. 装饰（Decorator）</a></li>
-<li><a href="#5-外观facade">5. 外观（Facade）</a></li>
-<li><a href="#6-享元flyweight">6. 享元（Flyweight）</a></li>
-<li><a href="#7-代理proxy">7. 代理（Proxy）</a></li>
-</ul>
-</li>
-<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
+        <h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>设计模式是解决问题的方案，学习现有的设计模式可以做到经验复用。</p><p>拥有设计模式词汇，在沟通时就能用更少的词汇来讨论，并且不需要了解底层细节。</p><h1 id="二、创建型"><a href="#二、创建型" class="headerlink" title="二、创建型"></a>二、创建型</h1><h2 id="1-单例（Singleton）"><a href="#1-单例（Singleton）" class="headerlink" title="1. 单例（Singleton）"></a>1. 单例（Singleton）</h2><h3 id="Intent"><a href="#Intent" class="headerlink" title="Intent"></a>Intent</h3><p>确保一个类只有一个实例，并提供该实例的全局访问点。</p><h3 id="Class-Diagram"><a href="#Class-Diagram" class="headerlink" title="Class Diagram"></a>Class Diagram</h3><p>使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。</p><a id="more"></a>
 
 
-</li>
-</ul><a id="more"></a><!-- GFM-TOC -->
 
-<h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>设计模式是解决问题的方案，学习现有的设计模式可以做到经验复用。</p>
-<p>拥有设计模式词汇，在沟通时就能用更少的词汇来讨论，并且不需要了解底层细节。</p>
-<h1 id="二、创建型"><a href="#二、创建型" class="headerlink" title="二、创建型"></a>二、创建型</h1><h2 id="1-单例（Singleton）"><a href="#1-单例（Singleton）" class="headerlink" title="1. 单例（Singleton）"></a>1. 单例（Singleton）</h2><h3 id="Intent"><a href="#Intent" class="headerlink" title="Intent"></a>Intent</h3><p>确保一个类只有一个实例，并提供该实例的全局访问点。</p>
-<h3 id="Class-Diagram"><a href="#Class-Diagram" class="headerlink" title="Class Diagram"></a>Class Diagram</h3><p>使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。</p>
 <p>私有构造函数保证了不能通过构造函数来创建对象实例，只能通过公有静态函数返回唯一的私有静态变量。</p>
 <div align="center"> <img src="pics/eca1f422-8381-409b-ad04-98ef39ae38ba.png"> </div><br>
 
@@ -1058,8 +1024,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/blog/post/78b8663.html" rel="next" title="网络技术 - 集群">
-                  <i class="fa fa-chevron-left"></i> 网络技术 - 集群
+                <a href="/blog/post/38ddab86.html" rel="next" title="网络技术 - 正则表达式">
+                  <i class="fa fa-chevron-left"></i> 网络技术 - 正则表达式
                 </a>
               
             </div>
@@ -1068,8 +1034,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/blog/post/51d10326.html" rel="prev" title="网络技术 - 消息队列">
-                  网络技术 - 消息队列 <i class="fa fa-chevron-right"></i>
+                <a href="/blog/post/64a35ad1.html" rel="prev" title="网络技术 - 缓存">
+                  网络技术 - 缓存 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>

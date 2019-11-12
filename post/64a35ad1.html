@@ -56,21 +56,21 @@
   };
 </script>
 
-  <meta name="description" content="一、缓存特征 二、LRU 三、缓存位置 四、CDN 五、缓存问题 六、数据分布 七、一致性哈希 参考资料    一、缓存特征命中率当某个请求能够通过访问缓存而得到响应时，称为缓存命中。缓存命中率越高，缓存的利用率也就越高。最大空间缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。">
+  <meta name="description" content="一、缓存特征命中率当某个请求能够通过访问缓存而得到响应时，称为缓存命中。缓存命中率越高，缓存的利用率也就越高。最大空间缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。当缓存存放的数据量超过最大空间时，就需要淘汰部分数据来存放新到达的数据。淘汰策略 FIFO（First In First Out）：先进先出策略，在实时性的场景下，需要经常访问最新的数据，那么就可以">
 <meta name="keywords" content="缓存">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络技术 - 缓存">
 <meta property="og:url" content="https://sometwo7.github.io/blog/post/64a35ad1.html">
 <meta property="og:site_name" content="佚名">
-<meta property="og:description" content="一、缓存特征 二、LRU 三、缓存位置 四、CDN 五、缓存问题 六、数据分布 七、一致性哈希 参考资料    一、缓存特征命中率当某个请求能够通过访问缓存而得到响应时，称为缓存命中。缓存命中率越高，缓存的利用率也就越高。最大空间缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。">
+<meta property="og:description" content="一、缓存特征命中率当某个请求能够通过访问缓存而得到响应时，称为缓存命中。缓存命中率越高，缓存的利用率也就越高。最大空间缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。当缓存存放的数据量超过最大空间时，就需要淘汰部分数据来存放新到达的数据。淘汰策略 FIFO（First In First Out）：先进先出策略，在实时性的场景下，需要经常访问最新的数据，那么就可以">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/15313ed8-a520-4799-a300-2b6b36be314f.jpg">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/68b110b9-76c6-4ee2-b541-4145e65adb3e.jpg">
 <meta property="og:image" content="https://sometwo7.github.io/blog/post/pics/66402828-fb2b-418f-83f6-82153491bcfe.jpg">
-<meta property="og:updated_time" content="2019-11-05T13:02:39.948Z">
+<meta property="og:updated_time" content="2019-11-12T06:21:18.312Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络技术 - 缓存">
-<meta name="twitter:description" content="一、缓存特征 二、LRU 三、缓存位置 四、CDN 五、缓存问题 六、数据分布 七、一致性哈希 参考资料    一、缓存特征命中率当某个请求能够通过访问缓存而得到响应时，称为缓存命中。缓存命中率越高，缓存的利用率也就越高。最大空间缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。">
+<meta name="twitter:description" content="一、缓存特征命中率当某个请求能够通过访问缓存而得到响应时，称为缓存命中。缓存命中率越高，缓存的利用率也就越高。最大空间缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。当缓存存放的数据量超过最大空间时，就需要淘汰部分数据来存放新到达的数据。淘汰策略 FIFO（First In First Out）：先进先出策略，在实时性的场景下，需要经常访问最新的数据，那么就可以">
 <meta name="twitter:image" content="https://sometwo7.github.io/blog/post/pics/15313ed8-a520-4799-a300-2b6b36be314f.jpg">
   <link rel="canonical" href="https://sometwo7.github.io/blog/post/64a35ad1">
 
@@ -279,11 +279,19 @@
                 
               
 
-              <time title="创建时间：2019-11-05 10:02:11 / 修改时间：13:02:39" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
+              <time title="创建时间：2019-11-05 10:02:11" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-12 06:21:18" itemprop="dateModified" datetime="2019-11-12T06:21:18+00:00">2019-11-12</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -311,32 +319,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li><a href="#一缓存特征">一、缓存特征</a></li>
-<li><a href="#二lru">二、LRU</a></li>
-<li><a href="#三缓存位置">三、缓存位置</a></li>
-<li><a href="#四cdn">四、CDN</a></li>
-<li><a href="#五缓存问题">五、缓存问题</a></li>
-<li><a href="#六数据分布">六、数据分布</a></li>
-<li><a href="#七一致性哈希">七、一致性哈希</a></li>
-<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
-
-
-</li>
-</ul><h1 id="一、缓存特征"><a href="#一、缓存特征" class="headerlink" title="一、缓存特征"></a>一、缓存特征</h1><h2 id="命中率"><a href="#命中率" class="headerlink" title="命中率"></a>命中率</h2><p>当某个请求能够通过访问缓存而得到响应时，称为缓存命中。</p><p>缓存命中率越高，缓存的利用率也就越高。</p><h2 id="最大空间"><a href="#最大空间" class="headerlink" title="最大空间"></a>最大空间</h2><p>缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。</p><a id="more"></a><!-- GFM-TOC -->
-
-
-
-
-<p>当缓存存放的数据量超过最大空间时，就需要淘汰部分数据来存放新到达的数据。</p>
-<h2 id="淘汰策略"><a href="#淘汰策略" class="headerlink" title="淘汰策略"></a>淘汰策略</h2><ul>
+        <h1 id="一、缓存特征"><a href="#一、缓存特征" class="headerlink" title="一、缓存特征"></a>一、缓存特征</h1><h2 id="命中率"><a href="#命中率" class="headerlink" title="命中率"></a>命中率</h2><p>当某个请求能够通过访问缓存而得到响应时，称为缓存命中。</p><p>缓存命中率越高，缓存的利用率也就越高。</p><h2 id="最大空间"><a href="#最大空间" class="headerlink" title="最大空间"></a>最大空间</h2><p>缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。</p><p>当缓存存放的数据量超过最大空间时，就需要淘汰部分数据来存放新到达的数据。</p><h2 id="淘汰策略"><a href="#淘汰策略" class="headerlink" title="淘汰策略"></a>淘汰策略</h2><ul>
 <li><p>FIFO（First In First Out）：先进先出策略，在实时性的场景下，需要经常访问最新的数据，那么就可以使用 FIFO，使得最先进入的数据（最晚的数据）被淘汰。</p>
 </li>
 <li><p>LRU（Least Recently Used）：最近最久未使用策略，优先淘汰最久未使用的数据，也就是上次被访问时间距离现在最久的数据。该策略可以保证内存中的数据都是热点数据，也就是经常被访问的数据，从而保证缓存命中率。</p>
 </li>
 <li><p>LFU（Least Frequently Used）：最不经常使用策略，优先淘汰一段时间内使用次数最少的数据。</p>
 </li>
-</ul>
+</ul><a id="more"></a>
+
+
+
+
 <h1 id="二、LRU"><a href="#二、LRU" class="headerlink" title="二、LRU"></a>二、LRU</h1><p>以下是基于 双向链表 + HashMap 的 LRU 算法实现，对算法的解释如下：</p>
 <ul>
 <li>访问某个节点时，将其从原来的位置删除，并重新插入到链表头部。这样就能保证链表尾部存储的就是最近最久未使用的节点，当节点数量大于缓存最大空间时就淘汰链表尾部的节点。</li>
@@ -434,8 +428,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/blog/post/38ddab86.html" rel="next" title="网络技术 - 正则表达式">
-                  <i class="fa fa-chevron-left"></i> 网络技术 - 正则表达式
+                <a href="/blog/post/9956399c.html" rel="next" title="网络技术 - 设计模式">
+                  <i class="fa fa-chevron-left"></i> 网络技术 - 设计模式
                 </a>
               
             </div>
@@ -444,8 +438,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/blog/post/78b8663.html" rel="prev" title="网络技术 - 集群">
-                  网络技术 - 集群 <i class="fa fa-chevron-right"></i>
+                <a href="/blog/post/51d10326.html" rel="prev" title="网络技术 - 消息队列">
+                  网络技术 - 消息队列 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
