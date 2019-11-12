@@ -172,7 +172,7 @@ avatar:
   # In theme directory (source/images): /images/avatar.gif
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: https://avatars2.githubusercontent.com/u/29475073?s=88&v=4 #/images/avatar.gif
+  url: pics/e4a8b75f94b06499ad0078f58954e6a8.png #/images/avatar.gif
   # If true, the avatar would be dispalyed in circle.
   rounded: false
   # If true, the avatar would be rotated with the cursor.
