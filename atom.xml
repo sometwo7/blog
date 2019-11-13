@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://sometwo7.github.io/blog/"/>
-  <updated>2019-11-12T09:00:15.228Z</updated>
+  <updated>2019-11-13T09:35:09.703Z</updated>
   <id>https://sometwo7.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux 环境搭建 - Solr8.3.0</title>
+    <link href="https://sometwo7.github.io/blog/46fcdcd9.html"/>
+    <id>https://sometwo7.github.io/blog/46fcdcd9.html</id>
+    <published>2019-11-13T16:18:19.000Z</published>
+    <updated>2019-11-13T09:35:09.703Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;下载-solr&quot;&gt;&lt;a href=&quot;#下载-solr&quot; class=&quot;headerlink&quot; title=&quot;下载 solr&quot;&gt;&lt;/a&gt;下载 solr&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;官网下载地址&lt;br&gt;https://lucene.apache.org/solr/downloads.html&lt;/li&gt;
+&lt;li&gt;文件链接(2019-11-12可以访问)&lt;br&gt;&lt;a href=&quot;https://mirrors.tuna.tsinghua.edu.cn/apache/lucene/solr/8.3.0/solr-8.3.0.zip&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;solr-8.3.0.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux环境搭建" scheme="https://sometwo7.github.io/blog/categories/Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Linux" scheme="https://sometwo7.github.io/blog/tags/Linux/"/>
+    
+      <category term="环境搭建" scheme="https://sometwo7.github.io/blog/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="solr" scheme="https://sometwo7.github.io/blog/tags/solr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 环境搭建 - Zookeeper 3.5.6</title>
+    <link href="https://sometwo7.github.io/blog/f889c743.html"/>
+    <id>https://sometwo7.github.io/blog/f889c743.html</id>
+    <published>2019-11-13T14:08:19.000Z</published>
+    <updated>2019-11-13T09:35:09.703Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;下载-zookeeper&quot;&gt;&lt;a href=&quot;#下载-zookeeper&quot; class=&quot;headerlink&quot; title=&quot;下载 zookeeper&quot;&gt;&lt;/a&gt;下载 zookeeper&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;官网下载地址&lt;br&gt;https://zookeeper.apache.org/releases.html&lt;/li&gt;
+&lt;li&gt;文件链接(2019-11-12可以访问)&lt;br&gt;&lt;a href=&quot;https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/stable/apache-zookeeper-3.5.6-bin.tar.gz&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;apache-zookeeper-3.5.6-bin.tar.gz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux环境搭建" scheme="https://sometwo7.github.io/blog/categories/Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Linux" scheme="https://sometwo7.github.io/blog/tags/Linux/"/>
+    
+      <category term="环境搭建" scheme="https://sometwo7.github.io/blog/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="zookeeper" scheme="https://sometwo7.github.io/blog/tags/zookeeper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络技术 - Linux</title>
     <link href="https://sometwo7.github.io/blog/eb01ca49.html"/>
     <id>https://sometwo7.github.io/blog/eb01ca49.html</id>
     <published>2019-11-05T10:04:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
+    <updated>2019-11-13T09:35:09.703Z</updated>
     
     <summary type="html">
     
@@ -46,7 +102,7 @@
     <link href="https://sometwo7.github.io/blog/5b4dafbb.html"/>
     <id>https://sometwo7.github.io/blog/5b4dafbb.html</id>
     <published>2019-11-05T10:03:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
+    <updated>2019-11-13T09:35:09.703Z</updated>
     
     <summary type="html">
     
@@ -67,11 +123,74 @@
   </entry>
   
   <entry>
+    <title>网络技术 - 代码可读性</title>
+    <link href="https://sometwo7.github.io/blog/1c7cd43d.html"/>
+    <id>https://sometwo7.github.io/blog/1c7cd43d.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-13T09:35:09.703Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、可读性的重要性&quot;&gt;&lt;a href=&quot;#一、可读性的重要性&quot; class=&quot;headerlink&quot; title=&quot;一、可读性的重要性&quot;&gt;&lt;/a&gt;一、可读性的重要性&lt;/h1&gt;&lt;p&gt;编程有很大一部分时间是在阅读代码，不仅要阅读自己的代码，而且要阅读别人的代码。因此，可读性良好的代码能够大大提高编程效率。&lt;/p&gt;&lt;p&gt;可读性良好的代码往往会让代码架构更好，因为程序员更愿意去修改这部分代码，而且也更容易修改。&lt;/p&gt;&lt;p&gt;只有在核心领域为了效率才可以放弃可读性，否则可读性是第一位。&lt;/p&gt;&lt;h1 id=&quot;二、用名字表达代码含义&quot;&gt;&lt;a href=&quot;#二、用名字表达代码含义&quot; class=&quot;headerlink&quot; title=&quot;二、用名字表达代码含义&quot;&gt;&lt;/a&gt;二、用名字表达代码含义&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="代码" scheme="https://sometwo7.github.io/blog/tags/%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - 设计模式</title>
+    <link href="https://sometwo7.github.io/blog/9956399c.html"/>
+    <id>https://sometwo7.github.io/blog/9956399c.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-13T09:35:09.707Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;设计模式是解决问题的方案，学习现有的设计模式可以做到经验复用。&lt;/p&gt;&lt;p&gt;拥有设计模式词汇，在沟通时就能用更少的词汇来讨论，并且不需要了解底层细节。&lt;/p&gt;&lt;h1 id=&quot;二、创建型&quot;&gt;&lt;a href=&quot;#二、创建型&quot; class=&quot;headerlink&quot; title=&quot;二、创建型&quot;&gt;&lt;/a&gt;二、创建型&lt;/h1&gt;&lt;h2 id=&quot;1-单例（Singleton）&quot;&gt;&lt;a href=&quot;#1-单例（Singleton）&quot; class=&quot;headerlink&quot; title=&quot;1. 单例（Singleton）&quot;&gt;&lt;/a&gt;1. 单例（Singleton）&lt;/h2&gt;&lt;h3 id=&quot;Intent&quot;&gt;&lt;a href=&quot;#Intent&quot; class=&quot;headerlink&quot; title=&quot;Intent&quot;&gt;&lt;/a&gt;Intent&lt;/h3&gt;&lt;p&gt;确保一个类只有一个实例，并提供该实例的全局访问点。&lt;/p&gt;&lt;h3 id=&quot;Class-Diagram&quot;&gt;&lt;a href=&quot;#Class-Diagram&quot; class=&quot;headerlink&quot; title=&quot;Class Diagram&quot;&gt;&lt;/a&gt;Class Diagram&lt;/h3&gt;&lt;p&gt;使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="设计模式" scheme="https://sometwo7.github.io/blog/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - Git</title>
+    <link href="https://sometwo7.github.io/blog/685bfdc8.html"/>
+    <id>https://sometwo7.github.io/blog/685bfdc8.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-13T09:35:09.703Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;集中式与分布式&quot;&gt;&lt;a href=&quot;#集中式与分布式&quot; class=&quot;headerlink&quot; title=&quot;集中式与分布式&quot;&gt;&lt;/a&gt;集中式与分布式&lt;/h1&gt;&lt;p&gt;Git 属于分布式版本控制系统，而 SVN 属于集中式。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/1fe2dc77-9a2d-4643-90b3-bbf50f649bac.png&quot; width=&quot;600px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。&lt;/p&gt;&lt;p&gt;集中式版本控制有安全性问题，当中心服务器挂了所有人都没办法工作了。&lt;/p&gt;&lt;p&gt;集中式版本控制需要连网才能工作，如果网速过慢，那么提交一个文件会慢的无法让人忍受。而分布式版本控制不需要连网就能工作。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="git" scheme="https://sometwo7.github.io/blog/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络技术 - 消息队列</title>
     <link href="https://sometwo7.github.io/blog/51d10326.html"/>
     <id>https://sometwo7.github.io/blog/51d10326.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.232Z</updated>
+    <updated>2019-11-13T09:35:09.707Z</updated>
     
     <summary type="html">
     
@@ -91,11 +210,125 @@
   </entry>
   
   <entry>
+    <title>网络技术 - 面向对象思想</title>
+    <link href="https://sometwo7.github.io/blog/7a9a193e.html"/>
+    <id>https://sometwo7.github.io/blog/7a9a193e.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-13T09:35:09.707Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、三大特性&quot;&gt;&lt;a href=&quot;#一、三大特性&quot; class=&quot;headerlink&quot; title=&quot;一、三大特性&quot;&gt;&lt;/a&gt;一、三大特性&lt;/h1&gt;&lt;h2 id=&quot;封装&quot;&gt;&lt;a href=&quot;#封装&quot; class=&quot;headerlink&quot; title=&quot;封装&quot;&gt;&lt;/a&gt;封装&lt;/h2&gt;&lt;p&gt;利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。&lt;/p&gt;&lt;p&gt;优点：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;减少耦合：可以独立地开发、测试、优化、使用、理解和修改&lt;/li&gt;
+&lt;li&gt;减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模块&lt;/li&gt;
+&lt;li&gt;有效地调节性能：可以通过剖析来确定哪些模块影响了系统的性能&lt;/li&gt;
+&lt;li&gt;提高软件的可重用性&lt;/li&gt;
+&lt;li&gt;降低了构建大型系统的风险：即使整个系统不可用，但是这些独立的模块却有可能是可用的&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="对象" scheme="https://sometwo7.github.io/blog/tags/%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - 集群</title>
+    <link href="https://sometwo7.github.io/blog/78b8663.html"/>
+    <id>https://sometwo7.github.io/blog/78b8663.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-13T09:35:09.707Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、负载均衡&quot;&gt;&lt;a href=&quot;#一、负载均衡&quot; class=&quot;headerlink&quot; title=&quot;一、负载均衡&quot;&gt;&lt;/a&gt;一、负载均衡&lt;/h1&gt;&lt;p&gt;集群中的应用服务器（节点）通常被设计成无状态，用户可以请求任何一个节点。&lt;/p&gt;&lt;p&gt;负载均衡器会根据集群中每个节点的负载情况，将用户请求转发到合适的节点上。&lt;/p&gt;&lt;p&gt;负载均衡器可以用来实现高可用以及伸缩性：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;高可用：当某个节点故障时，负载均衡器会将用户请求转发到另外的节点上，从而保证所有服务持续可用；&lt;/li&gt;
+&lt;li&gt;伸缩性：根据系统整体负载情况，可以很容易地添加或移除节点。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="集群" scheme="https://sometwo7.github.io/blog/tags/%E9%9B%86%E7%BE%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - SQL</title>
+    <link href="https://sometwo7.github.io/blog/4ce9f201.html"/>
+    <id>https://sometwo7.github.io/blog/4ce9f201.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-13T09:35:09.703Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h1&gt;&lt;p&gt;模式定义了数据如何存储、存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。&lt;/p&gt;&lt;p&gt;主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋给新数据行的主键）。&lt;/p&gt;&lt;p&gt;SQL（Structured Query Language)，标准 SQL 由 ANSI 标准委员会管理，从而称为 ANSI SQL。各个 DBMS 都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="sql" scheme="https://sometwo7.github.io/blog/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - Redis</title>
+    <link href="https://sometwo7.github.io/blog/2355d11.html"/>
+    <id>https://sometwo7.github.io/blog/2355d11.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-13T09:35:09.703Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。&lt;/p&gt;&lt;p&gt;键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。&lt;/p&gt;&lt;p&gt;Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。&lt;/p&gt;&lt;h1 id=&quot;二、数据类型&quot;&gt;&lt;a href=&quot;#二、数据类型&quot; class=&quot;headerlink&quot; title=&quot;二、数据类型&quot;&gt;&lt;/a&gt;二、数据类型&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="redis" scheme="https://sometwo7.github.io/blog/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - MySQL</title>
+    <link href="https://sometwo7.github.io/blog/7a97d7b6.html"/>
+    <id>https://sometwo7.github.io/blog/7a97d7b6.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-11-13T09:35:09.703Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、索引&quot;&gt;&lt;a href=&quot;#一、索引&quot; class=&quot;headerlink&quot; title=&quot;一、索引&quot;&gt;&lt;/a&gt;一、索引&lt;/h1&gt;&lt;h2 id=&quot;B-Tree-原理&quot;&gt;&lt;a href=&quot;#B-Tree-原理&quot; class=&quot;headerlink&quot; title=&quot;B+ Tree 原理&quot;&gt;&lt;/a&gt;B+ Tree 原理&lt;/h2&gt;&lt;h3 id=&quot;1-数据结构&quot;&gt;&lt;a href=&quot;#1-数据结构&quot; class=&quot;headerlink&quot; title=&quot;1. 数据结构&quot;&gt;&lt;/a&gt;1. 数据结构&lt;/h3&gt;&lt;p&gt;B Tree 指的是 Balance Tree，也就是平衡树。平衡树是一颗查找树，并且所有叶子节点位于同一层。&lt;/p&gt;&lt;p&gt;B+ Tree 是基于 B Tree 和叶子节点顺序访问指针进行实现，它具有 B Tree 的平衡性，并且通过顺序访问指针来提高区间查询的性能。&lt;/p&gt;&lt;p&gt;在 B+ Tree 中，一个节点中的 key 从左到右非递减排列，如果某个指针的左右相邻 key 分别是 key&lt;sub&gt;i&lt;/sub&gt; 和 key&lt;sub&gt;i+1&lt;/sub&gt;，且不为 null，则该指针指向节点的所有 key 大于等于 key&lt;sub&gt;i&lt;/sub&gt; 且小于等于 key&lt;sub&gt;i+1&lt;/sub&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="mysql" scheme="https://sometwo7.github.io/blog/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络技术 - 缓存</title>
     <link href="https://sometwo7.github.io/blog/64a35ad1.html"/>
     <id>https://sometwo7.github.io/blog/64a35ad1.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.232Z</updated>
+    <updated>2019-11-13T09:35:09.707Z</updated>
     
     <summary type="html">
     
@@ -119,32 +352,11 @@
   </entry>
   
   <entry>
-    <title>网络技术 - 设计模式</title>
-    <link href="https://sometwo7.github.io/blog/9956399c.html"/>
-    <id>https://sometwo7.github.io/blog/9956399c.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.232Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;设计模式是解决问题的方案，学习现有的设计模式可以做到经验复用。&lt;/p&gt;&lt;p&gt;拥有设计模式词汇，在沟通时就能用更少的词汇来讨论，并且不需要了解底层细节。&lt;/p&gt;&lt;h1 id=&quot;二、创建型&quot;&gt;&lt;a href=&quot;#二、创建型&quot; class=&quot;headerlink&quot; title=&quot;二、创建型&quot;&gt;&lt;/a&gt;二、创建型&lt;/h1&gt;&lt;h2 id=&quot;1-单例（Singleton）&quot;&gt;&lt;a href=&quot;#1-单例（Singleton）&quot; class=&quot;headerlink&quot; title=&quot;1. 单例（Singleton）&quot;&gt;&lt;/a&gt;1. 单例（Singleton）&lt;/h2&gt;&lt;h3 id=&quot;Intent&quot;&gt;&lt;a href=&quot;#Intent&quot; class=&quot;headerlink&quot; title=&quot;Intent&quot;&gt;&lt;/a&gt;Intent&lt;/h3&gt;&lt;p&gt;确保一个类只有一个实例，并提供该实例的全局访问点。&lt;/p&gt;&lt;h3 id=&quot;Class-Diagram&quot;&gt;&lt;a href=&quot;#Class-Diagram&quot; class=&quot;headerlink&quot; title=&quot;Class Diagram&quot;&gt;&lt;/a&gt;Class Diagram&lt;/h3&gt;&lt;p&gt;使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="设计模式" scheme="https://sometwo7.github.io/blog/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>网络技术 - 正则表达式</title>
     <link href="https://sometwo7.github.io/blog/38ddab86.html"/>
     <id>https://sometwo7.github.io/blog/38ddab86.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
+    <updated>2019-11-13T09:35:09.707Z</updated>
     
     <summary type="html">
     
@@ -165,7 +377,7 @@
     <link href="https://sometwo7.github.io/blog/d350a2b7.html"/>
     <id>https://sometwo7.github.io/blog/d350a2b7.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
+    <updated>2019-11-13T09:35:09.707Z</updated>
     
     <summary type="html">
     
@@ -185,15 +397,15 @@
   </entry>
   
   <entry>
-    <title>网络技术 - 代码可读性</title>
-    <link href="https://sometwo7.github.io/blog/1c7cd43d.html"/>
-    <id>https://sometwo7.github.io/blog/1c7cd43d.html</id>
+    <title>网络技术 - 构建工具</title>
+    <link href="https://sometwo7.github.io/blog/4ad173cd.html"/>
+    <id>https://sometwo7.github.io/blog/4ad173cd.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
+    <updated>2019-11-13T09:35:09.707Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;一、可读性的重要性&quot;&gt;&lt;a href=&quot;#一、可读性的重要性&quot; class=&quot;headerlink&quot; title=&quot;一、可读性的重要性&quot;&gt;&lt;/a&gt;一、可读性的重要性&lt;/h1&gt;&lt;p&gt;编程有很大一部分时间是在阅读代码，不仅要阅读自己的代码，而且要阅读别人的代码。因此，可读性良好的代码能够大大提高编程效率。&lt;/p&gt;&lt;p&gt;可读性良好的代码往往会让代码架构更好，因为程序员更愿意去修改这部分代码，而且也更容易修改。&lt;/p&gt;&lt;p&gt;只有在核心领域为了效率才可以放弃可读性，否则可读性是第一位。&lt;/p&gt;&lt;h1 id=&quot;二、用名字表达代码含义&quot;&gt;&lt;a href=&quot;#二、用名字表达代码含义&quot; class=&quot;headerlink&quot; title=&quot;二、用名字表达代码含义&quot;&gt;&lt;/a&gt;二、用名字表达代码含义&lt;/h1&gt;
+      &lt;h1 id=&quot;一、构建工具的作用&quot;&gt;&lt;a href=&quot;#一、构建工具的作用&quot; class=&quot;headerlink&quot; title=&quot;一、构建工具的作用&quot;&gt;&lt;/a&gt;一、构建工具的作用&lt;/h1&gt;&lt;p&gt;构建工具是用于构建项目的自动化工具，主要包含以下工作：&lt;/p&gt;&lt;h2 id=&quot;依赖管理&quot;&gt;&lt;a href=&quot;#依赖管理&quot; class=&quot;headerlink&quot; title=&quot;依赖管理&quot;&gt;&lt;/a&gt;依赖管理&lt;/h2&gt;&lt;p&gt;不再需要手动导入 Jar 依赖包，并且可以自动处理依赖关系，也就是说某个依赖如果依赖于其它依赖，构建工具可以帮助我们自动处理这种依赖关系。&lt;/p&gt;&lt;h2 id=&quot;运行单元测试&quot;&gt;&lt;a href=&quot;#运行单元测试&quot; class=&quot;headerlink&quot; title=&quot;运行单元测试&quot;&gt;&lt;/a&gt;运行单元测试&lt;/h2&gt;&lt;p&gt;不再需要在项目代码中添加测试代码，从而避免了污染项目代码。&lt;/p&gt;&lt;h2 id=&quot;将源代码转化为可执行文件&quot;&gt;&lt;a href=&quot;#将源代码转化为可执行文件&quot; class=&quot;headerlink&quot; title=&quot;将源代码转化为可执行文件&quot;&gt;&lt;/a&gt;将源代码转化为可执行文件&lt;/h2&gt;
     
     </summary>
     
@@ -201,70 +413,7 @@
       <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="代码" scheme="https://sometwo7.github.io/blog/tags/%E4%BB%A3%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - SQL</title>
-    <link href="https://sometwo7.github.io/blog/4ce9f201.html"/>
-    <id>https://sometwo7.github.io/blog/4ce9f201.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h1&gt;&lt;p&gt;模式定义了数据如何存储、存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。&lt;/p&gt;&lt;p&gt;主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋给新数据行的主键）。&lt;/p&gt;&lt;p&gt;SQL（Structured Query Language)，标准 SQL 由 ANSI 标准委员会管理，从而称为 ANSI SQL。各个 DBMS 都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="sql" scheme="https://sometwo7.github.io/blog/tags/sql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - Redis</title>
-    <link href="https://sometwo7.github.io/blog/2355d11.html"/>
-    <id>https://sometwo7.github.io/blog/2355d11.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。&lt;/p&gt;&lt;p&gt;键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。&lt;/p&gt;&lt;p&gt;Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。&lt;/p&gt;&lt;h1 id=&quot;二、数据类型&quot;&gt;&lt;a href=&quot;#二、数据类型&quot; class=&quot;headerlink&quot; title=&quot;二、数据类型&quot;&gt;&lt;/a&gt;二、数据类型&lt;/h1&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="redis" scheme="https://sometwo7.github.io/blog/tags/redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - MySQL</title>
-    <link href="https://sometwo7.github.io/blog/7a97d7b6.html"/>
-    <id>https://sometwo7.github.io/blog/7a97d7b6.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、索引&quot;&gt;&lt;a href=&quot;#一、索引&quot; class=&quot;headerlink&quot; title=&quot;一、索引&quot;&gt;&lt;/a&gt;一、索引&lt;/h1&gt;&lt;h2 id=&quot;B-Tree-原理&quot;&gt;&lt;a href=&quot;#B-Tree-原理&quot; class=&quot;headerlink&quot; title=&quot;B+ Tree 原理&quot;&gt;&lt;/a&gt;B+ Tree 原理&lt;/h2&gt;&lt;h3 id=&quot;1-数据结构&quot;&gt;&lt;a href=&quot;#1-数据结构&quot; class=&quot;headerlink&quot; title=&quot;1. 数据结构&quot;&gt;&lt;/a&gt;1. 数据结构&lt;/h3&gt;&lt;p&gt;B Tree 指的是 Balance Tree，也就是平衡树。平衡树是一颗查找树，并且所有叶子节点位于同一层。&lt;/p&gt;&lt;p&gt;B+ Tree 是基于 B Tree 和叶子节点顺序访问指针进行实现，它具有 B Tree 的平衡性，并且通过顺序访问指针来提高区间查询的性能。&lt;/p&gt;&lt;p&gt;在 B+ Tree 中，一个节点中的 key 从左到右非递减排列，如果某个指针的左右相邻 key 分别是 key&lt;sub&gt;i&lt;/sub&gt; 和 key&lt;sub&gt;i+1&lt;/sub&gt;，且不为 null，则该指针指向节点的所有 key 大于等于 key&lt;sub&gt;i&lt;/sub&gt; 且小于等于 key&lt;sub&gt;i+1&lt;/sub&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="mysql" scheme="https://sometwo7.github.io/blog/tags/mysql/"/>
+      <category term="构建工具" scheme="https://sometwo7.github.io/blog/tags/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -273,7 +422,7 @@
     <link href="https://sometwo7.github.io/blog/ecffdd03.html"/>
     <id>https://sometwo7.github.io/blog/ecffdd03.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
+    <updated>2019-11-13T09:35:09.703Z</updated>
     
     <summary type="html">
     
@@ -299,80 +448,11 @@
   </entry>
   
   <entry>
-    <title>网络技术 - 面向对象思想</title>
-    <link href="https://sometwo7.github.io/blog/7a9a193e.html"/>
-    <id>https://sometwo7.github.io/blog/7a9a193e.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.232Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、三大特性&quot;&gt;&lt;a href=&quot;#一、三大特性&quot; class=&quot;headerlink&quot; title=&quot;一、三大特性&quot;&gt;&lt;/a&gt;一、三大特性&lt;/h1&gt;&lt;h2 id=&quot;封装&quot;&gt;&lt;a href=&quot;#封装&quot; class=&quot;headerlink&quot; title=&quot;封装&quot;&gt;&lt;/a&gt;封装&lt;/h2&gt;&lt;p&gt;利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。&lt;/p&gt;&lt;p&gt;优点：&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;减少耦合：可以独立地开发、测试、优化、使用、理解和修改&lt;/li&gt;
-&lt;li&gt;减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模块&lt;/li&gt;
-&lt;li&gt;有效地调节性能：可以通过剖析来确定哪些模块影响了系统的性能&lt;/li&gt;
-&lt;li&gt;提高软件的可重用性&lt;/li&gt;
-&lt;li&gt;降低了构建大型系统的风险：即使整个系统不可用，但是这些独立的模块却有可能是可用的&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="对象" scheme="https://sometwo7.github.io/blog/tags/%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - 系统设计基础</title>
-    <link href="https://sometwo7.github.io/blog/bf574124.html"/>
-    <id>https://sometwo7.github.io/blog/bf574124.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.232Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、性能&quot;&gt;&lt;a href=&quot;#一、性能&quot; class=&quot;headerlink&quot; title=&quot;一、性能&quot;&gt;&lt;/a&gt;一、性能&lt;/h1&gt;&lt;h2 id=&quot;性能指标&quot;&gt;&lt;a href=&quot;#性能指标&quot; class=&quot;headerlink&quot; title=&quot;性能指标&quot;&gt;&lt;/a&gt;性能指标&lt;/h2&gt;&lt;h3 id=&quot;1-响应时间&quot;&gt;&lt;a href=&quot;#1-响应时间&quot; class=&quot;headerlink&quot; title=&quot;1. 响应时间&quot;&gt;&lt;/a&gt;1. 响应时间&lt;/h3&gt;&lt;p&gt;指某个请求从发出到接收到响应消耗的时间。&lt;/p&gt;&lt;p&gt;在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。&lt;/p&gt;&lt;h3 id=&quot;2-吞吐量&quot;&gt;&lt;a href=&quot;#2-吞吐量&quot; class=&quot;headerlink&quot; title=&quot;2. 吞吐量&quot;&gt;&lt;/a&gt;2. 吞吐量&lt;/h3&gt;&lt;p&gt;指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。&lt;/p&gt;&lt;h3 id=&quot;3-并发用户数&quot;&gt;&lt;a href=&quot;#3-并发用户数&quot; class=&quot;headerlink&quot; title=&quot;3. 并发用户数&quot;&gt;&lt;/a&gt;3. 并发用户数&lt;/h3&gt;&lt;p&gt;指系统能同时处理的并发用户请求数量。&lt;/p&gt;&lt;p&gt;在没有并发存在的系统中，请求被顺序执行，此时响应时间为吞吐量的倒数。例如系统支持的吞吐量为 100 req/s，那么平均响应时间应该为 0.01s。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="系统设计" scheme="https://sometwo7.github.io/blog/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - 构建工具</title>
-    <link href="https://sometwo7.github.io/blog/4ad173cd.html"/>
-    <id>https://sometwo7.github.io/blog/4ad173cd.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、构建工具的作用&quot;&gt;&lt;a href=&quot;#一、构建工具的作用&quot; class=&quot;headerlink&quot; title=&quot;一、构建工具的作用&quot;&gt;&lt;/a&gt;一、构建工具的作用&lt;/h1&gt;&lt;p&gt;构建工具是用于构建项目的自动化工具，主要包含以下工作：&lt;/p&gt;&lt;h2 id=&quot;依赖管理&quot;&gt;&lt;a href=&quot;#依赖管理&quot; class=&quot;headerlink&quot; title=&quot;依赖管理&quot;&gt;&lt;/a&gt;依赖管理&lt;/h2&gt;&lt;p&gt;不再需要手动导入 Jar 依赖包，并且可以自动处理依赖关系，也就是说某个依赖如果依赖于其它依赖，构建工具可以帮助我们自动处理这种依赖关系。&lt;/p&gt;&lt;h2 id=&quot;运行单元测试&quot;&gt;&lt;a href=&quot;#运行单元测试&quot; class=&quot;headerlink&quot; title=&quot;运行单元测试&quot;&gt;&lt;/a&gt;运行单元测试&lt;/h2&gt;&lt;p&gt;不再需要在项目代码中添加测试代码，从而避免了污染项目代码。&lt;/p&gt;&lt;h2 id=&quot;将源代码转化为可执行文件&quot;&gt;&lt;a href=&quot;#将源代码转化为可执行文件&quot; class=&quot;headerlink&quot; title=&quot;将源代码转化为可执行文件&quot;&gt;&lt;/a&gt;将源代码转化为可执行文件&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="构建工具" scheme="https://sometwo7.github.io/blog/tags/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>网络技术 - 攻击技术</title>
     <link href="https://sometwo7.github.io/blog/877061f8.html"/>
     <id>https://sometwo7.github.io/blog/877061f8.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
+    <updated>2019-11-13T09:35:09.707Z</updated>
     
     <summary type="html">
     
@@ -389,15 +469,15 @@
   </entry>
   
   <entry>
-    <title>网络技术 - Git</title>
-    <link href="https://sometwo7.github.io/blog/685bfdc8.html"/>
-    <id>https://sometwo7.github.io/blog/685bfdc8.html</id>
+    <title>网络技术 - 系统设计基础</title>
+    <link href="https://sometwo7.github.io/blog/bf574124.html"/>
+    <id>https://sometwo7.github.io/blog/bf574124.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
+    <updated>2019-11-13T09:35:09.707Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;集中式与分布式&quot;&gt;&lt;a href=&quot;#集中式与分布式&quot; class=&quot;headerlink&quot; title=&quot;集中式与分布式&quot;&gt;&lt;/a&gt;集中式与分布式&lt;/h1&gt;&lt;p&gt;Git 属于分布式版本控制系统，而 SVN 属于集中式。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/1fe2dc77-9a2d-4643-90b3-bbf50f649bac.png&quot; width=&quot;600px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。&lt;/p&gt;&lt;p&gt;集中式版本控制有安全性问题，当中心服务器挂了所有人都没办法工作了。&lt;/p&gt;&lt;p&gt;集中式版本控制需要连网才能工作，如果网速过慢，那么提交一个文件会慢的无法让人忍受。而分布式版本控制不需要连网就能工作。&lt;/p&gt;
+      &lt;h1 id=&quot;一、性能&quot;&gt;&lt;a href=&quot;#一、性能&quot; class=&quot;headerlink&quot; title=&quot;一、性能&quot;&gt;&lt;/a&gt;一、性能&lt;/h1&gt;&lt;h2 id=&quot;性能指标&quot;&gt;&lt;a href=&quot;#性能指标&quot; class=&quot;headerlink&quot; title=&quot;性能指标&quot;&gt;&lt;/a&gt;性能指标&lt;/h2&gt;&lt;h3 id=&quot;1-响应时间&quot;&gt;&lt;a href=&quot;#1-响应时间&quot; class=&quot;headerlink&quot; title=&quot;1. 响应时间&quot;&gt;&lt;/a&gt;1. 响应时间&lt;/h3&gt;&lt;p&gt;指某个请求从发出到接收到响应消耗的时间。&lt;/p&gt;&lt;p&gt;在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。&lt;/p&gt;&lt;h3 id=&quot;2-吞吐量&quot;&gt;&lt;a href=&quot;#2-吞吐量&quot; class=&quot;headerlink&quot; title=&quot;2. 吞吐量&quot;&gt;&lt;/a&gt;2. 吞吐量&lt;/h3&gt;&lt;p&gt;指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。&lt;/p&gt;&lt;h3 id=&quot;3-并发用户数&quot;&gt;&lt;a href=&quot;#3-并发用户数&quot; class=&quot;headerlink&quot; title=&quot;3. 并发用户数&quot;&gt;&lt;/a&gt;3. 并发用户数&lt;/h3&gt;&lt;p&gt;指系统能同时处理的并发用户请求数量。&lt;/p&gt;&lt;p&gt;在没有并发存在的系统中，请求被顺序执行，此时响应时间为吞吐量的倒数。例如系统支持的吞吐量为 100 req/s，那么平均响应时间应该为 0.01s。&lt;/p&gt;
     
     </summary>
     
@@ -405,89 +485,7 @@
       <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="git" scheme="https://sometwo7.github.io/blog/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - 集群</title>
-    <link href="https://sometwo7.github.io/blog/78b8663.html"/>
-    <id>https://sometwo7.github.io/blog/78b8663.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-12T09:00:15.232Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、负载均衡&quot;&gt;&lt;a href=&quot;#一、负载均衡&quot; class=&quot;headerlink&quot; title=&quot;一、负载均衡&quot;&gt;&lt;/a&gt;一、负载均衡&lt;/h1&gt;&lt;p&gt;集群中的应用服务器（节点）通常被设计成无状态，用户可以请求任何一个节点。&lt;/p&gt;&lt;p&gt;负载均衡器会根据集群中每个节点的负载情况，将用户请求转发到合适的节点上。&lt;/p&gt;&lt;p&gt;负载均衡器可以用来实现高可用以及伸缩性：&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;高可用：当某个节点故障时，负载均衡器会将用户请求转发到另外的节点上，从而保证所有服务持续可用；&lt;/li&gt;
-&lt;li&gt;伸缩性：根据系统整体负载情况，可以很容易地添加或移除节点。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="集群" scheme="https://sometwo7.github.io/blog/tags/%E9%9B%86%E7%BE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - Docker</title>
-    <link href="https://sometwo7.github.io/blog/1b4f4a15.html"/>
-    <id>https://sometwo7.github.io/blog/1b4f4a15.html</id>
-    <published>2019-11-05T10:01:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、解决的问题&quot;&gt;&lt;a href=&quot;#一、解决的问题&quot; class=&quot;headerlink&quot; title=&quot;一、解决的问题&quot;&gt;&lt;/a&gt;一、解决的问题&lt;/h1&gt;&lt;p&gt;由于不同的机器有不同的操作系统，以及不同的库和组件，在将一个应用部署到多台机器上需要进行大量的环境配置操作。&lt;/p&gt;&lt;p&gt;Docker 主要解决环境配置问题，它是一种虚拟化技术，对进程进行隔离，被隔离的进程独立于宿主操作系统和其它隔离的进程。使用 Docker 可以不修改应用程序代码，不需要开发人员学习特定环境下的技术，就能够将现有的应用程序部署在其它机器上。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="docker" scheme="https://sometwo7.github.io/blog/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从春招惨败到秋招收获 BAT OFFER</title>
-    <link href="https://sometwo7.github.io/blog/3c20f5a2.html"/>
-    <id>https://sometwo7.github.io/blog/3c20f5a2.html</id>
-    <published>2019-11-01T18:11:11.000Z</published>
-    <updated>2019-11-12T09:00:15.228Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;🚀&lt;/p&gt;&lt;h1 id=&quot;1-Offer-情况&quot;&gt;&lt;a href=&quot;#1-Offer-情况&quot; class=&quot;headerlink&quot; title=&quot;1. Offer 情况&quot;&gt;&lt;/a&gt;1. Offer 情况&lt;/h1&gt;&lt;p&gt;经过了长达一年左右的复习，秋招也收到了几个比较满意的 Offer，参加面试的都通过了。&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;百度，企业智能平台； &lt;/li&gt;
-&lt;li&gt;阿里，高德地图； &lt;/li&gt;
-&lt;li&gt;腾讯，IEG 游戏平台，后台研发，SP； &lt;/li&gt;
-&lt;li&gt;字节跳动，头条后台研发，SSP； &lt;/li&gt;
-&lt;li&gt;华为，Cloud Bu； &lt;/li&gt;
-&lt;li&gt;网易游戏，梦幻事业部； &lt;/li&gt;
-&lt;li&gt;顺丰科技。 &lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="面试问题" scheme="https://sometwo7.github.io/blog/categories/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="https://sometwo7.github.io/blog/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="问题" scheme="https://sometwo7.github.io/blog/tags/%E9%97%AE%E9%A2%98/"/>
-    
-      <category term="搬运" scheme="https://sometwo7.github.io/blog/tags/%E6%90%AC%E8%BF%90/"/>
-    
-      <category term="BAT" scheme="https://sometwo7.github.io/blog/tags/BAT/"/>
-    
-      <category term="offer" scheme="https://sometwo7.github.io/blog/tags/offer/"/>
+      <category term="系统设计" scheme="https://sometwo7.github.io/blog/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png?v=7.4.1">
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/blog/atom.xml" title="佚名" type="application/atom+xml">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="下载 zookeeper 官网下载地址https://zookeeper.apache.org/releases.html 文件链接(2019-11-12可以访问)apache-zookeeper-3.5.6-bin.tar.gz">
+<meta name="keywords" content="Linux,环境搭建,zookeeper">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 环境搭建 - Zookeeper 3.5.6">
+<meta property="og:url" content="https://sometwo7.github.io/blog/f889c743.html">
+<meta property="og:site_name" content="佚名">
+<meta property="og:description" content="下载 zookeeper 官网下载地址https://zookeeper.apache.org/releases.html 文件链接(2019-11-12可以访问)apache-zookeeper-3.5.6-bin.tar.gz">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-13T09:35:09.703Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux 环境搭建 - Zookeeper 3.5.6">
+<meta name="twitter:description" content="下载 zookeeper 官网下载地址https://zookeeper.apache.org/releases.html 文件链接(2019-11-12可以访问)apache-zookeeper-3.5.6-bin.tar.gz">
+  <link rel="canonical" href="https://sometwo7.github.io/blog/f889c743">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Linux 环境搭建 - Zookeeper 3.5.6 | 佚名</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">佚名</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">一生太短，请务必热情！(Life too short, just be active!)</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/f889c743.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="佚名">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Linux 环境搭建 - Zookeeper 3.5.6
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-13 14:08:19 / 修改时间：09:35:09" itemprop="dateCreated datePublished" datetime="2019-11-13T14:08:19+00:00">2019-11-13</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Linux环境搭建/" itemprop="url" rel="index"><span itemprop="name">Linux环境搭建</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="下载-zookeeper"><a href="#下载-zookeeper" class="headerlink" title="下载 zookeeper"></a>下载 zookeeper</h1><ul>
+<li>官网下载地址<br>https://zookeeper.apache.org/releases.html</li>
+<li>文件链接(2019-11-12可以访问)<br><a href="https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/stable/apache-zookeeper-3.5.6-bin.tar.gz" target="_blank" rel="noopener">apache-zookeeper-3.5.6-bin.tar.gz</a></li>
+</ul>
+<a id="more"></a>
+
+<h1 id="解压文件"><a href="#解压文件" class="headerlink" title="解压文件"></a>解压文件</h1><p>上传 zookeeper 至 Linux 用户文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 解压</span><br><span class="line">tar -zxvf ~/apache-zookeeper-3.5.6-bin.tar.gz -C /opt/</span><br><span class="line"># 设置软连接，方便以后升级 zookeeper</span><br><span class="line">ln -s /opt/apache-zookeeper-3.5.6-bin /opt/zookeeper</span><br></pre></td></tr></table></figure>
+
+<h1 id="准备参数文件"><a href="#准备参数文件" class="headerlink" title="准备参数文件"></a>准备参数文件</h1><ul>
+<li><p>zookeeper 配置文件<br>zoo.cfg</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;tickTime=2000&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;initLimit=10&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;syncLimit=5&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;dataDir=/opt/data/zookeeper&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;clientPort=2181&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;admin.serverPort=8081&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;4lw.commands.whitelist=*&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>java 配置文件<br>请自行下载安装 openjdk1.8 至 /opt/openjdk 文件夹下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;export JAVA_HOME=/opt/openjdk&quot; &gt;&gt; /opt/zookeeper/conf/java.env</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/data/zookeeper</span><br></pre></td></tr></table></figure>
+
+<h1 id="启动-zookeeper"><a href="#启动-zookeeper" class="headerlink" title="启动 zookeeper"></a>启动 zookeeper</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/zookeeper/bin/zkServer.sh start /opt/zookeeper/conf/zoo.cfg</span><br></pre></td></tr></table></figure>
+
+<h1 id="查看-zookeeper-状态"><a href="#查看-zookeeper-状态" class="headerlink" title="查看 zookeeper 状态"></a>查看 zookeeper 状态</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/zookeeper/bin/zkServer.sh status /opt/zookeeper/conf/zoo.cfg</span><br></pre></td></tr></table></figure>
+
+<h1 id="集群模式"><a href="#集群模式" class="headerlink" title="集群模式"></a>集群模式</h1><ul>
+<li><p>zoo.cfg 文件需要增加配置</p>
+<blockquote>
+<p>server.[myid] = hostname:节点同步数据端口:zk选举接口</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;server.1=node1:2888:3888&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;server.2=node2:2888:3888&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;server.3=node3:2888:3888&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加 myid<br>node1、node2、node3 分别执行 1、2、3</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt;&gt; opt/data/zookeeper/myid</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="权限问题-修改文件属组"><a href="#权限问题-修改文件属组" class="headerlink" title="权限问题(修改文件属组)"></a>权限问题(修改文件属组)</h2><ul>
+<li><p>修改属主</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R admin /opt/apache-zookeeper-3.5.6-bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改用户组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R :admin /opt/apache-zookeeper-3.5.6-bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根据文件属组，调整目标文件属组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R --reference=/opt/apache-zookeeper-3.5.6-bin.tar.gz /opt/apache-zookeeper-3.5.6-bin</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h2><p>上传文件至用户文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -zxvf ~/apache-zookeeper-3.5.6-bin.tar.gz -C /opt/</span><br><span class="line">sudo su root</span><br><span class="line"></span><br><span class="line">ln -s /opt/wildfly/openjdk/openjdk-1.8.0_92 /opt/openjdk</span><br><span class="line">ln -s /opt/apache-zookeeper-3.5.6-bin /opt/zookeeper</span><br><span class="line"></span><br><span class="line">echo &quot;tickTime=2000&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;initLimit=10&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;syncLimit=5&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;dataDir=/opt/data/zookeeper&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;clientPort=2181&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;admin.serverPort=8081&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line">echo &quot;4lw.commands.whitelist=*&quot; &gt;&gt; /opt/zookeeper/conf/zoo.cfg</span><br><span class="line"></span><br><span class="line">echo &quot;export JAVA_HOME=/opt/openjdk&quot; &gt;&gt; /opt/zookeeper/conf/java.env</span><br><span class="line"></span><br><span class="line">mkdir -p /opt/data/zookeeper</span><br><span class="line"></span><br><span class="line">chown -R --reference=/opt/logs /opt/zookeeper</span><br><span class="line">chown -R --reference=/opt/logs /opt/apache-zookeeper-3.5.6-bin</span><br><span class="line">chown -R --reference=/opt/logs /opt/openjdk</span><br><span class="line">chown -R --reference=/opt/logs /opt/data</span><br><span class="line"></span><br><span class="line">/opt/zookeeper/bin/zkServer.sh start /opt/zookeeper/conf/zoo.cfg</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/blog/tags/Linux/" rel="tag"># Linux</a>
+            
+              <a href="/blog/tags/环境搭建/" rel="tag"># 环境搭建</a>
+            
+              <a href="/blog/tags/zookeeper/" rel="tag"># zookeeper</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/blog/eb01ca49.html" rel="next" title="网络技术 - Linux">
+                  <i class="fa fa-chevron-left"></i> 网络技术 - Linux
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/blog/46fcdcd9.html" rel="prev" title="Linux 环境搭建 - Solr8.3.0">
+                  Linux 环境搭建 - Solr8.3.0 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#下载-zookeeper"><span class="nav-number">1.</span> <span class="nav-text">下载 zookeeper</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解压文件"><span class="nav-number">2.</span> <span class="nav-text">解压文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备参数文件"><span class="nav-number">3.</span> <span class="nav-text">准备参数文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建目录"><span class="nav-number">4.</span> <span class="nav-text">创建目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动-zookeeper"><span class="nav-number">5.</span> <span class="nav-text">启动 zookeeper</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看-zookeeper-状态"><span class="nav-number">6.</span> <span class="nav-text">查看 zookeeper 状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集群模式"><span class="nav-number">7.</span> <span class="nav-text">集群模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录"><span class="nav-number">8.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#权限问题-修改文件属组"><span class="nav-number">8.1.</span> <span class="nav-text">权限问题(修改文件属组)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制粘贴"><span class="nav-number">8.2.</span> <span class="nav-text">复制粘贴</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png"
+      alt="Sometwo">
+  <p class="site-author-name" itemprop="name">Sometwo</p>
+  <div class="site-description" itemprop="description">一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">91</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/blog/categories/">
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/blog/tags/">
+          
+        
+        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/blog/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/sometwo7" title="GitHub &rarr; https://github.com/sometwo7" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sometwo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/blog/js/utils.js?v=7.4.1"></script><script src="/blog/js/motion.js?v=7.4.1"></script>
+<script src="/blog/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/blog/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/blog/js/local-search.js?v=7.4.1"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
