@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Linux 环境搭建 - Solr8.3.0</title>
+    <title>Linux 环境搭建 - Solr 8.3.0</title>
     <url>/blog/46fcdcd9.html</url>
     <content><![CDATA[<h1 id="下载-solr"><a href="#下载-solr" class="headerlink" title="下载 solr"></a>下载 solr</h1><ul>
 <li>官网下载地址<br>https://lucene.apache.org/solr/downloads.html</li>
