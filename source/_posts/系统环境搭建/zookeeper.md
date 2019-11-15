@@ -121,4 +121,8 @@ chown -R --reference=/opt/logs /opt/data
 
 /opt/zookeeper/bin/zkServer.sh start /opt/zookeeper/conf/zoo.cfg
 
+exit
+exit
+
+
 ```

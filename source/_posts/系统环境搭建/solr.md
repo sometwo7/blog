@@ -129,4 +129,7 @@ chown -R --reference=/opt/logs /opt/logs/solr
 sudo su jbossuser
 /opt/solr/bin/solr start
 
+exit
+exit
+
 ```
