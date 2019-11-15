@@ -1,5 +1,5 @@
 ---
-title: Linux 环境搭建 - Solr8.3.0
+title: Linux 环境搭建 - Solr 8.3.0
 tags:
   - Linux
   - 环境搭建
