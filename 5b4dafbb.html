@@ -31,8 +31,8 @@
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":true,"color":"#222","save":"auto"},
     fancybox: false,
     mediumzoom: false,
     lazyload: false,
@@ -80,7 +80,7 @@
 <meta property="og:image" content="https://sometwo7.github.io/blog/pics/af198da1-2480-4043-b07f-a3b91a88b815.png">
 <meta property="og:image" content="https://sometwo7.github.io/blog/pics/e3f1657c-80fc-4dfa-9643-bf51abd201c6.png">
 <meta property="og:image" content="https://sometwo7.github.io/blog/pics/_u4E0B_u8F7D.png">
-<meta property="og:updated_time" content="2019-11-16T07:50:25.835Z">
+<meta property="og:updated_time" content="2019-11-16T08:28:07.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络技术 - Http">
 <meta name="twitter:description" content="一 、基础概念URIURI 包含 URL 和 URN。  请求和响应报文1. 请求报文  2. 响应报文  二、HTTP 方法客户端发送的  请求报文  第一行为请求行，包含了方法字段。GET 获取资源 当前网络请求中，绝大部分使用的是 GET 方法。HEAD 获取报文首部 和 GET 方法类似，但是不返回报文实体主体部分。">
@@ -245,10 +245,10 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  <div class="reading-progress-bar"></div>
+  <a class="book-mark-link book-mark-link-fixed" href="#"></a>
+
+  <a href="https://github.com/sometwo7" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
     <main id="main" class="main">
@@ -303,7 +303,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-16 07:50:25" itemprop="dateModified" datetime="2019-11-16T07:50:25+00:00">2019-11-16</time>
+                <time title="修改时间：2019-11-16 08:28:07" itemprop="dateModified" datetime="2019-11-16T08:28:07+00:00">2019-11-16</time>
               </span>
             
           
@@ -1129,6 +1129,11 @@
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
 
     </div>
   </aside>
@@ -1175,7 +1180,7 @@
 <script src="/blog/js/utils.js?v=7.4.1"></script><script src="/blog/js/motion.js?v=7.4.1"></script>
 <script src="/blog/js/schemes/pisces.js?v=7.4.1"></script>
 
-<script src="/blog/js/next-boot.js?v=7.4.1"></script>
+<script src="/blog/js/next-boot.js?v=7.4.1"></script><script src="/blog/js/bookmark.js?v=7.4.1"></script>
 
 
 
