@@ -34,3 +34,8 @@ date: 2019-10-08 19:49:19
 ## 画思维导图
 - [幕布](https://mubu.com/)
 
+## 笔记
+- [typora](https://typora.io/)
+- https://typora.io/
+- Markdown 笔记，所见即所得
+
