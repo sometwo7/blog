@@ -10,6 +10,10 @@ date: 2019-10-08 19:49:19
 ---
 
 ## 电子书籍
+- [搬书匠](http://www.banshujiang.cn/)
+ - http://www.banshujiang.cn/
+ - 搬书匠 - 电子书(EBook)
+
 - [IT熊猫](https://itpanda.net/book/)
  - https://itpanda.net/book/
  - 收集网络上的计算机书籍，相互分享
