@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="搬运工">
 <meta property="og:description" content="JVM1. 说一下 jvm 的主要组成部分？及其作用？ jvm的主要组成有，类加载器子系统，运行时数据区，执行引擎，本地库接口，垃圾收集模块；  首先通过类加载器（ClassLoader）会把 Java 字节码加载到内存中，  运行时数据区（Runtime Data Area）存储被加载的字节码，  而字节码文件只是 JVM 的一套指令集规范，并不能直接交个底层操作系统去执行，因此需要特定的命令解">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-06T10:10:48.728Z">
+<meta property="og:updated_time" content="2019-12-06T15:09:32.033Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM">
 <meta name="twitter:description" content="JVM1. 说一下 jvm 的主要组成部分？及其作用？ jvm的主要组成有，类加载器子系统，运行时数据区，执行引擎，本地库接口，垃圾收集模块；  首先通过类加载器（ClassLoader）会把 Java 字节码加载到内存中，  运行时数据区（Runtime Data Area）存储被加载的字节码，  而字节码文件只是 JVM 的一套指令集规范，并不能直接交个底层操作系统去执行，因此需要特定的命令解">
@@ -286,7 +286,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-06 10:10:48" itemprop="dateModified" datetime="2019-12-06T10:10:48+00:00">2019-12-06</time>
+                <time title="修改时间：2019-12-06 15:09:32" itemprop="dateModified" datetime="2019-12-06T15:09:32+00:00">2019-12-06</time>
               </span>
             
           
@@ -442,9 +442,11 @@
 </li>
 <li><p>在启动 JVM 的参数加上“-XX:+UseConcMarkSweepGC”来指定使用 CMS 垃圾回收器。</p>
 </li>
-<li><p>CMS 使用的是标记-清除的算法实现的，所以在 gc 的时候回产生大量的内存碎片，</p>
+<li><p>CMS 使用的是标记-清除的算法实现的，所以在 gc 的时候产生大量的内存碎片，</p>
 </li>
-<li><p>当剩余内存不能满足程序运行要求时，系统将会出现 Concurrent Mode Failure，临时 CMS 会采用 Serial Old 回收器进行垃圾清除，此时的性能将会被降低。</p>
+<li><p>当剩余内存不能满足程序运行要求时，系统将会出现 Concurrent Mode Failure，</p>
+</li>
+<li><p>临时 CMS 会采用 Serial Old 回收器进行垃圾清除，此时的性能将会被降低。</p>
 </li>
 </ul>
 <h2 id="12-新生代垃圾回收器和老生代垃圾回收器都有哪些？有什么区别？"><a href="#12-新生代垃圾回收器和老生代垃圾回收器都有哪些？有什么区别？" class="headerlink" title="12. 新生代垃圾回收器和老生代垃圾回收器都有哪些？有什么区别？"></a>12. 新生代垃圾回收器和老生代垃圾回收器都有哪些？有什么区别？</h2><ul>
