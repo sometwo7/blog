@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png?v=7.4.1">
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/blog/atom.xml" title="搬运工" type="application/atom+xml">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":true,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="BFS 1. 计算在网格中从原点到特定点的最短路径长度 2. 组成整数的最小平方数数量 3. 最短单词路径   DFS 1. 查找最大的连通面积 2. 矩阵中的连通分量数目 3. 好友关系的连通分量数目 4. 填充封闭区域 5. 能到达的太平洋和大西洋的区域   Backtracking 1. 数字键盘组合 2. IP 地址划分 3. 在矩阵中寻找字符串 4. 输出二叉树中所有从根到叶子的路径">
+<meta name="keywords" content="Java,leetcode,搜索">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode 题解 - 搜索">
+<meta property="og:url" content="https://sometwo7.github.io/blog/d7d172d4.html">
+<meta property="og:site_name" content="搬运工">
+<meta property="og:description" content="BFS 1. 计算在网格中从原点到特定点的最短路径长度 2. 组成整数的最小平方数数量 3. 最短单词路径   DFS 1. 查找最大的连通面积 2. 矩阵中的连通分量数目 3. 好友关系的连通分量数目 4. 填充封闭区域 5. 能到达的太平洋和大西洋的区域   Backtracking 1. 数字键盘组合 2. IP 地址划分 3. 在矩阵中寻找字符串 4. 输出二叉树中所有从根到叶子的路径">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://sometwo7.github.io/blog/pics/95903878-725b-4ed9-bded-bc4aae0792a9.jpg">
+<meta property="og:image" content="https://sometwo7.github.io/blog/pics/74dc31eb-6baa-47ea-ab1c-d27a0ca35093.png">
+<meta property="og:image" content="https://sometwo7.github.io/blog/pics/9823768c-212b-4b1a-b69a-b3f59e07b977.jpg">
+<meta property="og:image" content="https://sometwo7.github.io/blog/pics/0e8fdc96-83c1-4798-9abe-45fc91d70b9d.png">
+<meta property="og:image" content="https://sometwo7.github.io/blog/pics/067b310c-6877-40fe-9dcf-10654e737485.jpg">
+<meta property="og:image" content="https://sometwo7.github.io/blog/pics/9c422923-1447-4a3b-a4e1-97e663738187.jpg">
+<meta property="og:image" content="https://sometwo7.github.io/blog/pics/7a85e285-e152-4116-b6dc-3fab27ba9437.jpg">
+<meta property="og:updated_time" content="2019-10-31T06:54:21.319Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leetcode 题解 - 搜索">
+<meta name="twitter:description" content="BFS 1. 计算在网格中从原点到特定点的最短路径长度 2. 组成整数的最小平方数数量 3. 最短单词路径   DFS 1. 查找最大的连通面积 2. 矩阵中的连通分量数目 3. 好友关系的连通分量数目 4. 填充封闭区域 5. 能到达的太平洋和大西洋的区域   Backtracking 1. 数字键盘组合 2. IP 地址划分 3. 在矩阵中寻找字符串 4. 输出二叉树中所有从根到叶子的路径">
+<meta name="twitter:image" content="https://sometwo7.github.io/blog/pics/95903878-725b-4ed9-bded-bc4aae0792a9.jpg">
+  <link rel="canonical" href="https://sometwo7.github.io/blog/d7d172d4">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Leetcode 题解 - 搜索 | 搬运工</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">搬运工</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">一生太短，请务必热情！(Life too short, just be active!)</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a class="book-mark-link book-mark-link-fixed" href="#"></a>
+
+  <a href="https://github.com/sometwo7" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/d7d172d4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="搬运工">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Leetcode 题解 - 搜索
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-31 14:06:32 / 修改时间：14:54:21" itemprop="dateCreated datePublished" datetime="2019-10-31T14:06:32+08:00">2019-10-31</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <ul>
+<li><a href="#bfs">BFS</a><ul>
+<li><a href="#1-计算在网格中从原点到特定点的最短路径长度">1. 计算在网格中从原点到特定点的最短路径长度</a></li>
+<li><a href="#2-组成整数的最小平方数数量">2. 组成整数的最小平方数数量</a></li>
+<li><a href="#3-最短单词路径">3. 最短单词路径</a></li>
+</ul>
+</li>
+<li><a href="#dfs">DFS</a><ul>
+<li><a href="#1-查找最大的连通面积">1. 查找最大的连通面积</a></li>
+<li><a href="#2-矩阵中的连通分量数目">2. 矩阵中的连通分量数目</a></li>
+<li><a href="#3-好友关系的连通分量数目">3. 好友关系的连通分量数目</a></li>
+<li><a href="#4-填充封闭区域">4. 填充封闭区域</a></li>
+<li><a href="#5-能到达的太平洋和大西洋的区域">5. 能到达的太平洋和大西洋的区域</a></li>
+</ul>
+</li>
+<li><a href="#backtracking">Backtracking</a><ul>
+<li><a href="#1-数字键盘组合">1. 数字键盘组合</a></li>
+<li><a href="#2-ip-地址划分">2. IP 地址划分</a></li>
+<li><a href="#3-在矩阵中寻找字符串">3. 在矩阵中寻找字符串</a></li>
+<li><a href="#4-输出二叉树中所有从根到叶子的路径">4. 输出二叉树中所有从根到叶子的路径</a></li>
+<li><a href="#5-排列">5. 排列</a></li>
+<li><a href="#6-含有相同元素求排列">6. 含有相同元素求排列</a></li>
+<li><a href="#7-组合">7. 组合</a></li>
+<li><a href="#8-组合求和">8. 组合求和</a></li>
+<li><a href="#9-含有相同元素的组合求和">9. 含有相同元素的组合求和</a></li>
+<li><a href="#10-1-9-数字的组合求和">10. 1-9 数字的组合求和</a></li>
+<li><a href="#11-子集">11. 子集</a></li>
+<li><a href="#12-含有相同元素求子集">12. 含有相同元素求子集</a></li>
+<li><a href="#13-分割字符串使得每个部分都是回文数">13. 分割字符串使得每个部分都是回文数</a></li>
+<li><a href="#14-数独">14. 数独</a></li>
+<li><a href="#15-n-皇后">15. N 皇后</a><!-- GFM-TOC -->
+
+
+</li>
+</ul>
+</li>
+</ul><a id="more"></a><!-- GFM-TOC -->
+
+<p>深度优先搜索和广度优先搜索广泛运用于树和图中，但是它们的应用远远不止如此。</p>
+<h1 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h1><div align="center"> <img src="pics/95903878-725b-4ed9-bded-bc4aae0792a9.jpg"> </div><br>
+
+<p>广度优先搜索一层一层地进行遍历，每层遍历都以上一层遍历的结果作为起点，遍历一个距离能访问到的所有节点。需要注意的是，遍历过的节点不能再次被遍历。</p>
+<p>第一层：</p>
+<ul>
+<li>0 -&gt; {6,2,1,5}</li>
+</ul>
+<p>第二层：</p>
+<ul>
+<li>6 -&gt; {4}</li>
+<li>2 -&gt; {}</li>
+<li>1 -&gt; {}</li>
+<li>5 -&gt; {3}</li>
+</ul>
+<p>第三层：</p>
+<ul>
+<li>4 -&gt; {}</li>
+<li>3 -&gt; {}</li>
+</ul>
+<p>每一层遍历的节点都与根节点距离相同。设 d<sub>i</sub> 表示第 i 个节点与根节点的距离，推导出一个结论：对于先遍历的节点 i 与后遍历的节点 j，有 d<sub>i</sub> &lt;= d<sub>j</sub>。利用这个结论，可以求解最短路径等  <strong>最优解</strong>  问题：第一次遍历到目的节点，其所经过的路径为最短路径。应该注意的是，使用 BFS 只能求解无权图的最短路径，无权图是指从一个节点到另一个节点的代价都记为 1。</p>
+<p>在程序实现 BFS 时需要考虑以下问题：</p>
+<ul>
+<li>队列：用来存储每一轮遍历得到的节点；</li>
+<li>标记：对于遍历过的节点，应该将它标记，防止重复遍历。</li>
+</ul>
+<h2 id="1-计算在网格中从原点到特定点的最短路径长度"><a href="#1-计算在网格中从原点到特定点的最短路径长度" class="headerlink" title="1. 计算在网格中从原点到特定点的最短路径长度"></a>1. 计算在网格中从原点到特定点的最短路径长度</h2><p>1091. Shortest Path in Binary Matrix(Medium)</p>
+<p><a href="https://leetcode.com/problems/shortest-path-in-binary-matrix/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/shortest-path-in-binary-matrix/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[[1,1,0,1],</span><br><span class="line"> [1,0,1,0],</span><br><span class="line"> [1,1,1,1],</span><br><span class="line"> [1,0,1,1]]</span><br></pre></td></tr></table></figure>
+
+<p>题目描述：0 表示可以经过某个位置，求解从左上角到右下角的最短路径长度。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">shortestPathBinaryMatrix</span><span class="params">(<span class="keyword">int</span>[][] grids)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[][] direction = &#123;&#123;<span class="number">1</span>, -<span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;<span class="number">1</span>, <span class="number">1</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;, &#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">1</span>&#125;&#125;;</span><br><span class="line">    <span class="keyword">int</span> m = grids.length, n = grids[<span class="number">0</span>].length;</span><br><span class="line">    Queue&lt;Pair&lt;Integer, Integer&gt;&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    queue.add(<span class="keyword">new</span> Pair&lt;&gt;(<span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">    <span class="keyword">int</span> pathLength = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">int</span> size = queue.size();</span><br><span class="line">        pathLength++;</span><br><span class="line">        <span class="keyword">while</span> (size-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            Pair&lt;Integer, Integer&gt; cur = queue.poll();</span><br><span class="line">            <span class="keyword">int</span> cr = cur.getKey(), cc = cur.getValue();</span><br><span class="line">            grids[cr][cc] = <span class="number">1</span>; <span class="comment">// 标记</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span>[] d : direction) &#123;</span><br><span class="line">                <span class="keyword">int</span> nr = cr + d[<span class="number">0</span>], nc = cc + d[<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">if</span> (nr &lt; <span class="number">0</span> || nr &gt;= m || nc &lt; <span class="number">0</span> || nc &gt;= n || grids[nr][nc] == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (nr == m - <span class="number">1</span> &amp;&amp; nc == n - <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> pathLength + <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                queue.add(<span class="keyword">new</span> Pair&lt;&gt;(nr, nc));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-组成整数的最小平方数数量"><a href="#2-组成整数的最小平方数数量" class="headerlink" title="2. 组成整数的最小平方数数量"></a>2. 组成整数的最小平方数数量</h2><p>279. Perfect Squares (Medium)</p>
+<p><a href="https://leetcode.com/problems/perfect-squares/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/perfect-squares/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">For example, given n = 12, return 3 because 12 = 4 + 4 + 4; given n = 13, return 2 because 13 = 4 + 9.</span><br></pre></td></tr></table></figure>
+
+<p>可以将每个整数看成图中的一个节点，如果两个整数之差为一个平方数，那么这两个整数所在的节点就有一条边。</p>
+<p>要求解最小的平方数数量，就是求解从节点 n 到节点 0 的最短路径。</p>
+<p>本题也可以用动态规划求解，在之后动态规划部分中会再次出现。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numSquares</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    List&lt;Integer&gt; squares = generateSquares(n);</span><br><span class="line">    Queue&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="keyword">boolean</span>[] marked = <span class="keyword">new</span> <span class="keyword">boolean</span>[n + <span class="number">1</span>];</span><br><span class="line">    queue.add(n);</span><br><span class="line">    marked[n] = <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">int</span> level = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">int</span> size = queue.size();</span><br><span class="line">        level++;</span><br><span class="line">        <span class="keyword">while</span> (size-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> cur = queue.poll();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> s : squares) &#123;</span><br><span class="line">                <span class="keyword">int</span> next = cur - s;</span><br><span class="line">                <span class="keyword">if</span> (next &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (next == <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> level;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (marked[next]) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                marked[next] = <span class="keyword">true</span>;</span><br><span class="line">                queue.add(next);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 生成小于 n 的平方数序列</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 1,4,9,...</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> List&lt;Integer&gt; <span class="title">generateSquares</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    List&lt;Integer&gt; squares = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">int</span> square = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> diff = <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">while</span> (square &lt;= n) &#123;</span><br><span class="line">        squares.add(square);</span><br><span class="line">        square += diff;</span><br><span class="line">        diff += <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> squares;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-最短单词路径"><a href="#3-最短单词路径" class="headerlink" title="3. 最短单词路径"></a>3. 最短单词路径</h2><p>127. Word Ladder (Medium)</p>
+<p><a href="https://leetcode.com/problems/word-ladder/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/word-ladder/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">beginWord = "hit",</span><br><span class="line">endWord = "cog",</span><br><span class="line">wordList = ["hot","dot","dog","lot","log","cog"]</span><br><span class="line"></span><br><span class="line">Output: 5</span><br><span class="line"></span><br><span class="line">Explanation: As one shortest transformation is "hit" -&gt; "hot" -&gt; "dot" -&gt; "dog" -&gt; "cog",</span><br><span class="line">return its length 5.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">beginWord = "hit"</span><br><span class="line">endWord = "cog"</span><br><span class="line">wordList = ["hot","dot","dog","lot","log"]</span><br><span class="line"></span><br><span class="line">Output: 0</span><br><span class="line"></span><br><span class="line">Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.</span><br></pre></td></tr></table></figure>
+
+<p>题目描述：找出一条从 beginWord 到 endWord 的最短路径，每次移动规定为改变一个字符，并且改变之后的字符串必须在 wordList 中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">ladderLength</span><span class="params">(String beginWord, String endWord, List&lt;String&gt; wordList)</span> </span>&#123;</span><br><span class="line">    wordList.add(beginWord);</span><br><span class="line">    <span class="keyword">int</span> N = wordList.size();</span><br><span class="line">    <span class="keyword">int</span> start = N - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> end = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (end &lt; N &amp;&amp; !wordList.get(end).equals(endWord)) &#123;</span><br><span class="line">        end++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (end == N) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    List&lt;Integer&gt;[] graphic = buildGraphic(wordList);</span><br><span class="line">    <span class="keyword">return</span> getShortestPath(graphic, start, end);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> List&lt;Integer&gt;[] buildGraphic(List&lt;String&gt; wordList) &#123;</span><br><span class="line">    <span class="keyword">int</span> N = wordList.size();</span><br><span class="line">    List&lt;Integer&gt;[] graphic = <span class="keyword">new</span> List[N];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">        graphic[i] = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (isConnect(wordList.get(i), wordList.get(j))) &#123;</span><br><span class="line">                graphic[i].add(j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> graphic;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isConnect</span><span class="params">(String s1, String s2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> diffCnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s1.length() &amp;&amp; diffCnt &lt;= <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s1.charAt(i) != s2.charAt(i)) &#123;</span><br><span class="line">            diffCnt++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> diffCnt == <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">getShortestPath</span><span class="params">(List&lt;Integer&gt;[] graphic, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">    Queue&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="keyword">boolean</span>[] marked = <span class="keyword">new</span> <span class="keyword">boolean</span>[graphic.length];</span><br><span class="line">    queue.add(start);</span><br><span class="line">    marked[start] = <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">int</span> path = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">int</span> size = queue.size();</span><br><span class="line">        path++;</span><br><span class="line">        <span class="keyword">while</span> (size-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> cur = queue.poll();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> next : graphic[cur]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (next == end) &#123;</span><br><span class="line">                    <span class="keyword">return</span> path;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (marked[next]) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                marked[next] = <span class="keyword">true</span>;</span><br><span class="line">                queue.add(next);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h1><div align="center"> <img src="pics/74dc31eb-6baa-47ea-ab1c-d27a0ca35093.png"> </div><br>
+
+<p>广度优先搜索一层一层遍历，每一层得到的所有新节点，要用队列存储起来以备下一层遍历的时候再遍历。</p>
+<p>而深度优先搜索在得到一个新节点时立即对新节点进行遍历：从节点 0 出发开始遍历，得到到新节点 6 时，立马对新节点 6 进行遍历，得到新节点 4；如此反复以这种方式遍历新节点，直到没有新节点了，此时返回。返回到根节点 0 的情况是，继续对根节点 0 进行遍历，得到新节点 2，然后继续以上步骤。</p>
+<p>从一个节点出发，使用 DFS 对一个图进行遍历时，能够遍历到的节点都是从初始节点可达的，DFS 常用来求解这种  <strong>可达性</strong>  问题。</p>
+<p>在程序实现 DFS 时需要考虑以下问题：</p>
+<ul>
+<li>栈：用栈来保存当前节点信息，当遍历新节点返回时能够继续遍历当前节点。可以使用递归栈。</li>
+<li>标记：和 BFS 一样同样需要对已经遍历过的节点进行标记。</li>
+</ul>
+<h2 id="1-查找最大的连通面积"><a href="#1-查找最大的连通面积" class="headerlink" title="1. 查找最大的连通面积"></a>1. 查找最大的连通面积</h2><p>695. Max Area of Island (Medium)</p>
+<p><a href="https://leetcode.com/problems/max-area-of-island/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/max-area-of-island/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[[0,0,1,0,0,0,0,1,0,0,0,0,0],</span><br><span class="line"> [0,0,0,0,0,0,0,1,1,1,0,0,0],</span><br><span class="line"> [0,1,1,0,1,0,0,0,0,0,0,0,0],</span><br><span class="line"> [0,1,0,0,1,1,0,0,1,0,1,0,0],</span><br><span class="line"> [0,1,0,0,1,1,0,0,1,1,1,0,0],</span><br><span class="line"> [0,0,0,0,0,0,0,0,0,0,1,0,0],</span><br><span class="line"> [0,0,0,0,0,0,0,1,1,1,0,0,0],</span><br><span class="line"> [0,0,0,0,0,0,0,1,1,0,0,0,0]]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> m, n;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span>[][] direction = &#123;&#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxAreaOfIsland</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (grid == <span class="keyword">null</span> || grid.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    m = grid.length;</span><br><span class="line">    n = grid[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">int</span> maxArea = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            maxArea = Math.max(maxArea, dfs(grid, i, j));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxArea;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span>[][] grid, <span class="keyword">int</span> r, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (r &lt; <span class="number">0</span> || r &gt;= m || c &lt; <span class="number">0</span> || c &gt;= n || grid[r][c] == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    grid[r][c] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> area = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span>[] d : direction) &#123;</span><br><span class="line">        area += dfs(grid, r + d[<span class="number">0</span>], c + d[<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> area;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-矩阵中的连通分量数目"><a href="#2-矩阵中的连通分量数目" class="headerlink" title="2. 矩阵中的连通分量数目"></a>2. 矩阵中的连通分量数目</h2><p>200. Number of Islands (Medium)</p>
+<p><a href="https://leetcode.com/problems/number-of-islands/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/number-of-islands/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">11000</span><br><span class="line">11000</span><br><span class="line">00100</span><br><span class="line">00011</span><br><span class="line"></span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure>
+
+<p>可以将矩阵表示看成一张有向图。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> m, n;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span>[][] direction = &#123;&#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numIslands</span><span class="params">(<span class="keyword">char</span>[][] grid)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (grid == <span class="keyword">null</span> || grid.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    m = grid.length;</span><br><span class="line">    n = grid[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">int</span> islandsNum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (grid[i][j] != <span class="string">'0'</span>) &#123;</span><br><span class="line">                dfs(grid, i, j);</span><br><span class="line">                islandsNum++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> islandsNum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">char</span>[][] grid, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i &lt; <span class="number">0</span> || i &gt;= m || j &lt; <span class="number">0</span> || j &gt;= n || grid[i][j] == <span class="string">'0'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    grid[i][j] = <span class="string">'0'</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span>[] d : direction) &#123;</span><br><span class="line">        dfs(grid, i + d[<span class="number">0</span>], j + d[<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-好友关系的连通分量数目"><a href="#3-好友关系的连通分量数目" class="headerlink" title="3. 好友关系的连通分量数目"></a>3. 好友关系的连通分量数目</h2><p>547. Friend Circles (Medium)</p>
+<p><a href="https://leetcode.com/problems/friend-circles/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/friend-circles/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[[1,1,0],</span><br><span class="line"> [1,1,0],</span><br><span class="line"> [0,0,1]]</span><br><span class="line"></span><br><span class="line">Output: 2</span><br><span class="line"></span><br><span class="line">Explanation:The 0th and 1st students are direct friends, so they are in a friend circle.</span><br><span class="line">The 2nd student himself is in a friend circle. So return 2.</span><br></pre></td></tr></table></figure>
+
+<p>题目描述：好友关系可以看成是一个无向图，例如第 0 个人与第 1 个人是好友，那么 M[0][1] 和 M[1][0] 的值都为 1。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findCircleNum</span><span class="params">(<span class="keyword">int</span>[][] M)</span> </span>&#123;</span><br><span class="line">    n = M.length;</span><br><span class="line">    <span class="keyword">int</span> circleNum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">boolean</span>[] hasVisited = <span class="keyword">new</span> <span class="keyword">boolean</span>[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!hasVisited[i]) &#123;</span><br><span class="line">            dfs(M, i, hasVisited);</span><br><span class="line">            circleNum++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> circleNum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span>[][] M, <span class="keyword">int</span> i, <span class="keyword">boolean</span>[] hasVisited)</span> </span>&#123;</span><br><span class="line">    hasVisited[i] = <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (M[i][k] == <span class="number">1</span> &amp;&amp; !hasVisited[k]) &#123;</span><br><span class="line">            dfs(M, k, hasVisited);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-填充封闭区域"><a href="#4-填充封闭区域" class="headerlink" title="4. 填充封闭区域"></a>4. 填充封闭区域</h2><p>130. Surrounded Regions (Medium)</p>
+<p><a href="https://leetcode.com/problems/surrounded-regions/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/surrounded-regions/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">For example,</span><br><span class="line">X X X X</span><br><span class="line">X O O X</span><br><span class="line">X X O X</span><br><span class="line">X O X X</span><br><span class="line"></span><br><span class="line">After running your function, the board should be:</span><br><span class="line">X X X X</span><br><span class="line">X X X X</span><br><span class="line">X X X X</span><br><span class="line">X O X X</span><br></pre></td></tr></table></figure>
+
+<p>题目描述：使被 &#39;X&#39; 包围的 &#39;O&#39; 转换为 &#39;X&#39;。</p>
+<p>先填充最外侧，剩下的就是里侧了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">int</span>[][] direction = &#123;&#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> m, n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">char</span>[][] board)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (board == <span class="keyword">null</span> || board.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    m = board.length;</span><br><span class="line">    n = board[<span class="number">0</span>].length;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        dfs(board, i, <span class="number">0</span>);</span><br><span class="line">        dfs(board, i, n - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        dfs(board, <span class="number">0</span>, i);</span><br><span class="line">        dfs(board, m - <span class="number">1</span>, i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (board[i][j] == <span class="string">'T'</span>) &#123;</span><br><span class="line">                board[i][j] = <span class="string">'O'</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (board[i][j] == <span class="string">'O'</span>) &#123;</span><br><span class="line">                board[i][j] = <span class="string">'X'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">char</span>[][] board, <span class="keyword">int</span> r, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (r &lt; <span class="number">0</span> || r &gt;= m || c &lt; <span class="number">0</span> || c &gt;= n || board[r][c] != <span class="string">'O'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    board[r][c] = <span class="string">'T'</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span>[] d : direction) &#123;</span><br><span class="line">        dfs(board, r + d[<span class="number">0</span>], c + d[<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-能到达的太平洋和大西洋的区域"><a href="#5-能到达的太平洋和大西洋的区域" class="headerlink" title="5. 能到达的太平洋和大西洋的区域"></a>5. 能到达的太平洋和大西洋的区域</h2><p>417. Pacific Atlantic Water Flow (Medium)</p>
+<p><a href="https://leetcode.com/problems/pacific-atlantic-water-flow/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/pacific-atlantic-water-flow/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Given the following 5x5 matrix:</span><br><span class="line"></span><br><span class="line">  Pacific ~   ~   ~   ~   ~</span><br><span class="line">       ~  1   2   2   3  (5) *</span><br><span class="line">       ~  3   2   3  (4) (4) *</span><br><span class="line">       ~  2   4  (5)  3   1  *</span><br><span class="line">       ~ (6) (7)  1   4   5  *</span><br><span class="line">       ~ (5)  1   1   2   4  *</span><br><span class="line">          *   *   *   *   * Atlantic</span><br><span class="line"></span><br><span class="line">Return:</span><br><span class="line">[[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]] (positions with parentheses in above matrix).</span><br></pre></td></tr></table></figure>
+
+<p>左边和上边是太平洋，右边和下边是大西洋，内部的数字代表海拔，海拔高的地方的水能够流到低的地方，求解水能够流到太平洋和大西洋的所有位置。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> m, n;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span>[][] matrix;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span>[][] direction = &#123;&#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; pacificAtlantic(<span class="keyword">int</span>[][] matrix) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; ret = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">if</span> (matrix == <span class="keyword">null</span> || matrix.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    m = matrix.length;</span><br><span class="line">    n = matrix[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">this</span>.matrix = matrix;</span><br><span class="line">    <span class="keyword">boolean</span>[][] canReachP = <span class="keyword">new</span> <span class="keyword">boolean</span>[m][n];</span><br><span class="line">    <span class="keyword">boolean</span>[][] canReachA = <span class="keyword">new</span> <span class="keyword">boolean</span>[m][n];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        dfs(i, <span class="number">0</span>, canReachP);</span><br><span class="line">        dfs(i, n - <span class="number">1</span>, canReachA);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        dfs(<span class="number">0</span>, i, canReachP);</span><br><span class="line">        dfs(m - <span class="number">1</span>, i, canReachA);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (canReachP[i][j] &amp;&amp; canReachA[i][j]) &#123;</span><br><span class="line">                ret.add(Arrays.asList(i, j));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> r, <span class="keyword">int</span> c, <span class="keyword">boolean</span>[][] canReach)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (canReach[r][c]) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    canReach[r][c] = <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span>[] d : direction) &#123;</span><br><span class="line">        <span class="keyword">int</span> nextR = d[<span class="number">0</span>] + r;</span><br><span class="line">        <span class="keyword">int</span> nextC = d[<span class="number">1</span>] + c;</span><br><span class="line">        <span class="keyword">if</span> (nextR &lt; <span class="number">0</span> || nextR &gt;= m || nextC &lt; <span class="number">0</span> || nextC &gt;= n</span><br><span class="line">                || matrix[r][c] &gt; matrix[nextR][nextC]) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        dfs(nextR, nextC, canReach);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h1><p>Backtracking（回溯）属于 DFS。</p>
+<ul>
+<li>普通 DFS 主要用在  <strong>可达性问题</strong> ，这种问题只需要执行到特点的位置然后返回即可。</li>
+<li>而 Backtracking 主要用于求解  <strong>排列组合</strong>  问题，例如有 { &#39;a&#39;,&#39;b&#39;,&#39;c&#39; } 三个字符，求解所有由这三个字符排列得到的字符串，这种问题在执行到特定的位置返回之后还会继续执行求解过程。</li>
+</ul>
+<p>因为 Backtracking 不是立即返回，而要继续求解，因此在程序实现时，需要注意对元素的标记问题：</p>
+<ul>
+<li>在访问一个新元素进入新的递归调用时，需要将新元素标记为已经访问，这样才能在继续递归调用时不用重复访问该元素；</li>
+<li>但是在递归返回时，需要将元素标记为未访问，因为只需要保证在一个递归链中不同时访问一个元素，可以访问已经访问过但是不在当前递归链中的元素。</li>
+</ul>
+<h2 id="1-数字键盘组合"><a href="#1-数字键盘组合" class="headerlink" title="1. 数字键盘组合"></a>1. 数字键盘组合</h2><p>17. Letter Combinations of a Phone Number (Medium)</p>
+<p><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/description/" target="_blank" rel="noopener">力扣</a></p>
+<div align="center"> <img src="pics/9823768c-212b-4b1a-b69a-b3f59e07b977.jpg"> </div><br>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input:Digit string "23"</span><br><span class="line">Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String[] KEYS = &#123;<span class="string">""</span>, <span class="string">""</span>, <span class="string">"abc"</span>, <span class="string">"def"</span>, <span class="string">"ghi"</span>, <span class="string">"jkl"</span>, <span class="string">"mno"</span>, <span class="string">"pqrs"</span>, <span class="string">"tuv"</span>, <span class="string">"wxyz"</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">letterCombinations</span><span class="params">(String digits)</span> </span>&#123;</span><br><span class="line">    List&lt;String&gt; combinations = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">if</span> (digits == <span class="keyword">null</span> || digits.length() == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> combinations;</span><br><span class="line">    &#125;</span><br><span class="line">    doCombination(<span class="keyword">new</span> StringBuilder(), combinations, digits);</span><br><span class="line">    <span class="keyword">return</span> combinations;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">doCombination</span><span class="params">(StringBuilder prefix, List&lt;String&gt; combinations, <span class="keyword">final</span> String digits)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (prefix.length() == digits.length()) &#123;</span><br><span class="line">        combinations.add(prefix.toString());</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> curDigits = digits.charAt(prefix.length()) - <span class="string">'0'</span>;</span><br><span class="line">    String letters = KEYS[curDigits];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> c : letters.toCharArray()) &#123;</span><br><span class="line">        prefix.append(c);                         <span class="comment">// 添加</span></span><br><span class="line">        doCombination(prefix, combinations, digits);</span><br><span class="line">        prefix.deleteCharAt(prefix.length() - <span class="number">1</span>); <span class="comment">// 删除</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-IP-地址划分"><a href="#2-IP-地址划分" class="headerlink" title="2. IP 地址划分"></a>2. IP 地址划分</h2><p>93. Restore IP Addresses(Medium)</p>
+<p><a href="https://leetcode.com/problems/restore-ip-addresses/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/restore-ip-addresses/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Given "25525511135",</span><br><span class="line">return ["255.255.11.135", "255.255.111.35"].</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">restoreIpAddresses</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    List&lt;String&gt; addresses = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    StringBuilder tempAddress = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    doRestore(<span class="number">0</span>, tempAddress, addresses, s);</span><br><span class="line">    <span class="keyword">return</span> addresses;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">doRestore</span><span class="params">(<span class="keyword">int</span> k, StringBuilder tempAddress, List&lt;String&gt; addresses, String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (k == <span class="number">4</span> || s.length() == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (k == <span class="number">4</span> &amp;&amp; s.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            addresses.add(tempAddress.toString());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length() &amp;&amp; i &lt;= <span class="number">2</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i != <span class="number">0</span> &amp;&amp; s.charAt(<span class="number">0</span>) == <span class="string">'0'</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        String part = s.substring(<span class="number">0</span>, i + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (Integer.valueOf(part) &lt;= <span class="number">255</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (tempAddress.length() != <span class="number">0</span>) &#123;</span><br><span class="line">                part = <span class="string">"."</span> + part;</span><br><span class="line">            &#125;</span><br><span class="line">            tempAddress.append(part);</span><br><span class="line">            doRestore(k + <span class="number">1</span>, tempAddress, addresses, s.substring(i + <span class="number">1</span>));</span><br><span class="line">            tempAddress.delete(tempAddress.length() - part.length(), tempAddress.length());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-在矩阵中寻找字符串"><a href="#3-在矩阵中寻找字符串" class="headerlink" title="3. 在矩阵中寻找字符串"></a>3. 在矩阵中寻找字符串</h2><p>79. Word Search (Medium)</p>
+<p><a href="https://leetcode.com/problems/word-search/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/word-search/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">For example,</span><br><span class="line">Given board =</span><br><span class="line">[</span><br><span class="line">  ['A','B','C','E'],</span><br><span class="line">  ['S','F','C','S'],</span><br><span class="line">  ['A','D','E','E']</span><br><span class="line">]</span><br><span class="line">word = "ABCCED", -&gt; returns true,</span><br><span class="line">word = "SEE", -&gt; returns true,</span><br><span class="line">word = "ABCB", -&gt; returns false.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span>[][] direction = &#123;&#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> m;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">exist</span><span class="params">(<span class="keyword">char</span>[][] board, String word)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (word == <span class="keyword">null</span> || word.length() == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (board == <span class="keyword">null</span> || board.length == <span class="number">0</span> || board[<span class="number">0</span>].length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    m = board.length;</span><br><span class="line">    n = board[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">boolean</span>[][] hasVisited = <span class="keyword">new</span> <span class="keyword">boolean</span>[m][n];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> r = <span class="number">0</span>; r &lt; m; r++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> c = <span class="number">0</span>; c &lt; n; c++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (backtracking(<span class="number">0</span>, r, c, hasVisited, board, word)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">int</span> curLen, <span class="keyword">int</span> r, <span class="keyword">int</span> c, <span class="keyword">boolean</span>[][] visited, <span class="keyword">final</span> <span class="keyword">char</span>[][] board, <span class="keyword">final</span> String word)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (curLen == word.length()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (r &lt; <span class="number">0</span> || r &gt;= m || c &lt; <span class="number">0</span> || c &gt;= n</span><br><span class="line">            || board[r][c] != word.charAt(curLen) || visited[r][c]) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    visited[r][c] = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span>[] d : direction) &#123;</span><br><span class="line">        <span class="keyword">if</span> (backtracking(curLen + <span class="number">1</span>, r + d[<span class="number">0</span>], c + d[<span class="number">1</span>], visited, board, word)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    visited[r][c] = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-输出二叉树中所有从根到叶子的路径"><a href="#4-输出二叉树中所有从根到叶子的路径" class="headerlink" title="4. 输出二叉树中所有从根到叶子的路径"></a>4. 输出二叉树中所有从根到叶子的路径</h2><p>257. Binary Tree Paths (Easy)</p>
+<p><a href="https://leetcode.com/problems/binary-tree-paths/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/binary-tree-paths/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  1</span><br><span class="line"> /  \</span><br><span class="line">2    3</span><br><span class="line"> \</span><br><span class="line">  5</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">["1-&gt;2-&gt;5", "1-&gt;3"]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">binaryTreePaths</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    List&lt;String&gt; paths = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> paths;</span><br><span class="line">    &#125;</span><br><span class="line">    List&lt;Integer&gt; values = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    backtracking(root, values, paths);</span><br><span class="line">    <span class="keyword">return</span> paths;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(TreeNode node, List&lt;Integer&gt; values, List&lt;String&gt; paths)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    values.add(node.val);</span><br><span class="line">    <span class="keyword">if</span> (isLeaf(node)) &#123;</span><br><span class="line">        paths.add(buildPath(values));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        backtracking(node.left, values, paths);</span><br><span class="line">        backtracking(node.right, values, paths);</span><br><span class="line">    &#125;</span><br><span class="line">    values.remove(values.size() - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isLeaf</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> node.left == <span class="keyword">null</span> &amp;&amp; node.right == <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> String <span class="title">buildPath</span><span class="params">(List&lt;Integer&gt; values)</span> </span>&#123;</span><br><span class="line">    StringBuilder str = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; values.size(); i++) &#123;</span><br><span class="line">        str.append(values.get(i));</span><br><span class="line">        <span class="keyword">if</span> (i != values.size() - <span class="number">1</span>) &#123;</span><br><span class="line">            str.append(<span class="string">"-&gt;"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> str.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-排列"><a href="#5-排列" class="headerlink" title="5. 排列"></a>5. 排列</h2><p>46. Permutations (Medium)</p>
+<p><a href="https://leetcode.com/problems/permutations/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/permutations/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[1,2,3] have the following permutations:</span><br><span class="line">[</span><br><span class="line">  [1,2,3],</span><br><span class="line">  [1,3,2],</span><br><span class="line">  [2,1,3],</span><br><span class="line">  [2,3,1],</span><br><span class="line">  [3,1,2],</span><br><span class="line">  [3,2,1]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; permute(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; permutes = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; permuteList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">boolean</span>[] hasVisited = <span class="keyword">new</span> <span class="keyword">boolean</span>[nums.length];</span><br><span class="line">    backtracking(permuteList, permutes, hasVisited, nums);</span><br><span class="line">    <span class="keyword">return</span> permutes;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(List&lt;Integer&gt; permuteList, List&lt;List&lt;Integer&gt;&gt; permutes, <span class="keyword">boolean</span>[] visited, <span class="keyword">final</span> <span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (permuteList.size() == nums.length) &#123;</span><br><span class="line">        permutes.add(<span class="keyword">new</span> ArrayList&lt;&gt;(permuteList)); <span class="comment">// 重新构造一个 List</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; visited.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (visited[i]) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        visited[i] = <span class="keyword">true</span>;</span><br><span class="line">        permuteList.add(nums[i]);</span><br><span class="line">        backtracking(permuteList, permutes, visited, nums);</span><br><span class="line">        permuteList.remove(permuteList.size() - <span class="number">1</span>);</span><br><span class="line">        visited[i] = <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-含有相同元素求排列"><a href="#6-含有相同元素求排列" class="headerlink" title="6. 含有相同元素求排列"></a>6. 含有相同元素求排列</h2><p>47. Permutations II (Medium)</p>
+<p><a href="https://leetcode.com/problems/permutations-ii/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/permutations-ii/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[1,1,2] have the following unique permutations:</span><br><span class="line">[[1,1,2], [1,2,1], [2,1,1]]</span><br></pre></td></tr></table></figure>
+
+<p>数组元素可能含有相同的元素，进行排列时就有可能出现重复的排列，要求重复的排列只返回一个。</p>
+<p>在实现上，和 Permutations 不同的是要先排序，然后在添加一个元素时，判断这个元素是否等于前一个元素，如果等于，并且前一个元素还未访问，那么就跳过这个元素。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; permuteUnique(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; permutes = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; permuteList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    Arrays.sort(nums);  <span class="comment">// 排序</span></span><br><span class="line">    <span class="keyword">boolean</span>[] hasVisited = <span class="keyword">new</span> <span class="keyword">boolean</span>[nums.length];</span><br><span class="line">    backtracking(permuteList, permutes, hasVisited, nums);</span><br><span class="line">    <span class="keyword">return</span> permutes;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(List&lt;Integer&gt; permuteList, List&lt;List&lt;Integer&gt;&gt; permutes, <span class="keyword">boolean</span>[] visited, <span class="keyword">final</span> <span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (permuteList.size() == nums.length) &#123;</span><br><span class="line">        permutes.add(<span class="keyword">new</span> ArrayList&lt;&gt;(permuteList));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; visited.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i != <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>] &amp;&amp; !visited[i - <span class="number">1</span>]) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;  <span class="comment">// 防止重复</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (visited[i])&#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        visited[i] = <span class="keyword">true</span>;</span><br><span class="line">        permuteList.add(nums[i]);</span><br><span class="line">        backtracking(permuteList, permutes, visited, nums);</span><br><span class="line">        permuteList.remove(permuteList.size() - <span class="number">1</span>);</span><br><span class="line">        visited[i] = <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-组合"><a href="#7-组合" class="headerlink" title="7. 组合"></a>7. 组合</h2><p>77. Combinations (Medium)</p>
+<p><a href="https://leetcode.com/problems/combinations/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/combinations/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">If n = 4 and k = 2, a solution is:</span><br><span class="line">[</span><br><span class="line">  [2,4],</span><br><span class="line">  [3,4],</span><br><span class="line">  [2,3],</span><br><span class="line">  [1,2],</span><br><span class="line">  [1,3],</span><br><span class="line">  [1,4],</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; combine(<span class="keyword">int</span> n, <span class="keyword">int</span> k) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; combinations = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; combineList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    backtracking(combineList, combinations, <span class="number">1</span>, k, n);</span><br><span class="line">    <span class="keyword">return</span> combinations;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(List&lt;Integer&gt; combineList, List&lt;List&lt;Integer&gt;&gt; combinations, <span class="keyword">int</span> start, <span class="keyword">int</span> k, <span class="keyword">final</span> <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (k == <span class="number">0</span>) &#123;</span><br><span class="line">        combinations.add(<span class="keyword">new</span> ArrayList&lt;&gt;(combineList));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt;= n - k + <span class="number">1</span>; i++) &#123;  <span class="comment">// 剪枝</span></span><br><span class="line">        combineList.add(i);</span><br><span class="line">        backtracking(combineList, combinations, i + <span class="number">1</span>, k - <span class="number">1</span>, n);</span><br><span class="line">        combineList.remove(combineList.size() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-组合求和"><a href="#8-组合求和" class="headerlink" title="8. 组合求和"></a>8. 组合求和</h2><p>39. Combination Sum (Medium)</p>
+<p><a href="https://leetcode.com/problems/combination-sum/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/combination-sum/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">given candidate set [2, 3, 6, 7] and target 7,</span><br><span class="line">A solution set is:</span><br><span class="line">[[7],[2, 2, 3]]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; combinationSum(<span class="keyword">int</span>[] candidates, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; combinations = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    backtracking(<span class="keyword">new</span> ArrayList&lt;&gt;(), combinations, <span class="number">0</span>, target, candidates);</span><br><span class="line">    <span class="keyword">return</span> combinations;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(List&lt;Integer&gt; tempCombination, List&lt;List&lt;Integer&gt;&gt; combinations,</span></span></span><br><span class="line"><span class="function"><span class="params">                          <span class="keyword">int</span> start, <span class="keyword">int</span> target, <span class="keyword">final</span> <span class="keyword">int</span>[] candidates)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (target == <span class="number">0</span>) &#123;</span><br><span class="line">        combinations.add(<span class="keyword">new</span> ArrayList&lt;&gt;(tempCombination));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt; candidates.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (candidates[i] &lt;= target) &#123;</span><br><span class="line">            tempCombination.add(candidates[i]);</span><br><span class="line">            backtracking(tempCombination, combinations, i, target - candidates[i], candidates);</span><br><span class="line">            tempCombination.remove(tempCombination.size() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-含有相同元素的组合求和"><a href="#9-含有相同元素的组合求和" class="headerlink" title="9. 含有相同元素的组合求和"></a>9. 含有相同元素的组合求和</h2><p>40. Combination Sum II (Medium)</p>
+<p><a href="https://leetcode.com/problems/combination-sum-ii/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/combination-sum-ii/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8,</span><br><span class="line">A solution set is:</span><br><span class="line">[</span><br><span class="line">  [1, 7],</span><br><span class="line">  [1, 2, 5],</span><br><span class="line">  [2, 6],</span><br><span class="line">  [1, 1, 6]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; combinationSum2(<span class="keyword">int</span>[] candidates, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; combinations = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    Arrays.sort(candidates);</span><br><span class="line">    backtracking(<span class="keyword">new</span> ArrayList&lt;&gt;(), combinations, <span class="keyword">new</span> <span class="keyword">boolean</span>[candidates.length], <span class="number">0</span>, target, candidates);</span><br><span class="line">    <span class="keyword">return</span> combinations;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(List&lt;Integer&gt; tempCombination, List&lt;List&lt;Integer&gt;&gt; combinations,</span></span></span><br><span class="line"><span class="function"><span class="params">                          <span class="keyword">boolean</span>[] hasVisited, <span class="keyword">int</span> start, <span class="keyword">int</span> target, <span class="keyword">final</span> <span class="keyword">int</span>[] candidates)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (target == <span class="number">0</span>) &#123;</span><br><span class="line">        combinations.add(<span class="keyword">new</span> ArrayList&lt;&gt;(tempCombination));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt; candidates.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i != <span class="number">0</span> &amp;&amp; candidates[i] == candidates[i - <span class="number">1</span>] &amp;&amp; !hasVisited[i - <span class="number">1</span>]) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (candidates[i] &lt;= target) &#123;</span><br><span class="line">            tempCombination.add(candidates[i]);</span><br><span class="line">            hasVisited[i] = <span class="keyword">true</span>;</span><br><span class="line">            backtracking(tempCombination, combinations, hasVisited, i + <span class="number">1</span>, target - candidates[i], candidates);</span><br><span class="line">            hasVisited[i] = <span class="keyword">false</span>;</span><br><span class="line">            tempCombination.remove(tempCombination.size() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-1-9-数字的组合求和"><a href="#10-1-9-数字的组合求和" class="headerlink" title="10. 1-9 数字的组合求和"></a>10. 1-9 数字的组合求和</h2><p>216. Combination Sum III (Medium)</p>
+<p><a href="https://leetcode.com/problems/combination-sum-iii/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/combination-sum-iii/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: k = 3, n = 9</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line"></span><br><span class="line">[[1,2,6], [1,3,5], [2,3,4]]</span><br></pre></td></tr></table></figure>
+
+<p>从 1-9 数字中选出 k 个数不重复的数，使得它们的和为 n。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; combinationSum3(<span class="keyword">int</span> k, <span class="keyword">int</span> n) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; combinations = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; path = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    backtracking(k, n, <span class="number">1</span>, path, combinations);</span><br><span class="line">    <span class="keyword">return</span> combinations;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> n, <span class="keyword">int</span> start,</span></span></span><br><span class="line"><span class="function"><span class="params">                          List&lt;Integer&gt; tempCombination, List&lt;List&lt;Integer&gt;&gt; combinations)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (k == <span class="number">0</span> &amp;&amp; n == <span class="number">0</span>) &#123;</span><br><span class="line">        combinations.add(<span class="keyword">new</span> ArrayList&lt;&gt;(tempCombination));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (k == <span class="number">0</span> || n == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt;= <span class="number">9</span>; i++) &#123;</span><br><span class="line">        tempCombination.add(i);</span><br><span class="line">        backtracking(k - <span class="number">1</span>, n - i, i + <span class="number">1</span>, tempCombination, combinations);</span><br><span class="line">        tempCombination.remove(tempCombination.size() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-子集"><a href="#11-子集" class="headerlink" title="11. 子集"></a>11. 子集</h2><p>78. Subsets (Medium)</p>
+<p><a href="https://leetcode.com/problems/subsets/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/subsets/description/" target="_blank" rel="noopener">力扣</a></p>
+<p>找出集合的所有子集，子集不能重复，[1, 2] 和 [2, 1] 这种子集算重复</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; subsets(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; subsets = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; tempSubset = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> size = <span class="number">0</span>; size &lt;= nums.length; size++) &#123;</span><br><span class="line">        backtracking(<span class="number">0</span>, tempSubset, subsets, size, nums); <span class="comment">// 不同的子集大小</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> subsets;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">int</span> start, List&lt;Integer&gt; tempSubset, List&lt;List&lt;Integer&gt;&gt; subsets,</span></span></span><br><span class="line"><span class="function"><span class="params">                          <span class="keyword">final</span> <span class="keyword">int</span> size, <span class="keyword">final</span> <span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (tempSubset.size() == size) &#123;</span><br><span class="line">        subsets.add(<span class="keyword">new</span> ArrayList&lt;&gt;(tempSubset));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt; nums.length; i++) &#123;</span><br><span class="line">        tempSubset.add(nums[i]);</span><br><span class="line">        backtracking(i + <span class="number">1</span>, tempSubset, subsets, size, nums);</span><br><span class="line">        tempSubset.remove(tempSubset.size() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-含有相同元素求子集"><a href="#12-含有相同元素求子集" class="headerlink" title="12. 含有相同元素求子集"></a>12. 含有相同元素求子集</h2><p>90. Subsets II (Medium)</p>
+<p><a href="https://leetcode.com/problems/subsets-ii/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/subsets-ii/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">For example,</span><br><span class="line">If nums = [1,2,2], a solution is:</span><br><span class="line"></span><br><span class="line">[</span><br><span class="line">  [2],</span><br><span class="line">  [1],</span><br><span class="line">  [1,2,2],</span><br><span class="line">  [2,2],</span><br><span class="line">  [1,2],</span><br><span class="line">  []</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; subsetsWithDup(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    Arrays.sort(nums);</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; subsets = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; tempSubset = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">boolean</span>[] hasVisited = <span class="keyword">new</span> <span class="keyword">boolean</span>[nums.length];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> size = <span class="number">0</span>; size &lt;= nums.length; size++) &#123;</span><br><span class="line">        backtracking(<span class="number">0</span>, tempSubset, subsets, hasVisited, size, nums); <span class="comment">// 不同的子集大小</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> subsets;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">int</span> start, List&lt;Integer&gt; tempSubset, List&lt;List&lt;Integer&gt;&gt; subsets, <span class="keyword">boolean</span>[] hasVisited,</span></span></span><br><span class="line"><span class="function"><span class="params">                          <span class="keyword">final</span> <span class="keyword">int</span> size, <span class="keyword">final</span> <span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (tempSubset.size() == size) &#123;</span><br><span class="line">        subsets.add(<span class="keyword">new</span> ArrayList&lt;&gt;(tempSubset));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i != <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>] &amp;&amp; !hasVisited[i - <span class="number">1</span>]) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        tempSubset.add(nums[i]);</span><br><span class="line">        hasVisited[i] = <span class="keyword">true</span>;</span><br><span class="line">        backtracking(i + <span class="number">1</span>, tempSubset, subsets, hasVisited, size, nums);</span><br><span class="line">        hasVisited[i] = <span class="keyword">false</span>;</span><br><span class="line">        tempSubset.remove(tempSubset.size() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="13-分割字符串使得每个部分都是回文数"><a href="#13-分割字符串使得每个部分都是回文数" class="headerlink" title="13. 分割字符串使得每个部分都是回文数"></a>13. 分割字符串使得每个部分都是回文数</h2><p>131. Palindrome Partitioning (Medium)</p>
+<p><a href="https://leetcode.com/problems/palindrome-partitioning/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/palindrome-partitioning/description/" target="_blank" rel="noopener">力扣</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">For example, given s = "aab",</span><br><span class="line">Return</span><br><span class="line"></span><br><span class="line">[</span><br><span class="line">  ["aa","b"],</span><br><span class="line">  ["a","a","b"]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;String&gt;&gt; partition(String s) &#123;</span><br><span class="line">    List&lt;List&lt;String&gt;&gt; partitions = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    List&lt;String&gt; tempPartition = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    doPartition(s, partitions, tempPartition);</span><br><span class="line">    <span class="keyword">return</span> partitions;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">doPartition</span><span class="params">(String s, List&lt;List&lt;String&gt;&gt; partitions, List&lt;String&gt; tempPartition)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s.length() == <span class="number">0</span>) &#123;</span><br><span class="line">        partitions.add(<span class="keyword">new</span> ArrayList&lt;&gt;(tempPartition));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (isPalindrome(s, <span class="number">0</span>, i)) &#123;</span><br><span class="line">            tempPartition.add(s.substring(<span class="number">0</span>, i + <span class="number">1</span>));</span><br><span class="line">            doPartition(s.substring(i + <span class="number">1</span>), partitions, tempPartition);</span><br><span class="line">            tempPartition.remove(tempPartition.size() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String s, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (begin &lt; end) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s.charAt(begin++) != s.charAt(end--)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="14-数独"><a href="#14-数独" class="headerlink" title="14. 数独"></a>14. 数独</h2><p>37. Sudoku Solver (Hard)</p>
+<p><a href="https://leetcode.com/problems/sudoku-solver/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/sudoku-solver/description/" target="_blank" rel="noopener">力扣</a></p>
+<div align="center"> <img src="pics/0e8fdc96-83c1-4798-9abe-45fc91d70b9d.png"> </div><br>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">boolean</span>[][] rowsUsed = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">9</span>][<span class="number">10</span>];</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">boolean</span>[][] colsUsed = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">9</span>][<span class="number">10</span>];</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">boolean</span>[][] cubesUsed = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">9</span>][<span class="number">10</span>];</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">char</span>[][] board;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">solveSudoku</span><span class="params">(<span class="keyword">char</span>[][] board)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.board = board;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">9</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (board[i][j] == <span class="string">'.'</span>) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> num = board[i][j] - <span class="string">'0'</span>;</span><br><span class="line">            rowsUsed[i][num] = <span class="keyword">true</span>;</span><br><span class="line">            colsUsed[j][num] = <span class="keyword">true</span>;</span><br><span class="line">            cubesUsed[cubeNum(i, j)][num] = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        backtracking(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> col)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (row &lt; <span class="number">9</span> &amp;&amp; board[row][col] != <span class="string">'.'</span>) &#123;</span><br><span class="line">        row = col == <span class="number">8</span> ? row + <span class="number">1</span> : row;</span><br><span class="line">        col = col == <span class="number">8</span> ? <span class="number">0</span> : col + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (row == <span class="number">9</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num = <span class="number">1</span>; num &lt;= <span class="number">9</span>; num++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (rowsUsed[row][num] || colsUsed[col][num] || cubesUsed[cubeNum(row, col)][num]) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        rowsUsed[row][num] = colsUsed[col][num] = cubesUsed[cubeNum(row, col)][num] = <span class="keyword">true</span>;</span><br><span class="line">        board[row][col] = (<span class="keyword">char</span>) (num + <span class="string">'0'</span>);</span><br><span class="line">        <span class="keyword">if</span> (backtracking(row, col)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        board[row][col] = <span class="string">'.'</span>;</span><br><span class="line">        rowsUsed[row][num] = colsUsed[col][num] = cubesUsed[cubeNum(row, col)][num] = <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">cubeNum</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> r = i / <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">int</span> c = j / <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">return</span> r * <span class="number">3</span> + c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="15-N-皇后"><a href="#15-N-皇后" class="headerlink" title="15. N 皇后"></a>15. N 皇后</h2><p>51. N-Queens (Hard)</p>
+<p><a href="https://leetcode.com/problems/n-queens/description/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode-cn.com/problems/n-queens/description/" target="_blank" rel="noopener">力扣</a></p>
+<div align="center"> <img src="pics/067b310c-6877-40fe-9dcf-10654e737485.jpg"> </div><br>
+
+<p>在 n*n 的矩阵中摆放 n 个皇后，并且每个皇后不能在同一行，同一列，同一对角线上，求所有的 n 皇后的解。</p>
+<p>一行一行地摆放，在确定一行中的那个皇后应该摆在哪一列时，需要用三个标记数组来确定某一列是否合法，这三个标记数组分别为：列标记数组、45 度对角线标记数组和 135 度对角线标记数组。</p>
+<p>45 度对角线标记数组的长度为 2 * n - 1，通过下图可以明确 (r, c) 的位置所在的数组下标为 r + c。</p>
+<div align="center"> <img src="pics/9c422923-1447-4a3b-a4e1-97e663738187.jpg" width="300px"> </div><br>
+
+
+<p>135 度对角线标记数组的长度也是 2 * n - 1，(r, c) 的位置所在的数组下标为 n - 1 - (r - c)。</p>
+<div align="center"> <img src="pics/7a85e285-e152-4116-b6dc-3fab27ba9437.jpg" width="300px"> </div><br>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> List&lt;List&lt;String&gt;&gt; solutions;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">char</span>[][] nQueens;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">boolean</span>[] colUsed;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">boolean</span>[] diagonals45Used;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">boolean</span>[] diagonals135Used;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> List&lt;List&lt;String&gt;&gt; solveNQueens(<span class="keyword">int</span> n) &#123;</span><br><span class="line">    solutions = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    nQueens = <span class="keyword">new</span> <span class="keyword">char</span>[n][n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        Arrays.fill(nQueens[i], <span class="string">'.'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    colUsed = <span class="keyword">new</span> <span class="keyword">boolean</span>[n];</span><br><span class="line">    diagonals45Used = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">2</span> * n - <span class="number">1</span>];</span><br><span class="line">    diagonals135Used = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">2</span> * n - <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">this</span>.n = n;</span><br><span class="line">    backtracking(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> solutions;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">int</span> row)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (row == n) &#123;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span>[] chars : nQueens) &#123;</span><br><span class="line">            list.add(<span class="keyword">new</span> String(chars));</span><br><span class="line">        &#125;</span><br><span class="line">        solutions.add(list);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> col = <span class="number">0</span>; col &lt; n; col++) &#123;</span><br><span class="line">        <span class="keyword">int</span> diagonals45Idx = row + col;</span><br><span class="line">        <span class="keyword">int</span> diagonals135Idx = n - <span class="number">1</span> - (row - col);</span><br><span class="line">        <span class="keyword">if</span> (colUsed[col] || diagonals45Used[diagonals45Idx] || diagonals135Used[diagonals135Idx]) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        nQueens[row][col] = <span class="string">'Q'</span>;</span><br><span class="line">        colUsed[col] = diagonals45Used[diagonals45Idx] = diagonals135Used[diagonals135Idx] = <span class="keyword">true</span>;</span><br><span class="line">        backtracking(row + <span class="number">1</span>);</span><br><span class="line">        colUsed[col] = diagonals45Used[diagonals45Idx] = diagonals135Used[diagonals135Idx] = <span class="keyword">false</span>;</span><br><span class="line">        nQueens[row][col] = <span class="string">'.'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/blog/tags/Java/" rel="tag"># Java</a>
+            
+              <a href="/blog/tags/leetcode/" rel="tag"># leetcode</a>
+            
+              <a href="/blog/tags/搜索/" rel="tag"># 搜索</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/blog/d820eb3.html" rel="next" title="Leetcode 题解 - 分治">
+                  <i class="fa fa-chevron-left"></i> Leetcode 题解 - 分治
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/blog/77ebe21.html" rel="prev" title="Leetcode 题解 - 动态规划">
+                  Leetcode 题解 - 动态规划 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#BFS"><span class="nav-number">1.</span> <span class="nav-text">BFS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-计算在网格中从原点到特定点的最短路径长度"><span class="nav-number">1.1.</span> <span class="nav-text">1. 计算在网格中从原点到特定点的最短路径长度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-组成整数的最小平方数数量"><span class="nav-number">1.2.</span> <span class="nav-text">2. 组成整数的最小平方数数量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-最短单词路径"><span class="nav-number">1.3.</span> <span class="nav-text">3. 最短单词路径</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DFS"><span class="nav-number">2.</span> <span class="nav-text">DFS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-查找最大的连通面积"><span class="nav-number">2.1.</span> <span class="nav-text">1. 查找最大的连通面积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-矩阵中的连通分量数目"><span class="nav-number">2.2.</span> <span class="nav-text">2. 矩阵中的连通分量数目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-好友关系的连通分量数目"><span class="nav-number">2.3.</span> <span class="nav-text">3. 好友关系的连通分量数目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-填充封闭区域"><span class="nav-number">2.4.</span> <span class="nav-text">4. 填充封闭区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-能到达的太平洋和大西洋的区域"><span class="nav-number">2.5.</span> <span class="nav-text">5. 能到达的太平洋和大西洋的区域</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Backtracking"><span class="nav-number">3.</span> <span class="nav-text">Backtracking</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-数字键盘组合"><span class="nav-number">3.1.</span> <span class="nav-text">1. 数字键盘组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-IP-地址划分"><span class="nav-number">3.2.</span> <span class="nav-text">2. IP 地址划分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-在矩阵中寻找字符串"><span class="nav-number">3.3.</span> <span class="nav-text">3. 在矩阵中寻找字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-输出二叉树中所有从根到叶子的路径"><span class="nav-number">3.4.</span> <span class="nav-text">4. 输出二叉树中所有从根到叶子的路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-排列"><span class="nav-number">3.5.</span> <span class="nav-text">5. 排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-含有相同元素求排列"><span class="nav-number">3.6.</span> <span class="nav-text">6. 含有相同元素求排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-组合"><span class="nav-number">3.7.</span> <span class="nav-text">7. 组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-组合求和"><span class="nav-number">3.8.</span> <span class="nav-text">8. 组合求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-含有相同元素的组合求和"><span class="nav-number">3.9.</span> <span class="nav-text">9. 含有相同元素的组合求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-1-9-数字的组合求和"><span class="nav-number">3.10.</span> <span class="nav-text">10. 1-9 数字的组合求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-子集"><span class="nav-number">3.11.</span> <span class="nav-text">11. 子集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-含有相同元素求子集"><span class="nav-number">3.12.</span> <span class="nav-text">12. 含有相同元素求子集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-分割字符串使得每个部分都是回文数"><span class="nav-number">3.13.</span> <span class="nav-text">13. 分割字符串使得每个部分都是回文数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-数独"><span class="nav-number">3.14.</span> <span class="nav-text">14. 数独</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-N-皇后"><span class="nav-number">3.15.</span> <span class="nav-text">15. N 皇后</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png"
+      alt="Sometwo">
+  <p class="site-author-name" itemprop="name">Sometwo</p>
+  <div class="site-description" itemprop="description">一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/blog/categories/">
+          
+        
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/blog/tags/">
+          
+        
+        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/blog/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/sometwo7" title="GitHub &rarr; https://github.com/sometwo7" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sometwo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/blog/js/utils.js?v=7.4.1"></script><script src="/blog/js/motion.js?v=7.4.1"></script>
+<script src="/blog/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/blog/js/next-boot.js?v=7.4.1"></script><script src="/blog/js/bookmark.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/blog/js/local-search.js?v=7.4.1"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

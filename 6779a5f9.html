@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png?v=7.4.1">
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/blog/atom.xml" title="搬运工" type="application/atom+xml">
+
+<link rel="stylesheet" href="/blog/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":true,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="网络的网络 ISP 主机之间的通信方式 电路交换与分组交换 1. 电路交换 2. 分组交换   时延 1. 排队时延 2. 处理时延 3. 传输时延 4. 传播时延   计算机网络体系结构 1. 五层协议 2. OSI 3. TCP/IP 4. 数据在各层之间的传递过程      网络的网络网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。">
+<meta name="keywords" content="网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络 - 概述">
+<meta property="og:url" content="https://sometwo7.github.io/blog/6779a5f9.html">
+<meta property="og:site_name" content="搬运工">
+<meta property="og:description" content="网络的网络 ISP 主机之间的通信方式 电路交换与分组交换 1. 电路交换 2. 分组交换   时延 1. 排队时延 2. 处理时延 3. 传输时延 4. 传播时延   计算机网络体系结构 1. 五层协议 2. OSI 3. TCP/IP 4. 数据在各层之间的传递过程      网络的网络网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://sometwo7.github.io/pics/network-of-networks.gif">
+<meta property="og:image" content="https://sometwo7.github.io/pics/72be01cd-41ae-45f7-99b9-a8d284e44dd4.png">
+<meta property="og:image" content="https://sometwo7.github.io/pics/3be42601-9d33-4d29-8358-a9d16453af93.png">
+<meta property="og:image" content="https://sometwo7.github.io/pics/914894c2-0bc4-46b5-bef9-0316a69ef521.jpg">
+<meta property="og:image" content="https://sometwo7.github.io/pics/42430e94-3137-48c0-bdb6-3cebaf9102e3.jpg">
+<meta property="og:image" content="https://sometwo7.github.io/pics/4b2ae78c-e254-44df-9e37-578e2f2bef52.jpg">
+<meta property="og:image" content="https://sometwo7.github.io/pics/dcdbb96c-9077-4121-aeb8-743e54ac02a4.png">
+<meta property="og:image" content="https://sometwo7.github.io/pics/a1616dac-0e12-40b2-827d-9e3f7f0b940d.png">
+<meta property="og:image" content="https://sometwo7.github.io/pics/0fa6c237-a909-4e2a-a771-2c5485cd8ce0.png">
+<meta property="og:image" content="https://sometwo7.github.io/pics/48d79be8-085b-4862-8a9d-18402eb93b31.png">
+<meta property="og:updated_time" content="2019-11-01T09:57:00.378Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机网络 - 概述">
+<meta name="twitter:description" content="网络的网络 ISP 主机之间的通信方式 电路交换与分组交换 1. 电路交换 2. 分组交换   时延 1. 排队时延 2. 处理时延 3. 传输时延 4. 传播时延   计算机网络体系结构 1. 五层协议 2. OSI 3. TCP/IP 4. 数据在各层之间的传递过程      网络的网络网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。">
+<meta name="twitter:image" content="https://sometwo7.github.io/pics/network-of-networks.gif">
+  <link rel="canonical" href="https://sometwo7.github.io/blog/6779a5f9">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>计算机网络 - 概述 | 搬运工</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">搬运工</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">一生太短，请务必热情！(Life too short, just be active!)</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="fa fa-search fa-fw"></i>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a class="book-mark-link book-mark-link-fixed" href="#"></a>
+
+  <a href="https://github.com/sometwo7" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/6779a5f9.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="搬运工">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">计算机网络 - 概述
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-01 17:11:11 / 修改时间：17:57:00" itemprop="dateCreated datePublished" datetime="2019-11-01T17:11:11+08:00">2019-11-01</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/计算机网络/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <ul>
+<li><a href="#网络的网络">网络的网络</a></li>
+<li><a href="#isp">ISP</a></li>
+<li><a href="#主机之间的通信方式">主机之间的通信方式</a></li>
+<li><a href="#电路交换与分组交换">电路交换与分组交换</a><ul>
+<li><a href="#1-电路交换">1. 电路交换</a></li>
+<li><a href="#2-分组交换">2. 分组交换</a></li>
+</ul>
+</li>
+<li><a href="#时延">时延</a><ul>
+<li><a href="#1-排队时延">1. 排队时延</a></li>
+<li><a href="#2-处理时延">2. 处理时延</a></li>
+<li><a href="#3-传输时延">3. 传输时延</a></li>
+<li><a href="#4-传播时延">4. 传播时延</a></li>
+</ul>
+</li>
+<li><a href="#计算机网络体系结构">计算机网络体系结构</a><ul>
+<li><a href="#1-五层协议">1. 五层协议</a></li>
+<li><a href="#2-osi">2. OSI</a></li>
+<li><a href="#3-tcpip">3. TCP/IP</a></li>
+<li><a href="#4-数据在各层之间的传递过程">4. 数据在各层之间的传递过程</a><!-- GFM-TOC -->
+
+
+</li>
+</ul>
+</li>
+</ul><h1 id="网络的网络"><a href="#网络的网络" class="headerlink" title="网络的网络"></a>网络的网络</h1><p>网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。</p><a id="more"></a><!-- GFM-TOC -->
+
+
+<div align="center"> <img src="../pics/network-of-networks.gif" width="450"> </div><br>
+
+<h1 id="ISP"><a href="#ISP" class="headerlink" title="ISP"></a>ISP</h1><p>互联网服务提供商 ISP 可以从互联网管理机构获得许多 IP 地址，同时拥有通信线路以及路由器等联网设备，个人或机构向 ISP 缴纳一定的费用就可以接入互联网。</p>
+<div align="center"> <img src="../pics/72be01cd-41ae-45f7-99b9-a8d284e44dd4.png" width="500"> </div><br>
+
+<p>目前的互联网是一种多层次 ISP 结构，ISP 根据覆盖面积的大小分为第一层 ISP、区域 ISP 和接入 ISP。互联网交换点 IXP 允许两个 ISP 直接相连而不用经过第三个 ISP。</p>
+<div align="center"> <img src="../pics/3be42601-9d33-4d29-8358-a9d16453af93.png" width="500"> </div><br>
+
+<h1 id="主机之间的通信方式"><a href="#主机之间的通信方式" class="headerlink" title="主机之间的通信方式"></a>主机之间的通信方式</h1><ul>
+<li>客户-服务器（C/S）：客户是服务的请求方，服务器是服务的提供方。</li>
+</ul>
+<div align="center"> <img src="../pics/914894c2-0bc4-46b5-bef9-0316a69ef521.jpg" width="240px"> </div><br>
+
+<ul>
+<li>对等（P2P）：不区分客户和服务器。</li>
+</ul>
+<div align="center"> <img src="../pics/42430e94-3137-48c0-bdb6-3cebaf9102e3.jpg" width="200px"> </div><br>
+
+<h1 id="电路交换与分组交换"><a href="#电路交换与分组交换" class="headerlink" title="电路交换与分组交换"></a>电路交换与分组交换</h1><h2 id="1-电路交换"><a href="#1-电路交换" class="headerlink" title="1. 电路交换"></a>1. 电路交换</h2><p>电路交换用于电话通信系统，两个用户要通信之前需要建立一条专用的物理链路，并且在整个通信过程中始终占用该链路。由于通信的过程中不可能一直在使用传输线路，因此电路交换对线路的利用率很低，往往不到 10%。</p>
+<h2 id="2-分组交换"><a href="#2-分组交换" class="headerlink" title="2. 分组交换"></a>2. 分组交换</h2><p>每个分组都有首部和尾部，包含了源地址和目的地址等控制信息，在同一个传输线路上同时传输多个分组互相不会影响，因此在同一条传输线路上允许同时传输多个分组，也就是说分组交换不需要占用传输线路。</p>
+<p>在一个邮局通信系统中，邮局收到一份邮件之后，先存储下来，然后把相同目的地的邮件一起转发到下一个目的地，这个过程就是存储转发过程，分组交换也使用了存储转发过程。</p>
+<h1 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h1><p>总时延 = 排队时延 + 处理时延 + 传输时延 + 传播时延</p>
+<div align="center"> <img src="../pics/4b2ae78c-e254-44df-9e37-578e2f2bef52.jpg" width="380"> </div><br>
+
+<h2 id="1-排队时延"><a href="#1-排队时延" class="headerlink" title="1. 排队时延"></a>1. 排队时延</h2><p>分组在路由器的输入队列和输出队列中排队等待的时间，取决于网络当前的通信量。</p>
+<h2 id="2-处理时延"><a href="#2-处理时延" class="headerlink" title="2. 处理时延"></a>2. 处理时延</h2><p>主机或路由器收到分组时进行处理所需要的时间，例如分析首部、从分组中提取数据、进行差错检验或查找适当的路由等。</p>
+<h2 id="3-传输时延"><a href="#3-传输时延" class="headerlink" title="3. 传输时延"></a>3. 传输时延</h2><p>主机或路由器传输数据帧所需要的时间。</p>
+<!-- <div align="center"><img src="https://latex.codecogs.com/gif.latex?delay=\frac{l(bit)}{v(bit/s)}" class="mathjax-pic"/></div> <br> -->
+
+<div align="center"> <img src="../pics/dcdbb96c-9077-4121-aeb8-743e54ac02a4.png" width="150px"> </div><br>
+
+
+<p>其中 l 表示数据帧的长度，v 表示传输速率。</p>
+<h2 id="4-传播时延"><a href="#4-传播时延" class="headerlink" title="4. 传播时延"></a>4. 传播时延</h2><p>电磁波在信道中传播所需要花费的时间，电磁波传播的速度接近光速。</p>
+<!-- <div align="center"><img src="https://latex.codecogs.com/gif.latex?delay=\frac{l(m)}{v(m/s)}" class="mathjax-pic"/></div> <br> -->
+
+<div align="center"> <img src="../pics/a1616dac-0e12-40b2-827d-9e3f7f0b940d.png" width="150"> </div><br>
+
+<p>其中 l 表示信道长度，v 表示电磁波在信道上的传播速度。</p>
+<h1 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h1><div align="center"> <img src="../pics/0fa6c237-a909-4e2a-a771-2c5485cd8ce0.png" width="450"> </div><br>
+
+<h2 id="1-五层协议"><a href="#1-五层协议" class="headerlink" title="1. 五层协议"></a>1. 五层协议</h2><ul>
+<li><p><strong>应用层</strong> ：为特定应用程序提供数据传输服务，例如 HTTP、DNS 等协议。数据单位为报文。</p>
+</li>
+<li><p><strong>传输层</strong> ：为进程提供通用数据传输服务。由于应用层协议很多，定义通用的传输层协议就可以支持不断增多的应用层协议。运输层包括两种协议：传输控制协议 TCP，提供面向连接、可靠的数据传输服务，数据单位为报文段；用户数据报协议 UDP，提供无连接、尽最大努力的数据传输服务，数据单位为用户数据报。TCP 主要提供完整性服务，UDP 主要提供及时性服务。</p>
+</li>
+<li><p><strong>网络层</strong> ：为主机提供数据传输服务。而传输层协议是为主机中的进程提供数据传输服务。网络层把传输层传递下来的报文段或者用户数据报封装成分组。</p>
+</li>
+<li><p><strong>数据链路层</strong> ：网络层针对的还是主机之间的数据传输服务，而主机之间可以有很多链路，链路层协议就是为同一链路的主机提供数据传输服务。数据链路层把网络层传下来的分组封装成帧。</p>
+</li>
+<li><p><strong>物理层</strong> ：考虑的是怎样在传输媒体上传输数据比特流，而不是指具体的传输媒体。物理层的作用是尽可能屏蔽传输媒体和通信手段的差异，使数据链路层感觉不到这些差异。</p>
+</li>
+</ul>
+<h2 id="2-OSI"><a href="#2-OSI" class="headerlink" title="2. OSI"></a>2. OSI</h2><p>其中表示层和会话层用途如下：</p>
+<ul>
+<li><p><strong>表示层</strong> ：数据压缩、加密以及数据描述，这使得应用程序不必关心在各台主机中数据内部格式不同的问题。</p>
+</li>
+<li><p><strong>会话层</strong> ：建立及管理会话。</p>
+</li>
+</ul>
+<p>五层协议没有表示层和会话层，而是将这些功能留给应用程序开发者处理。</p>
+<h2 id="3-TCP-IP"><a href="#3-TCP-IP" class="headerlink" title="3. TCP/IP"></a>3. TCP/IP</h2><p>它只有四层，相当于五层协议中数据链路层和物理层合并为网络接口层。</p>
+<p>TCP/IP 体系结构不严格遵循 OSI 分层概念，应用层可能会直接使用 IP 层或者网络接口层。</p>
+<div align="center"> <img src="../pics/48d79be8-085b-4862-8a9d-18402eb93b31.png" width="250"> </div><br>
+
+<h2 id="4-数据在各层之间的传递过程"><a href="#4-数据在各层之间的传递过程" class="headerlink" title="4. 数据在各层之间的传递过程"></a>4. 数据在各层之间的传递过程</h2><p>在向下的过程中，需要添加下层协议所需要的首部或者尾部，而在向上的过程中不断拆开首部和尾部。</p>
+<p>路由器只有下面三层协议，因为路由器位于网络核心中，不需要为进程或者应用程序提供服务，因此也就不需要传输层和应用层。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/blog/tags/网络/" rel="tag"># 网络</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/blog/d925e7e6.html" rel="next" title="计算机操作系统 - 链接">
+                  <i class="fa fa-chevron-left"></i> 计算机操作系统 - 链接
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/blog/e0ea4e35.html" rel="prev" title="一文帮你理清面试知识点">
+                  一文帮你理清面试知识点 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络的网络"><span class="nav-number">1.</span> <span class="nav-text">网络的网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ISP"><span class="nav-number">2.</span> <span class="nav-text">ISP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主机之间的通信方式"><span class="nav-number">3.</span> <span class="nav-text">主机之间的通信方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电路交换与分组交换"><span class="nav-number">4.</span> <span class="nav-text">电路交换与分组交换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-电路交换"><span class="nav-number">4.1.</span> <span class="nav-text">1. 电路交换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-分组交换"><span class="nav-number">4.2.</span> <span class="nav-text">2. 分组交换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#时延"><span class="nav-number">5.</span> <span class="nav-text">时延</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-排队时延"><span class="nav-number">5.1.</span> <span class="nav-text">1. 排队时延</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-处理时延"><span class="nav-number">5.2.</span> <span class="nav-text">2. 处理时延</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-传输时延"><span class="nav-number">5.3.</span> <span class="nav-text">3. 传输时延</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-传播时延"><span class="nav-number">5.4.</span> <span class="nav-text">4. 传播时延</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络体系结构"><span class="nav-number">6.</span> <span class="nav-text">计算机网络体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-五层协议"><span class="nav-number">6.1.</span> <span class="nav-text">1. 五层协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-OSI"><span class="nav-number">6.2.</span> <span class="nav-text">2. OSI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-TCP-IP"><span class="nav-number">6.3.</span> <span class="nav-text">3. TCP/IP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-数据在各层之间的传递过程"><span class="nav-number">6.4.</span> <span class="nav-text">4. 数据在各层之间的传递过程</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png"
+      alt="Sometwo">
+  <p class="site-author-name" itemprop="name">Sometwo</p>
+  <div class="site-description" itemprop="description">一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/blog/categories/">
+          
+        
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/blog/tags/">
+          
+        
+        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/blog/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/sometwo7" title="GitHub &rarr; https://github.com/sometwo7" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sometwo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/blog/js/utils.js?v=7.4.1"></script><script src="/blog/js/motion.js?v=7.4.1"></script>
+<script src="/blog/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/blog/js/next-boot.js?v=7.4.1"></script><script src="/blog/js/bookmark.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/blog/js/local-search.js?v=7.4.1"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
