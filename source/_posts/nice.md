@@ -1,3 +1,13 @@
+---
+title: JAVA 基础
+tags:
+  - java
+categories:
+  - java
+comments: true
+abbrlink: 94c303a9
+date: 2019-12-17 09:49:19
+---
 # JAVA基础
 
 ## JAVA中的几种基本数据类型是什么，各自占用多少字节。
