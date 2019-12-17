@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/blog/0.html</url>
+    <title>JAVA 基础</title>
+    <url>/blog/94c303a9.html</url>
     <content><![CDATA[<h1 id="JAVA基础"><a href="#JAVA基础" class="headerlink" title="JAVA基础"></a>JAVA基础</h1><h2 id="JAVA中的几种基本数据类型是什么，各自占用多少字节。"><a href="#JAVA中的几种基本数据类型是什么，各自占用多少字节。" class="headerlink" title="JAVA中的几种基本数据类型是什么，各自占用多少字节。"></a>JAVA中的几种基本数据类型是什么，各自占用多少字节。</h2><p>8种基本数据类型，<br>byte，1<br>char，2<br>short，2<br>float，4<br>int，4<br>double，8<br>long，8<br>boolean，1 或 4，变量 boolean 占4个字节， boolean 数组占1个字节</p><h2 id="String类能被继承吗，为什么。"><a href="#String类能被继承吗，为什么。" class="headerlink" title="String类能被继承吗，为什么。"></a>String类能被继承吗，为什么。</h2><a id="more"></a>
 <p>String 是 final 修饰的类，不能被继承</p>
 <h2 id="String，Stringbuffer，StringBuilder的区别。"><a href="#String，Stringbuffer，StringBuilder的区别。" class="headerlink" title="String，Stringbuffer，StringBuilder的区别。"></a>String，Stringbuffer，StringBuilder的区别。</h2><p>String 是字符串，StringBuffer 及 StringBuilder 是可变字符串<br>StringBuffer 是线程安全的，使用 synchronized 修饰方法<br>StringBuilder 线程不安全</p>
@@ -114,6 +114,12 @@
 </li>
 </ol>
 <h2 id="lucence内部结构是什么。"><a href="#lucence内部结构是什么。" class="headerlink" title="lucence内部结构是什么。"></a>lucence内部结构是什么。</h2>]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
   </entry>
   <entry>
     <title>Linux 环境搭建 - Solr 8.3.0</title>
