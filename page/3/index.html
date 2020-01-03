@@ -246,7 +246,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/9956399c.html">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/78b8663.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sometwo">
@@ -260,7 +260,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/blog/9956399c.html" class="post-title-link" itemprop="url">网络技术 - 设计模式</a>
+            <a href="/blog/78b8663.html" class="post-title-link" itemprop="url">网络技术 - 集群</a>
           
         </h1>
 
@@ -286,7 +286,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -315,11 +315,120 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>设计模式是解决问题的方案，学习现有的设计模式可以做到经验复用。</p><p>拥有设计模式词汇，在沟通时就能用更少的词汇来讨论，并且不需要了解底层细节。</p><h1 id="二、创建型"><a href="#二、创建型" class="headerlink" title="二、创建型"></a>二、创建型</h1><h2 id="1-单例（Singleton）"><a href="#1-单例（Singleton）" class="headerlink" title="1. 单例（Singleton）"></a>1. 单例（Singleton）</h2><h3 id="Intent"><a href="#Intent" class="headerlink" title="Intent"></a>Intent</h3><p>确保一个类只有一个实例，并提供该实例的全局访问点。</p><h3 id="Class-Diagram"><a href="#Class-Diagram" class="headerlink" title="Class Diagram"></a>Class Diagram</h3><p>使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。</p>
+          <h1 id="一、负载均衡"><a href="#一、负载均衡" class="headerlink" title="一、负载均衡"></a>一、负载均衡</h1><p>集群中的应用服务器（节点）通常被设计成无状态，用户可以请求任何一个节点。</p><p>负载均衡器会根据集群中每个节点的负载情况，将用户请求转发到合适的节点上。</p><p>负载均衡器可以用来实现高可用以及伸缩性：</p><ul>
+<li>高可用：当某个节点故障时，负载均衡器会将用户请求转发到另外的节点上，从而保证所有服务持续可用；</li>
+<li>伸缩性：根据系统整体负载情况，可以很容易地添加或移除节点。</li>
+</ul>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/blog/9956399c.html" rel="contents">
+              <a class="btn" href="/blog/78b8663.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/7a9a193e.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sometwo">
+      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
+      <meta itemprop="image" content="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="搬运工">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/blog/7a9a193e.html" class="post-title-link" itemprop="url">网络技术 - 面向对象思想</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-05 10:02:11" itemprop="dateCreated datePublished" datetime="2019-11-05T10:02:11+00:00">2019-11-05</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/网络技术/" itemprop="url" rel="index"><span itemprop="name">网络技术</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="一、三大特性"><a href="#一、三大特性" class="headerlink" title="一、三大特性"></a>一、三大特性</h1><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外的接口使其与外部发生联系。用户无需关心对象内部的细节，但可以通过对象对外提供的接口来访问该对象。</p><p>优点：</p><ul>
+<li>减少耦合：可以独立地开发、测试、优化、使用、理解和修改</li>
+<li>减轻维护的负担：可以更容易被程序员理解，并且在调试的时候可以不影响其他模块</li>
+<li>有效地调节性能：可以通过剖析来确定哪些模块影响了系统的性能</li>
+<li>提高软件的可重用性</li>
+<li>降低了构建大型系统的风险：即使整个系统不可用，但是这些独立的模块却有可能是可用的</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/blog/7a9a193e.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -386,7 +495,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -486,7 +595,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -594,7 +703,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -753,7 +862,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -870,7 +979,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -998,7 +1107,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -1128,7 +1237,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -1197,132 +1306,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/6779a5f9.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sometwo">
-      <meta itemprop="description" content="一些学习笔记与人生的妄想。<br/>Nameless want to be someone, <br/> but end to nobody. <br/> Maybe sometwo this time.">
-      <meta itemprop="image" content="/blog/pics/e4a8b75f94b06499ad0078f58954e6a8.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="搬运工">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/blog/6779a5f9.html" class="post-title-link" itemprop="url">计算机网络 - 概述</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-01 17:11:11" itemprop="dateCreated datePublished" datetime="2019-11-01T17:11:11+00:00">2019-11-01</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/计算机网络/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><a href="#网络的网络">网络的网络</a></li>
-<li><a href="#isp">ISP</a></li>
-<li><a href="#主机之间的通信方式">主机之间的通信方式</a></li>
-<li><a href="#电路交换与分组交换">电路交换与分组交换</a><ul>
-<li><a href="#1-电路交换">1. 电路交换</a></li>
-<li><a href="#2-分组交换">2. 分组交换</a></li>
-</ul>
-</li>
-<li><a href="#时延">时延</a><ul>
-<li><a href="#1-排队时延">1. 排队时延</a></li>
-<li><a href="#2-处理时延">2. 处理时延</a></li>
-<li><a href="#3-传输时延">3. 传输时延</a></li>
-<li><a href="#4-传播时延">4. 传播时延</a></li>
-</ul>
-</li>
-<li><a href="#计算机网络体系结构">计算机网络体系结构</a><ul>
-<li><a href="#1-五层协议">1. 五层协议</a></li>
-<li><a href="#2-osi">2. OSI</a></li>
-<li><a href="#3-tcpip">3. TCP/IP</a></li>
-<li><a href="#4-数据在各层之间的传递过程">4. 数据在各层之间的传递过程</a><!-- GFM-TOC -->
-
-
-</li>
-</ul>
-</li>
-</ul><h1 id="网络的网络"><a href="#网络的网络" class="headerlink" title="网络的网络"></a>网络的网络</h1><p>网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/blog/6779a5f9.html" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://sometwo7.github.io/blog/blog/e0ea4e35.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1363,7 +1346,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 08:44:09" itemprop="dateModified" datetime="2019-12-17T08:44:09+00:00">2019-12-17</time>
+                <time title="修改时间：2020-01-03 07:29:55" itemprop="dateModified" datetime="2020-01-03T07:29:55+00:00">2020-01-03</time>
               </span>
             
           
@@ -1471,7 +1454,7 @@
         
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-count">93</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1542,7 +1525,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
